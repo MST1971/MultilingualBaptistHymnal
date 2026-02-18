@@ -1,0 +1,323 @@
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  min-width: 48px;
+}
+
+.nav-icon {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-icon i {
+  font-size: 0.8rem;
+}
+
+.nav-label {
+  font-size: 8px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item:active {
+  transform: scale(0.95);
+}
+
+.nav-item.active {
+  color: #4a90e2;
+}
+
+.nav-item.active .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-item.active .nav-label {
+  opacity: 1;
+}
+
+.active-indicator {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.expand-button {
+  position: absolute;
+  top: -40px;
+  right: 16px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expand-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(90deg);
+}
+
+/* Theme styles */
+.theme-dark .mobile-nav {
+  background: rgba(34, 34, 34, 0.95);
+}
+
+.theme-dark .nav-item {
+  color: #999;
+}
+
+.theme-dark .nav-item.active {
+  color: #b8d4f5;
+}
+
+.theme-dark .expand-button {
+  background: #333;
+  color: #fff;
+}
+
+.theme-blue .mobile-nav {
+  background: rgba(26, 42, 58, 0.95);
+}
+
+.theme-blue .nav-item {
+  color: #e0e6f0;
+}
+
+.theme-blue .nav-item.active {
+  color: #4a90e2;
+}
+
+.theme-blue .expand-button {
+  background: #1a2a3a;
+  color: #e0e6f0;
+}
+
+/* Safe area padding for iOS */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-nav {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .mobile-nav, .nav-overlay {
+    display: none;
+  }
+}
+
+/* Add padding to main content */
+.hymn-list,
+.hymn-detail,
+.favorites-page {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .hymn-list,
+  .hymn-detail,
+  .favorites-page {
+    padding-bottom: 20px;
+  }
+}
+
+/* Theme-specific styles for mobile nav */
+body.theme-light .mobile-nav {
+  background: rgba(0, 0, 0, 0.05); /* 5% black for light theme */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+body.theme-light .nav-item {
+  color: #555;
+}
+
+body.theme-light .nav-item.active {
+  color: #3a5a97;
+}
+
+body.theme-blue .mobile-nav {
+  background: rgba(44, 62, 80, 0.9); /* 90% blue-dark for blue theme */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.theme-blue .nav-item {
+  color: #a4b7c8;
+}
+
+body.theme-blue .nav-item.active {
+  color: #3498db;
+}
+
+/* Theme dropdown in mobile nav */
+.theme-dropdown {
+  position: relative;
+}
+
+.theme-options {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  width: 120px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.theme-dropdown:hover .theme-options,
+.theme-dropdown:focus .theme-options,
+.theme-dropdown:focus-within .theme-options {
+  display: flex;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.theme-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-option.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-icon {
+  font-size: 1rem;
+}
+
+/* Theme-specific styles for theme dropdown */
+body.theme-light .theme-options {
+  background: rgba(240, 240, 240, 0.95);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.theme-light .theme-option {
+  color: #333;
+}
+
+body.theme-light .theme-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.theme-light .theme-option.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.theme-dark .theme-options {
+  background: rgba(40, 40, 40, 0.95);
+}
+
+body.theme-blue .theme-options {
+  background: rgba(44, 62, 80, 0.95);
+}
+
+/* Add these styles to your existing MobileNav.css */
+
+.share-button {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.share-button:active {
+  transform: scale(0.95);
+}
+
+/* Make sure the share button matches other nav items */
+.nav-item.share-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  min-width: 64px;
+}
+
+/* Theme-specific styles */
+.theme-dark .nav-item.share-button {
+  color: #999;
+}
+
+.theme-blue .nav-item.share-button {
+  color: #e0e6f0;
+} 

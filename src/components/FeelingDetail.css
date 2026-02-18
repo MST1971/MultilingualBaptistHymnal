@@ -1,0 +1,101 @@
+.feeling-detail-container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-bottom: 20px;
+}
+
+.detail-header {
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-content p {
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.hymns-list {
+  padding: 10px;
+}
+
+.hymn-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border: none;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+  margin-bottom: 0.5px;
+}
+
+.theme-dark .hymn-item {
+  border: none;
+}
+
+.hymn-item:active {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.theme-dark .hymn-item:active {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.hymn-number {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ff9800;
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.theme-dark .hymn-number {
+  color: #ff9800;
+}
+
+.hymn-info {
+  flex: 1;
+}
+
+.hymn-info h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hymn-preview {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.fa-chevron-right {
+  color: #ccc;
+  margin-left: 10px;
+  font-size: 10px;
+}

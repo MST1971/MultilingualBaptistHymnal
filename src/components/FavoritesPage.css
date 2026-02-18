@@ -1,0 +1,173 @@
+.my-hymns-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.my-hymns-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Tabs */
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 25px;
+  background: white;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tab-item {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #7f8c8d;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.tab-item.active {
+  color: #3498db; /* Blue active color */
+  font-weight: 600;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #3498db;
+  border-radius: 3px 3px 0 0;
+}
+
+/* Tab Content Header */
+.tab-content-header {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tab-content-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+}
+
+.tab-content-header p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+/* Hymn List Card */
+.hymn-list-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #f0f0f0;
+}
+
+.hymn-list-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hymn-badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4a90e2; /* Matches the blue circle in image */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.hymn-info {
+  flex: 1;
+  text-align: left;
+}
+
+.hymn-title-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+  line-height: 1.3;
+}
+
+.hymn-meta {
+  font-size: 12px;
+  color: #95a5a6;
+  margin-bottom: 3px;
+}
+
+.hymn-timestamp {
+  font-size: 12px;
+  color: #bdc3c7;
+}
+
+/* Theme Support */
+.theme-dark .my-hymns-container {
+  background-color: #1a1a1a;
+}
+
+.theme-dark .my-hymns-title {
+  color: #ecf0f1;
+}
+
+.theme-dark .tabs-header {
+  background-color: #2c3e50;
+  border-bottom-color: #34495e;
+}
+
+.theme-dark .tab-item {
+  color: #95a5a6;
+}
+
+.theme-dark .tab-item.active {
+  color: #3498db;
+}
+
+.theme-dark .tab-content-header h3 {
+  color: #ecf0f1;
+}
+
+.theme-dark .hymn-list-card {
+  background-color: #2c3e50;
+  border-color: #34495e;
+}
+
+.theme-dark .hymn-title-text {
+  color: #ecf0f1;
+}
+
+.theme-blue .my-hymns-container {
+  background-color: #f0f4f8;
+}
+
+.theme-blue .hymn-badge {
+  background-color: #2980b9;
+}

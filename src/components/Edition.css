@@ -1,0 +1,217 @@
+.edition-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Edition Topic Section - 5% */
+.edition-topic-section {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Merriweather', serif !important;
+}
+
+.edition-topic-section * {
+  font-family: 'Merriweather', serif !important;
+}
+
+.edition-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.edition-title {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.edition-topic {
+  font-size: 11px;
+  color: #888;
+  margin: 0;
+}
+
+/* Edition Info Section - 20% */
+.edition-info-section {
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  font-family: 'Merriweather', serif !important;
+}
+
+.edition-info-section * {
+  font-family: 'Merriweather', serif !important;
+}
+
+.edition-info-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Hymn List Section - 75% */
+.hymn-list-section {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  padding-bottom: 80px;
+  overflow-y: auto;
+  font-family: 'Merriweather', serif !important;
+}
+
+.hymn-list-section * {
+  font-family: 'Merriweather', serif !important;
+}
+
+.hymn-count {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hymn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hymn-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.2s;
+}
+
+.hymn-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hymn-number {
+  font-weight: bold;
+  width: 40px;
+  color: orange;
+  font-size: 10px;
+}
+
+.hymn-title {
+  flex: 1;
+}
+
+/* Theme variants */
+.theme-light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.theme-light .edition-info-section,
+.theme-light .hymn-list-section {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.theme-light .hymn-item {
+  background: #f9f9f9;
+  color: #333;
+}
+.theme-light .hymn-item:hover {
+  background: #f0f0f0;
+}
+.theme-light .hymn-number {
+  color: #e65100;
+}
+
+.theme-dark {
+  background-color: #121212;
+}
+
+.theme-sepia {
+  background-color: #f4ecd8;
+  color: #5b4636;
+}
+.theme-sepia .edition-info-section,
+.theme-sepia .hymn-list-section {
+  background: #e8dfc8;
+}
+.theme-sepia .hymn-item {
+  background: rgba(91, 70, 54, 0.05);
+  color: #5b4636;
+}
+.theme-sepia .hymn-number {
+  color: #8d6e63;
+}
+
+/* Navigation Arrows */
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.nav-arrow {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: inherit;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-arrow:not(:disabled):hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.theme-light .nav-arrow {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.theme-light .nav-arrow:not(:disabled):hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-sepia .nav-arrow {
+  border-color: rgba(91, 70, 54, 0.3);
+}
+
+/* Solfa Notation Style */
+.solfa-line {
+  font-family: monospace;
+  font-weight: bold;
+  color: #ffd700; /* Gold color for visibility in dark mode */
+  display: block;
+  margin-bottom: 4px;
+  font-size: 15px; /* Slightly larger for readability */
+}
+
+.theme-light .solfa-line {
+  color: #d32f2f; /* Red-ish color for light mode */
+}
+
+.theme-sepia .solfa-line {
+  color: #bf360c; /* Deep orange/brown for sepia */
+}

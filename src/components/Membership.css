@@ -1,0 +1,134 @@
+.membership-page {
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-header {
+  background: linear-gradient(135deg, #4285f4 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 20px 40px;
+  text-align: center;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.membership-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.membership-header p {
+  margin: 15px 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.4;
+  padding: 0 40px;
+}
+
+.membership-content {
+  padding: 30px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.features-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border: 1px solid #f0f0f0;
+}
+
+.feature-item {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-text {
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.membership-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.membership-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.login-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+}
+
+.login-btn:active {
+  background-color: #3367d6;
+  transform: scale(0.98);
+}
+
+.signup-btn {
+  background-color: white;
+  color: #4285f4;
+  border: 1px solid #e0e0e0;
+}
+
+.signup-btn:active {
+  background-color: #f8f9fa;
+  transform: scale(0.98);
+}
+
+.membership-note {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #888;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+
+/* Theme Dark Overrides */
+.theme-dark.membership-page {
+  background-color: #121212;
+}
+
+.theme-dark .features-card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.theme-dark .feature-text {
+  color: #eee;
+}
+
+.theme-dark .signup-btn {
+  background-color: #1e1e1e;
+  border-color: #444;
+  color: #4285f4;
+}

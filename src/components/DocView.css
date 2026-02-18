@@ -1,0 +1,48 @@
+.docview-container {
+   padding: 16px;
+ }
+ .docview-title {
+   font-size: 1.5rem;
+   margin-bottom: 12px;
+ }
+ .docview-grid {
+   display: grid;
+   grid-template-columns: 240px 1fr;
+   gap: 16px;
+ }
+ .docview-sidebar {
+   border-right: 1px solid #ddd;
+   padding-right: 12px;
+ }
+ .docview-sidebar .section-link {
+   display: block;
+   margin: 8px 0;
+   color: inherit;
+   text-decoration: none;
+ }
+ .docview-content {
+   line-height: 1.6;
+ }
+ .doc-section {
+   margin-bottom: 24px;
+ }
+ .doc-section h3 {
+   margin: 8px 0;
+ }
+ .docview-search {
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 12px;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+ }
+ /* Theme adjustments */
+ .theme-dark .docview-container {
+   color: #e6e6e6;
+ }
+ .theme-dark .docview-sidebar {
+   border-right-color: #555;
+ }
+ .theme-blue .docview-title {
+   color: #004a99;
+ }

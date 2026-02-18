@@ -1,0 +1,500 @@
+﻿
+> my-baptist-hymnal@0.1.0 test
+> react-scripts test src/components/VerifyYorubaHymns_341_400.test.js
+
+  console.error
+    Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  5 |[39m
+     [90m  6 |[39m [36mconst[39m renderHymn [33m=[39m (id) [33m=>[39m {
+    [31m[1m>[22m[39m[90m  7 |[39m     [36mreturn[39m render(
+     [90m    |[39m                  [31m[1m^[22m[39m
+     [90m  8 |[39m         [33m<[39m[33mMemoryRouter[39m initialEntries[33m=[39m{[[32m`/yoruba-hymn/${id}`[39m]}[33m>[39m
+     [90m  9 |[39m             [33m<[39m[33mRoutes[39m[33m>[39m
+     [90m 10 |[39m                 [33m<[39m[33mRoute[39m path[33m=[39m[32m"/yoruba-hymn/:id"[39m element[33m=[39m{[33m<[39m[33mYorubaHymnDetail[39m [35m/>} /[39m[33m>[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at renderHymn (src/components/VerifyYorubaHymns_341_400.test.js:7:18)
+      at Object.<anonymous> (src/components/VerifyYorubaHymns_341_400.test.js:30:13)
+
+  console.warn
+    ΓÜá∩╕Å React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m  5 |[39m
+     [90m  6 |[39m [36mconst[39m renderHymn [33m=[39m (id) [33m=>[39m {
+    [31m[1m>[22m[39m[90m  7 |[39m     [36mreturn[39m render(
+     [90m    |[39m                  [31m[1m^[22m[39m
+     [90m  8 |[39m         [33m<[39m[33mMemoryRouter[39m initialEntries[33m=[39m{[[32m`/yoruba-hymn/${id}`[39m]}[33m>[39m
+     [90m  9 |[39m             [33m<[39m[33mRoutes[39m[33m>[39m
+     [90m 10 |[39m                 [33m<[39m[33mRoute[39m path[33m=[39m[32m"/yoruba-hymn/:id"[39m element[33m=[39m{[33m<[39m[33mYorubaHymnDetail[39m [35m/>} /[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at renderHymn (src/components/VerifyYorubaHymns_341_400.test.js:7:18)
+      at Object.<anonymous> (src/components/VerifyYorubaHymns_341_400.test.js:30:13)
+
+  console.warn
+    ΓÜá∩╕Å React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m  5 |[39m
+     [90m  6 |[39m [36mconst[39m renderHymn [33m=[39m (id) [33m=>[39m {
+    [31m[1m>[22m[39m[90m  7 |[39m     [36mreturn[39m render(
+     [90m    |[39m                  [31m[1m^[22m[39m
+     [90m  8 |[39m         [33m<[39m[33mMemoryRouter[39m initialEntries[33m=[39m{[[32m`/yoruba-hymn/${id}`[39m]}[33m>[39m
+     [90m  9 |[39m             [33m<[39m[33mRoutes[39m[33m>[39m
+     [90m 10 |[39m                 [33m<[39m[33mRoute[39m path[33m=[39m[32m"/yoruba-hymn/:id"[39m element[33m=[39m{[33m<[39m[33mYorubaHymnDetail[39m [35m/>} /[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at renderHymn (src/components/VerifyYorubaHymns_341_400.test.js:7:18)
+      at Object.<anonymous> (src/components/VerifyYorubaHymns_341_400.test.js:30:13)
+
+node.exe : FAIL src/components/Ve
+rifyYorubaHymns_341_400.test.js 
+(6.165 s)
+At C:\Program 
+Files\nodejs\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : No 
+   tSpecified: (FAIL src/compon  
+  ...st.js (6.165 s):String) [   
+ ], RemoteException
+    + FullyQualifiedErrorId : Na 
+   tiveCommandError
+ 
+  YorubaHymnDetail Verification 
+(Hymns 341-400)
+    ├ù renders hymn 341 
+correctly (875 ms)
+    ├ù renders hymn 350 
+correctly (99 ms)
+    ├ù renders hymn 360 
+correctly (56 ms)
+    ├ù renders hymn 361 
+correctly (61 ms)
+    ├ù renders hymn 370 
+correctly (101 ms)
+    ├ù renders hymn 380 
+correctly (43 ms)
+    ├ù renders hymn 390 
+correctly (39 ms)
+    ├ù renders hymn 400 
+correctly (45 ms)
+    ├ù verifies specific content 
+for hymn 361 (59 ms)
+    ├ù verifies specific content 
+for hymn 400 (32 ms)
+
+  ΓùÅ YorubaHymnDetail 
+Verification (Hymns 341-400) ΓÇ║ 
+renders hymn 341 correctly
+
+    TestingLibraryElementError: 
+Unable to find an element with 
+the text: /OL├ÜWA, r├án w├í 
+lß╗ì╠üwß╗ì╠ü/i. This could be 
+because the text is broken up by 
+multiple elements. In this case, 
+you can provide a function for 
+your text matcher to make your 
+matcher more flexible.
+
+    Ignored nodes: comments, 
+script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"h
+ymn-detail-page 
+theme-undefined"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m
+"header-top-row"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"header-spacer"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m
+"hymn-topic-section"[39m
+          [36m>[39m
+            [36m<h1>[39m
+              [0mOrin Ko Si[0m
+            [36m</h1>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"hymn-topic"[39m
+            [36m>[39m
+              [0mAimß╗ì[0m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"hymn-source"[39m
+            [36m>[39m
+              [0mYoruba Baptist 
+Hymnal[0m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m
+"hymn-content"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"navigation-arrows"[39m
+            [36m>[39m
+              [36m<button[39m
+                
+[33mclass[39m=[32m"nav-arrow 
+prev-arrow"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"icon"[39m
+                [36m>[39m
+                  [0mΓåÉ[0m
+                [36m</span>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                
+[33mclass[39m=[32m"nav-arrow 
+next-arrow"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"icon"[39m
+                [36m>[39m
+                  [0mΓåÆ[0m
+                [36m</span>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"floating-share"[39m
+            [36m>[39m
+              [36m<button[39m
+                
+[33maria-label[39m=[32m"P├¡n 
+orin"[39m
+                [33mclass[39m=
+[32m"share-button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"icon"[39m
+                [36m>[39m
+                  [0mΓåù∩╕Å[0m
+                [36m</span>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"metadata-box"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  
+[0mNß╗ì╠ümb├á:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mN/A[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  
+[0mOnkß╗ì╠Çw├⌐:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  
+[0mAkß╗ì╠ümpose:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  [0mTune:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  [0mMeter:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  [0mKey:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  
+[0mß╗îd├║n:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"metadata-item"[39m
+                [33mdata-type[3
+9m=[32m"scripture"[39m
+              [36m>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"label"[39m
+                [36m>[39m
+                  [0m├îw├⌐ 
+M├¡mß╗ì╠ü:[0m
+                [36m</span>[39m
+                [36m<span[39m
+                  
+[33mclass[39m=[32m"value"[39m
+                [36m>[39m
+                  [0mAimß╗ì[0m
+                [36m</span>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"lyrics"[39m
+              [33mstyle[39m=[3
+2m"user-select: text;"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=
+[32m"stanza-container"[39m
+                [33mstyle[39m=
+[32m"margin-top: 0px; 
+margin-bottom: 0px;"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m
+=[32m"stanza"[39m
+                  [33mstyle[39m
+=[32m"margin-top: 0px; 
+margin-bottom: 1px;"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mclass[3
+9m=[32m"music-signs 
+transparent"[39m
+                  [36m>[39m
+                    [0mx[0m
+                  
+[36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[3
+9m=[32m"stanza-number"[39m
+                  [36m>[39m
+                    [0m1.[0m
+                  
+[36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[3
+9m=[32m"stanza-text"[39m
+                  [36m>[39m
+                    
+[36m<div[39m
+                      
+[33mclass[39m=[32m"line "[39m
+                      [33mstyle
+[39m=[32m"margin-top: 0px; 
+margin-bottom: 1px;"[39m
+                    [36m>[39m
+                      [0mAlaye 
+orin ko si.[0m
+                    
+[36m</div>[39m
+                  
+[36m</div>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"hymn-history"[39m
+            [36m>[39m
+              [36m<h3>[39m
+                [0m├ît├án[0m
+              [36m</h3>[39m
+              [36m<p>[39m
+                [0mKo si itan 
+fun orin yii.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m
+"highlight-toolbar "[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"color-picker-title"[39m
+            [36m>[39m
+              [0mYan ├Çwß╗ì╠Ç 
+Underline[0m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[3
+2m"color-grid"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=
+[32m"color-button yellow 
+active"[39m
+                [33mdata-color[
+39m=[32m"Yellow"[39m
+                
+[33mtitle[39m=[32m"Yellow 
+underline"[39m
+              [36m/>[39m
+              [36m<button[39m
+                [33mclass[39m=
+[32m"color-button red "[39m
+                [33mdata-color[
+39m=[32m"Red"[39m
+                
+[33mtitle[39m=[32m"Red 
+underline"[39m
+              [36m/>[39m
+              [36m<button[39m
+                [33mclass[39m=
+[32m"color-button blue "[39m
+                [33mdata-color[
+39m=[32m"Blue"[39m
+                
+[33mtitle[39m=[32m"Blue 
+underline"[39m
+              [36m/>[39m
+              [36m<button[39m
+                [33mclass[39m=
+[32m"color-button orange "[39m
+                [33mdata-color[
+39m=[32m"Orange"[39m
+                
+[33mtitle[39m=[32m"Orange 
+underline"[39m
+              [36m/>[39m
+              [36m<button[39m

@@ -1,0 +1,20 @@
+.hymn-content {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  overflow: auto;
+}
+
+.page-number {
+  display: block;
+  position: relative;
+  z-index: 10;
+  color: black;
+  font-size: 14px;
+}
+
+.hymn-source {
+  font-size: 8px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
+} 

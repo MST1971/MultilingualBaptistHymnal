@@ -1,0 +1,183 @@
+.sample-hymn-container {
+  padding: 10px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: 'Merriweather', serif;
+}
+
+.sample-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 10px;
+}
+
+.sample-back-button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hymn-navigation {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-arrow {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-arrow:hover {
+  background-color: #ddd;
+}
+
+.nav-arrow i {
+  font-size: 12px;
+}
+
+.sample-page {
+  background-color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #000;
+  line-height: 1.4;
+}
+
+.sample-page-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.page-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hymn-main-header {
+  margin-bottom: 30px;
+}
+
+.hymn-number {
+  font-size: 32px;
+  font-weight: bold;
+  float: left;
+  margin-right: 20px;
+  line-height: 1;
+}
+
+.hymn-metadata-top {
+  overflow: hidden; /* Clearfix */
+}
+
+.tune-info {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.tune-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.scripture-info {
+  border-top: 0.5px solid #ccc;
+  padding-top: 5px;
+}
+
+.scripture-text {
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.verses-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.verse-block {
+  margin-bottom: 15px;
+}
+
+.verse-column {
+  width: 100%;
+}
+
+.verse-content-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.music-signs-column {
+  min-width: 30px;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.music-sign-line {
+  height: 1.4em;
+  font-size: 11px;
+  color: #444;
+}
+
+.lyrics-column {
+  flex: 1;
+}
+
+.line-wrapper {
+  display: flex;
+  gap: 12px;
+  height: 1.4em;
+  align-items: flex-start;
+}
+
+.v-num-cell {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: right;
+  font-size: 10px;
+}
+
+.l-text-cell {
+  font-size: 14px;
+  flex: 1;
+}
+
+.sample-hymn-error {
+  text-align: center;
+  padding: 50px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .verses-grid {
+    grid-template-columns: 1fr;
+  }
+  .sample-page {
+    padding: 20px;
+  }
+}
