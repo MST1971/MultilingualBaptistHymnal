@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MinistersCompanion.css'; // Reusing styles
+import './Edition.css';
 import { useSettings } from '../context/SettingsContext';
 
 function ChurchCovenant({ theme }) {
@@ -73,12 +73,13 @@ function ChurchCovenant({ theme }) {
   const currentContent = covenantContent[language] || covenantContent.english;
 
   return (
-    <div className={`ministers-companion-page theme-${theme}`}>
-      <div className="page-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <i className="fas fa-arrow-left"></i>
+    <div className={`edition-page theme-${theme}`} style={{ paddingBottom: '100px' }}>
+      <div className="header-top-row">
+        <button className="back-button icon-only" onClick={() => navigate(-1)}>
+          <span className="icon">←</span>
         </button>
-        <h1>{currentContent.title}</h1>
+        <h1 style={{ flex: 1, textAlign: 'center', fontSize: '18px', margin: 0 }}>{currentContent.title}</h1>
+        <div style={{ width: '40px' }}></div>
       </div>
 
       <div className="language-switch-container" style={{ display: 'flex', justifyContent: 'center', margin: '10px 0' }}>

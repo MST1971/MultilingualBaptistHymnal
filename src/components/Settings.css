@@ -338,6 +338,12 @@ input:checked + .slider:before {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .user-info {
@@ -496,7 +502,7 @@ input:checked + .slider:before {
 
 .hymn-info-mini p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 12px;
   color: #888;
 }
 
@@ -805,6 +811,24 @@ input:checked + .slider:before {
   color: #e0e6f0;
 }
 
+/* Blue theme: specific section headers emphasized in orange */
+.settings-page-redesign.theme-blue .friends-activity-section .section-header h3,
+.theme-blue .settings-page-redesign .friends-activity-section .section-header h3,
+.settings-page-redesign.theme-blue .member-resources-section .section-header h3,
+.theme-blue .settings-page-redesign .member-resources-section .section-header h3,
+.settings-page-redesign.theme-blue .more-options-section .section-header h3,
+.theme-blue .settings-page-redesign .more-options-section .section-header h3,
+.settings-page-redesign.theme-blue .quick-actions-section .section-header h3,
+.theme-blue .settings-page-redesign .quick-actions-section .section-header h3 {
+  color: #e67e22;
+}
+
+/* Emphasis color for Blue theme header title (user name) */
+.settings-page-redesign.theme-blue .user-info h2,
+.theme-blue .settings-page-redesign .user-info h2 {
+  color: #e67e22;
+}
+
 .settings-page-redesign.theme-blue .hymn-day-card,
 .settings-page-redesign.theme-blue .activity-item,
 .settings-page-redesign.theme-blue .resource-item,
@@ -854,4 +878,38 @@ input:checked + .slider:before {
   background-color: transparent;
   border-color: #63b3ed;
   color: #63b3ed;
+}
+
+/* Blue theme: Hymn of the Day (mini) styling for contrast and consistency */
+.settings-page-redesign.theme-blue .hymn-day-card-mini,
+.theme-blue .settings-page-redesign .hymn-day-card-mini {
+  background: #243447;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.settings-page-redesign.theme-blue .hymn-info-mini h4,
+.theme-blue .settings-page-redesign .hymn-info-mini h4 {
+  color: #e0e6f0;
+}
+
+.settings-page-redesign.theme-blue .hymn-info-mini p,
+.theme-blue .settings-page-redesign .hymn-info-mini p {
+  color: #a0aec0;
+}
+
+.settings-page-redesign.theme-blue .hymn-info-mini .hymn-category,
+.theme-blue .settings-page-redesign .hymn-info-mini .hymn-category {
+  color: #90a4ae;
+}
+
+.settings-page-redesign.theme-blue .hymn-number-circle,
+.theme-blue .settings-page-redesign .hymn-number-circle {
+  background-color: #1a2a3a;
+  color: #e67e22;
+}
+
+.settings-page-redesign.theme-blue .view-all-link,
+.theme-blue .settings-page-redesign .view-all-link {
+  color: #e67e22;
 }

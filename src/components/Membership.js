@@ -1,9 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Membership.css';
 
 function Membership({ theme }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className={`membership-page theme-${theme}`}>
@@ -26,10 +27,16 @@ function Membership({ theme }) {
         </div>
 
         <div className="membership-actions">
-          <button className="membership-btn login-btn" onClick={() => navigate('/signin')}>
+          <button
+            className="membership-btn login-btn"
+            onClick={() => navigate('/signin', { state: { redirectTo: location.state?.redirectTo || '/' } })}
+          >
             Log In
           </button>
-          <button className="membership-btn signup-btn" onClick={() => navigate('/signup')}>
+          <button
+            className="membership-btn signup-btn"
+            onClick={() => navigate('/signup', { state: { redirectTo: location.state?.redirectTo || '/' } })}
+          >
             Sign Up
           </button>
         </div>

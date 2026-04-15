@@ -7,29 +7,41 @@ import './Home.css';
 function Home({ theme }) {
   const navigate = useNavigate();
   const { user } = useAuth();
-  // State to track the current slide
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  // Array of advertisement images
-  const adImages = [
-    'https://picsum.photos/600/125?random=1',
-    'https://picsum.photos/600/125?random=2',
-    'https://picsum.photos/600/125?random=3',
-    'https://picsum.photos/600/125?random=4',
-    'https://picsum.photos/600/125?random=5'
-  ];
+  // State to check if running on native device
+  const isNative = typeof window !== 'undefined' && window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform();
 
   // Get the hymn of the day
   const hymnOfTheDay = getHymnOfTheDay();
 
-  // Set up automatic rotation for advertisement images
+
+
+  // Show native AdMob banner on Home (native only)
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prevSlide => (prevSlide + 1) % adImages.length);
-    }, 3000); // Change slide every 3 seconds
+    if (!isNative) return;
     
-    return () => clearInterval(interval); // Clean up on unmount
-  }, [adImages.length]); // Add adImages.length as dependency
+    const showAd = async () => {
+      try {
+        const { AdMob, BannerAdSize, BannerAdPosition } = await import('@capacitor-community/admob');
+        await AdMob.showBanner({
+          adId: 'ca-app-pub-6283300909154451/6104372050',
+          adSize: BannerAdSize.BANNER,
+          position: BannerAdPosition.BOTTOM_CENTER,
+          margin: 0,
+          isTesting: false
+        });
+      } catch (e) {
+        console.error("AdMob Banner Error on Home:", e);
+      }
+    };
+    
+    showAd();
+    
+    return () => {
+      import('@capacitor-community/admob').then(({ AdMob }) => {
+        AdMob.hideBanner().catch(e => console.error(e));
+      });
+    };
+  }, [isNative]);
 
   const editions = [
     { id: '1956', title: "1956 Edition", link: "/edition/1956", color: "#3498db" },
@@ -117,29 +129,6 @@ function Home({ theme }) {
         </div>
       </div>
       
-      <div className="advertisement-box-redesign">
-        <div className="ad-slider">
-          {adImages.map((image, index) => (
-            <div 
-              key={index} 
-              className={`ad-slide ${index === currentSlide ? 'active' : ''}`}
-              style={{ backgroundImage: `url(${image})` }}
-            >
-              <div className="ad-fallback">Advertisement {index + 1}</div>
-            </div>
-          ))}
-          
-          <div className="ad-indicators">
-            {adImages.map((_, index) => (
-              <button 
-                key={index} 
-                className={`ad-indicator ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

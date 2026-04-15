@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, RecaptchaVerifier } from 'firebase/auth';
 
 const config = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -12,13 +12,15 @@ const config = {
 
 let app;
 let auth;
-let provider;
+let googleProvider;
+
 
 if (config.apiKey && config.authDomain) {
   try {
     app = initializeApp(config);
     auth = getAuth(app);
-    provider = new GoogleAuthProvider();
+    googleProvider = new GoogleAuthProvider();
+
     
     // Check if appId looks like an Android ID but running in web
     if (config.appId && config.appId.includes(':android:') && typeof window !== 'undefined') {
@@ -31,4 +33,4 @@ if (config.apiKey && config.authDomain) {
   console.warn("Firebase configuration is incomplete. Check your .env file.");
 }
 
-export { app, auth, provider };
+export { app, auth, googleProvider, RecaptchaVerifier };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MinistersCompanion.css'; // Reusing existing styles
+import './Edition.css';
 
 function Resources({ theme }) {
   const navigate = useNavigate();
@@ -12,12 +12,13 @@ function Resources({ theme }) {
   ];
 
   return (
-    <div className={`ministers-companion-page theme-${theme}`}>
-      <div className="page-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <i className="fas fa-arrow-left"></i>
+    <div className={`edition-page theme-${theme}`} style={{ paddingBottom: '100px' }}>
+      <div className="header-top-row">
+        <button className="back-button icon-only" onClick={() => navigate(-1)}>
+          <span className="icon">←</span>
         </button>
-        <h1>Other Resources</h1>
+        <h1 style={{ flex: 1, textAlign: 'center', fontSize: '18px', margin: 0 }}>Other Resources</h1>
+        <div style={{ width: '40px' }}></div>
       </div>
       
       <div className="resources-list" style={{ padding: '20px' }}>

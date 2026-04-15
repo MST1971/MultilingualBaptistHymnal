@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './MinistersCompanion.css';
+import { Link, useNavigate } from 'react-router-dom';
+import './Edition.css';
+import './HymnList.css';
 import { useSettings } from '../context/SettingsContext';
+import { ministerCompanionData } from '../data/ministerCompanionData';
 
 function MinistersCompanion({ theme }) {
   const navigate = useNavigate();
   const { language: settingsLanguage } = useSettings();
   const [language, setLanguage] = useState('english');
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const savedLang = localStorage.getItem('ministersCompanionLanguage');
@@ -27,70 +30,48 @@ function MinistersCompanion({ theme }) {
     localStorage.setItem('ministersCompanionLanguage', language);
   }, [language]);
 
-  const resourcesContent = {
-    english: {
-      title: "Minister's Resources",
-      intro: "This section will contain resources for ministers including:",
-      items: [
-        "Liturgies and Orders of Service",
-        "Prayers for Various Occasions",
-        "Scripture Readings",
-        "Sermon Notes & Helps"
-      ],
-      badge: "Coming Soon"
-    },
-    yoruba: {
-      title: "Awọn Ohun Elo fun Oluso-agutan",
-      intro: "Abala yii yoo ni awọn ohun elo fun awọn oluso-agutan pẹlu:",
-      items: [
-        "Awọn Ilana Ijọsin",
-        "Adura fun Awọn Igba Oniruru",
-        "Awọn Eko Bibeli",
-        "Awọn Akọsilẹ Iwaasu"
-      ],
-      badge: "A N Bọ"
-    },
-    igbo: {
-      title: "Ngwa Ọrụ Maka Onye Ozi",
-      intro: "Nkebi a ga-enwe ngwa ọrụ maka ndị ozi gụnyere:",
-      items: [
-        "Usoro Ofufe",
-        "Ekpere Maka Oge Dị Iche Iche",
-        "Ọgụgụ Akwụkwọ Nsọ",
-        "Ihe Edeturu Maka Ozizi"
-      ],
-      badge: "Ọ Na-abịa"
-    },
-    hausa: {
-      title: "Kayan Aiki don Mai Wa'azi",
-      intro: "Wannan bangare zai kunshi kayan aiki ga masu wa'azi ciki har da:",
-      items: [
-        "Tsarin Ibada",
-        "Addu'o'i na Lokuta Daban-daban",
-        "Karatun Nassosi",
-        "Bayanan Wa'azi"
-      ],
-      badge: "Yana Zuwa"
-    }
+  const getFilteredItems = () => {
+    // Currently only English data is available
+    return ministerCompanionData.filter(item => 
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   };
 
-  const currentContent = resourcesContent[language] || resourcesContent.english;
+  const filteredItems = getFilteredItems();
 
   return (
-    <div className={`ministers-companion-page theme-${theme}`}>
-      <div className="page-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <i className="fas fa-arrow-left"></i>
+    <div className={`edition-page theme-${theme}`} style={{ paddingBottom: '100px' }}>
+      <div className="header-top-row">
+        <button className="back-button icon-only" onClick={() => navigate(-1)}>
+           <span className="icon">←</span>
         </button>
-        <h1>{currentContent.title}</h1>
+        <h1>Minister's Companion</h1>
+        <div style={{ width: '40px' }}></div>
       </div>
 
-      <div className="language-switch-container" style={{ display: 'flex', justifyContent: 'center', margin: '10px 0' }}>
+      <div className="search-container">
+        <div className="search-input-group">
+          <input
+            type="text"
+            placeholder="Search topics..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+          {searchTerm && (
+            <button 
+              className="clear-search-button"
+              onClick={() => setSearchTerm('')}
+            >
+              ×
+            </button>
+          )}
+        </div>
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
           className="settings-select"
-          style={{ maxWidth: '280px' }}
+          style={{ marginTop: '10px', maxWidth: '280px' }}
         >
           <option value="english">English</option>
           <option value="yoruba">Yoruba</option>
@@ -98,29 +79,22 @@ function MinistersCompanion({ theme }) {
           <option value="hausa">Hausa</option>
         </select>
       </div>
-      
-      <div className="content-placeholder">
-        <div className="icon-large">
-          <i className="fas fa-user-tie"></i>
-        </div>
-        <h2>{currentContent.title}</h2>
-        <p style={{ 
-          fontSize: '11px', 
-          lineHeight: '1.5', 
-          fontFamily: "'Merriweather', serif",
-          textAlign: 'justify'
-        }}>{currentContent.intro}</p>
-        <ul className="feature-list" style={{ 
-          fontSize: '11px', 
-          lineHeight: '1.5', 
-          fontFamily: "'Merriweather', serif",
-          textAlign: 'justify'
-        }}>
-          {currentContent.items.map((item, index) => (
-            <li key={index} style={{ marginBottom: '8px' }}>{item}</li>
-          ))}
-        </ul>
-        <div className="coming-soon-badge">{currentContent.badge}</div>
+
+      <div className="hymn-section">
+        {filteredItems.length === 0 ? (
+          <div className="no-results" style={{ textAlign: 'center', padding: '20px' }}>
+            <p>No items found matching "{searchTerm}"</p>
+          </div>
+        ) : (
+          <div className="hymn-grid">
+            {filteredItems.map((item, index) => (
+              <Link to={`/ministers-companion/${item.id}`} key={item.id} className="hymn-card">
+                <div className="hymn-number">{index + 1}</div>
+                <div className="hymn-title">{item.title}</div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

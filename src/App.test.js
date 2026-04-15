@@ -3,6 +3,5 @@ import App from './App';
 
 test('renders app title', () => {
   render(<App />);
-  const titleElement = screen.getByText(/My Baptist Hymnal/i);
-  expect(titleElement).toBeInTheDocument();
+  expect(screen.getAllByText(/Multilingual Baptist Hymnal/i).length).toBeGreaterThanOrEqual(1);
 });

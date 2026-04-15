@@ -215,3 +215,68 @@
 .theme-sepia .solfa-line {
   color: #bf360c; /* Deep orange/brown for sepia */
 }
+
+/* Shared styles */
+.settings-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #333;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.theme-dark .settings-select {
+  background: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+.theme-blue .settings-select {
+  background: #354555;
+  border-color: #455565;
+  color: #fff;
+}
+
+/* Edition Meta & History */
+.edition-meta {
+  font-size: 12px;
+  color: #a0a0a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.theme-light .edition-meta {
+  color: #666;
+}
+
+.theme-sepia .edition-meta {
+  color: #795548;
+}
+
+.edition-meta .meta-separator {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+.edition-history-box {
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.theme-light .edition-history-box {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.theme-sepia .edition-history-box {
+  background: rgba(91, 70, 54, 0.1);
+}

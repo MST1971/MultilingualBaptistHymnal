@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { getHymnOfTheDay } from '../utils/hymnUtils';
+import { hymns as hymns1956 } from '../data/hymns';
 import { Share } from '@capacitor/share';
 import './Settings.css';
 
@@ -46,6 +47,14 @@ function Settings({ theme }) {
 
   // Use the common hymn of the day logic
   const hymnOfTheDay = getHymnOfTheDay();
+  const hymnMetadata = hymnOfTheDay ? hymns1956?.[String(hymnOfTheDay.id)] : null;
+  const displayAuthor = hymnMetadata?.author || 'Unknown Author';
+  const displayComposer = hymnMetadata?.composer || 'Unknown Composer';
+
+  const formatDate = () => {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date().toLocaleDateString('en-US', options);
+  };
 
   const [activity, setActivity] = React.useState([]);
 
@@ -101,7 +110,9 @@ function Settings({ theme }) {
             {user?.photoURL ? (
               <img src={user.photoURL} alt="User" />
             ) : (
-              <div className="avatar-placeholder"></div>
+              <div className="avatar-placeholder">
+                {user?.name ? user.name.charAt(0).toUpperCase() : ''}
+              </div>
             )}
           </div>
           <div className="user-info">
@@ -152,21 +163,21 @@ function Settings({ theme }) {
         {/* 2. Hymn of the Day Section */}
         <div className="content-section">
           <div className="section-header">
-            <h3>Hymn of the Day</h3>
+            <h3>{formatDate()}</h3>
             <button className="view-all-link" onClick={() => navigate('/browse')}>View</button>
           </div>
           <div className="hymn-day-card-mini" onClick={() => navigate(`/hymn/${hymnOfTheDay.id}`)}>
             <div className="hymn-number-circle">{hymnOfTheDay.id}</div>
             <div className="hymn-info-mini">
               <h4>{hymnOfTheDay.title}</h4>
-              <p>Unknown</p>
-              <p className="hymn-category">Unknown</p>
+              <p>{displayAuthor}</p>
+              <p className="hymn-category">{displayComposer}</p>
             </div>
           </div>
         </div>
 
         {/* 3. Friends Activity Section */}
-        <div className="content-section">
+        <div className="content-section friends-activity-section">
           <div className="section-header">
             <h3>Friends Activity</h3>
             <button className="view-link" onClick={() => navigate('/settings/community')}>View All</button>
@@ -192,7 +203,7 @@ function Settings({ theme }) {
         </div>
 
         {/* 4. Member Resources */}
-        <div className="content-section">
+        <div className="content-section member-resources-section">
           <div className="section-header">
             <h3>Member Resources</h3>
           </div>
@@ -212,7 +223,7 @@ function Settings({ theme }) {
         </div>
 
         {/* 5. More Options */}
-        <div className="content-section">
+        <div className="content-section more-options-section">
           <div className="section-header">
             <h3>More Options</h3>
           </div>
@@ -232,7 +243,7 @@ function Settings({ theme }) {
         </div>
 
         {/* 6. Quick Actions */}
-        <div className="content-section">
+        <div className="content-section quick-actions-section">
           <div className="section-header">
             <h3>Quick Actions</h3>
           </div>

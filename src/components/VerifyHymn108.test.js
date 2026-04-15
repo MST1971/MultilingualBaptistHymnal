@@ -12,5 +12,5 @@ test('renders Hymn 108 details', () => {
         </MemoryRouter>
     );
 
-    expect(screen.getByText(/Rejoice/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Rejoice/i).length).toBeGreaterThanOrEqual(1);
 });

@@ -12,7 +12,20 @@
           "package_name": "com.mstraybiz.multilingualbaptisthymnal"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "145711928101-oct9grdd7pf36enf85su56amrg7gvuok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mstraybiz.multilingualbaptisthymnal",
+            "certificate_hash": "06daf848a276d2f917cbebf47ec6b6bacd970033"
+          }
+        },
+        {
+          "client_id": "145711928101-ednt0fq2dsmev57bhs3hfbc0j2ejqgf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB4qMz179CIAQxtUy_kpHedDDx_sDUzts0"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145711928101-ednt0fq2dsmev57bhs3hfbc0j2ejqgf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

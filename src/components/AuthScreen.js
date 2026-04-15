@@ -45,7 +45,6 @@ function AuthScreen() {
             <p>Choose a provider to continue</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
               <button onClick={signInWithGoogle}>Continue with Google</button>
-              <button disabled title="Coming soon">Continue with Facebook</button>
               <button disabled title="Coming soon">Continue with Twitter</button>
             </div>
           </>

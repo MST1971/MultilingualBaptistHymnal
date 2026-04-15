@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { choruses } from '../data/choruses';
+import { chorusesYoruba } from '../data/chorusesYoruba';
+import { chorusesIgbo } from '../data/chorusesIgbo';
+import { chorusesHausa } from '../data/chorusesHausa';
 import './HymnList.css'; // For shared styles
 import './Edition.css'; // For navigation arrows
 
@@ -8,22 +11,38 @@ function ChorusDetail({ theme }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [chorus, setChorus] = useState(null);
+  const [language, setLanguage] = useState('english');
+
+  const getChorusesForLanguage = (lang) => {
+    const normalized = String(lang || '').toLowerCase();
+    if (normalized === 'yoruba') return chorusesYoruba;
+    if (normalized === 'igbo') return chorusesIgbo;
+    if (normalized === 'hausa') return chorusesHausa;
+    return choruses;
+  };
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('chorusesLanguage');
+    setLanguage(savedLang || 'english');
+  }, []);
 
   useEffect(() => {
     const chorusId = parseInt(id);
-    const foundChorus = choruses.find(c => c.id === chorusId);
+    const currentChoruses = getChorusesForLanguage(language);
+    const foundChorus = currentChoruses.find(c => c.id === chorusId);
     if (foundChorus) {
       setChorus(foundChorus);
     } else {
       navigate('/choruses');
     }
-  }, [id, navigate]);
+  }, [id, navigate, language]);
 
   if (!chorus) return null;
 
-  const currentIndex = choruses.findIndex(c => c.id === chorus.id);
-  const prevChorus = currentIndex > 0 ? choruses[currentIndex - 1] : null;
-  const nextChorus = currentIndex !== -1 && currentIndex < choruses.length - 1 ? choruses[currentIndex + 1] : null;
+  const currentChoruses = getChorusesForLanguage(language);
+  const currentIndex = currentChoruses.findIndex(c => c.id === chorus.id);
+  const prevChorus = currentIndex > 0 ? currentChoruses[currentIndex - 1] : null;
+  const nextChorus = currentIndex !== -1 && currentIndex < currentChoruses.length - 1 ? currentChoruses[currentIndex + 1] : null;
 
   const handleNext = () => {
     if (nextChorus) navigate(`/chorus/${nextChorus.id}`);
@@ -51,7 +70,7 @@ function ChorusDetail({ theme }) {
     const cleanLine = line.replace(/\(echo\)/gi, '').trim();
     // \u2080-\u2089 matches subscript numbers 0-9
     // \u00B9 matches superscript 1
-    const solfaRegex = /^[\s\d:;.,\-drmfslt|/xce\u2080-\u2089\u00B9()!>a]+$/i;
+    const solfaRegex = /^[\s\d:;.,\-drmfslt|/xcen\u2080-\u2089\u00B9()!>a]+$/i;
     // Ensure it has at least some solfa characters to avoid matching just punctuation
     const hasNotes = /[drmfslt]/i.test(cleanLine);
     return solfaRegex.test(cleanLine) && hasNotes;

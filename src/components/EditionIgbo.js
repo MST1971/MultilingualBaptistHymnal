@@ -65,7 +65,8 @@ function EditionIgbo({ theme }) {
   // Filter hymns based on search term
   const filteredHymns = allHymns.filter(hymn => 
     hymn.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    hymn.number.toString().includes(searchTerm)
+    hymn.number.toString().includes(searchTerm) ||
+    (hymn.tune && hymn.tune.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
   // Calculate pagination
@@ -91,6 +92,8 @@ function EditionIgbo({ theme }) {
       </div>
       
       <div className="edition-meta">
+        <span>Denomination: Baptist</span>
+        <span className="meta-separator">•</span>
         <span>Published: 2024</span>
         <span className="meta-separator">•</span>
         <span>Publisher: Baptist Convention</span>
@@ -99,7 +102,7 @@ function EditionIgbo({ theme }) {
       <div className="edition-meta">
         <span>Hymns: {allHymns.length}</span>
         <span className="meta-separator">•</span>
-        <span>Language: Igbo</span>
+        <span>Editor: Igbo Hymnal Editorial Committee</span>
         <span className="meta-separator">•</span>
         <button className="history-toggle" onClick={toggleHistory}>
           {showHistory ? "Hide History" : "Show History"}

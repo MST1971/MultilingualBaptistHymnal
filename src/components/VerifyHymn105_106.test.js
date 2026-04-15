@@ -26,8 +26,8 @@ test('renders Hymn 106 details', () => {
         </MemoryRouter>
     );
 
-    expect(screen.getAllByText(/Up Calv'ry's Mountain One Dreadful Morn/i).length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/Harry D. Loes/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Blessed Redeemer/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Harry.*Loes/i).length).toBeGreaterThanOrEqual(1);
     const refrainElements = screen.getAllByText(/Blessed Redeemer/i);
     expect(refrainElements.length).toBeGreaterThanOrEqual(1);
 

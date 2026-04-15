@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { hymns as hymns1956 } from '../data/hymns';
 import './Welcome.css';
 import appLogo from '../assets/app-logo.png';
 
@@ -31,17 +32,8 @@ function Welcome({ theme }) {
     navigate('/signup');
   };
 
-  // State to track the current slide
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  // Array of advertisement images
-  const adImages = [
-    'https://picsum.photos/600/125?random=1',
-    'https://picsum.photos/600/125?random=2',
-    'https://picsum.photos/600/125?random=3',
-    'https://picsum.photos/600/125?random=4',
-    'https://picsum.photos/600/125?random=5'
-  ];
+  // State to check if running on native device
+  const isNative = typeof window !== 'undefined' && window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform();
 
   // Sample hymn data for demonstration with categories
   const hymns = {
@@ -162,14 +154,33 @@ function Welcome({ theme }) {
   // Get the hymn of the day and current season
   const hymnOfTheDay = getHymnOfTheDay();
 
-  // Set up automatic rotation for advertisement images
+  // Show native AdMob banner when in native environment
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prevSlide => (prevSlide + 1) % adImages.length);
-    }, 3000); // Change slide every 3 seconds
+    if (!isNative) return;
     
-    return () => clearInterval(interval); // Clean up on unmount
-  }, [adImages.length]); // Add adImages.length as dependency
+    const showAd = async () => {
+      try {
+        const { AdMob, BannerAdSize, BannerAdPosition } = await import('@capacitor-community/admob');
+        await AdMob.showBanner({
+          adId: 'ca-app-pub-6283300909154451/6104372050',
+          adSize: BannerAdSize.BANNER,
+          position: BannerAdPosition.BOTTOM_CENTER,
+          margin: 0,
+          isTesting: false
+        });
+      } catch (e) {
+        console.error("AdMob Banner Error on Welcome:", e);
+      }
+    };
+    
+    showAd();
+    
+    return () => {
+      import('@capacitor-community/admob').then(({ AdMob }) => {
+        AdMob.hideBanner().catch(e => console.error(e));
+      });
+    };
+  }, [isNative]);
 
   const editions = [
     { id: '1956', title: "1956 Edition", link: "/edition/1956", color: "#3498db" },
@@ -195,6 +206,10 @@ function Welcome({ theme }) {
     return new Date().toLocaleDateString('en-US', options);
   };
 
+  const hymnMetadata = hymnOfTheDay ? hymns1956?.[String(hymnOfTheDay.id)] : null;
+  const displayAuthor = hymnMetadata?.author || 'Unknown Author';
+  const displayComposer = hymnMetadata?.composer || 'Unknown Composer';
+
   if (showLanding) {
     return (
       <div className={`landing-page theme-${theme}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/welcome-bg.jpg')` }}>
@@ -204,9 +219,9 @@ function Welcome({ theme }) {
           </div>
           
           <div className="landing-text-group">
-            <p className="welcome-to-text">Welcome to</p>
             <h1 className="app-name-text">Multilingual Baptist Hymnal</h1>
             <h2 className="app-subtitle-text">My Worship Companion</h2>
+            <p className="app-description-text">Experience worship in multiple languages with our comprehensive hymnal collection.</p>
           </div>
 
           <div className="landing-actions">
@@ -224,8 +239,9 @@ function Welcome({ theme }) {
   return (
     <div className={`welcome-page-redesign theme-${theme}`}>
       <div className="welcome-header">
-        <h1>{firstName ? `Welcome back, ${firstName}!` : 'Welcome back!'}</h1>
-        <p>Let's worship together</p>
+        <div className="welcome-line-1">Welcome back,</div>
+        <div className="welcome-line-2">{firstName ? `${firstName}!` : 'Friend!'}</div>
+        <div className="welcome-line-3">Let's worship together</div>
       </div>
 
       <div className="hymn-day-card-large">
@@ -233,6 +249,10 @@ function Welcome({ theme }) {
           <div className="card-sublabel">Daily Hymn</div>
           <div className="card-label">{formatDate()}</div>
           <h2 className="card-title">"{hymnOfTheDay.title}"</h2>
+          <div className="hymn-metadata">
+            <div className="hymn-metadata-author">{displayAuthor}</div>
+            <div className="hymn-metadata-composer">{displayComposer}</div>
+          </div>
           <button className="sing-now-btn" onClick={() => navigate(`/hymn/${hymnOfTheDay.id}`)}>
             Sing Now
           </button>
@@ -277,29 +297,6 @@ function Welcome({ theme }) {
         </div>
       </div>
       
-      <div className="advertisement-box-redesign">
-        <div className="ad-slider">
-          {adImages.map((image, index) => (
-            <div 
-              key={index} 
-              className={`ad-slide ${index === currentSlide ? 'active' : ''}`}
-              style={{ backgroundImage: `url(${image})` }}
-            >
-              <div className="ad-fallback">Advertisement {index + 1}</div>
-            </div>
-          ))}
-          
-          <div className="ad-indicators">
-            {adImages.map((_, index) => (
-              <button 
-                key={index} 
-                className={`ad-indicator ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

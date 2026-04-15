@@ -81,30 +81,17 @@ function FeelingList({ theme }) {
       <div className="feeling-header">
         <h1>Feelings</h1>
         <div className="language-selector">
-          <button 
-            className={language === 'english' ? 'active' : ''} 
-            onClick={() => handleLanguageChange('english')}
+          <select
+            value={language}
+            onChange={(e) => handleLanguageChange(e.target.value)}
+            className="settings-select"
+            style={{ maxWidth: '200px' }}
           >
-            English
-          </button>
-          <button 
-            className={language === 'yoruba' ? 'active' : ''} 
-            onClick={() => handleLanguageChange('yoruba')}
-          >
-            Yoruba
-          </button>
-          <button 
-            className={language === 'hausa' ? 'active' : ''} 
-            onClick={() => handleLanguageChange('hausa')}
-          >
-            Hausa
-          </button>
-          <button 
-            className={language === 'igbo' ? 'active' : ''} 
-            onClick={() => handleLanguageChange('igbo')}
-          >
-            Igbo
-          </button>
+            <option value="english">English</option>
+            <option value="yoruba">Yoruba</option>
+            <option value="hausa">Hausa</option>
+            <option value="igbo">Igbo</option>
+          </select>
         </div>
       </div>
 

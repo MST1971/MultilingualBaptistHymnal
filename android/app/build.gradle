@@ -4,75 +4,102 @@ plugins {
 }
 
 android {
-    namespace = "com.mstraybiz.multilingualbaptisthymnal"
-    compileSdk = rootProject.ext.compileSdkVersion
+
+    namespace "com.mstraybiz.multilingualbaptisthymnal"
+
+    compileSdk rootProject.ext.compileSdkVersion
+
     defaultConfig {
         applicationId "com.mstraybiz.multilingualbaptisthymnal"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        aaptOptions {
-             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
-             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
-            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
-        }
+
+        vectorDrawables.useSupportLibrary = true
     }
+
     signingConfigs {
         release {
-            storeFile file('release-key.keystore')
-            storePassword 'hymnal123'
-            keyAlias 'release-alias'
-            keyPassword 'hymnal123'
+            storeFile file("release-key.keystore")
+            storePassword "hymnal123"
+            keyAlias "release-alias"
+            keyPassword "hymnal123"
         }
     }
+
     buildTypes {
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+        }
+
         release {
             signingConfig signingConfigs.release
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(
+                    "proguard-android-optimize.txt"
+            ), "proguard-rules.pro"
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-}
 
-// Override Capacitor's forced Java 21 version
-afterEvaluate {
-    android {
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_17
-            targetCompatibility JavaVersion.VERSION_17
+    packaging {
+        resources {
+            excludes += [
+                    "META-INF/DEPENDENCIES",
+                    "META-INF/LICENSE",
+                    "META-INF/LICENSE.txt",
+                    "META-INF/NOTICE",
+                    "META-INF/NOTICE.txt"
+            ]
         }
     }
 }
 
 repositories {
-    flatDir{
+    flatDir {
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
     }
 }
 
 dependencies {
-    // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:34.9.0"))
 
-    // Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
-    implementation("com.google.firebase:firebase-analytics")
+    implementation platform("com.google.firebase:firebase-bom:34.9.0")
+    implementation "com.google.firebase:firebase-analytics"
 
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
-    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
-    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.google.android.gms:play-services-ads:22.6.0"
+
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+    implementation "androidx.core:core-splashscreen:1.0.1"
+
     implementation project(':capacitor-android')
-    testImplementation "junit:junit:$junitVersion"
-    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
 }
 
-apply from: 'capacitor.build.gradle'
+apply from: "capacitor.build.gradle"
+
+// Force Java 17 for stability with current environment
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

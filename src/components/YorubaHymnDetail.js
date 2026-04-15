@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './HymnDetail.css';
+import { yorubaHymns as yorubaHymnIndex } from '../data/hymnsYoruba';
 
 function YorubaHymnDetail({ theme }) {
   const { id } = useParams();
@@ -31,16 +32,16 @@ function YorubaHymnDetail({ theme }) {
 
   // Save note to localStorage
   useEffect(() => {
-    const savedNotes = localStorage.getItem('hymnNotes') 
-      ? JSON.parse(localStorage.getItem('hymnNotes')) 
+    const savedNotes = localStorage.getItem('hymnNotes')
+      ? JSON.parse(localStorage.getItem('hymnNotes'))
       : {};
-    
+
     if (note.trim()) {
       savedNotes[id] = note;
     } else {
       delete savedNotes[id];
     }
-    
+
     localStorage.setItem('hymnNotes', JSON.stringify(savedNotes));
   }, [note, id]);
 
@@ -448,7 +449,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "N' iwájú 'tẹ̀ Jèhófà ńlá,",
               "Oríl'-èdè ẹ f' ayọ̀ sin;",
@@ -458,7 +459,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mf", "x", "p", "cr" ],
+            musicSigns: ["mf", "x", "p", "cr"],
             lines: [
               "Ìpá Re láìsí 'rànwọ́ wa,",
               "L' Ó f' àm'ọ̀ dá wa l' ènìyàn;",
@@ -468,7 +469,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹnià at' ìkẹ́ Re ni wá,",
               "Ẹmí at' ara ikú wa,",
@@ -478,7 +479,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "ff", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "A ó fi orin kún ilé Re,",
               "L' ohun gíga l' a ó kọrin,",
@@ -488,7 +489,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àṣẹ Re gbòró bí ayé,",
               "Ìfẹ́ Re bí ayérayé,",
@@ -515,7 +516,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ Yìn Olúwa, ẹ tún ohun ṣe,",
               "Láti kọrin Rẹ̀ nínú àjọ ńlá;",
@@ -525,7 +526,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Kí nwọ́n f' ìtara sìn orúkọ Rẹ̀,",
               "Kí nwọ́n sì f' ìfẹ́ Rẹ̀ hàn,",
@@ -535,7 +536,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Nínú ògo li àwọn ènìyàn Rẹ̀,",
               "Y' ó kọ orin sí Oníbùú-oore,",
@@ -562,7 +563,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Dídùn n' iṣẹ́ náà, Ọba mi,",
               "Láti má yìn orúkọ Rẹ̀,",
@@ -572,7 +573,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Dídùn l'ọjọ́ 'sìmí mímọ́,",
               "Làálàá kò sí fún mi lónìí:",
@@ -582,7 +583,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ọkàn mi ó yọ̀ n'n' Olúwa,",
               "Y'ó yìn iṣẹ́ at' ọ̀rọ̀ Rẹ̀",
@@ -592,7 +593,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "mf", "x", "x", "cr" ],
+            musicSigns: ["mf", "x", "x", "cr"],
             lines: [
               "Èmi ó yan ipò ògo",
               "'Gb' oore-ọ̀fẹ́ bá wẹ̀ mi nú;",
@@ -602,7 +603,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Igbàná, ngó rí, ngó gbọ́, ngó mọ̀",
               "Ohun gbogbo tí mo ti ńfẹ́;",
@@ -629,7 +630,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "EWÓLÉ f' Ọba, òlógo jùlọ,",
               "Ẹ kọrin ipa àti ìfẹ́ Rẹ̀;",
@@ -639,7 +640,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "cr" ],
+            musicSigns: ["x", "x", "x", "cr"],
             lines: [
               "Ẹ sọ t' ipa Rẹ̀, ẹ sọ t' oore Rẹ̀:",
               "'Mọ́lẹ̀ l' aṣọ Rẹ̀ gòbì Rẹ̀ ọ̀run,",
@@ -649,7 +650,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ayé yìí pẹ̀lú ẹ̀kún rẹ̀ gbogbo,",
               "Ọlọ́run, agbára Rẹ̀ l' ó dá wọn:",
@@ -659,7 +660,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "cr", "x", "di", "p" ],
+            musicSigns: ["cr", "x", "di", "p"],
             lines: [
               "Ìtọ́jú Rẹ̀ wà lára gbogbo wọn,",
               "Nínú àfẹ́fẹ́, nínú ìmọ́lẹ̀;",
@@ -669,7 +670,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "mp", "x", "cr", "f" ],
+            musicSigns: ["mp", "x", "cr", "f"],
             lines: [
               "Àwa erúpẹ̀, àw' àláìlera,",
               "'Wọ l' a gbẹ́kẹ̀lé, Ọ̀ kì ó dá ni;",
@@ -679,7 +680,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "ff", "x", "di", "cr" ],
+            musicSigns: ["ff", "x", "di", "cr"],
             lines: [
               "Èwò alagbara, onife julo,",
               "B' awon angeli ti yin O loke,",
@@ -706,7 +707,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "YÌN Olúwa, ọ̀rọ̀ dídùn",
               "Yìn òru 'dákẹ́ jẹ́,",
@@ -716,7 +717,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yìn, ẹ̀nyìn ìjì t' ó dìde",
               "N' ìgbọ́ràn s' àṣẹ Rẹ̀",
@@ -726,7 +727,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ fi ètè nyìn mímọ́ yìn",
               "Ẹ̀nyìn ogun ọ̀run;",
@@ -736,7 +737,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ̀yìn, ẹ̀nyìn mímọ́ tí nyọ̀",
               "Níhìn. Nín 'àṣẹ Rẹ̀",
@@ -746,7 +747,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ yìn gbogbo iṣẹ́ Rẹ̀ tí",
               "Ó wà n' ìkáwọ́ Rẹ̀,",
@@ -773,7 +774,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "OLÚWA pọ̀! Ogun ọ̀run wọlé fún,",
               "Àti ẹ̀nyìn t' ó nrìn l' áyé.",
@@ -783,7 +784,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Olúwa pọ̀! Títóbi Rẹ̀ sì l' ógo,",
               "Ẹ yìn lát' ilé dé ilé,",
@@ -793,7 +794,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "ff", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "Olúwa pọ̀! Àánú Rẹ̀ sì tí pọ̀ tó",
               "Ẹ̀nyìn mímọ́ gbé hárpù yín,",
@@ -820,7 +821,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "YÌN Olúwa, ọ̀run wọlé",
               "Yìn ẹ̀nyìn mímọ́ l' òkè",
@@ -830,7 +831,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yìn Olúwa, Ó ti s' ọ̀rọ̀,",
               "Àwọn ayé gb' ohùn Rẹ̀,",
@@ -840,7 +841,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yìn, nítorí tí Ó l' ọlá,",
               "Ìlérí Rẹ̀ kò lè yí;",
@@ -850,7 +851,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yìn Ọlọ́run ìgbàlà wa,",
               "Ogun ọ̀run, sọ pa Rẹ̀,",
@@ -877,7 +878,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ÌRÁNṢẸ́, ẹ fọnrere Ọba nyín,",
               "Ẹ sì tan 'hìn orúkọ nlá Rẹ̀ ká,",
@@ -887,7 +888,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O npase l' oke, Olugbala nla,",
               "Sibe ara Re ko jina si wa,",
@@ -897,7 +898,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "ff", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "Ogo fun Oba t' O wa lor' ite,",
               "Egb' ohun s' oke, fun Jesu 'lola,",
@@ -924,7 +925,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "GBOGBO ẹ̀dá dapọ̀,",
               "Ẹ jọ yìn Olúwa,",
@@ -936,7 +937,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n ó yẹ k' ìyìn",
               "T' ènìyàn ga jùlọ,",
@@ -948,7 +949,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mf", "x", "x", "x", "cr", "x" ],
+            musicSigns: ["mf", "x", "x", "x", "cr", "x"],
             lines: [
               "Mí sínú ọkàn mi,",
               "Olúwa Oloore,",
@@ -977,7 +978,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "GBOGBO ẹ̀dá lábẹ́ ọ̀run.",
               "Ẹ fi ìyìn fún Ẹlẹ́dá wa:",
@@ -987,7 +988,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "x", "f", "x" ],
+            musicSigns: ["p", "x", "f", "x"],
             lines: [
               "Títí l' àánú Rẹ̀, Olúwa.",
               "Òtítọ́ Rẹ̀ sì dúró láìláì",
@@ -1014,7 +1015,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "DÌDE, yìn Olúwa,",
               "Ẹ̀nyìn, àyànfẹ́ Rẹ̀;",
@@ -1024,7 +1025,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ó rékọjá ìyìn,",
               "Ó ga fún ìbùkún,",
@@ -1034,7 +1035,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "A bá lè rí iná",
               "Lát' órí pẹpẹ Rẹ̀,",
@@ -1044,7 +1045,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run n'ipa wa",
               "Ìgbàlà Rẹ̀ ti wà,",
@@ -1054,7 +1055,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Dìde, yìn Olúwa,",
               "Wọlé n' íwájú Rẹ̀,",
@@ -1081,7 +1082,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "ẸNYÌN ìran Adam,",
               "Da ohun orin pọ̀,",
@@ -1093,7 +1094,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "Ìwọ ọ̀run dídán,",
               "At' òṣùpá òru,",
@@ -1105,7 +1106,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "Ayé tí ńdàn lókè,",
               "Nwọ́n dúró n' ipò wọn,",
@@ -1117,7 +1118,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "mp", "x", "x", "x", "f", "x" ],
+            musicSigns: ["mp", "x", "x", "x", "f", "x"],
             lines: [
               "K' orílẹ̀-èdè bẹ̀rù",
               "Ọba t' ó jẹ lókè,",
@@ -1146,7 +1147,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "BABA wa tí ó mbẹ l' ọ̀run,",
               "Ọwọ́ l' orúkọ Rẹ̀,",
@@ -1156,7 +1157,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Fún wa l' oúnjẹ ọjọ́ lónì,",
               "Dárí ẹ̀ṣẹ wa jì,",
@@ -1166,7 +1167,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Má sìn wa sínú ìdánwò,",
               "Yọ wa nínú ewu,",
@@ -1193,7 +1194,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "WÁ ròhìn Rẹ̀ yíká",
               "K'ó si kọrin ògó;",
@@ -1203,7 +1204,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wá, wọlé n' ìtẹ́ Rẹ̀,",
               "Wá tẹríba fún U;",
@@ -1213,7 +1214,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mp", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Lónì gbọ́ ohùn Rẹ̀,",
               "Máṣe fa 'bínú Rẹ̀,",
@@ -1240,7 +1241,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA t' ó mọ́ jùlọ,",
               "K' á wọlé l' orúkọ Rẹ̀;",
@@ -1250,7 +1251,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B' á ti jẹ́ aláyé tó,",
               "Síbẹ̀ Ó ńgbọ́ orin wa,",
@@ -1260,7 +1261,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níwọ̀n b' á ti wà l' ayé,",
               "Tó ẹ̀ṣẹ wa s' ọ̀nà Rẹ̀,",
@@ -1270,7 +1271,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "ff", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "'Gbàná pẹ̀lú hárpù wa,",
               "Áo m' orin dídùn sójì,",
@@ -1297,7 +1298,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "KÓ mi Olúwa bí a ti",
               "Jẹ́ gbóhùngbò ọ̀rọ̀ Rẹ̀;",
@@ -1307,7 +1308,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tó mi Olúwa kín lè tó",
               "Àwọn t'ó ṣàkó sí ọ̀nà;",
@@ -1317,17 +1318,17 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "di", "x" ],
+            musicSigns: ["f", "x", "di", "x"],
             lines: [
               "Fún mi l' agbára: fi è ṣe",
               "Mi múlẹ̀ lórí àpáta;",
-              "dì Kí nlè na ọwọ́ ìgbàlà",
+              "Kí nlè na ọwọ́ ìgbàlà",
               "S' àwọn t' ó ńrì sínú ẹ̀ṣẹ̀."
             ]
           },
           {
             number: 4,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Kó mi Olúwa kín lè fi",
               "Ẹ̀kọ́ rere Rẹ̀ k' elòmí;",
@@ -1337,7 +1338,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "F' ìsìmí dídùn Rẹ̀ fún mi,",
               "Kí nlè mọ̀ b'ó ti yẹ láti",
@@ -1347,7 +1348,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Jésù, fi è kún Rẹ̀ kún mi,",
               "Fi kún mi li ọ̀pọ̀lọpọ̀,",
@@ -1357,7 +1358,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "cr", "x", "ff", "x" ],
+            musicSigns: ["cr", "x", "ff", "x"],
             lines: [
               "Lò mí, Olúwa, àn' èmi,",
               "Bí Ó ti fẹ́ nígbàkúgbà;",
@@ -1384,7 +1385,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA, a wá 'dọ̀, Rẹ̀,",
               "L'ẹ̀sẹ̀ Rẹ̀ l' a kúnlẹ̀ sí;",
@@ -1394,7 +1395,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L' ọ̀nà tí Ó yàn fún wa,",
               "L' a ńwá Ọ lọ́wọ́lọ́wọ́;",
@@ -1404,7 +1405,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ránṣẹ́ lát' ọ̀rọ̀ Rẹ̀ wá,",
               "Tí ó fi ayọ̀ fún wa;",
@@ -1414,7 +1415,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "p", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Jẹ́ k' a wá k' a sì rí Ọ",
               "Ní Ọlọ́run Olóore;",
@@ -1441,7 +1442,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "JÉSÙ, níb' ẹni Rẹ̀ pàdé,",
               "Níbẹ̀ nwọ́n r' ìtẹ́ àánú Rẹ̀;",
@@ -1451,7 +1452,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Kò s' ògiri t' ó ṣe Ọ mọ́,",
               "Ó ńgbé inú onírelé;",
@@ -1461,7 +1462,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mf", "x", "cr", "x" ],
+            musicSigns: ["mf", "x", "cr", "x"],
             lines: [
               "Olùṣàgàtàn ẹni Rẹ̀,",
               "Sọ àánú Rẹ̀ 'gbàni d'ọ́tún,",
@@ -1471,7 +1472,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "mf", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "K' ár' ipa àdúrà níhìn,",
               "Tí y'ó fún ìgbàgbọ́ l'òkun,",
@@ -1481,7 +1482,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "cr", "x", "f", "x" ],
+            musicSigns: ["cr", "x", "f", "x"],
             lines: [
               "Olúwa, 'Wọ mbẹ́ nítòsí,",
               "N' Apá Rẹ̀, d' Etí Rẹ̀ sílẹ̀;",
@@ -1508,7 +1509,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MO j' àlejò níhìn, 'nú ilé àjèjì,",
               "Ilé mi jìn rere, l'ór' ebúté wúrà;",
@@ -1524,19 +1525,11 @@ function YorubaHymnDetail({ theme }) {
               "'Ṣẹ́ t' àwọn angẹ́lì nkọ l'ọ̀run:",
               "Ẹ b'Ọlọ́run lájà l'Olúwa Ọba wí,",
               "Ẹ ba Ọlọ́run nyìn lájà.",
-              "Èyí ni 'ṣẹ́ tí mo wá jẹ́,",
-              "'Ṣẹ́ t' àwọn angẹ́lì nkọ l'ọ̀run:",
-              "Ẹ b'Ọlọ́run lájà l'Olúwa Ọba wí,",
-              "Ẹ ba Ọlọ́run nyìn lájà.",
-              "Èyí ni 'ṣẹ́ tí mo wá jẹ́,",
-              "'Ṣẹ́ t' àwọn angẹ́lì nkọ l'ọ̀run:",
-              "Ẹ b'Ọlọ́run lájà l'Olúwa Ọba wí,",
-              "Ẹ ba Ọlọ́run nyìn lájà."
             ]
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èyí l'àṣẹ Ọba, k'ènìyàn n'bí gbogbo",
               "Ronúpìwàdà kúrò nínú 'dékùn ẹ̀ṣẹ̀,",
@@ -1546,7 +1539,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé mi dára jù pẹ̀tẹ́lẹ́ Ṣárọ́n lọ,",
               "Níbití 'yè àìnípẹ̀kún at' ayọ̀ wà;",
@@ -1571,7 +1564,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "GBAT' ọkàn àrẹ̀ fẹ́ 'sìmí,",
               "T' ó ńwá Ọlọ́run rẹ̀,",
@@ -1581,7 +1574,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àdùn láti r' òye 'mọ́lẹ̀",
               "T' ó là sí ojú wa,",
@@ -1591,7 +1584,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n wákàtí rẹ̀ ńṣáré;",
               "Kí ó tó dé òpin,",
@@ -1616,7 +1609,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ỌJỌ́ mẹ́fà t' iṣẹ́ kọjá,",
               "Ọkàn t' ìsìmí sì bẹ̀rẹ̀;",
@@ -1626,7 +1619,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí èrò àt' ọpẹ́ wàn dé",
               "Bí ẹbọ tùràrí s'ọ̀run",
@@ -1636,7 +1629,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "p", "x"],
             lines: [
               "Ìdákẹ́ rọ̀rọ̀ kún ọkàn,",
               "Elérí ìsìmí ti mbọ̀,",
@@ -1646,7 +1639,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "A f' ayọ̀ wo 'ṣẹ́ Rẹ̀, Ọba;",
               "Onírúrú, ògbó, ọ̀tún;",
@@ -1656,7 +1649,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "F' òní ṣe 'sìn mímọ́ jalẹ̀.",
               "Sì ṣe pẹ̀lú inú dídùn,",
@@ -1681,7 +1674,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "JÍ, ẹ̀yin mímọ́ jí,",
               "Ẹ k' ọjọ́ owó yìí,",
@@ -1693,7 +1686,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "Ní ọ̀rọ̀ rere yìí",
               "L' Olúwa jí dìde,",
@@ -1705,7 +1698,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x", "x", "x"],
             lines: [
               "Kabíyèsí, Ọba!",
               "Hosanna ndùn lókè;",
@@ -1732,7 +1725,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "KÁBỌ̀ ọjọ́ 'sìmí",
               "T' ó r' àjíndé Jésù;",
@@ -1742,7 +1735,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "cr"],
             lines: [
               "Ọba pa súnmọ́ wa,",
               "Láti bọ́ ènìyàn rẹ̀;",
@@ -1752,7 +1745,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ọjọ́ kan níbití",
               "'Wọ, Olúwa mi ńgbé,",
@@ -1762,7 +1755,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["p", "x", "cr", "x"],
             lines: [
               "Ọkàn mi fẹ́ f' ayọ̀",
               "Dúró n' ipò báyìí;",
@@ -1787,7 +1780,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "mf", "x", "x", "p", "x"],
             lines: [
               "ỌJỌ́ 'sìmí àt' ayọ̀",
               "Ọjọ́ inú dídùn,",
@@ -1800,7 +1793,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "mf", "x", "x", "x"],
             lines: [
               "L' órí rẹ̀ ni dídá ayé",
               "N' ìmọ́lẹ̀ kọ́ ràn sí,",
@@ -1814,7 +1807,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "f", "x", "x", "x", "p", "x"],
             lines: [
               "Lónì fún gbogb' aláàrẹ̀,",
               "Manna ńwọ̀ lát' ọ̀run;",
@@ -1843,7 +1836,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "BÓ ti dùn tó l' ọj' owó yìí,",
               "Ọjọ́ t' ó dára jù,",
@@ -1853,16 +1846,17 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "B' ó ti dùn tó láti l' ayé",
               "Bẹ̀bẹ̀ fún 'dáríjì!",
-              "K' a fi ìgbòyà ọmọ pè"
+              "K' a fi ìgbòyà ọmọ pè",
+              "Baba ti mbẹ̀ l'ọrun"
             ]
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "p", "x"],
             lines: [
               "Láti gb' ọr' Aláàfíà dídùn",
               "Lát' ẹnu ránṣẹ́ Rẹ̀;",
@@ -1872,7 +1866,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "B' ó bá sì jẹ́ pé ó ti wà",
               "Láti lé ẹ̀ṣẹ̀ lọ,",
@@ -1882,7 +1876,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ǹjẹ má wọlé ọjọ́ owó,",
               "Ọjọ́ t' ó dára jù,",
@@ -1907,7 +1901,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "ÌMỌ́LẸ̀ ọjọ́ 'sìmí",
               "Jẹ́ l' ó kù mọ́ wa l' ójú,",
@@ -1917,7 +1911,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B' ìmọ́lẹ̀ ti ńrẹkọjá,",
               "Òru t' àṣọ̀bọ̀ ayé;",
@@ -1927,7 +1921,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Aláàfíà kún ayé;",
               "Ti Ọlọ́run mímọ́ ni, –",
@@ -1937,7 +1931,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Síbẹ̀ Ẹ̀mí dúró ti",
               "Àwọn t' ó ńsìn l' àṣálẹ̀,",
@@ -1947,7 +1941,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "pp", "x"],
             lines: [
               "Jésù jẹ́ k' ìsìmí wa",
               "Jẹ́ ti ayọ̀ nínú Rẹ̀,",
@@ -1972,7 +1966,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "BABA, aniyan àt' ẹ̀rù",
               "Lè sú l' ọjọ́ ọ̀la,",
@@ -1982,7 +1976,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "A k'y'ó da ọkàn sí méjì",
               "Láti sìn n' ilé Rẹ̀;",
@@ -1992,7 +1986,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Sùn l' òní, aniyan ọkàn,",
               "Fún ohun tí ayé;",
@@ -2002,7 +1996,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ayé mbẹ̀ lí ọjọ́ ọ̀la",
               "Láti sa ipa nyín;",
@@ -2027,7 +2021,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "OLÚWA, ìsìmí Rẹ̀ dùn;",
               "Ṣùgbọ́n t' òkè ju ti ayé lọ;",
@@ -2037,7 +2031,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Kò sí àrẹ̀, kò sí iṣẹ́,",
               "Ẹ̀ṣẹ̀, ikú kí y'ó dé 'bẹ̀",
@@ -2047,7 +2041,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Kò sí ìdàgírì ọ̀tá;",
               "Ìsìmí láìsí aniyan;",
@@ -2057,7 +2051,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Bẹ̀rẹ̀, ọjọ́ t' a ti ńrètí,",
               "Mo sí ayé ìrora yìí,",
@@ -2082,7 +2076,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "GBOGBO ọgún ọ̀run nró kẹ̀kẹ́,",
               "Àngẹ́lì mú hárpù wọn,",
@@ -2096,7 +2090,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jẹ́k' a pẹ̀lú àwọn t' ọ̀run",
               "Yìn Ọlọ́run Ọba wa;",
@@ -2110,7 +2104,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "K' ó tó d' ìgbà náà, ẹ jẹ́kí",
               "A má sìn l' ọjọ́ keje,",
@@ -2139,7 +2133,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ẸMÍ wa bá w' ápè,",
               "L' ọjọ́ ìsìmí yìí;",
@@ -2149,7 +2143,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Asán li orin wa,",
               "Ìwásù wa asán,",
@@ -2159,7 +2153,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Òjíṣẹ́ Ọ̀run ńlá,",
               "Tani mọ̀ jẹ́ bí Rẹ̀?",
@@ -2169,7 +2163,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Wa kọ́ wa láti bẹ̀,",
               "L' ohun t' a bá tọ́rọ̀;",
@@ -2179,7 +2173,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Nípa 'ránlọ́wọ́ Rẹ̀",
               "L'a n' ìrètí àánú,",
@@ -2204,7 +2198,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ÀBẸ́, a fẹ́ rí ọ,",
               "Ọjọ́ 'sìmí rere,",
@@ -2214,7 +2208,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ó kọ́ w' ápè Krístì",
               "Jíǹde nínú òkú;",
@@ -2224,7 +2218,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ó sọ t' àjíǹde wa",
               "Gẹ́gẹ́ bí ti Jésù;",
@@ -2234,7 +2228,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ìwọ sọ t' ìsìmí,",
               "T' ìlú àlàáfíà;",
@@ -2259,7 +2253,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "mf", "x", "ff", "x", "mf", "x"],
             lines: [
               "JÉSÙ, a fẹ́ pàdé,",
               "L' ọjọ́ Rẹ̀ mímọ́ yìí;",
@@ -2273,7 +2267,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "A kò gbọ́dọ̀ lọ́ra,",
               "L' ọjọ́ Rẹ̀ mímọ́ yìí;",
@@ -2287,7 +2281,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "ff", "x", "x", "x"],
             lines: [
               "A tẹ́tí s' ọ̀rọ̀ Rẹ̀,",
               "L' ọjọ́ Rẹ̀ mímọ́ yìí;",
@@ -2316,7 +2310,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "", "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "OSE, ose rere,",
               "Ìwọ ọjọ́ ìsìmí;",
@@ -2330,7 +2324,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "", "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ose, ose rere,",
               "A k' iyọ̀ sísẹ́ lóní;",
@@ -2344,7 +2338,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "", "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ose, ose rere,",
               "Àgọ́ tilẹ̀ nwípé,",
@@ -2358,7 +2352,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "", "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ose, ose rere,",
               "Wákàtí rẹ wù mí;",
@@ -2387,7 +2381,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "mf", "cr"],
             lines: [
               "OJO 'mọlẹ l' eyi,",
               "K' ìmọ́lẹ̀ wa l'óní;",
@@ -2397,7 +2391,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["p", "mf", "dc", "mp"],
             lines: [
               "Ọjọ́ ìsìmí l'eyi,",
               "S' agbára wa d' ọ̀tún;",
@@ -2407,7 +2401,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "mf", "cr"],
             lines: [
               "Ọjọ́ àlàáfíà,",
               "F' àlàáfíà fún wa;",
@@ -2417,7 +2411,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "mf", "cr"],
             lines: [
               "Ọjọ́ àdúrà ni",
               "K' àiyé súnmọ́ ọ̀run;",
@@ -2427,7 +2421,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "mf", "ff"],
             lines: [
               "Ọba ọjọ́ l' eyi,",
               "Fún wa ní ìsọjí;",
@@ -2452,7 +2446,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "EYI l' ọjọ́ Olúwa dá,",
               "Ó pè 'gbà ná n Tirẹ̀;",
@@ -2462,7 +2456,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lóní, Ó jíǹde n'nú òkú,",
               "Ìjọba Satan' tú;",
@@ -2472,7 +2466,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "mf", "x"],
             lines: [
               "Hosanna sí Ọba t' a yìn,",
               "S' Ọmọ mímọ́ Dafidi",
@@ -2482,7 +2476,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Abùkún l' Olúwa t' Ó wa",
               "N' iṣẹ́ ọ̀rẹ́ ọ̀fẹ́;",
@@ -2492,7 +2486,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "Hosanna li ohùn gòrò",
               "L'ènìyàn Rẹ lè wí;",
@@ -2517,7 +2511,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "JÉSÙ a w' ọ́dọ̀ Rẹ",
               "L' ọjọ́ Rẹ mímọ́ yìí;",
@@ -2527,7 +2521,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Dárí ẹ̀ṣẹ jì wa",
               "Fún wa l' Ẹ̀mí Mímọ́",
@@ -2537,7 +2531,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "F' ífẹ́ kún àyà wa",
               "Bùkún olùkọ́ wa;",
@@ -2562,7 +2556,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "", "x", "x", "x"],
             lines: [
               "FI ìbùkún Rẹ tú wa ká,",
               "Fi ayọ̀ kún ọkàn wa;",
@@ -2574,7 +2568,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "mf", "x", "cr", "x"],
             lines: [
               "Ọpẹ́ at' ìyìn l' á ńfún Ọ,",
               "Fún ìhìnrere ayọ̀;",
@@ -2586,7 +2580,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "cr", "x", "f", "x"],
             lines: [
               "Njẹ́, nígbàt'á bá sípẹ wa",
               "Láti f' àiyé yìí sílẹ̀,",
@@ -2613,7 +2607,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN àwa fẹ́,",
               "Ilé t' ọlá Rẹ wà;",
@@ -2623,7 +2617,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ilé àdúrà ni,",
               "Fún àwọn ọmọ Rẹ",
@@ -2633,7 +2627,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwa fẹ́ àṣẹ Rẹ,",
               "Tí ntẹ́ ọkàn l' ọ̀run",
@@ -2643,7 +2637,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwa fẹ́ ọ̀rọ̀ Rẹ,",
               "Ọ̀rọ̀ àlàáfíà",
@@ -2653,7 +2647,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "cr", "x"],
             lines: [
               "Àwa fẹ́ orin Rẹ,",
               "Tí a nkọ l' àiyé yìí;",
@@ -2663,7 +2657,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "mp", "x", "x"],
             lines: [
               "Jésù Olúwa wa,",
               "Bùsi 'fẹ́ wa níhìn;",
@@ -2688,7 +2682,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "LI òwúrọ̀ Ìwọ ó gbọ́",
               "Ohùn mi, Olúwa;",
@@ -2698,7 +2692,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Sí òkè tí Jésù lọ bẹ̀",
               "Fún àwọn ènìyàn Rẹ;",
@@ -2708,7 +2702,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "p", "x"],
             lines: [
               "Ọba níwà ju Ẹni tí",
               "Ẹlẹ́ṣẹ kò lè gbé;",
@@ -2718,7 +2712,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n èmi y'ó wa 'lé Rẹ",
               "Láti tọ́ àánú wò,",
@@ -2728,7 +2722,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ẹ̀mí Rẹ ìbá lè má tọ́",
               "Ẹ̀ṣẹ mi sírẹrẹ.",
@@ -2753,7 +2747,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "NI kùtù, mo dé Olúwa",
               "Láti wá ojú Rẹ,",
@@ -2763,7 +2757,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B' ó ti wù kí àṣẹ dùn tó,",
               "Kò lè tẹ́ mi l' ọ̀run;",
@@ -2773,7 +2767,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àiyé pa, pẹ̀lú ayọ̀ rẹ",
               "Kò tó m' orí mi yá,",
@@ -2783,9 +2777,9 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
-              "Bẹ́ẹ̀, títí èmi ó pín,",
+              "Bẹ̀, títí èmi ó pín,",
               "Ngó bùkún Ọba mi,",
               "Ngó gbé ọwọ́ ẹbẹ̀ sókè,",
               "Ngó f' ètè mi kọrin."
@@ -2808,7 +2802,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "JÉSÙ bùkún ọ̀rọ̀ Rẹ,",
               "K' ó lè tètè f' ipa hàn;",
@@ -2818,7 +2812,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Bùkún iṣẹ́ àánú Rẹ,",
               "Fi agbára Rẹ tẹ̀lé:",
@@ -2828,7 +2822,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Jésù sọ f' àiyé k'ó yọ̀,",
               "Ran òtítọ́ rẹ kákírí,",
@@ -2853,7 +2847,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "ÀKÓKÒ 'rẹ gbat' ẹ̀dá tẹ́,",
               "Làti b' Ọlọ́run rẹ s' ọ̀rọ̀,",
@@ -2863,7 +2857,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbat' aníyàn àiyé jọ̀wọ́",
               "Ìjọba àìyà rẹ lọ́wọ́,",
@@ -2873,7 +2867,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbat' Ọlọ́run pa sún mọ́ ni,",
               "Làti f' ayọ̀ gbọ́ t' ènìyàn Rẹ,",
@@ -2883,7 +2877,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìbànígbé Rẹ ni fún ni,",
               "Ní ìtọ́wọ́ ayọ̀ tí ńbọ̀,",
@@ -2908,7 +2902,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "JÍ ọkàn mi, ba òrùn jí,",
               "Múra sí iṣẹ́ ọjọ́ rẹ;",
@@ -2918,7 +2912,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mp", "", "", "" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ògo fún Ẹnití ó sọ mi,",
               "T' ó tú mi lára l' ọ́jọ́ òrùn;",
@@ -2928,7 +2922,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mp", "", "", "" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Olúwa mọ túnẹ jẹ jẹ,",
               "Tú ẹ̀ṣẹ ká b' ìrí ọ̀rọ̀;",
@@ -2938,7 +2932,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "mp", "", "", "" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ọ̀rọ̀ at' iṣẹ́ mi òní,",
               "Kí nwọn lè rí bí ẹ̀kọ́ Rẹ;",
@@ -2963,7 +2957,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN kùtù ohùn Rẹ",
               "L' ó mú òrùn f' ayọ̀ dìde,",
@@ -2973,7 +2967,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Gẹ́gẹ́ bí òrùn, mba lè fi",
               "Ayọ̀ ṣe iṣẹ́ ọjọ́ mi,",
@@ -2983,7 +2977,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mp", "", "", "" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Fi ẹ̀kọ́ Rẹ s' àmọ̀nà mi,",
               "K' Ó sì gbà mi sí ayọ̀ rẹ,",
@@ -3008,7 +3002,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x", "x", "x"],
             lines: [
               "1. GBAT' ojú mi bá ṣe pẹ̀kí",
               "   'Mólẹ̀ tó ṣe n' ìlà òrùn,",
@@ -3020,7 +3014,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mp", "", "", "", "p", "" ],
+            musicSigns: ["mp", "x", "x", "p", "x", "x"],
             lines: [
               "2. Gba m' bá ẹbọ òwúrọ̀",
               "   Wá síwájú Ọba òrùn,",
@@ -3032,7 +3026,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "p", "", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x", "x", "x"],
             lines: [
               "3. 'Gbàtí iṣẹ́ ọjọ́ parí,",
               "   Tí ara arẹ fé 'sìmí,",
@@ -3044,7 +3038,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "p", "", "", "", "f" ],
+            musicSigns: ["p", "x", "x", "x", "f", "x"],
             lines: [
               "4. Gba t' orùn àiyé mi bá wọ̀,",
               "   T' ìjà àt' iṣẹ́ mi d' òpín,",
@@ -3071,7 +3065,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ỌKÀN mi, ojú rẹ tún rí",
               "Ọjọ́ tuntun tí ó ńbọ̀,",
@@ -3081,7 +3075,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ọjọ́ àná ti kọjá lọ",
               "Pẹ̀lú gbogbo àṣìṣe rẹ̀;",
@@ -3091,7 +3085,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Olúwa, darí mi lóde òní",
               "Ní gbogbo ohun tí mo bá ṣe;",
@@ -3101,7 +3095,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "mp", "", "f", "" ],
+            musicSigns: ["mp", "x", "f", "x"],
             lines: [
               "Nígbàtí òrùn bá wọ̀ lọ",
               "Àti tí mo bá padà sí ilé,",
@@ -3126,7 +3120,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x", "x", "x"],
             lines: [
               "NÍGBÀT' ìmọ́lẹ̀ òwúrọ̀",
               "Ba ńti ìlà òrùn tàn wá,",
@@ -3138,7 +3132,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mp", "", "", "p", "", "" ],
+            musicSigns: ["mp", "x", "x", "p", "x", "x"],
             lines: [
               "Gbàt mbá m'ẹbọ ọ̀rọ̀ wá",
               "'Wájú Ọlọ́run t' Ó l'ògo,",
@@ -3150,7 +3144,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "p", "", "", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x", "x", "x"],
             lines: [
               "'Gbà gbogbo iṣẹ́ ọjọ́ pín,",
               "Tí ara sì ńfẹ́ lọ sìmí,",
@@ -3162,7 +3156,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "p", "", "", "", "f", "" ],
+            musicSigns: ["p", "x", "x", "x", "f", "x"],
             lines: [
               "'Gbàt' òrùn àiyé mi bá wọ̀,",
               "Tí kò sí sí wàhálà mọ́,",
@@ -3189,7 +3183,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "", "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "KRIST, ògo, òlọ́lá,",
               "Ìwọ Ìmọ́lẹ̀ àiyé,",
@@ -3201,7 +3195,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "", "", "cr", "", "" ],
+            musicSigns: ["p", "x", "x", "cr", "x", "x"],
             lines: [
               "Òkùnkùn l'òwúrọ̀ jẹ́",
               "B' Ìwọ kò pẹ̀lú rẹ wá;",
@@ -3213,7 +3207,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "cr", "", "", "", "", "f" ],
+            musicSigns: ["mf", "x", "x", "x", "x", "f"],
             lines: [
               "Wá bẹ ọkàn mi mí yí wò,",
               "Lé òkùnkùn ẹ̀ṣẹ lọ;",
@@ -3240,7 +3234,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ÒTUN ìfẹ́ l' ó ńfàràhàn,",
               "Bí a ti ńjí l' ọjọ́júmọ́,",
@@ -3250,7 +3244,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òtun àánú l' ọjọ́júmọ́",
               "L'ó ńrà yí wa ká n' òkun,",
@@ -3260,7 +3254,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìfẹ́ sì òré a d'òtun,",
               "'Gbà ẹwà òrùn bá wò wọn,",
@@ -3270,7 +3264,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa nínú ìfẹ́ Rẹ,",
               "Mú wa yẹ fún 'sìmí òrùn;",
@@ -3295,7 +3289,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ, Olúwa oré-ọ̀fẹ́,",
               "'Wọ ìmọ́lẹ̀ ojú Bàbá,",
@@ -3305,7 +3299,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wá, Òrùn 'fẹ́ òrùn mímọ́,",
               "Ràn àṣẹ Rẹ lát' òkè wá,",
@@ -3315,7 +3309,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ ni k' a p' ọjọ́ gbogbo mọ́,",
               "Kí ọ̀rọ̀ wa f' ìrẹ̀lẹ̀ hàn,",
@@ -3325,7 +3319,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Jésù, ọjọ́ gbogbo l' ó ńmú",
               "Àwòrán Rẹ wá s' ọkàn wa;",
@@ -3350,7 +3344,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "NÍNÚ gbogbo ewu òru,",
               "Olúwa l' Ó ńṣọ wa;",
@@ -3360,7 +3354,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa pa wa mọ́ lóní,",
               "Fi apá Rẹ ṣọ wa,",
@@ -3370,7 +3364,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K' ọ̀rọ̀ wa àti ìwà wa",
               "Wípé, tirẹ l' àwa;",
@@ -3380,7 +3374,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má jẹ́ k' a pàdé lọ́dọ̀ Rẹ,",
               "Olùgbàlà òwọn:",
@@ -3405,7 +3399,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "OLÚWA mi, mo ńjáde lọ,",
               "Láti ṣe iṣẹ́ ọjọ́ mi;",
@@ -3415,7 +3409,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Iṣẹ́ t' Ó yàn mi l' àánú Rẹ",
               "Jẹ́ kí nlè ṣe táyọtáyọ;",
@@ -3425,7 +3419,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Dáàbòbò mi lọ́wọ́ 'dànwò,",
               "K' Ó pa ọkàn mi mọ́ kúrò",
@@ -3435,7 +3429,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ t'ójú Rẹ r' ọkàn mi,",
               "Má wà lọ́wọ́ ọ̀tún mi làí,",
@@ -3445,7 +3439,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́kí nrẹrú Rẹ t'ó fúyẹ̀,",
               "Kí nmá ṣọ́ra nígbàgbogbo,",
@@ -3455,7 +3449,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ohunkóhun t' Ó fi fún mi,",
               "Jẹ́kí nlè lò fún ògo Rẹ,",
@@ -3480,7 +3474,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "p", "mf", "p", "f" ],
+            musicSigns: ["p", "mf", "p", "f"],
             lines: [
               "MÍMỌ́, mímọ́, mímọ́! Olódùmarè!",
               "Ní kùtùkùtù n'Ìwọ ó gbọ́ orin wa;",
@@ -3490,7 +3484,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "mf", "", "cr", "f d" ],
+            musicSigns: ["mf", "x", "cr", "fd"],
             lines: [
               "Mímọ́, mímọ́, mímọ́! Àwọn tí òrùn nyìn",
               "Nwọn ńfi adé wúrà wọn lélẹ̀ y' ìtẹ́ ká:",
@@ -3500,7 +3494,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "p", "", "mf", "" ],
+            musicSigns: ["p", "", "mf", ""],
             lines: [
               "Mímọ́, mímọ́, mímọ́! B' òkùnkùn pa Ọ mọ́,",
               "Bí ojú ẹlẹ́ṣẹ kò lè rí ògo Rẹ;",
@@ -3510,7 +3504,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "f", "ff", "f cr", "ff" ],
+            musicSigns: ["f", "ff", "f cr", "ff"],
             lines: [
               "Mímọ́, mímọ́ mímọ́! Olódùmarè!",
               "Gbogbo iṣẹ́ Rẹ n' ilẹ̀ l' òkè l' ó ńyìn Ọ;",
@@ -3536,7 +3530,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "MO fẹ́ ìyẹra s'ápakàn",
               "Kúrò l'érò t'àiyé,",
@@ -3546,7 +3540,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Mo fẹ́ wá níkan kí nsọkún",
               "Ti ìròbìnújẹ́,",
@@ -3556,7 +3550,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "p", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Mo fẹ́ ro àánú t'ó kọjá,",
               "Bẹ́ẹ̀ fún oore tí ńbọ̀,",
@@ -3566,7 +3560,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ má fi ìgbàgbọ́ wò",
               "Ohun dídán t'ọ̀run,",
@@ -3576,7 +3570,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "p", "", "", "" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Nígbà làálà àiyé bá pín,",
               "Kí wíwo rẹ̀ lè jọ",
@@ -3602,7 +3596,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "JẸ́ ní ìmọ́lẹ̀ ọjọ́",
               "Para kúrò lójú mi,",
@@ -3612,7 +3606,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Wọ t'ójú Rẹ̀ rí yíká,",
               "Ọba àrínú r'òde,",
@@ -3622,7 +3616,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "'Mọ́lẹ̀ ọjọ́ fẹ́rẹ́ lọ",
               "L'ójú mi títí láìláì,",
@@ -3648,7 +3642,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mf", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "LÁTI orí pẹpẹ ọkàn wa,",
               "Jẹ́ kí òrùn dìde;",
@@ -3658,7 +3652,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìṣẹjú àt'ọ̀pọ̀ àánú",
               "L'a fi s'ọjọ́ òní,",
@@ -3668,7 +3662,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ojúrẹ́ àt'ayọ̀ títún,",
               "Bẹ̀rẹ̀ orin òtún,",
@@ -3694,7 +3688,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "mp", "", "", "", "cr", "", "mf", "" ],
+            musicSigns: ["mp", "x", "x", "x", "cr", "x", "mf", ""],
             lines: [
               "K'á tó sùn, Olùgbàlà wa,",
               "Fún wa n'íbùkún alẹ́;",
@@ -3708,7 +3702,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "p", "", "mf", "", "p", "", "mf", "" ],
+            musicSigns: ["p", "x", "mf", "x", "p", "x", "mf", "x"],
             lines: [
               "B'ìparun tilẹ̀ yí wa ká,",
               "Tí ọfà ńfọ́ wa kọjá,",
@@ -3722,7 +3716,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "", "", "", "", "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ní ìrẹlẹ̀, a f'ara wa",
               "Sábẹ́ àbò Rẹ̀, Baba;",
@@ -3752,7 +3746,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ òní ló tán,",
               "Òru súnmọ́lẹ̀:",
@@ -3762,7 +3756,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òkùnkùn bo ilé,",
               "Àwọn 'ráwọ yọ;",
@@ -3772,7 +3766,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Jésù f'òrùn dídùn,",
               "F'ẹni àlàárẹ́;",
@@ -3782,7 +3776,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Jẹ́ k'ọmọ kékeré,",
               "Là ara rere;",
@@ -3792,7 +3786,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "mf", "x"],
             lines: [
               "Má tọ́jú àlàìsàn,",
               "Tí kò r'òrùn sùn;",
@@ -3802,7 +3796,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Nínú gbogbo òru,",
               "Jẹ́ k'angẹli Rẹ̀,",
@@ -3812,7 +3806,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbat'ilé bá sì mọ́,",
               "Jẹ́ k'ẹ̀mí dìde,",
@@ -3822,7 +3816,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ògo ni fún Baba,",
               "Àti fún Ọmọ,",
@@ -3848,7 +3842,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x", "x", "cr"],
             lines: [
               "Wò ìmọ́lẹ̀! láàrin òkun àiyé,",
               "Má sin mi lọ.",
@@ -3860,7 +3854,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbàkan rí, èmi kò bẹ́ Ọ pé",
               "Má sin mi lọ;",
@@ -3872,7 +3866,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "mf", "x", "x", "x", "x"],
             lines: [
               "Ipa Rẹ̀ l'ó ti ńdì mí mú, yíò sì",
               "Má sin mi lọ;",
@@ -3884,7 +3878,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "p", "x"],
             lines: [
               "Kò tó d'ìgbà ná, lọ́nà àiyé yìí",
               "T'Ìwọ ti rìn,",
@@ -3912,7 +3906,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ẹrọ dídùn kan nsọ",
               "S'ọkàn mi firifiri,",
@@ -3922,7 +3916,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Mo súnmọ́, 'tẹ̀ nlá ni",
               "Mo súnmọ́ 'òkun kristali,",
@@ -3932,7 +3926,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Mo súnm' ópínẹ mi,",
               "T'á sọ èrù kalẹ̀,",
@@ -3942,7 +3936,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "cr", "x"],
             lines: [
               "Lágbédéméjì èyí,",
               "N'ìsan-omi dúdú:",
@@ -3952,7 +3946,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Jésù, jọ̀ sé mi pé,",
               "Sọ 'gbàgbọ́ mi di líle:",
@@ -3962,7 +3956,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Kí nmọ̀ p'Ó súnmọ́ mi,",
               "Gbà mbá njìn sí kòtò:",
@@ -3988,7 +3982,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Bàbá, a tún pàdé l'ọkọ Jésù,",
               "A sì wá tẹríba láb' ẹsẹ̀ Rẹ;",
@@ -3998,7 +3992,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "A yìn Ọ fún ìtọ́jú 'gbàgbogbo,",
               "'Jojúmọ́ l'á ò má sọ t'íṣẹ́ Rẹ:",
@@ -4008,7 +4002,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "mf"],
             lines: [
               "Ó ṣe! a kò yé fún ìfẹ́ nlá Rẹ,",
               "A sàkò kúrò lọ́dọ̀ Rẹ pọ́jù:",
@@ -4018,7 +4012,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "cr"],
             lines: [
               "Nípa ọkọ t'ó bòr' ohun gbogbo,",
               "Nípa ìfẹ́ t'ó ta 'fẹ́ gbogbo yọ,",
@@ -4044,7 +4038,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ìwọ ìmọ́lẹ̀ ọkàn mi,",
               "Lí ọdọ̀ Rẹ òru kò sí,",
@@ -4054,7 +4048,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["pp", "x", "x", "x"],
             lines: [
               "Nígbàt' òrùn alẹ́ dídùn",
               "Bá ńpa ìpẹnpẹjú mi dé,",
@@ -4064,7 +4058,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Bá mi gbé l'òrò tít' alẹ́",
               "Láìsí Rẹ, èmi kò lè wà;",
@@ -4074,7 +4068,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "cr"],
             lines: [
               "B'àwọn òtòsì ọmọ Rẹ",
               "Ta 'pa sí òrò Rẹ l'ónì,",
@@ -4084,7 +4078,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "dr", "rp"],
             lines: [
               "Bùkún fún àwọn aláìsàn,",
               "Nínú ọpọ̀ ìbùkún Rẹ;",
@@ -4094,7 +4088,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["cr", "x", "x", "f"],
             lines: [
               "Sùré fún wa nígbàt' a jí,",
               "K'á tó m'ohun àiyé yìí ṣe.",
@@ -4120,7 +4114,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Olúwa, ọjọ́ t'Ó fún wa pín",
               "Òkùnkùn sì dé l'àṣẹ Rẹ",
@@ -4130,7 +4124,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "A dúpẹ́ tí Ìjọ Rẹ kò ńsùn,",
               "B'àiyé tí ńyí lọ s'ìmọ́lẹ̀,",
@@ -4140,7 +4134,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B'ilé sì tín mọ́ lójojúmọ́",
               "Ní orílẹ̀ àt'ẹ́kùsù,",
@@ -4150,7 +4144,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀run t'ó wọ̀ fún wa, sì tí là",
               "S'àwọn ẹdá ìwọ-òrun,",
@@ -4160,7 +4154,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀, Olúwa, láì n'ìjọba Rẹ,",
               "Kò dàbí ìjọba àiyé;",
@@ -4186,7 +4180,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mf", "x", "p", "x"],
             lines: [
               "L'ójú alẹ́, 'gbat'òrùn wọ̀,",
               "Nwọn gbé abìrùn wọdọ̀ Rẹ:",
@@ -4196,7 +4190,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["mf", "x", "cr", "x"],
             lines: [
               "Jésù a dé l'ój' alẹ́ yìí,",
               "A sùnmọ́, t'àwa t'àrùn wa,",
@@ -4206,7 +4200,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Olùgbàlà, wò òsì wa:",
               "Ọmí kò san, 'mí bànújẹ́,",
@@ -4216,7 +4210,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọmí mọ̀ pé, àṣàn l'àiyé",
               "Bẹ́ẹ̀ ni nwọn kò f'àiyé sílẹ̀;",
@@ -4226,7 +4220,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò s'ọkàn nínú wa t'ó pé,",
               "Gbogbo wa sì ní ẹlẹ́ṣẹ̀;",
@@ -4236,7 +4230,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n Jésù Olùgbàlà,",
               "Ẹni bí àwa n'Ìwọ ṣe:",
@@ -4246,7 +4240,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Agbar' ọwọ́ Rẹ wá sílẹ̀,",
               "Ọ̀rọ̀ Rẹ sì lí agbára:",
@@ -4272,7 +4266,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "x", "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "Ìfẹ́ Rẹ dá wa sí lónì,",
               "L'àré a sì dùbúlẹ̀;",
@@ -4284,7 +4278,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "p", "x"],
             lines: [
               "Ẹrọ àt'àlejò l'àiyé,",
               "A ńgbé àárín àwọn ọ́tá!",
@@ -4312,7 +4306,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mp", "x", "cr", "x"],
             lines: [
               "Òrùn sì nyára wọ̀,",
               "Ọjọ́ ńkú lọ;",
@@ -4322,7 +4316,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["pp", "x", "x", "x"],
             lines: [
               "B'orí Jésù ti tẹ́",
               "L'agbélébù,",
@@ -4332,7 +4326,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ ni mo f'ẹ̀mí mi",
               "Fún: l'á fún tán,",
@@ -4342,7 +4336,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Njẹ ẹ̀mí ò sìmí",
               "Lọ́dọ̀ Rẹ̀ jẹ́;",
@@ -4352,7 +4346,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Fẹ́ Tìrẹ ni ṣíṣe",
               "L'ọ̀nàkọ̀nà:",
@@ -4362,7 +4356,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ l'ẹ̀mí yẹ: ṣùgbọ́n",
               "Ẹ̀mí kò, Ọn",
@@ -4372,7 +4366,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Mẹ́talókansọ́sọ",
               "Ọlọ́run kan,",
@@ -4398,7 +4392,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ògó f' Ọlọ́run l' àlẹ́ yì",
               "Fún gbògbó òré ìmọ́lẹ̀,",
@@ -4408,7 +4402,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Olúwa, f' ẹ̀ṣẹ̀ mí jí mí,",
               "Nítorí Ọmọ Rẹ lónìí;",
@@ -4418,7 +4412,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "p", "cr"],
             lines: [
               "Kọ́ mí kí nwá, kín lè má wò",
               "Ìbojì t'èmí b' ẹni mí;",
@@ -4428,7 +4422,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Jẹ́ k' ọkàn mí lè sùn lé Ọ",
               "K' òòrùn dídùn p' ojú mí dé;",
@@ -4438,7 +4432,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Bí mò bá dùbúlẹ̀ láìsùn,",
               "F' èrò òrun kún ọkàn mí",
@@ -4448,7 +4442,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "Yín Olúwa, gbògbó ẹ̀dá",
               "Tí mbẹ́ n' ìsàlẹ̀ àiyé yì;",
@@ -4474,7 +4468,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Jésù, bùkún wa k' á tó lọ:",
               "Gbìn ọ̀rọ̀ Rẹ sí àyà wa:",
@@ -4484,25 +4478,15 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["cr", "p"],
             lines: [
-              "Nígbà ìyè àt' ikú wa,",
-              "Jésù, jàre ṣe 'mọ́lẹ̀ wa.",
-              "Nígbà ìyè àt' ikú wa,",
-              "Jésù, jàre ṣe 'mọ́lẹ̀ wa.",
-              "Nígbà ìyè àt' ikú wa,",
-              "Jésù, jàre ṣe 'mọ́lẹ̀ wa.",
-              "Nígbà ìyè àt' ikú wa,",
-              "Jésù, jàre ṣe 'mọ́lẹ̀ wa.",
-              "Nígbà ìyè àt' ikú wa,",
-              "Jésù, jàre ṣe 'mọ́lẹ̀ wa.",
               "Nígbà ìyè àt' ikú wa,",
               "Jésù, jàre ṣe 'mọ́lẹ̀ wa."
             ]
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ilé ti ṣú òrun ti wọ̀;",
               "'Wọ sì ti ṣírò ìwà wa:",
@@ -4512,7 +4496,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Jésù, dárìjì wa: fún",
               "L' àyọ̀, àti ẹ̀rù mímọ́,",
@@ -4522,7 +4506,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Làlà dùn, 'torí Ìwọ ṣe rí:",
               "Aníyàn fẹ́rẹ́, Ọ ṣe rí:",
@@ -4532,7 +4516,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "A mbẹ̀ Ọ f'àwọn aláìní,",
               "F' ẹlẹ́ṣẹ̀ àt' àwọn t' á fẹ́:",
@@ -4542,7 +4526,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Jésù, bùkún wa, – ilé ṣú:",
               "Tìkálárẹ wa bá wàg bẹ̀:",
@@ -4568,7 +4552,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["f", "x", "x", "p"],
             lines: [
               "Olùgbàlà, a tún fẹ́ f' òhun kan,",
               "Yín orúkọ Rẹ k' á tó túká lọ;",
@@ -4578,7 +4562,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "cr", "mf", "x"],
             lines: [
               "F' Àlàáfíà fún wa, b' á tín rẹ́ 'lé",
               "Jẹ́ k' á parí ọjọ́ yìí pẹ̀lú Rẹ;",
@@ -4588,7 +4572,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "cr", "mf", "x"],
             lines: [
               "F' àlàáfíà fún wa l' òru òní,",
               "Sọ òkùnkùn rẹ̀ d' ìmọ́lẹ̀ fún:",
@@ -4598,7 +4582,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "cr", "mf", "p"],
             lines: [
               "F' Àlàáfíà fún wa ní àyè wa,",
               "Rẹ́ wa l' ẹ́kùn, k' Ó sì gbé wa n' ìjà:",
@@ -4624,7 +4608,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ìwọ tí gbogbo ẹ̀dá ńsìn",
               "L' àrá erúpẹ̀ yìí,",
@@ -4634,7 +4618,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàtí mo f' ìyànu wò",
               "Ògo 'ṣẹ Rẹ l' òkè,",
@@ -4644,7 +4628,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa kíl' ènìyàn tí",
               "'Wọ fẹ́ má ronú rẹ̀?",
@@ -4654,7 +4638,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ìwọ tí gbogbo ẹ̀dá ńsìn",
               "L' àrá erúpẹ̀ yìí,",
@@ -4680,7 +4664,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ọlọ́run wa àìyéràìyé,",
               "Òré Rẹ ńtàn lókè òrun:",
@@ -4690,7 +4674,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òré Rẹ dúró títí làì,",
               "Bí òkè tí f' ìdí múlẹ̀;",
@@ -4700,7 +4684,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "p", "x"],
             lines: [
               "Òré-ọ̀fẹ́ Rẹ tí pọ̀ tó,",
               "Níbìt' ìtúnú wa ti ńwá!",
@@ -4710,7 +4694,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ní inú ṣẹ́ṣẹ́ ilé Rẹ,",
               "Síbẹ̀ àó rí oúnjẹ dídùn;",
@@ -4736,7 +4720,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ọkàn mi, tún ròhìn",
               "Ẹnìt àánú Rẹ, pọ̀,",
@@ -4746,7 +4730,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìpá Rẹ t' ẹ̀ṣẹ̀ wa;",
               "Àánú ìfìjì Rẹ,",
@@ -4756,7 +4740,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí òrun ti ga jù",
               "Ilẹ̀ tí a ńtẹ̀ lọ,",
@@ -4782,7 +4766,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yín 'Lúwa, ọkàn mi;",
               "Kí gbogbo inú mi,",
@@ -4792,7 +4776,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Yín 'Lúwa, ọkàn mi;",
               "Má jẹ́ k' àánú Rẹ sùn",
@@ -4802,7 +4786,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Òn l' Ó fẹ́' ẹ̀ṣẹ̀ rẹ̀ jì,",
               "L' Ó mú 'ròrá rẹ̀ sàn;",
@@ -4812,7 +4796,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ó f' ìfẹ́ j' àyé rẹ̀",
               "Gbàt á rá ọ n'bòjì;",
@@ -4838,7 +4822,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Mo kọrin ìpá Ọlọ́run,",
               "T' Ó gbé òkè dìde,",
@@ -4848,7 +4832,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Mo kọrin ọgbọ́n t' ó mú kí",
               "Ọ̀run kò ràn l' ọ̀sán",
@@ -4858,7 +4842,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Mo kọrin òré Olúwa,",
               "T' Ó f' oúnjẹ kún àyé;",
@@ -4868,7 +4852,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Kò s' ewéko tàb' ìtànná,",
               "Tí kò f' ògo Rẹ hàn;",
@@ -4878,7 +4862,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ̀dá t' ó gbà 'yè lọ́dọ̀ Rẹ,",
               "Wà lábẹ́ 'tọ́jú Rẹ;",
@@ -4904,7 +4888,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ jẹ́ k' á f' inú dídùn,",
               "Yín Olúwa Oloòré;",
@@ -4914,7 +4898,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Òn, nípa agbára Rẹ,",
               "F' ìmọ́lẹ̀ s' àyé títún;",
@@ -4924,7 +4908,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ó mbò àwọn aláìní,",
               "Àti gbogbo aláyé;",
@@ -4934,7 +4918,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Ó bùkún àyànfẹ́ Rẹ",
               "Lí aginjù ìpàrù;",
@@ -4944,7 +4928,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ jẹ́ k' á f' inú dídùn,",
               "Yín Olúwa Oloòré;",
@@ -4970,7 +4954,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "ỌLỌRUN l' ààbò ẹni Rẹ,",
               "Nígbà ìjì ìpọ́njú dé:",
@@ -4980,7 +4964,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "B' agbami rírú mbú sókè,",
               "Ọkàn wa mbẹ l' Àlàáfíà;",
@@ -4990,7 +4974,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwé owó ni, ọ̀rọ̀ Rẹ,",
               "Káwó ìbínú fúfù wa;",
@@ -5016,7 +5000,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "YIN Ọlọrun Ọba wa,",
               "E ko orin ogo si,",
@@ -5026,7 +5010,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yin, n'tori t' O da orun",
               "Lati ran l' ojojumo,",
@@ -5036,7 +5020,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Yin, n'torr t' O m' ojo ro,",
               "Lati mu irugbin ru,",
@@ -5046,7 +5030,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Yin fun ikore oko,",
               "O mu ki aka wa kun;",
@@ -5056,7 +5040,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "Ògo f' Ọba Olore,",
               "Ki gbogbo eda korin,",
@@ -5082,7 +5066,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "x" ],
+            musicSigns: ["mf", "x", "x", "f"],
             lines: [
               "IFE l' Ọlọrun: anu Re",
               "Mole s' ona wa gbogbo;",
@@ -5092,7 +5076,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "f"],
             lines: [
               "Iku at' ayida nsise;",
               "Enia nbaje, aiye nlo,",
@@ -5102,7 +5086,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Akoko t'o dab' o su ju,",
               "Y'o fi ore nla Re han;",
@@ -5112,7 +5096,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "f"],
             lines: [
               "O fi lala inu aiye",
               "So 'reti on 'tunu po;",
@@ -5138,7 +5122,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "T' OLORUN n' ijoba gbogbo",
               "Oril-ede, e korin 'yin:",
@@ -5148,7 +5132,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O nsan ara lat' orun wa;",
               "Orúkọ Re nro li orun:",
@@ -5158,7 +5142,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Ọlọrun ni isimi wa:",
               "On l' Ọba, kede ola Re;",
@@ -5184,7 +5168,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mp", "x", "f", "x"],
             lines: [
               "ONA ara l' Ọlọrun wa",
               "Ngba sise Re l' aiye;",
@@ -5194,7 +5178,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "cr", "x"],
             lines: [
               "Ona Re enikan ko mo,",
               "Awamaridi ni;",
@@ -5204,7 +5188,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "cr", "x"],
             lines: [
               "Ma beru mo, enyin mimo,",
               "Ọ̀run t' o su be ni,",
@@ -5214,7 +5198,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mp", "x", "x", "cr"],
             lines: [
               "Mase da Olúwa l' ejo,",
               "Sugbon gbeke re le;",
@@ -5224,7 +5208,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ìṣẹ́ Re fere ye wan a,",
               "Y'o ma tan siwaju;",
@@ -5234,7 +5218,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "f", "x"],
             lines: [
               "Afoju ni alaigbagbo,",
               "Ko mo 'se Ọlọrun;",
@@ -5260,7 +5244,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "", "" ],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "OLUWA l' O nso mi:",
               "Y'o te fe mi lorun:",
@@ -5270,7 +5254,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O sin mi lo sibi",
               "Ti papa orun nhu,",
@@ -5280,7 +5264,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bi mo ba sina lo,",
               "A m' okan mi pada,",
@@ -5290,7 +5274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bi mba nri 'ranwo Re,",
               "Eru ko le ba mi;",
@@ -5300,7 +5284,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Loj' awon ota mi,",
               "O te onje fun mi;",
@@ -5310,7 +5294,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Opo ife Re y'o",
               "Kun ojo ni t'o ku;",
@@ -5336,7 +5320,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "", "", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "SAJU wan so, Ọlọrun,",
               "Fere ogun ti ro;",
@@ -5350,7 +5334,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Saju wan so, Ọlọrun",
               "D'opin ogun ese;",
@@ -5364,7 +5348,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Saju wan so, Ọlọrun",
               "Laiberu l'awa nlo,",
@@ -5394,7 +5378,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "cr", ""],
+            musicSigns: ["f", "x", "cr", "x"],
             lines: [
               "AYỌ b'aiye: Olúwa de!",
               "K'aiye gba Ọba rẹ̀;",
@@ -5404,7 +5388,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["f", "cr", "", ""],
+            musicSigns: ["f", "cr", "x", "x"],
             lines: [
               "Ayọ̀ baiye: Jesu jọba;",
               "Ki enia kọrin;",
@@ -5414,7 +5398,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "K'ẹṣẹ̀ at'ikanu yè wá,",
               "K'ilẹ̀ yẹ̀ hu ẹgún;",
@@ -5424,7 +5408,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O nf'otitọ jọba l'aiye,",
               "O si m'oril'ede",
@@ -5450,7 +5434,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "cr", "p"],
+            musicSigns: ["f", "x", "cr", "p"],
             lines: [
               "MA wo 'le, Jésù t' a nreti,",
               "T'a bi lati gba ni la!",
@@ -5460,7 +5444,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ipa at' itunu Israel;",
               "Ireti awon mimo;",
@@ -5470,7 +5454,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "A bi O lati gb' eda la,",
               "Enia – sugbon Ọlọrun –",
@@ -5480,7 +5464,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mp", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Nipa Ẹmí Re t' o wa lai,",
               "Nikan joba ninu wa;",
@@ -5506,7 +5490,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "p", "", "", ""],
+            musicSigns: ["mf", "x", "f", "x", "x", "x"],
             lines: [
               "WO oju sanma ohun ni.",
               "Wo lila orun oro.",
@@ -5518,7 +5502,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", "", "", ""],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "O pe ti mo ti nreti Re,",
               "L' are l' okan mi nduro,",
@@ -5530,7 +5514,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "p", "", "", ""],
+            musicSigns: ["mf", "x", "p", "x", "x", "x"],
             lines: [
               "Igbala mi sunm' etile,",
               "Oru fere koja na,",
@@ -5542,7 +5526,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mf", "", "", "", "", "ff"],
+            musicSigns: ["mf", "x", "x", "x", "x", "ff"],
             lines: [
               "Je ki fitila mi ma jo,",
               "Ki nma sako kiri mo,",
@@ -5570,7 +5554,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "GBÓ 'gbe ayọ̀! Olúwa dé,",
               "Jésù t' a sèlérí;",
@@ -5580,7 +5564,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "ff", ""],
+            musicSigns: ["x", "x", "ff", "x"],
             lines: [
               "Ó dé láti t' òndé sílẹ̀,",
               "L' òkò èrù Èṣù;",
@@ -5590,7 +5574,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ó délárín 'bàjẹ́ ayé",
               "Láti tan 'mọ́lẹ̀ Rẹ̀,",
@@ -5600,7 +5584,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["p", "", "cr", ""],
+            musicSigns: ["p", "x", "cr", "x"],
             lines: [
               "Ó dé! 'Tínú f' ọkàn 'rọ́ra,",
               "Ìwòsàn f' àgbègbè;",
@@ -5610,7 +5594,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["un", "", "", ""],
+            musicSigns: ["un", "x", "x", "x"],
             lines: [
               "Hosanna wa, Ọba 'láfíà",
               "Àó kéde bíbọ̀ Rẹ̀;",
@@ -5636,7 +5620,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ÌLÚ t' ó dára pọ̀ l' ayé;",
               "Betlehemu, 'wọ ta wọn yọ;",
@@ -5646,7 +5630,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ògo ti ìràwọ̀ ni jù",
               "Ti ọ̀run òwúrọ̀ lọ;",
@@ -5656,7 +5640,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwọn 'lọ́gbọ́n ìlà-ọ̀run",
               "Mú 'yẹbíyẹ orẹ wa:",
@@ -5666,7 +5650,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù, 'Wọ ti kẹ́fẹ́rí nsìn",
               "Lí ọjọ́ ìfihàn Rẹ̀;",
@@ -5692,7 +5676,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "ODE, Kristi Olúwa,",
               "Lát' ibùgbé Rẹ̀ l' ọ̀run,",
@@ -5702,7 +5686,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Aládé Àlànà",
               "Dé, láti rù 'pọ́njú wa;",
@@ -5727,7 +5711,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "cr", ""],
+            musicSigns: ["f", "x", "cr", "x"],
             lines: [
               "ỌJỌ́ ayọ̀ ńlánlá ná dé,",
               "Èyí t' àráyé ti ńrètí;",
@@ -5737,7 +5721,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Olùṣàgùtàn ní pápá,",
               "Bí nwọ́n ti ńṣọ àgùtàn wọn,",
@@ -5747,7 +5731,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àngẹ́lì ìránṣẹ́ Olúwa;",
               "L' a ràn sí wọn alábùkún,",
@@ -5757,7 +5741,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mp", "", "f", ""],
+            musicSigns: ["mp", "x", "f", "x"],
             lines: [
               "Gídigidi l' èrù bá wọn,",
               "Fún àjèjì ìran ńlá yìí;",
@@ -5767,7 +5751,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", "p"],
+            musicSigns: ["x", "x", "x", "p"],
             lines: [
               "A bí Olùgbàlà lónì,",
               "Kristi Olúwa ayé ni;",
@@ -5777,7 +5761,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "\"Ògo fún Ọlọ́run\" l' orin",
               "Ti ènìyàn y' ó kọ s' ọ̀run;",
@@ -5803,7 +5787,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "WÒ! gbogbo ilé òkùnkùn,",
               "Wò! ọkàn mi, dúró jẹ́;",
@@ -5815,7 +5799,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí India òn Afrika,",
               "K' àláìgbédé gbogbo rí",
@@ -5827,7 +5811,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìjọba t' ó wà l' òkùnkùn,",
               "Jésù, tan 'mọ́lẹ̀ fún wọn.",
@@ -5839,7 +5823,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má tan lọ, 'wọ ìhìnrere,",
               "Má ṣẹ́gun lọ, má dúró:",
@@ -5867,7 +5851,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "p", "cr", "f", "", "", ""],
+            musicSigns: ["x", "x", "p", "cr", "f", "x", "x", "x"],
             lines: [
               "GBÓ ẹda ọ̀run ńkọrin,",
               "\"Ògo fún Ọba t' a bí.\"",
@@ -5884,7 +5868,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "cr", "", "", "mf", "", "", ""],
+            musicSigns: ["mp", "cr", "x", "x", "mf", "x", "x", "x"],
             lines: [
               "Ó bọ̀ 'go Rẹ̀ s' àpákàn,",
               "A bí, k' ènìyàn má kú,",
@@ -5901,7 +5885,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["cr", "", "", "", "ff", "", "", ""],
+            musicSigns: ["cr", "x", "x", "x", "ff", "x", "x", "x"],
             lines: [
               "Pa àwòrán Adam run,",
               "F' àwòrán Rẹ̀ s' ipò rẹ̀;",
@@ -5934,13 +5918,18 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "AYỌ̀ kún ọkàn wa lónì",
               "A bí Ọmọ Ọba;",
               "Ọ̀pọ̀ àwọn ọgun ọ̀run,",
-              "Ńsọ t' ibí Rẹ̀ lónì:",
-              "Egbe:",
+              "Ńsọ t' ibí Rẹ̀ lónì:"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["ff", "p", "x", "x"],
+            lines: [
               "Ẹ yọ̀, Ọlọ́run d' ènìyàn,",
               "Ó wá jókòó l' ayé,",
               "Orúkọ wo l'ó dùn tó yìí –",
@@ -5949,47 +5938,32 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "", "cr", ""],
+            musicSigns: ["mp", "x", "cr", "x"],
             lines: [
               "A wọlé n' ibùjẹ eran,",
               "N' ìyanu l' a jọsìn:",
               "Ìbùkún kan kò ta yìí yọ,",
-              "Kò s' ayọ̀ bí èyí:",
-              "Egbe:",
-              "Ẹ yọ̀, Ọlọ́run d' ènìyàn,",
-              "Ó wá jókòó l' ayé,",
-              "Orúkọ wo l'ó dùn tó yìí –",
-              "Emmanuel."
+              "Kò s' ayọ̀ bí èyí:"
             ]
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ayé kò n' adùn fún wa mọ́,",
               "'Gbàtí a bá ńwò Ọ;",
               "L' ọwọ́ Wúndíá ìyá Rẹ̀",
-              "'Wọ Ọmọ ìyanu.",
-              "Egbe:",
-              "Ẹ yọ̀, Ọlọ́run d' ènìyàn,",
-              "Ó wá jókòó l' ayé,",
-              "Orúkọ wo l'ó dùn tó yìí –",
-              "Emmanuel."
+              "'Wọ Ọmọ ìyanu."
             ]
           },
           {
             number: "4",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ìmọ́lẹ̀ lát' inú 'Mọ́lẹ̀,",
               "Tan 'mọ́lẹ̀ s' òkun wa,",
               "K' a lè má fi ìsìn mímọ́",
-              "Ṣe 'ràntí ọjọ́ Rẹ̀.",
-              "Egbe:",
-              "Ẹ yọ̀, Ọlọ́run d' ènìyàn,",
-              "Ó wá jókòó l' ayé,",
-              "Orúkọ wo l'ó dùn tó yìí –",
-              "Emmanuel."
+              "Ṣe 'ràntí ọjọ́ Rẹ̀."
             ]
           }
         ],
@@ -6010,7 +5984,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["ff", "", "", "", "ff", ""],
+            musicSigns: ["ff", "x", "x", "x", "ff", "x"],
             lines: [
               "ONÍGBÀGBỌ́, ẹ bu s' ayọ̀!",
               "Ọjọ́ ńlá l' èyí fún wa;",
@@ -6022,7 +5996,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["f", "", "f", "", "", ""],
+            musicSigns: ["f", "x", "f", "x", "x", "x"],
             lines: [
               "Ẹ jùmọ̀, yọ̀, gbogbo ẹda,",
               "L' ayé yìí àti l' ọ̀run;",
@@ -6034,7 +6008,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["ff", "", "", "", "", ""],
+            musicSigns: ["ff", "x", "x", "x", "x", "x"],
             lines: [
               "Gb' ohun yin ga, \"Ọm' Afrika\"",
               "Ẹ̀yin ìran Yorùbá;",
@@ -6046,7 +6020,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["f", "ff", "", "", "", ""],
+            musicSigns: ["f", "ff", "x", "x", "x", "x"],
             lines: [
               "Ẹ dámúsọ̀! ẹ dámúsọ̀!",
               "Ẹ hò yé! k' ẹ sì má yọ̀;",
@@ -6058,7 +6032,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", "f", "", ""],
+            musicSigns: ["x", "x", "x", "f", "x", "x"],
             lines: [
               "Ẹ gb' ohun nyín ga, Serafu,",
               "Kerubu, lẹ́bá ìtẹ́;",
@@ -6070,7 +6044,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["", "", "", "", "", ""],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Mẹ́talọ́kan, Ẹni Mímọ́",
               "Bàbá Olódùmarè,",
@@ -6098,58 +6072,54 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x"],
             lines: [
               "WÁ ẹ̀yin olóòtọ́",
               "L' ayọ̀ àt' ìṣẹ́gun",
               "Wá kálọ, wá kálọ sí Bẹ́tílẹ́hẹ̀mù;",
               "Wá kálọ wò ó!",
-              "Ọba àwọn Àngẹ́lì!",
-              "Egbe:",
+              "Ọba àwọn Àngẹ́lì!"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["p", "f"],
+            lines: [
               "Ẹ wá kálọ jùbà Rẹ̀,",
               "Ẹ wá k' á lọ jùbà Kristi Olúwa."
             ]
           },
           {
             number: "2",
-            musicSigns: ["", "", "p", "f", ""],
+            musicSigns: ["x", "x", "p", "f", "x"],
             lines: [
               "Olódùmarè ni,",
               "Ìmọ́lẹ̀ Òdodo,",
               "Kò sí kórìíra inú Wúndíá;",
               "Ọlọ́run pàpànì",
-              "Tí a bí, tí a kò dá;",
-              "Egbe:",
-              "Ẹ wá kálọ jùbà Rẹ̀,",
-              "Ẹ wá k' á lọ jùbà Kristi Olúwa."
+              "Tí a bí, tí a kò dá;"
             ]
           },
           {
             number: "3",
-            musicSigns: ["f", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x"],
             lines: [
               "Àngẹ́lì, ẹ kọrin,",
               "Kọrin ìtọ́yẹ Rẹ̀;",
               "Kí gbogbo ẹ̀dá ọ̀run sì gberin:",
               "Ògo f' Ọlọ́run",
-              "Lí òkè ọ̀run,",
-              "Egbe:",
-              "Ẹ wá kálọ jùbà Rẹ̀,",
-              "Ẹ wá k' á lọ jùbà Kristi Olúwa."
+              "Lí òkè ọ̀run,"
             ]
           },
           {
             number: "4",
-            musicSigns: ["f", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x"],
             lines: [
               "Nítòòtọ́, a wọlé",
               "F' Ọba t' á bí lónì;",
               "Jésù, Ìwọ l' áwa ńfi ògo fún:",
               "'Wọ Ọmọ Bàbá,",
-              "T' ó m' ara wa wọ̀!",
-              "Egbe:",
-              "Ẹ wá kálọ jùbà Rẹ̀,",
-              "Ẹ wá k' á lọ jùbà Kristi Olúwa."
+              "T' ó m' ara wa wọ̀!"
             ]
           }
         ],
@@ -6170,7 +6140,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", "", "mf", "", "", "f"],
+            musicSigns: ["f", "x", "x", "x", "mf", "x", "x", "f"],
             lines: [
               "GBỌ́ ohun àlọ́rẹ,",
               "Jí, ara, jí:",
@@ -6184,7 +6154,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "", "", "p", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x", "p", "x", "x", "x"],
             lines: [
               "Sọ f' egbe t' ó TI JÍ,",
               "Ara, ṣọ́ra;",
@@ -6198,7 +6168,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", "", "", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Gbọ́ ohun Ìrìjú,",
               "Ara, ṣiṣẹ́;",
@@ -6212,7 +6182,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mp", "", "", "", "p", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x", "p", "x", "x", "x"],
             lines: [
               "Gb' ohun Olúwa wa,",
               "Ẹ gbàdúrà;",
@@ -6226,7 +6196,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "cr", "", "ff", "", "", ""],
+            musicSigns: ["x", "x", "cr", "x", "ff", "x", "x", "x"],
             lines: [
               "Kọ orin ìkẹhìn,",
               "Yín, ara, yín;",
@@ -6256,65 +6226,60 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ẸYIN Àngẹ́l' l' ọ̀run ògo",
               "Tó yí gbogbo ayé ká,",
               "Ẹ ti kọ 'rin dídá ayé,",
               "Ẹ sọ t' ibí Mẹ́síà,",
-              "Egbe:",
               "Sá wá jọsìn",
               "Fún Kristi Ọba títún."
             ]
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "cr", ""],
+            musicSigns: ["mf", "x", "cr", "x"],
             lines: [
               "Ẹ̀yin Olùṣọ́-àgùtàn,",
               "Tí ńṣọ eran nyín l' òru,",
               "Emmanueli wa ti dé",
               "Ìrànwọ́ Ọmọ ná ntàn,",
-              "Egbe:",
               "Sá wá jọsìn",
               "Fún Kristi Ọba títún."
             ]
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Onígbàgbọ́ tí ńterìbà,",
               "Ní 'bẹ̀rù àt' ìrètí,",
               "L' òjìjì l' Olúwa y'ó dé,",
               "Tí yíò mú nyín rẹ 'lé",
-              "Egbe:",
               "Sá wá jọsìn",
               "Fún Kristi Ọba títún."
             ]
           },
           {
             number: "4",
-            musicSigns: ["mp", "p", "", ""],
+            musicSigns: ["mp", "p", "x", "x"],
             lines: [
               "Ẹlẹ́ṣẹ̀, 'wọ aláìrònú,",
               "Ẹlẹ́bì àti egbe,",
               "Òdodo Ọlọ́run dúró,",
               "Àánú ńpè ọ́, pa wá dá,",
-              "Egbe:",
               "Sá wá jọsìn",
               "Fún Kristi Ọba títún."
             ]
           },
           {
             number: "5",
-            musicSigns: ["mf", "p", "mf", ""],
+            musicSigns: ["mf", "p", "mf", "x"],
             lines: [
               "Gbogbo ẹ̀dá ẹ fò f' ayọ̀,",
               "Jésù Olùgbàlà dé;",
               "Ànfààní mìíràn kò sí mọ́,",
               "B' èyí bá fò nyín kọjá,",
-              "Egbe:",
               "Njẹ ẹ wá sìn,",
               "Sìn Kristi Ọba Ògo."
             ]
@@ -6337,7 +6302,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "JÍ, ìwọ Kristian, kí o kí òrọ ayọ̀",
               "Tí a bí Olùgbàlà aráyé;",
@@ -6349,7 +6314,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x", "x", "x"],
             lines: [
               "Ìgbànà là ràn akéde Àngẹ́lì,",
               "Tí ó sọ fún àwọn Olùṣọ́-àgùtàn, pé,",
@@ -6361,7 +6326,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x", "x", "x"],
             lines: [
               "Bí akéde Àngẹ́lì náà ti sọ tán,",
               "Ọ̀pọ̀lọpọ̀ ogun ọ̀run sì dé;",
@@ -6373,7 +6338,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mf", "", "", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x", "x", "x"],
             lines: [
               "Ó yẹ kí àwa kí ó má rò lọ́kàn wa,",
               "Ìfẹ́ ńlá tí Ọlọ́run ní sí ọkàn wa,",
@@ -6385,7 +6350,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["f", "", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbà náà ìgbà bá dé ọ̀run lọ́hùn,",
               "A ó kọrin ayọ̀ tí ìràpadà;",
@@ -6413,7 +6378,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A JÍN jìn, òru mímọ́,",
               "Òkun sù, ìmọ́lẹ̀ dé,",
@@ -6432,7 +6397,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A jín jìn, òru mímọ́",
               "Ìmọ́lẹ̀, dé òkun sá,",
@@ -6451,7 +6416,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A jín jìn, òru mímọ́,",
               "Ìràwọ̀ ọ̀run tàn ìmọ́lẹ̀,",
@@ -6470,7 +6435,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A jín jìn, òru mímọ́,",
               "Ìràwọ̀ ọ̀run tàn ìmọ́lẹ̀,",
@@ -6483,8 +6448,8 @@ function YorubaHymnDetail({ theme }) {
             musicSigns: [" "],
             lines: [
               "Egbe:",
-              "Jésù olùgbàlà dé",
-              "Jésù olùgbàlà dé."
+              "Jésù Olùgbàlà dé",
+              "Jésù Olùgbàlà dé."
             ]
           }
         ],
@@ -6505,7 +6470,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "p", ""],
+            musicSigns: ["mf", "x", "p", "x"],
             lines: [
               "SÚNMỌ́ ọ̀dọ̀ wa, Emmanuel,",
               "Wá ara Ísírẹ́lì padà,",
@@ -6524,7 +6489,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Wá, Ọ̀pá àládé Jesse,",
               "Kí o gbá wa lọ́wọ́ ọ̀tá wa",
@@ -6543,7 +6508,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Súnmọ́ wa ìwọ Ìlà Ọ̀run,",
               "Kí bíbọ̀ Rẹ̀ ṣe ìtùnú wa.",
@@ -6562,7 +6527,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Wá ọmọ ìlẹ̀kùn Dafídì,",
               "Ìlẹ̀kùn ọ̀run yíò sí fún Ọ",
@@ -6581,7 +6546,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Súnmọ́ wa Olúwa ìpá,",
               "Tí ó fi òfin fún ènìyàn Rẹ̀",
@@ -6616,7 +6581,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "f", "p"],
+            musicSigns: ["mf", "x", "f", "p"],
             lines: [
               "A NTÍ ọ̀nà tí Olúwa wa rìn:",
               "A ńgbé agbélébù Rẹ̀;",
@@ -6626,7 +6591,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["p", "", "", ""],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Ọ̀pọ̀ ìgbà ló jú wa láyọ̀,",
               "Ló kún fún omijé;",
@@ -6636,7 +6601,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["p", "", "", ""],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "A ńgbọ́n ìdàrọ̀pọ̀ ara wa nù,",
               "A ńmọ̀ sí bí a ti ńlọ",
@@ -6661,7 +6626,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mp", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "NÍNÚ ìṣẹ̀, nínú ìjà, Olúwa mi,",
               "Ńgọ rìn lí ọ̀nà Rẹ̀;",
@@ -6671,7 +6636,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["p", "", "", ""],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Pẹ̀lú ìtara, ayọ̀ ló fi",
               "Ṣe ìfẹ́ Bàbá Rẹ̀;",
@@ -6681,7 +6646,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["p", "", "", ""],
+            musicSigns: ["p", "x", "x", "x"],
             lines: [
               "Ìwà pẹ̀lẹ́, òtítọ́, ìfẹ́",
               "Ńhàn ní ìwà Rẹ̀ gbogbo;",
@@ -6707,7 +6672,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mp", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "JÉSÙ, Ó ha rẹ́ ara Rẹ̀ lẹ́",
               "Gbà tí Ó gbé ara wa wò?",
@@ -6717,7 +6682,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó ha tẹ́ etí sí aláàgbé,",
               "Ó mú afọ́jú ríran?",
@@ -6727,7 +6692,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó ha kàánú fún ìṣẹ̀ ẹ̀dá,",
               "Ó tún mú ìlera wá?",
@@ -6737,7 +6702,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó ha yí Ọmọ-dò tí ó mbẹ̀rù",
               "Gbà tí ó nrí nínú ìgbì?",
@@ -6763,7 +6728,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mp", "", "", "p"],
+            musicSigns: ["mp", "x", "x", "p"],
             lines: [
               "ÒGÀNJỌ́ gan: lóke Olífì",
               "Àwọn ìràwọ̀ sì ti wò;",
@@ -6773,7 +6738,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "ÒGÀNJỌ́ gan: láìsí ẹnikẹ́ni,",
               "Jésù nìkan bá èrù já;",
@@ -6783,7 +6748,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mp", "", "p", ""],
+            musicSigns: ["mp", "x", "p", "x"],
             lines: [
               "ÒGÀNJỌ́ gan: fẹ́sẹ̀ lómí",
               "Ẹni ìkàánú ńsọkún nínú ẹ̀jẹ̀;",
@@ -6829,7 +6794,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "\"Ó parí!\" – ìgbé ikú yìí",
               "Yíò ṣe ètùtù fún ẹ̀ṣẹ̀ gbogbo,",
@@ -6839,7 +6804,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "\"Ó parí!\" – a bá ọ̀run là ìjà",
               "A ba ìpá òkùnkùn jẹ́;",
@@ -6849,7 +6814,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "\"Ó parí!\" – kí ìròyìn ayọ̀ yìí",
               "Ká gbogbo orílẹ̀-èdè;",
@@ -6875,7 +6840,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "p"],
+            musicSigns: ["mf", "x", "p"],
             lines: [
               "ẸYIN ti ńkọjá",
               "Yá sọ́dọ̀ Jésù:",
@@ -6884,7 +6849,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "pp"],
+            musicSigns: ["x", "x", "pp"],
             lines: [
               "Àlàáfíà wa",
               "Onígbówó wa:",
@@ -6893,7 +6858,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["f", "", ""],
+            musicSigns: ["f", "x", "x"],
             lines: [
               "Olúwa ní jọ náà,",
               "Ní ìbínú Rẹ̀ gbé",
@@ -6902,7 +6867,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["p", "", ""],
+            musicSigns: ["p", "x", "x"],
             lines: [
               "Ó kú, kí Ó ṣ' ètùtù",
               "Nítorí ẹ̀ṣẹ̀ wa:",
@@ -6911,7 +6876,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["p", "", ""],
+            musicSigns: ["p", "x", "x"],
             lines: [
               "Kí a gbà òrẹ-ọ̀fẹ́",
               "Ìràpadà mú:",
@@ -6920,7 +6885,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["ff", "", ""],
+            musicSigns: ["ff", "x", "x"],
             lines: [
               "Nígbà ayé bá pín",
               "Àwa ó má bọ̀",
@@ -6945,7 +6910,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "cr", "", "p", ""],
+            musicSigns: ["mf", "x", "cr", "x", "p", "x"],
             lines: [
               "MO f' ara Mi fún ọ,",
               "Mo kú nítorí rẹ,",
@@ -6957,7 +6922,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "", "cr", "", "p", ""],
+            musicSigns: ["mp", "x", "cr", "x", "p", "x"],
             lines: [
               "Mo f' ọjọ́ ayé Mi",
               "Ṣe iṣẹ́ làálà fún ọ;",
@@ -6969,7 +6934,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["f", "", "di", "", "p", ""],
+            musicSigns: ["f", "x", "di", "x", "p", "x"],
             lines: [
               "Ilé tí Bàbá Mi,",
               "Àti ìtẹ́ ògo Mi,",
@@ -6981,7 +6946,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", "", "", "mp", ""],
+            musicSigns: ["x", "x", "x", "x", "x", "mp", "x"],
             lines: [
               "Mo jìyà pọ̀ fún ọ,",
               "Tí ẹnu kò lè sọ",
@@ -6993,7 +6958,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["mf", "", "cr", "", "", "", "p"],
+            musicSigns: ["mf", "x", "cr", "x", "x", "x", "p"],
             lines: [
               "Mo mú ìgbàlà ńlá,",
               "Láti ilé Bàbá Mi",
@@ -7005,7 +6970,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["f", "", "", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fi ara rẹ fún Mi,",
               "Fi ayé rẹ sìn Mi,",
@@ -7033,7 +6998,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mp", "", "", "p"],
+            musicSigns: ["mp", "x", "x", "p"],
             lines: [
               "A RÁ, ẹ wá bá mi sọ̀fọ̀,",
               "Ẹ wá sọ́dọ̀ Olùgbàlà;",
@@ -7043,7 +7008,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "", "", "p"],
+            musicSigns: ["mp", "x", "x", "p"],
             lines: [
               "Kò ha sí omijé lójú wa",
               "bí àwọn Jú tí ńfi ṣefè?",
@@ -7053,7 +7018,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "p", ""],
+            musicSigns: ["mf", "x", "p", "x"],
             lines: [
               "Ẹ̀mejì ló sọ̀rọ̀ ìfẹ́;",
               "Ìdákẹ́ wákàtí mẹ́ta",
@@ -7063,7 +7028,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["cr", "", "mp", "p"],
+            musicSigns: ["cr", "x", "mp", "p"],
             lines: [
               "Bú sí ekún, ọkàn líle mi!",
               "Ẹ̀ṣẹ̀ àti ìgbéraga rẹ",
@@ -7073,7 +7038,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", "p"],
+            musicSigns: ["x", "x", "x", "p"],
             lines: [
               "Wá dúró ti agbélébù,",
               "Kí ẹ̀jẹ̀ tín jáde ní ìhà Rẹ̀",
@@ -7083,7 +7048,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["cr", "", "", "p"],
+            musicSigns: ["cr", "x", "x", "p"],
             lines: [
               "Ìbànújẹ́ àti omijé,",
               "Bẹ̀rẹ̀, a kì ó fi dù ọ́;",
@@ -7093,7 +7058,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "7",
-            musicSigns: ["f", "", "", "di"],
+            musicSigns: ["f", "x", "x", "di"],
             lines: [
               "Ìfẹ́ Bàbá, ẹ̀ṣẹ̀ ẹ̀dá,",
               "Níhìn la rí agbára rẹ;",
@@ -7119,7 +7084,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "", "", "p", ""],
+            musicSigns: ["mf", "x", "x", "x", "p", "x"],
             lines: [
               "ẸGBỌ́ ohun ìfẹ́ àt' àánú,",
               "Tí ń dùn l' òkè Kalfárì!",
@@ -7131,7 +7096,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "", "", "", "p", ""],
+            musicSigns: ["mp", "x", "x", "x", "p", "x"],
             lines: [
               "\"Ó ti parí!\" B' ó ti dùn tó,",
               "Ohun t' òrò wọ̀nyí wí,",
@@ -7143,7 +7108,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["f", "", "", "", "p", ""],
+            musicSigns: ["f", "x", "x", "x", "p", "x"],
             lines: [
               "Ìṣẹ́ ìgbàlà wa parí,",
               "Jésù ti mú òfin ṣe;",
@@ -7155,7 +7120,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["f", "", "", "ff", "p", ""],
+            musicSigns: ["f", "x", "x", "ff", "p", "x"],
             lines: [
               "Ẹ tún hárpù nyín ṣe, Sérápù,",
               "Láti kórin ògo Rẹ̀;",
@@ -7183,7 +7148,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "OLÚGBÀLÀ mi ha gb' ògbé?",
               "K' Ọba Ògo si kú?",
@@ -7193,7 +7158,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mp", "", "cr", ""],
+            musicSigns: ["mp", "x", "cr", "x"],
             lines: [
               "Ìhà ṣe ẹ̀ṣẹ tí mo dá",
               "L' ó gbé kó sór' igi?",
@@ -7203,7 +7168,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mp", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Ó yẹ k' òrun f' ojú pamọ́,",
               "K' ó b' ògo rẹ̀ mọ́lẹ̀;",
@@ -7213,7 +7178,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mp", "", "", ""],
+            musicSigns: ["mp", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ l' ó yẹ k' ojú ba tí mi",
               "'Gbà mo r' àgbélébù;",
@@ -7223,7 +7188,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n omijẹ kò lè san",
               "'Gbẹ̀sẹ̀ 'fẹ́ tí mo jẹ;",
@@ -7249,7 +7214,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "ÀGBÉLÉBÙ ni eré mi,",
               "Níbẹ̀ ni a rúbọ fún mi;",
@@ -7259,7 +7224,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "", "s"],
+            musicSigns: ["mf", "x", "x", "s"],
             lines: [
               "Kíni ó lè fa ọkàn Rẹ̀",
               "Láti tẹ́ 'rí gba ìyà mi?",
@@ -7269,7 +7234,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "p", ""],
+            musicSigns: ["mf", "x", "p", "x"],
             lines: [
               "Àìfohun náà tí mi",
               "Níwájú Jésù mímọ́ mi,",
@@ -7295,7 +7260,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["f", "", "", "", "", "", "", ""],
+            musicSigns: ["f", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "GBỌ́-GBỌ́ ògo ìyìn ọlá,",
               "Fún O olùdàndè,",
@@ -7309,7 +7274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: ["ff", "", "", ""],
+            musicSigns: ["ff", "x", "x", "x"],
             lines: [
               "Gbogb' ògo ìyìn ọlá",
               "Fún O, Olùdàndè,",
@@ -7319,7 +7284,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["f", "", "", ""],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹgbẹ́ àwọn malẹ́ka,",
               "Nyín O l' òkè gíga;",
@@ -7329,7 +7294,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Àwọn Hébrù ló, ṣájú,",
               "Pẹ̀lú imo ọpẹ,",
@@ -7339,7 +7304,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["cr", "", "", ""],
+            musicSigns: ["cr", "x", "x", "x"],
             lines: [
               "Sí O ṣájú ìyà Rẹ̀,",
               "Nwọn kórin ìyìn wọn;",
@@ -7375,7 +7340,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "WÒ t' ó ńbẹ̀bẹ̀ f' ọ̀tá Rẹ̀,",
               "L' órí igi àgbélébù;",
@@ -7385,7 +7350,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["mf", "", "p", ""],
+            musicSigns: ["mf", "x", "p", "x"],
             lines: [
               "Jésù jọ̀ bẹ̀bẹ̀ fún wa,",
               "Fún ẹ̀ṣẹ̀ wa gbogbogbo;",
@@ -7395,7 +7360,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Jẹ́ k' àwa tí ńwá àánú,",
               "Dàbí Rẹ̀ l' ọkàn ń' ìwà,",
@@ -7405,7 +7370,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Lónìí ni ìwọ ó wà pẹ̀lú mi ní Paradise – Lúkù 23:43",
               "Jésù 'Wọ t' ó gbọ́ àrò",
@@ -7416,7 +7381,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Nínú èbi ẹ̀ṣẹ̀ wa,",
               "Jẹ́ k' a tọ́rọ àánú Rẹ̀,",
@@ -7426,7 +7391,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["mp", "", "", "p"],
+            musicSigns: ["mp", "x", "x", "p"],
             lines: [
               "Ràntí àwa tí ńrahun",
               "T' a nọ́w àgbélébù Rẹ̀;",
@@ -7436,7 +7401,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "7",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Obìnrin, wò ọmọ rẹ – Jòhánù 19:26-27",
               "'Wọ t' ó fẹ́ l'àfẹ́ dópin",
@@ -7447,7 +7412,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "8",
-            musicSigns: ["mf", "", "cr", "p"],
+            musicSigns: ["mf", "x", "cr", "p"],
             lines: [
               "Jẹ́ k' a pín 'nú ìyá Rẹ̀,",
               "K' a má kó ikú fún O,",
@@ -7457,7 +7422,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "9",
-            musicSigns: ["f", "", "cr", "p"],
+            musicSigns: ["f", "x", "cr", "p"],
             lines: [
               "Kí gbogbo àwa tìrẹ,",
               "Jẹ́ ọmọ ilé kanna,",
@@ -7467,7 +7432,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "10",
-            musicSigns: ["mf", "", "cr", "p"],
+            musicSigns: ["mf", "x", "cr", "p"],
             lines: [
               "Ọlọ́run mi, Ọlọ́run mi èṣe tí Ìwọ fi kọ̀ mí sílẹ̀? – Matteu 27:46",
               "Jésù 'Wọ tí ẹ̀rù ńbà,",
@@ -7478,7 +7443,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "11",
-            musicSigns: ["", "", "", "p"],
+            musicSigns: ["x", "x", "x", "p"],
             lines: [
               "'Gbàtí a bá ńpè lásan,",
               "T' ìrètí wa sì jìnà;",
@@ -7488,7 +7453,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "12",
-            musicSigns: ["mf", "", "f", "p"],
+            musicSigns: ["mf", "x", "f", "p"],
             lines: [
               "B' ó dàbí Bàbá kò gbọ́,",
               "B' ó dàbí 'mọ̀lẹ̀ kò sí,",
@@ -7498,7 +7463,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "13",
-            musicSigns: ["mf", "", "cr", "p"],
+            musicSigns: ["mf", "x", "cr", "p"],
             lines: [
               "Òrùngbẹ ńgbẹ mí – Jòhánù 19:28",
               "Jésù nínú òngbẹ Rẹ̀,",
@@ -7509,7 +7474,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "14",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Má kòngbẹ ìfẹ́ Rẹ̀",
               "Síṣe mímọ́ lára wa,",
@@ -7519,7 +7484,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "15",
-            musicSigns: ["mf", "", "", ""],
+            musicSigns: ["mf", "x", "x", "x"],
             lines: [
               "Jẹ́ k' a kòngbẹ ìfẹ́ Rẹ̀",
               "Má ṣàmọ́nà wa títí,",
@@ -7529,7 +7494,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "16",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Ó parí – Jòhánù 19:30",
               "Jésù Olùràpadà,",
@@ -7540,7 +7505,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "17",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Gbà wa l' ọjọ́ ìdàmú,",
               "Ṣe olùránlọ́wọ́ wa,",
@@ -7550,7 +7515,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "18",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "F' ìmọ́lẹ̀ Rẹ̀ s' ọ̀nà wa,",
               "Tí v' ó má tàn títí láì,",
@@ -7560,7 +7525,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "19",
-            musicSigns: ["mf", "", "", "p"],
+            musicSigns: ["mf", "x", "x", "p"],
             lines: [
               "Bàbá li ọwọ́ Rẹ̀ ni mo fi ẹ̀mí mi lé – Lúkù 23:46",
               "Jésù gbogbo iṣẹ́ Rẹ̀,",
@@ -7571,7 +7536,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "20",
-            musicSigns: ["mp", "", "f", "p"],
+            musicSigns: ["mp", "x", "f", "p"],
             lines: [
               "'Gbàt' ikú bá dé bá wa,",
               "Gbà wa lọ́wọ́ ọ̀tá wa;",
@@ -7581,7 +7546,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "21",
-            musicSigns: ["f", "", "", "p"],
+            musicSigns: ["f", "x", "x", "p"],
             lines: [
               "Kí ikú àt' ìyè Rẹ̀,",
               "Mú ọ̀rẹ́ ọ̀fẹ́ bá wa,",
@@ -7607,7 +7572,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má gẹṣin lọ l’ ọláńlá Rẹ;",
               "Gbọ́, gbogb’ ayé ńké “Hósánnà”,",
@@ -7617,7 +7582,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má gẹṣin lọ l’ ọláńlá Rẹ;",
               "Má f’ ìrẹ̀lẹ̀ gẹṣin, lọ kú:",
@@ -7627,7 +7592,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má gẹṣin lọ l’ ọláńlá Rẹ:",
               "Ogun áńgẹ́lì lát’ ọ̀run",
@@ -7637,7 +7602,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má gẹṣin lọ l’ ọláńlá Rẹ,",
               "Ìjà ìkẹyìn náà dé tán;",
@@ -7647,7 +7612,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má gẹṣin lọ l’ ọláńlá Rẹ.",
               "Má f’ ìrẹ̀lẹ̀ gẹṣin lọ kú,",
@@ -7673,7 +7638,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kristi Olúwa jí lónìí, – Hallelúyà,",
               "Ẹ̀dá àt’ Áńgẹ́lì ńwí – Hal.",
@@ -7683,7 +7648,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Iṣẹ́ ti ìdándè tán; – Hal.",
               "Ó jijà, Ó ti ṣẹ́gun; – Hal.",
@@ -7693,7 +7658,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lásán n’ íṣọ́ àt’ àmì, – Hal.",
               "Kristi wó ọ̀run àpáàdì; – Hal",
@@ -7703,7 +7668,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó tún wà, Ọba ògo: – Hal.",
               "“Ikú ìtání rẹ dà?” – Hal.",
@@ -7713,7 +7678,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ jẹ́ k’ àwa gòkè lọ, – Hal.",
               "Sọ́dọ̀ Kristi Orí wa, – Hal.",
@@ -7723,7 +7688,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa t’ ayé t’ ọ̀run, – Hal.",
               "Tìrẹ ni gbogbo ìyìn, – Hal.",
@@ -7749,7 +7714,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó kú! – Ọ̀rẹ́ ẹlẹ́ṣẹ̀ kú",
               "Ọmọbìnrin Sálẹ́m’ Sọkún;",
@@ -7759,7 +7724,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìfẹ́ àt’ ìkànú l' èyí",
               "Olúwa Ògo kú f’ ènìyàn!",
@@ -7769,7 +7734,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run kò bojì sílẹ̀,",
               "Ó lọ s’ ágbàlá Baba Rẹ̀.",
@@ -7779,7 +7744,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má sọkún mọ́, ẹ̀yin mímọ́,",
               "K’ ẹ sọ gíga ìjọba Rẹ̀;",
@@ -7789,7 +7754,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ wí pé, “Ọba wà títí,",
               "Ẹni t’ a bí láti gbà là!”",
@@ -7815,7 +7780,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀run, kọrin! Ayé, yọ̀!",
               "Áńgẹ́lì àt’ ènìyàn,",
@@ -7825,7 +7790,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ti fọ́ ejò l’ orí,",
               "A ṣẹ́gun ‘kú àt’ Èṣù,",
@@ -7835,7 +7800,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Iṣẹ́ àt' ìjà Rẹ̀ tán,",
               "Ó lọ sínú ayọ̀ Rẹ̀,",
@@ -7861,7 +7826,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Olúwa jí lóòótọ́:”",
               "Ó wà, kò ní kú mọ́,",
@@ -7871,7 +7836,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Olúwa jí lóòótọ́:”",
               "Èṣù sọ tìrẹ nù:",
@@ -7881,7 +7846,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Olúwa jí lóòótọ́:”",
               "Ẹ̀yin Áńgẹ́lì gbọ́:",
@@ -7891,7 +7856,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ mú dùùrù wúrà,",
               "K’ ẹ sì tẹ ‘rin dídùn:",
@@ -7917,7 +7882,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "1",
-            musicSigns: ["", "", "", "", "", ""],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "“Kábọ̀ ọjọ́ rere,” l’ a ó máa wí títí;",
               "A ṣẹ́tẹ ‘kú lónìí, ọ̀run di tiwa.",
@@ -7929,7 +7894,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹlẹ́dàá, Olúwa, Ẹ̀mí alààyè!",
               "Lát’ ọ̀run l’ Ó ti bojúwò ‘ṣìnà wa;",
@@ -7939,7 +7904,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Wọ Ọlọ́run ìyè, O wá tọ ‘kú wò:",
               "Láti f’ ipá Rẹ hàn, O sùn n’ íbojì,",
@@ -7949,7 +7914,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tú ìbèkùn sílẹ̀, t’ Èṣù dè l’ ẹ̀wọ̀n,",
               "Àwọn t’ ó sì ṣubú, jọ̀wọ́ gbé wọn dìde,",
@@ -7975,14 +7940,14 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "Egbe",
-            musicSigns: [""],
+            musicSigns: ["x"],
             lines: [
               "Hallelúyà"
             ]
           },
           {
             number: "1",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Hallelúyà! Hallelúyà!! Hallelúyà!!!",
               "Ìjà d’ òpin, ogun sì tán:",
@@ -7992,7 +7957,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "2",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbogbo ipá n’ ikú sì lò:",
               "Ṣùgbọ́n Kristi f’ ogun rẹ̀ ká:",
@@ -8001,7 +7966,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "3",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ mẹ́ta náà ti kọjá.",
               "Ó jínde kúrò nín’ òkú:",
@@ -8010,7 +7975,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "4",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó d’ ẹ̀wọ̀n ọ̀run àpáàdì,",
               "Ó ṣ’ ìlẹ̀kùn ọ̀run sílẹ̀:",
@@ -8019,7 +7984,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù nípa ìyà t’ Ó jẹ,",
               "A bọ́ lọ́wọ́ ikú títí:",
@@ -8044,7 +8009,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: "Egbe",
-            musicSigns: [""],
+            musicSigns: ["x"],
             lines: [
               "Hallelúyà"
             ]
@@ -9596,7 +9561,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi ìfẹ́ tí Rẹ hàn mí,",
               "Fún mi l’ oore l’ọfẹ́ Rẹ̀;",
@@ -9661,7 +9626,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "5",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bíkòṣ’ oore-ọ̀fẹ́,",
               "Mo mọ̀ pé emí, kì bá ti lè rí",
@@ -9671,7 +9636,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "6",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ ẹyẹ wá ìtẹ́ wọn,",
               "Kọ̀lọ̀kọ̀lọ̀ àt’ ènìyàn ‘bùgbé wọn,",
@@ -9681,7 +9646,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "7",
-            musicSigns: ["", "", "", ""],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Wọ fẹ́ láti máa gbé",
               "Ọkàn ‘rẹlẹ̀ t’ó kànú fún ẹ̀ṣẹ̀,",
@@ -11950,7 +11915,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "ALÁÌMỌ́ ni èmi,",
               "Ọlọ́run Olúwa!",
@@ -11960,7 +11925,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹrù ẹ̀ṣẹ̀ yìí ńpa",
               "Ọkàn búburú mi;",
@@ -11970,7 +11935,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ̀mí ó ha sì kú",
               "Ní aláìnírétí",
@@ -11980,7 +11945,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Ẹ̀jẹ̀ ni tí Ó ta,",
               "Tí ‘ṣe or-ọ̀fẹ́ Rẹ̀,",
@@ -11990,7 +11955,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "f", "x", "x", "x" ],
+            musicSigns: ["f", "x", "x", "x"],
             lines: [
               "Mo wọlé l’ ẹsẹ̀ Rẹ̀,",
               "Jọ̀ k’ Ó dáríjì mi;",
@@ -12516,7 +12481,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.7.8.7.4.7",
         key: "Unknown",
         scripture: "Ẹ wa sọdọ mi gbogbo ẹnyin ti nṣisẹ. – Matteu 11:28",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12555,7 +12520,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Gbọ́ eti nyĩ ki yio si jẹ ki ọkan nyĩ yè. – Isiah 55:3",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12620,7 +12585,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.7.8.7.4.7",
         key: "Unknown",
         scripture: "Ẹniti o bá tọ̀ mi wa emi kì yio ta a nù lọna-kan. – Johannu 6:37",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12683,7 +12648,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.6",
         key: "Unknown",
         scripture: "Enit’ o bá tọ̀ mi wa emi kì yio ta a nù lọna-kan. – Johannu 6:37",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12748,7 +12713,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.8",
         key: "Unknown",
         scripture: "Mo gb’ ohùn kan nwi fãn mi pe, Ma bọ̀. – Ifihan 4:1",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12803,7 +12768,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.8",
         key: "Unknown",
         scripture: "Kiyesi i, emi duro li ẹnu-ọna mi si nkan kũn. – Ifihan 3:20",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12858,7 +12823,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "O ti pari. – Johannu 19:30",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12933,7 +12898,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Ẹnyin ẹ yípadà, nitori èṣe ti ẹnyin o fi kú. – Esekiẹli 33:11",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -12978,7 +12943,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.8.8.8",
         key: "Unknown",
         scripture: "Ki alafia ki o pọ̀ fũn nyin. – Daniẹli 6:25",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13017,7 +12982,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.5.8.3",
         key: "Unknown",
         scripture: "Ẹ wá sọdọ mi, gbogbo ẹnyin ti nṣisẹ. – Matteu 11:28",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13102,7 +13067,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Ẹniti o bá tọ̀ mi wa emi kì yio ta a nù lọna-kan. – Johannu 6:37",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13165,7 +13130,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.7.8.7",
         key: "Unknown",
         scripture: "Nwọn si fi àwọn rẹ silẹ nã, nwọn si tọ̀ ọ lẹhin. – Matteu 4:20",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13230,7 +13195,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Oduro li ẹnu-ọna nkan kũn. – Ifihan 3:20",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13285,7 +13250,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Nwọn si nláti kọrin titun. – Ifihan 14:3",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13358,7 +13323,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "7.6.7.6.D",
         key: "Unknown",
         scripture: "Sọdọ mi, ẹnyin ti nrù eru wuwo. – Matteu 11:28",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13429,7 +13394,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.8",
         key: "Unknown",
         scripture: "Oluwa, nibo li o wà? – Johannu 1:38",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13524,7 +13489,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "6.5.6.5.D",
         key: "Unknown",
         scripture: "Mo gbadura fũn ọ. – Lúkù 22:32",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13595,7 +13560,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.7.8.7.D",
         key: "Unknown",
         scripture: "Oluwa mbe titi lailai. – Orin Dafidi 9:7",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13638,7 +13603,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Abasọ li ọkọ̀, gba mi. – Orin Dafidi 69:1",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13703,7 +13668,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "D.S.M.",
         key: "Unknown",
         scripture: "Adura mi yio de ọdọ rẹ li owurọ̀. – Orin Dafidi 88:13",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13774,7 +13739,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Emi o tọ̀ Baba mi lọ. – Lúkù 15:18",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13822,7 +13787,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Li odo Galili... o pe awọn nã: gẹgẹ bẹ̃ni nwọn kọ̀... nwon si tọ̀ ọ lẹhin. – Matteu 4:18-22",
-        theme: "Ipe s\'odo Jesu",
+        theme: "Ipe s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13893,7 +13858,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M.",
         key: "Unknown",
         scripture: "Nigbayi li emi duro li ẹnu-ọna emi si nkan kũn. – Ifihan 3:20",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -13958,7 +13923,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.8.8.8",
         key: "Unknown",
         scripture: "Enit’ o bá tọ̀ mi wa emi kì yio ta a nù lọna-kan. – Johannu 6:37",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14009,7 +13974,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "6.7.8.7",
         key: "Unknown",
         scripture: "Mo ti jọwọ́ okan mi fun u. – 2 Timoteu 1:12",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14074,7 +14039,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.6.D",
         key: "Unknown",
         scripture: "Adurà igbagbọ yio si gbà alaisan là. – Jakọbu 5:15",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14125,7 +14090,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Emi gbe ọwọ́ mi soke si ọ. – Orin Dafidi 143:6",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14170,7 +14135,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Alagbawi kan mbe fun wa lọdọ Baba. – Johannu 2:1",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14235,7 +14200,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.6",
         key: "Unknown",
         scripture: "Ẹniti o bá tọ̀ mi wa emi kì yio ta a nù lọna-kan. – Johannu 6:37",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14310,7 +14275,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "S.M.",
         key: "Unknown",
         scripture: "Ki a le gbadura daju ki a si sìn i. – 1 Peteru 4:7",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14375,7 +14340,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "7.7.7.7",
         key: "Unknown",
         scripture: "Ọlọrun, ṣanu fun mi, ẹlẹṣẹ. – Lúkù 18:13",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14450,7 +14415,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M.",
         key: "Unknown",
         scripture: "Nwọn si nwi fũn u pe, Jesu ti Nasarẹti li o nkoja lọ. – Lúkù 18:37",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14549,7 +14514,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Enia mẹsan iyokù ha dà? – Lúkù 17:17",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14612,7 +14577,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "7.7.7.7",
         key: "Unknown",
         scripture: "Nigbati nwọn mbe nibẹ nwọn fi ara han nwọn. – Johannu 21:1",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14667,7 +14632,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "S.M.",
         key: "Unknown",
         scripture: "Simi li omije rẹ. – Lúkù 7:48",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14722,7 +14687,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "7.7.7.7.7.7",
         key: "Unknown",
         scripture: "Nigbati nwọn ri irawo na nwọn yọ̀ ayọ̀ nla pupọ. – Matteu 2:10",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14797,7 +14762,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Ẹ sunmọ Ọlọrun, on o si sunmọ nyin. – Jakọbu 4:8",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -14862,7 +14827,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "7s",
         key: "Unknown",
         scripture: "Mo ti pa ọ mọ, ohun ini mi ni iwọ iṣe. – Isiah 44:21",
-        theme: "Wiwa s\'odo Jesu",
+        theme: "Wiwa s'odo Jesu",
         year: "Traditional",
         verses: [
           {
@@ -15770,293 +15735,293 @@ function YorubaHymnDetail({ theme }) {
         ],
         history: "Traditional Yoruba hymn on trust in God."
       },
-    "YBH246": {
-      title: "KÍ Nkọ́ Ohun Gbogbosilẹ́",
-      number: "YBH246",
-      author: "Unknown",
-      composer: "Unknown",
-      tune: "Unknown",
-      meter: "8.6.8.6",
-      key: "Unknown",
-      scripture: "Fílípì 3:8",
-      theme: "Igbekele Jesu",
-      year: "Traditional",
-      verses: [
-        {
-          number: 1,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "KÍ nkọ́ ohun gbogbosilẹ́",
-            "Fún Ọ, Olúwa mi",
-            "Ó tó bẹ́, níwọ̀n b’ Ó ti ṣe",
-            "Rekọjá ‘yí fún mi."
-          ]
-        },
-        {
-          number: 2,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Jẹ́ k’ ó lọ, ìrìjú Rẹ kan,",
-            "Ó ju gbogbo rẹ̀ lọ;",
-            "Y’ó dípò àdámù ọ̀rẹ́,",
-            "Orúkọ àt’ ọrọ̀."
-          ]
-        },
-        {
-          number: 3,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Ẹgbàárùn aiyé àt’ èmi,",
-            "Bí nwọn ti kéré tó!",
-            "L’ ẹgbẹ́ Rẹ, Oníbù ọrẹ́,",
-            "Ìwọ ‘Mọ́lẹ̀ ọ̀run."
-          ]
-        },
-        {
-          number: 4,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Ìbá le rí ojúrere kan",
-            "Láti ọ̀dọ̀ Rẹ wá;",
-            "Mo le p’ àdámù iní mi",
-            "Fún ayọ̀ èrè mi."
-          ]
-        }
-      ],
-      history: "Traditional Yoruba hymn of total surrender to God."
-    },
-    "YBH247": {
-      title: "OLÚWA l’ Àtìlẹ́yìn Mi",
-      number: "YBH247",
-      author: "Unknown",
-      composer: "Unknown",
-      tune: "Unknown",
-      meter: "8.6.8.6",
-      key: "Unknown",
-      scripture: "Orin Dáfídì 27:1",
-      theme: "Igbekele Jesu",
-      year: "Traditional",
-      verses: [
-        {
-          number: 1,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "OLÚWA l’ àtìlẹ́yìn mi,",
-            "Kíni ‘bá tẹ̀ mí rí?",
-            "Ẹnití Ó dá aiyé ró,",
-            "T’ Ó tẹ́ sánmà l’ aṣọ."
-          ]
-        },
-        {
-          number: 2,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Kí nkú, nígbàtí Jésù jí",
-            "Kúrò láàrin ikú?",
-            "Ọkàn mi ti gba ‘dáríjì",
-            "Lọ́wọ́ Olórí mi."
-          ]
-        },
-        {
-          number: 3,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Ẹ̀mí, àt’ ohun tí mo ní,",
-            "Y’ó jẹ́ Tìrẹ láéláé;",
-            "Ohun tí kò tó s’ ipò mi,",
-            "L’ ayọ̀ mo fi fún Ọ."
-          ]
-        },
-        {
-          number: 4,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "B’ ohun kan sí mbẹ tí ipò",
-            "Kò béèrè l’ ọ wọ́ mi,",
-            "Ìfẹ́ nlá sí Ọlọ́run tó",
-            "Mú mi fi kún pẹ̀lú."
-          ]
-        }
-      ],
-      history: "Traditional Yoruba hymn of God's support."
-    },
-    "YBH248": {
-      title: "F’ Ẹrù Rẹ F’ Afẹ́fẹ́",
-      number: "YBH248",
-      author: "Paul Gerhardt; Yoruba translation",
-      composer: "Unknown",
-      tune: "Unknown",
-      meter: "S.M.",
-      key: "Unknown",
-      scripture: "Orin Dáfídì 37:5",
-      theme: "Igbekele Jesu",
-      year: "Traditional",
-      verses: [
-        {
-          number: 1,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "F’ ẸRÙ rẹ f’ afẹ́fẹ́,",
-            "N’ ìrètí, má fòyà,",
-            "Ọlọ́run gbọ́ ‘míkànlẹ̀ rẹ,",
-            "Yíò gb’ orí rẹ ga."
-          ]
-        },
-        {
-          number: 2,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "N’ írúmi àt’ ìjì,",
-            "Yíò s’ ọ̀nà rẹ fẹ́fẹ́,",
-            "Dúró de ìgbà rẹ̀; òru",
-            "Yíò pin s’ ọjọ́ ayọ̀."
-          ]
-        },
-        {
-          number: 3,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Ìwọ r’ àìlera wa,",
-            "Inú wa n’ Ìwọ mọ̀,",
-            "Gbé ọwọ́ t’ ó rẹ sí òkè,",
-            "M’ ẹkún àìlera le."
-          ]
-        },
-        {
-          number: 4,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "K’ áwa n’íyè n’ ikú,",
-            "Sọ ọ̀rọ̀ Rẹ, tántán;",
-            "K’ a sọ tít’ òpin mi wá,",
-            "Ìfẹ́ ìtọ́jú Rẹ."
-          ]
-        }
-      ],
-      history: "Traditional Yoruba translation of Paul Gerhardt's 'Give To The Winds Thy Fears'."
-    },
-    "YBH249": {
-      title: "GBẸ́KẸ̀LÉ Ojojúmọ́",
-      number: "YBH249",
-      author: "Unknown",
-      composer: "Unknown",
-      tune: "Unknown",
-      meter: "7.7.7.7 with chorus",
-      key: "Unknown",
-      scripture: "Jòhánù 14:1",
-      theme: "Igbekele Jesu",
-      year: "Traditional",
-      verses: [
-        {
-          number: 1,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "GBẸ́KẸ̀LÉ ojojúmọ́,",
-            "‘Gbẹ́kẹ̀lé nínú ìjì,",
-            "B’ ìgbì tilẹ̀ kéré,",
-            "Kí nsá gbẹ́kẹ̀lé Jésù."
-          ]
-        },
-        {
-          number: "Egbe",
-          musicSigns: [],
-          lines: [
-            "Gbẹ́kẹ̀lé Jésù Nìkan",
-            "B’ ìṣẹ́jú tí nfò Kánkán,",
-            "Bí ọjọ́ nkọjá lọ,",
-            "Ohunkóhun t’ ó lè dé,",
-            "Gbẹ́kẹ̀lé Jésù nìkan."
-          ]
-        },
-        {
-          number: 2,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Ẹ̀mí Rẹ nmọ́lẹ̀ púpọ̀,",
-            "Sínú ọkàn òṣì mi,",
-            "B’ Ó bá n tọ́ mi nk’y’ó ṣubú,",
-            "Kí nsá gbẹ́kẹ̀lé Jésù."
-          ]
-        },
-        {
-          number: 3,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Kí nkọrin b’ ọ̀nà mi tọ́,",
-            "Gbàdúrà gbàt’ ọ̀nà ṣú,",
-            "Kí nke pè nínú ‘dánwò,",
-            "Gbẹ́kẹ̀lé Jésù nìkan."
-          ]
-        },
-        {
-          number: 4,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Kí ngbẹ́kẹ̀lé d’ ojú ‘kú,",
-            "Títí ayé yíò kọjá,",
-            "Títí ngó fi dé ọ̀run,",
-            "Gbẹ́kẹ̀lé Jésù nìkan."
-          ]
-        }
-      ],
-      history: "Traditional Yoruba hymn of daily trust in Jesus."
-    },
-    "YBH250": {
-      title: "GBẸ́KẸ̀LÉ Onígbàgbọ́",
-      number: "YBH250",
-      author: "Unknown",
-      composer: "Unknown",
-      tune: "Unknown",
-      meter: "P.M.",
-      key: "Unknown",
-      scripture: "Fílípì 4:13",
-      theme: "Igbekele Jesu",
-      year: "Traditional",
-      verses: [
-        {
-          number: 1,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "GBẸ́KẸ̀LÉ onígbàgbọ́,",
-            "B’ ìjà náà tilẹ̀ pẹ́,",
-            "Síbẹ̀ ìwọ yíò ṣẹ́gun,",
-            "Ọlọ́run jà fún ọ."
-          ]
-        },
-        {
-          number: "Egbe",
-          musicSigns: [],
-          lines: [
-            "Sá gbẹ́kẹ̀lé!",
-            "Sá gbẹ́kẹ̀lé!",
-            "B’ òkùnkùn tilẹ̀ ṣú:",
-            "Sá gbẹ́kẹ̀lé!",
-            "Ilẹ̀ fẹ́rẹ̀ mọ́ ná."
-          ]
-        },
-        {
-          number: 2,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Gbẹ́kẹ̀lé! ewu má mbọ̀,",
-            "Ìdánwò wà n’tòsí;",
-            "Nínú gbogb’ ewu aiyé,",
-            "Òun yíò t’ ọkọ̀ rẹ."
-          ]
-        },
-        {
-          number: 3,
-          musicSigns: ["f", "x", "x", "x"],
-          lines: [
-            "Olúwa lè gbà wá là,",
-            "Ọ̀rẹ́ òtítọ́ ni;",
-            "Gbẹ́kẹ̀lé onígbàgbọ́,",
-            "Gbẹ́kẹ̀lé dé òpin."
-          ]
-        }
-      ],
-      history: "Traditional Yoruba hymn of perseverance and trust."
-    },
+      "YBH246": {
+        title: "KÍ Nkọ́ Ohun Gbogbosilẹ́",
+        number: "YBH246",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "8.6.8.6",
+        key: "Unknown",
+        scripture: "Fílípì 3:8",
+        theme: "Igbekele Jesu",
+        year: "Traditional",
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "KÍ nkọ́ ohun gbogbosilẹ́",
+              "Fún Ọ, Olúwa mi",
+              "Ó tó bẹ́, níwọ̀n b’ Ó ti ṣe",
+              "Rekọjá ‘yí fún mi."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Jẹ́ k’ ó lọ, ìrìjú Rẹ kan,",
+              "Ó ju gbogbo rẹ̀ lọ;",
+              "Y’ó dípò àdámù ọ̀rẹ́,",
+              "Orúkọ àt’ ọrọ̀."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Ẹgbàárùn aiyé àt’ èmi,",
+              "Bí nwọn ti kéré tó!",
+              "L’ ẹgbẹ́ Rẹ, Oníbù ọrẹ́,",
+              "Ìwọ ‘Mọ́lẹ̀ ọ̀run."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Ìbá le rí ojúrere kan",
+              "Láti ọ̀dọ̀ Rẹ wá;",
+              "Mo le p’ àdámù iní mi",
+              "Fún ayọ̀ èrè mi."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn of total surrender to God."
+      },
+      "YBH247": {
+        title: "OLÚWA l’ Àtìlẹ́yìn Mi",
+        number: "YBH247",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "8.6.8.6",
+        key: "Unknown",
+        scripture: "Orin Dáfídì 27:1",
+        theme: "Igbekele Jesu",
+        year: "Traditional",
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "OLÚWA l’ àtìlẹ́yìn mi,",
+              "Kíni ‘bá tẹ̀ mí rí?",
+              "Ẹnití Ó dá aiyé ró,",
+              "T’ Ó tẹ́ sánmà l’ aṣọ."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Kí nkú, nígbàtí Jésù jí",
+              "Kúrò láàrin ikú?",
+              "Ọkàn mi ti gba ‘dáríjì",
+              "Lọ́wọ́ Olórí mi."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Ẹ̀mí, àt’ ohun tí mo ní,",
+              "Y’ó jẹ́ Tìrẹ láéláé;",
+              "Ohun tí kò tó s’ ipò mi,",
+              "L’ ayọ̀ mo fi fún Ọ."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "B’ ohun kan sí mbẹ tí ipò",
+              "Kò béèrè l’ ọ wọ́ mi,",
+              "Ìfẹ́ nlá sí Ọlọ́run tó",
+              "Mú mi fi kún pẹ̀lú."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn of God's support."
+      },
+      "YBH248": {
+        title: "F’ Ẹrù Rẹ F’ Afẹ́fẹ́",
+        number: "YBH248",
+        author: "Paul Gerhardt; Yoruba translation",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "S.M.",
+        key: "Unknown",
+        scripture: "Orin Dáfídì 37:5",
+        theme: "Igbekele Jesu",
+        year: "Traditional",
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "F’ ẸRÙ rẹ f’ afẹ́fẹ́,",
+              "N’ ìrètí, má fòyà,",
+              "Ọlọ́run gbọ́ ‘míkànlẹ̀ rẹ,",
+              "Yíò gb’ orí rẹ ga."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "N’ írúmi àt’ ìjì,",
+              "Yíò s’ ọ̀nà rẹ fẹ́fẹ́,",
+              "Dúró de ìgbà rẹ̀; òru",
+              "Yíò pin s’ ọjọ́ ayọ̀."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Ìwọ r’ àìlera wa,",
+              "Inú wa n’ Ìwọ mọ̀,",
+              "Gbé ọwọ́ t’ ó rẹ sí òkè,",
+              "M’ ẹkún àìlera le."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "K’ áwa n’íyè n’ ikú,",
+              "Sọ ọ̀rọ̀ Rẹ, tántán;",
+              "K’ a sọ tít’ òpin mi wá,",
+              "Ìfẹ́ ìtọ́jú Rẹ."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba translation of Paul Gerhardt's 'Give To The Winds Thy Fears'."
+      },
+      "YBH249": {
+        title: "GBẸ́KẸ̀LÉ Ojojúmọ́",
+        number: "YBH249",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "7.7.7.7 with chorus",
+        key: "Unknown",
+        scripture: "Jòhánù 14:1",
+        theme: "Igbekele Jesu",
+        year: "Traditional",
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "GBẸ́KẸ̀LÉ ojojúmọ́,",
+              "‘Gbẹ́kẹ̀lé nínú ìjì,",
+              "B’ ìgbì tilẹ̀ kéré,",
+              "Kí nsá gbẹ́kẹ̀lé Jésù."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: [],
+            lines: [
+              "Gbẹ́kẹ̀lé Jésù Nìkan",
+              "B’ ìṣẹ́jú tí nfò Kánkán,",
+              "Bí ọjọ́ nkọjá lọ,",
+              "Ohunkóhun t’ ó lè dé,",
+              "Gbẹ́kẹ̀lé Jésù nìkan."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Ẹ̀mí Rẹ nmọ́lẹ̀ púpọ̀,",
+              "Sínú ọkàn òṣì mi,",
+              "B’ Ó bá n tọ́ mi nk’y’ó ṣubú,",
+              "Kí nsá gbẹ́kẹ̀lé Jésù."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Kí nkọrin b’ ọ̀nà mi tọ́,",
+              "Gbàdúrà gbàt’ ọ̀nà ṣú,",
+              "Kí nke pè nínú ‘dánwò,",
+              "Gbẹ́kẹ̀lé Jésù nìkan."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Kí ngbẹ́kẹ̀lé d’ ojú ‘kú,",
+              "Títí ayé yíò kọjá,",
+              "Títí ngó fi dé ọ̀run,",
+              "Gbẹ́kẹ̀lé Jésù nìkan."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn of daily trust in Jesus."
+      },
+      "YBH250": {
+        title: "GBẸ́KẸ̀LÉ Onígbàgbọ́",
+        number: "YBH250",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "P.M.",
+        key: "Unknown",
+        scripture: "Fílípì 4:13",
+        theme: "Igbekele Jesu",
+        year: "Traditional",
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "GBẸ́KẸ̀LÉ onígbàgbọ́,",
+              "B’ ìjà náà tilẹ̀ pẹ́,",
+              "Síbẹ̀ ìwọ yíò ṣẹ́gun,",
+              "Ọlọ́run jà fún ọ."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: [],
+            lines: [
+              "Sá gbẹ́kẹ̀lé!",
+              "Sá gbẹ́kẹ̀lé!",
+              "B’ òkùnkùn tilẹ̀ ṣú:",
+              "Sá gbẹ́kẹ̀lé!",
+              "Ilẹ̀ fẹ́rẹ̀ mọ́ ná."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Gbẹ́kẹ̀lé! ewu má mbọ̀,",
+              "Ìdánwò wà n’tòsí;",
+              "Nínú gbogb’ ewu aiyé,",
+              "Òun yíò t’ ọkọ̀ rẹ."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["f", "x", "x", "x"],
+            lines: [
+              "Olúwa lè gbà wá là,",
+              "Ọ̀rẹ́ òtítọ́ ni;",
+              "Gbẹ́kẹ̀lé onígbàgbọ́,",
+              "Gbẹ́kẹ̀lé dé òpin."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn of perseverance and trust."
+      },
       "YBH251": {
         title: "ÀPÁTA Aiyéraiyé",
         number: "YBH251",
@@ -17883,7 +17848,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.6.8.6",
         key: "Unknown",
         scripture: "Orin Dafidi 32:1-2",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -17939,7 +17904,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "6.6.9.D",
         key: "Unknown",
         scripture: "Filipi 4:4",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18015,7 +17980,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.6.8.6",
         key: "Unknown",
         scripture: "1 Peteru 5:7",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18081,7 +18046,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.6.8.6",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18133,7 +18098,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "6.6.8.6",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18189,7 +18154,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.6.8.6",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18245,7 +18210,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.6.8.6",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18311,7 +18276,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "S.M. with chorus",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18385,7 +18350,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.D.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18443,7 +18408,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "S.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18479,7 +18444,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18545,7 +18510,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M. with chorus",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -18599,7 +18564,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Ayo n\'nu Jesu",
+        theme: "Ayo n'nu Jesu",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19537,7 +19502,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19603,7 +19568,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19659,7 +19624,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19725,7 +19690,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "10.10.10.10",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19771,7 +19736,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.7.4.7 with chorus",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19836,7 +19801,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "6.4.6.4.6.6.4",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -19917,7 +19882,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "8.8.8.4",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -20003,7 +19968,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "C.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -20079,7 +20044,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "P.M.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -20181,7 +20146,7 @@ function YorubaHymnDetail({ theme }) {
         meter: "L.M.D.",
         key: "Unknown",
         scripture: "Unknown",
-        theme: "Iba Kristi s\'oro",
+        theme: "Iba Kristi s'oro",
         year: "Traditional",
         musicSigns: ["f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x", "f", "x", "x", "x"],
         verses: [
@@ -25551,7 +25516,7 @@ function YorubaHymnDetail({ theme }) {
         scripture: "Unknown",
         theme: "Idapo Mimo",
         year: "Traditional",
-        
+
         verses: [
           {
             number: 1,
@@ -25895,7 +25860,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "ALÁBÙKÚN n’ ìsun ẹ̀jẹ̀,",
               "T’ a fi hàn ẹlẹ́ṣẹ̀ ayé;",
@@ -25909,7 +25874,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Funfun ju yìnyín lọ",
               "Funfun ju yìnyín lọ",
@@ -25919,7 +25884,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀gún ni adé orí Rẹ̀,",
               "Àgbélébù sì l’ ẹ̀rù Rẹ̀,",
@@ -25933,7 +25898,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Bàbá mo ṣákò lọ́dọ̀ Rẹ,",
               "Nígbà púpọ̀ l’ ọkàn mi ńṣẹ̀;",
@@ -25963,7 +25928,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“LỌ wàásù Mi,” l’ Olúwa wí:",
               "Wí f’ ayé k’ ó gba ọ̀rẹ́ Mi;",
@@ -25973,7 +25938,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Ng ó jẹ́ k’ a mọ̀ àṣẹ yín ńlá,",
               "Ẹ ó sì rí p’ òtítọ́ n’ ìhìn Mi,",
@@ -25983,7 +25948,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Kọ́ gbogb’ orílẹ̀ l’ àṣẹ Mi;",
               "Mo wà l’ ẹ̀yìn yín dé òpin;",
@@ -25993,7 +25958,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó wí, ìmọ́lẹ̀ tàn l’ ojú Rẹ̀;",
               "Ó gun sánmà lọ sí ọ̀run;",
@@ -26019,7 +25984,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "OLÚWA wà mímọ́,",
               "Tí ogun ọ̀run ńyìn,",
@@ -26032,7 +25997,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fún ọ̀rọ̀ Rẹ n’ ipá,",
               "Bùkún ìránṣẹ́ Rẹ yìí;",
@@ -26045,7 +26010,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ ọdún ti ńrekọjá,",
               "Kí ayọ̀ máa pọ̀ sí",
@@ -26073,7 +26038,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JẸ́ K’ alóre Síónì dìde",
               "Gba ìpè fún ‘ra wọn;",
@@ -26083,7 +26048,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kì í ṣe iṣẹ́ kékeré ni",
               "A ńfẹ́ olùṣọ́ sí;",
@@ -26093,7 +26058,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wọ́n ńṣọ́ ọkàn tí Olúwa",
               "F’ ògo ọ̀run ‘lé fún –",
@@ -26103,7 +26068,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ àwọn pàápàá lè rí Jésù náà",
               "Bí Olùgbàlà wọn;",
@@ -26129,7 +26094,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN Ìkórè, tẹ́ etí Rẹ,",
               "F’ ara Rẹ hàn l’ ogun Síónì;",
@@ -26139,7 +26104,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wo wá l’ ojú, Olúwa wa,",
               "Ìkórè pọ́n, ó ńre dédé;",
@@ -26149,7 +26114,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi ọwọ́ agbára Rẹ tọ́",
               "Ọmọ Síónì níbi gbogbo,",
@@ -26175,7 +26140,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ÌJÌNLẸ̀ l’ ọ̀rọ̀ Rẹ, Jésù,",
               "Ta ni lè túmọ̀ rẹ̀?",
@@ -26185,7 +26150,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ta ni lè ṣí Bíbélì rẹ̀,",
               "K’ ìrẹ̀wẹ̀sì má mú?",
@@ -26195,7 +26160,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣe àlùfáà Rẹ ní pípé",
               "T’ ó wù Ọ́, t’ Ó sì yàn;",
@@ -26205,7 +26170,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ ó lè máa rìn n’ ìwà mímọ́",
               "Níwájú ènìyàn Rẹ;",
@@ -26215,7 +26180,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàt’ ó bá dúró níwájú",
               "Àwọn t’ Ó ràpadà,",
@@ -26225,7 +26190,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tú ìbùkún Rẹ s’ orí rẹ̀,",
               "K’ Ẹ̀mí Rẹ máa bágbé,",
@@ -26251,7 +26216,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀WỌ̀ l’ ẹni òróró Rẹ,",
               "L’ òjíṣẹ́ ọ̀rọ̀ mímọ́ Rẹ",
@@ -26261,7 +26226,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ipò ẹlẹ́gbẹ́ n’ ipò rẹ̀,",
               "Aṣọ tí kò fẹ́ àbàwọ́n,",
@@ -26271,7 +26236,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níwọ̀n b’ ó ti wù Ọ láti",
               "Fi ṣe olùṣọ́ ẹ̀mí wa,",
@@ -26281,7 +26246,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má jẹ́ k’ iṣẹ́ wa mú bínú,",
               "Kí ìwà wa tàn sí subú;",
@@ -26291,7 +26256,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k’ á r’ ẹwà Rẹ l’ lára rẹ̀,",
               "K’ ó máa ràn n’nú ìwà pẹ̀lẹ́,",
@@ -26317,7 +26282,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "KRIST’, nín’ ọgbà Édén,",
               "L’ a gbé ti rí r’ àṣẹ yìí,",
@@ -26330,7 +26295,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́, a k’ ara wa jọ,",
               "Láti ṣe àṣẹ yìí;",
@@ -26343,7 +26308,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "K’ àwọn méjèèjì yìí,",
               "T’ a fẹ́ láti so pọ̀,",
@@ -26372,7 +26337,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NÍ Kánánì tí Gálílì,",
               "Níb’ àsè ‘gbéyàwó,",
@@ -26382,7 +26347,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù máṣàì f’ ara Rẹ̀ hàn",
               "Níbi ‘gbéyàwó yìí,",
@@ -26392,7 +26357,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí nwọ́n lè wà n’ írẹ́pọ̀,",
               "Ní ọjọ́ ayé wọn;",
@@ -26402,7 +26367,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí nwọ́n máa ran ‘ra wọn lọ́wọ́",
               "Nípa àjùmọ̀ṣe;",
@@ -26412,7 +26377,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gẹ́gẹ́ b’ ire ọjọ́ kíní,",
               "Ní ọgbà Édénì,",
@@ -26438,7 +26403,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "IRE t’ a sú ní Édén’,",
               "N’ ígbéyàwó ‘kíní,",
@@ -26448,7 +26413,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Síbẹ̀ títí di òní,",
               "N’ ígbéyàwó Kristìan;",
@@ -26458,7 +26423,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ire, kí nwọ́n lè máa bí,",
               "Kí nwọ́n sì lè máa rẹ̀;",
@@ -26468,7 +26433,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bá ni pé, Bàbá, sì fa",
               "Obìnrin yìí f’ ọkọ;",
@@ -26478,7 +26443,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bá ni pé Olùgbàlà,",
               "Sì so ọwọ́ wọn pọ̀,",
@@ -26488,7 +26453,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bá wa pé, Ẹ̀mí Mímọ́,",
               "F’ ìbùkún Rẹ fún wọn;",
@@ -26498,7 +26463,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi nwọn s’ abẹ́ ààbò Rẹ,",
               "K’ ibi kan má bà wọ́n;",
@@ -26508,7 +26473,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀lú wọn l’ ọj’ ayé wọn,",
               "Àt’ ọkọ àt’ aya;",
@@ -26534,7 +26499,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ f’ ara hàn nítòótọ́,",
               "Níbi àsè ‘yàwó;",
@@ -26544,7 +26509,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi ìbùkún Rẹ fún àwọn",
               "Tí ó da ‘wọ́ pọ̀ yìí;",
@@ -26554,7 +26519,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "F’ ẹ̀bùn ìfẹ́ kún àyà wọn,",
               "Fún wọn n’ ítẹ́lọ́rùn;",
@@ -26564,7 +26529,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "F’ ìfẹ́ mímọ́ so wọ́n d’ ọ̀kan,",
               "Kí nwọ́n f’ ìfẹ́ Kristi",
@@ -26574,7 +26539,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí nwọ́n ran ‘ra wọn lọ́wọ́,",
               "Nínú ìgbàgbọ́ wọn;",
@@ -26600,7 +26565,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "SIMI lé Olúwa - ẹ gbọ́",
               "Orin dùùrù ọ̀run –",
@@ -26610,7 +26575,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Simi, ìwọ ọkọ t’ ó gba",
               "Ìyàwó rẹ lónìí;",
@@ -26620,7 +26585,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ tí a fa ọwọ́ rẹ",
               "F’ ọkọ, n’nú ilé yìí,",
@@ -26630,7 +26595,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ simi, ẹ̀yin ọ̀rẹ́ wọn",
               "T’ ẹ wá bá wọn péjọ;",
@@ -26640,7 +26605,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Simi: Jésù Ọkọ Ìjọ",
               "Dúró ti nyín níhìn:",
@@ -26650,7 +26615,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ simi: – Àdàbà Mímọ́",
               "Ṣíṣẹ́ Rẹ̀ nínú wa –",
@@ -26676,7 +26641,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "JÉSÙ f’ ẹ̀jẹ̀ Rẹ̀ rà wá,",
               "Ẹ jẹ́k’ á súnm’ Ọlọ́run;",
@@ -26688,7 +26653,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Olúwa, jí nwọn yíká,",
               "Kí nwọ́n mọ ‘pè ayọ̀ náà;",
@@ -26700,7 +26665,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "A gbọ́ ‘ròyìn ògo Rẹ,",
               "Ohun t’ apá Rẹ ti ṣe;",
@@ -26728,7 +26693,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "WÁ, Olúwa, l’ àánú tún wa,",
               "Pẹ̀lú ‘pa ‘p’ ọkàn dà,",
@@ -26738,7 +26703,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọkàn wa kún f’ àárẹ̀ kíkan,",
               "Láti rí b’ ẹlẹ́ṣẹ̀,",
@@ -26748,7 +26713,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Jésù, wá pẹ̀lú ‘pa ‘sọjí,”",
               "L’ àwọn ènìyàn Rẹ ńké;",
@@ -26758,7 +26723,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́k’ ẹlẹ́ṣẹ̀ rọ̀ s’ ilé Rẹ,",
               "Kí nwọ́n hó ìṣẹ́gun,",
@@ -26784,7 +26749,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "GBỌ́ l’ ór’ ìtẹ́ Rẹ, Aládé,",
               "F’ onírúurú ‘bukun ránṣẹ́,",
@@ -26794,7 +26759,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wá, Ẹ̀mí Mímọ́ lát’ òkè,",
               "F’ ìfẹ́ kún ọkàn t’ ó tútù;",
@@ -26804,7 +26769,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Sọ̀rọ̀, ojú t’ ó dá yíò sun",
               "Ẹkún ‘robinújẹ́ jáde;",
@@ -26814,7 +26779,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Á! jẹ́k’ ọ̀pọ̀ àwọn mímọ́",
               "Dúró n’ ílẹ̀kùn ilé Rẹ;",
@@ -26840,7 +26805,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA, mo gbọ́ pé Ìwọ",
               "Ńrọ̀ òjò ‘bukun kiri;",
@@ -26850,7 +26815,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Àn’ èmi!",
               "Rọ̀ òjò rẹ s’ orí mi!"
@@ -26858,7 +26823,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má kọjá Bàbá Olóore,",
               "Bí ẹ̀ṣẹ̀ mi tilẹ̀ pọ̀;",
@@ -26868,7 +26833,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má kọjá mi, Olùgbàlà",
               "Jẹ́k’ èmi lè rọ̀ mọ́ Ọ;",
@@ -26878,7 +26843,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má kọjá mi, Ẹ̀mí Mímọ́,",
               "‘Wọ lè la ‘jú afọ́jú;",
@@ -26888,7 +26853,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo ti sùn fọnfọn nín’ ẹ̀ṣẹ̀,",
               "Mo bí Ọ bínú kọjá;",
@@ -26898,7 +26863,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìfẹ́ Ọlọ́run tí kì yẹ̀;",
               "Ẹ̀jẹ̀ Krist’ iyebíye;",
@@ -26908,7 +26873,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má kọjá mi, dáríjì mi,",
               "Fa mi rọra, Olúwa;",
@@ -26934,7 +26899,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MÁ kọjá mi, Olúgbàlà,",
               "Gbọ́ àdúrà mi;",
@@ -26944,7 +26909,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Jésù! Jésù! Gbọ́ àdúrà mi,",
               "Gbat’ Ìwọ bà ńp’ èlómìrán,",
@@ -26953,7 +26918,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "N’ ìtẹ́-àánú jẹ́k’ èmi rí",
               "Ìtura dídùn;",
@@ -26963,7 +26928,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "N’ ìgbẹ́kẹ̀lé ìtóye Rẹ,",
               "L’ èm’ ó w’ ojú Rẹ;",
@@ -26973,7 +26938,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Wọ orísun ìtùnú mi!",
               "Ju ‘ye fún mi lọ;",
@@ -26999,7 +26964,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "WỌ ‘lé ‘wọ ẹnit’ a bùkún,",
               "O kì tún s’ àlejò;",
@@ -27009,7 +26974,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Owó ‘dàpọ̀, àt’ ọkàn ‘fẹ́,",
               "Òun lí a na sí ọ;",
@@ -27035,7 +27000,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ARÁ n’nú Kríst’, nítorí Rẹ̀,",
               "A fi t’ ọkàntọkàn gbà ọ́;",
@@ -27045,7 +27010,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ Ẹnit’ a pè nípa ‘ké Rẹ̀,",
               "Rán Ẹ̀mí ‘re Rẹ̀ sọ̀kalẹ̀,",
@@ -27055,7 +27020,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb’ onígbàgbọ́ bá pé báyìí,",
               "Èrò ayé a d’ ìgbàgbé;",
@@ -27065,7 +27030,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àó, sọ t’ iṣẹ́ àt’ ọ̀rọ̀ Rẹ̀,",
               "T’ ìyà t’ Ó jẹ fún wa l’ ayé,",
@@ -27075,7 +27040,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí àkókò ti ńrẹkọjá,",
               "Àó fẹ́ràn, àó sìn n’ íyanu;",
@@ -27101,7 +27066,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "WỌ ‘lé, ‘wọ alábùkúnfún;",
               "Wá l’ orúkọ Jésù ọ̀wọ́n;",
@@ -27111,7 +27076,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ayọ̀ t’ ayé kò lè fún ni",
               "Àó f’ ìṣọ̀kan wa ìdí rẹ̀,",
@@ -27121,7 +27086,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B’ a sì ti ńlọ l’ ayé ẹkún,",
               "Àó f’ ayọ̀ àt’ ẹ̀dùn wa hàn;",
@@ -27131,7 +27096,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A tún ńkí ni, “Má wọlé,”",
               "Gba ìdálójú ìfẹ́ wa;",
@@ -27157,7 +27122,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀YIN ènìyàn Ọlọ́run,",
               "Mo ti kiri ayé ká,",
@@ -27167,7 +27132,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọkàn mi padà sìn yín, –",
               "Ẹ̀mí ìsánsá, mo dé;",
@@ -27177,7 +27142,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀mí k’yò nìkan rìn mọ́,",
               "Bí afẹ́fẹ́ àt’ ìgbì;",
@@ -27187,7 +27152,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "T’ èmi ni Ọlọ́run nyín;",
               "Jésù nyín yíò jẹ t’ èmi;",
@@ -27213,7 +27178,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ, ‘Wọ Olùṣ’-àgùtàn,",
               "Pa agbo Rẹ kékeré mọ́;",
@@ -27223,7 +27188,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Dáàbòbò nwọn lábẹ́ òrùn,",
               "Sìn nwọn lọ síb’ omi ìyè;",
@@ -27233,7 +27198,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jọ̀, kọ́ nwọn láti m’ ohùn Rẹ,",
               "Kí nwọn yọ̀ nígbà nwọn bá gbọ́;",
@@ -27243,7 +27208,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "M’ àwọn t’ ó kú l’ óde wá ‘lé,",
               "K’ O sì jẹ́kí iye nwọn pé;",
@@ -27269,7 +27234,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÍ ‘ṣẹ́ Rẹ nde Jésù!",
               "Fi agbára Rẹ hàn!",
@@ -27279,7 +27244,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jí ‘ṣẹ́ Rẹ nde Jésù!",
               "Tọ ọ̀run ikú yìí!",
@@ -27289,7 +27254,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jí ‘ṣẹ́ Rẹ nde Jésù!",
               "Mú k’ òùngbẹ Rẹ gbẹ wá!",
@@ -27299,7 +27264,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jí ‘ṣẹ́ Rẹ nde Jésù!",
               "Gbé orúkọ Rẹ ga;",
@@ -27309,7 +27274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jí ‘ṣẹ́ Rẹ nde Jésù!",
               "Rọ ‘jò ìtura nìkan,",
@@ -27335,7 +27300,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MÁ f’ ara fún ‘dánwò, nítor’ ẹ̀ṣẹ̀ ni",
               "Ìṣẹ́gun kan yíò f’ ipá mìíràn fún ọ",
@@ -27345,7 +27310,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Bèrè k’ Olúgbàlà fi",
               "‘Pá òun ‘tùnú fú ọ",
@@ -27355,7 +27320,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má kọ ẹgbẹ́ k’ ẹgbẹ́, má sọ̀rọ̀ ‘korò",
               "Máṣe pe orúkọ Ọlọ́run l’ ásán",
@@ -27365,7 +27330,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run yíò f’ adé f’ ẹnit’ ó ṣẹ́gun",
               "B’ a tilẹ̀ ńṣubú a fi ‘gbàgbọ́ ṣẹ́gun",
@@ -27391,7 +27356,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Á, JÉSÙ Alábùkún,",
               "A m’ orin ayọ̀ wá,",
@@ -27405,7 +27370,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "‘Torí nínú àánú Rẹ",
               "L’ O fi ọ̀run sílẹ̀,",
@@ -27419,7 +27384,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Á, Olúgbàlà ọ̀wọ́n,",
               "Gba orin ìfẹ́ wa,",
@@ -27449,7 +27414,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "TỌ́ nwọn, Baba sí Ọ,",
               "Tọ́ nwọn sí Ọ;",
@@ -27463,7 +27428,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "‘Gbàtí ayé bá ńdán,",
               "T’ ó ńwo dára,",
@@ -27477,7 +27442,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fún ‘rú nwọn ni Jésù",
               "Wá l’ ọmọdé,",
@@ -27491,7 +27456,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "‘Gbàgbọ́ mi lè s’ àìpé",
               "Síbẹ̀ mo mọ̀",
@@ -27521,7 +27486,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA sọ̀kalẹ̀,",
               "Bùkún àwọn ‘mọ má,",
@@ -27531,7 +27496,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B’ o ti jẹ ‘fẹ́ wa tó",
               "Láti rí ayọ̀ wọn,",
@@ -27541,7 +27506,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tu Ẹ̀mí Rẹ, Baba,",
               "S’ orí irúgbìn wa;",
@@ -27551,7 +27516,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́kí nwọn gb’ ọ̀rọ̀ Rẹ,",
               "Jẹ́wọ́ orúkọ Kríst’,",
@@ -27561,7 +27526,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ni k’ ìran wa yìí",
               "Pẹpẹ mímọ́ Rẹ ká,",
@@ -27587,7 +27552,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ DÌDE kí a sì kọrin,",
               "K’ a yin Olúwa wa,",
@@ -27597,7 +27562,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ dìde kí a sì kọrin,",
               "K’ a yin Olúwa wa,",
@@ -27607,7 +27572,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ dìde kí a sì kọrin,",
               "K’ a yin Olúwa wa,",
@@ -27617,7 +27582,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ dìde kí a sì kọrin,",
               "B’ a sì ti fẹ́ túká,",
@@ -27627,7 +27592,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́ ‘gbàtí a bá kọrin tán,",
               "T’ a bá sì s’ or’ ọ̀fẹ́",
@@ -27653,7 +27618,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀SẸ̀, ọ̀sẹ̀ t’ a ńretí",
               "A kì ó pè “Má wọlé,”",
@@ -27663,7 +27628,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A wá ‘lé ẹ̀kọ́ lónìí,",
               "Àt’ àgbà àt’ èwe wa,",
@@ -27673,7 +27638,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ àwọn àgbà tí ńk’ ẹ̀kọ́",
               "Má p’ àdánù èrè náà;",
@@ -27683,7 +27648,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀l’ àwọn ‘mọ wérewà,",
               "Tí ńk’ ẹ̀kọ́ n’nú ilé yìí,",
@@ -27709,7 +27674,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "LẸ́YÌN ‘jọ́ méfà t’ O ṣiṣẹ́,",
               "O simi ní ijọ́ keje,",
@@ -27719,7 +27684,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A wá láti m’ àṣẹ náà ṣẹ,",
               "Nínú ilé Rẹ yìí lónìí,",
@@ -27729,7 +27694,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí àó ti s’ ìwé mímọ́ Rẹ,",
               "Jẹ́k’ a lè kà pẹ̀lú ‘rẹ̀lẹ̀,",
@@ -27739,7 +27704,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Túmọ̀ rẹ̀ fún wa fún ‘ra Rẹ,",
               "Aláìlọ́gbọ́n sá lí àwa,",
@@ -27749,7 +27714,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀lú àwọn olùkọ́ wa,",
               "Fi Ẹ̀mí Mímọ́ Rẹ fún wọn,",
@@ -27759,7 +27724,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàt’ a bá kúrò níhìn,",
               "Jọ̀ másàì pẹ̀lú ọ̀nà wa,",
@@ -27785,7 +27750,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "JÉSÙ Ọba, a parí ẹ̀kọ́ wa,",
               "Má jẹ́kí Èṣù sá jẹ l’ ọkàn wa."
@@ -27793,7 +27758,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Jésù Ọba, a s’ ọpẹ́ lọ́wọ́ Rẹ,",
               "T’ O ti fún wa lí oúnjẹ ọ̀run jẹ."
@@ -27801,7 +27766,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Jésù Ọba, kò s’ ẹ̀kọ́ bí Tìrẹ,",
               "Ìhìn Rẹ dùn púpọ̀ lí etí wa."
@@ -27809,7 +27774,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Jésù Ọba, Ìwọ lí àó má wò,",
               "O ti kọ́ wa bẹ́ nínú ọ̀rọ̀ Rẹ."
@@ -27817,7 +27782,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Jésù Ọba, n’ íjáde wa lọ yìí,",
               "A bẹ̀ Ọ k’ O dáàbòbò gbogbo wa."
@@ -27825,7 +27790,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Jésù Ọba, nínú gbogb’ ọ̀sẹ̀ yìí,",
               "Ṣọ́ wa, sì mú wa rí ọ̀sẹ̀ tí mbọ̀."
@@ -27849,7 +27814,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ ÁWA tó parí ẹ̀kọ́ wa,",
               "Àwa f’ ìyìn fún Ọ;",
@@ -27859,7 +27824,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbin ọ̀rọ̀ Rẹ sí ọkàn wa,",
               "Gbà wá lọ́wọ́ ẹ̀ṣẹ̀;",
@@ -27869,7 +27834,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù jọ̀ bùkún ilé wa;",
               "K’ a lo ọjọ́ yìí ‘re;",
@@ -27895,7 +27860,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MO fẹ́ kí ndàbí Jésù,",
               "Nínú ìwà pẹ̀lẹ́;",
@@ -27905,7 +27870,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ kí ndàbí Jésù,",
               "L’ ádúrà ‘gbàgbogbo;",
@@ -27915,7 +27880,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ kí ndàbí Jésù,",
               "Ẹ̀mí kò rí ka pè",
@@ -27925,7 +27890,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ kí ndàbí Jésù,",
               "Nínú iṣẹ́ rere;",
@@ -27935,7 +27900,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ kí ndàbí Jésù,",
               "T’ó f’ ìyọ́nú wípe,",
@@ -27945,7 +27910,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n nkò dàbí Jésù",
               "Ó sì hàn gbangba bẹ́ẹ̀;",
@@ -27971,7 +27936,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "BÍ oṣùn gbẹ́gẹ́ etí ‘dò,",
               "Tútù minimini;",
@@ -27981,7 +27946,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ l’ ọmọ náà yíò dàgbà,",
               "Tí ńrìn l’ ọ̀nà rere",
@@ -27991,7 +27956,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ewé tútù l’ ẹ̀bá odò,",
               "B’ó pẹ́ a rẹ dànù;",
@@ -28001,7 +27966,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìbùkún ni fún ọmọ náà,",
               "Tí ńrìn l’ ọ̀nà Baba;",
@@ -28011,7 +27976,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa, ‘Wọ l’a gbákèlé,",
               "Fún wa l’ oore-ọ̀fẹ́;",
@@ -28037,7 +28002,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ILÉ-Ẹ̀KỌ́ ọjọ́ ‘sinmi,",
               "Á, mo ti fẹ́ Ọ tó!",
@@ -28047,7 +28012,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé-ẹ̀kọ́ ọjọ́ ‘sinmi,",
               "Oore rẹ p’àpọ̀jù;",
@@ -28057,7 +28022,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé-ẹ̀kọ́ ọjọ́ ‘sinmi,",
               "Jésù l’ó ti kọ́ ọ;",
@@ -28067,7 +28032,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé-ẹ̀kọ́ ọjọ́ ‘sinmi,",
               "Àwa rí ẹ̀rí gbà,",
@@ -28077,7 +28042,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé-ẹ̀kọ́ ọjọ́ ‘sinmi,",
               "B’òrùn ńràn l’árànjù,",
@@ -28087,7 +28052,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé-ẹ̀kọ́ ọjọ́ ‘sinmi,",
               "Mo yọ̀ láti rí ọ,",
@@ -28113,7 +28078,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN Baba, Kríst’ Ọmọ,",
               "Àti Ẹ̀mí, Mẹ́talọ́kan,",
@@ -28123,7 +28088,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ ìmọ́lẹ̀ ọ̀rọ̀ Rẹ f’ òye",
               "F’ àgbà àti èwe níhìn,",
@@ -28133,7 +28098,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níhìn, kí Jésù f’ ipá hàn,",
               "Tí sọ òkùn di ìmọ́lẹ̀,",
@@ -28143,7 +28108,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù Olúwa, Aládé,",
               "‘Wọ t’ àwọn mímọ́ ńwólẹ̀ fún,",
@@ -28169,7 +28134,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NÍHÌN-ÍN, l’ óko Rẹ Olúwa,",
               "A kọ ‘lé ‘rupe yìí fún Ọ,",
@@ -28179,7 +28144,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb’ ènìyàn Rẹ bá ńwá Ọ níhìn,",
               "T’ ẹlẹ́ṣẹ̀ mbẹ̀bẹ̀ fún ìyè,",
@@ -28189,7 +28154,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbàt’ òjíṣẹ́ Rẹ bá ńwàásù",
               "Ìhìnrere Jésù níhìn,",
@@ -28199,7 +28164,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbàt’ ohùn ewé bá ńkọrin,",
               "Hósánnà s’ Ọba wọn l’ ókè,",
@@ -28209,7 +28174,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ ògo Rẹ má f’ ìhìn ‘lẹ̀ láé,",
               "Síbẹ̀, má yan ‘lè yìí nìkan,",
@@ -28235,7 +28200,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN Baba, Ológo,",
               "T’ O jókòó lór’ ìtẹ́ láé,",
@@ -28247,7 +28212,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run Ọmọ, ‘Lùgbàlà,",
               "T’ O dúró n’ ìtẹ́ àánú,",
@@ -28259,7 +28224,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run Ẹ̀mí, tó ńwẹ ni,",
               "‘Mọ́lẹ̀, Ìyè, Agbára,",
@@ -28271,7 +28236,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Baba, Ọmọ, àti Ẹ̀mí,",
               "Ìfẹ́ ‘ṣọ̀kan, sọ̀kalẹ̀;",
@@ -28299,7 +28264,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "KRISTI n’ ìpìlẹ̀ wa,",
               "Lórí Rẹ̀ la ó kọ́lé;",
@@ -28313,7 +28278,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Àgbàlá mímọ́ yìí,",
               "Y’ó kún f’ orin ìyìn,",
@@ -28327,7 +28292,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run Olóore,",
               "F’ ìyè síni níhìn;",
@@ -28341,7 +28306,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Níhìn, jẹ́ k’ oore Rẹ",
               "T’ a ńtọrọ l’ át’ ọ̀run",
@@ -28371,7 +28336,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "LÁT’ òkè tútù Grinland,",
               "Láti òkun India,",
@@ -28385,7 +28350,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Afẹ́fẹ́ ọ̀run dídùn,",
               "Ńfẹ́ jẹ́jẹ́ ní Seilon;",
@@ -28399,7 +28364,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́ àwa tí a mọ̀ye",
               "Nípa ọgbọ́n ọ̀run,",
@@ -28413,7 +28378,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀fúùfù, mú ‘hìn rẹ̀ lọ,",
               "Àti ẹ̀yin odò;",
@@ -28443,7 +28408,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "GBỌ́ ohùn Jésù tí ńké pe,",
               "Ta ni yíò ṣiṣẹ́ lónìí?",
@@ -28457,7 +28422,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ ìwọ kò lè la òkun lọ,",
               "Láti wá ‘wọn kèfèrí,",
@@ -28471,7 +28436,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ o kò lè s’ ọ̀rọ̀ b’ ángẹ́lì,",
               "B’ o kò lè wàásù bí Pọ́ọ̀lù,",
@@ -28485,7 +28450,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ ìwọ kò lè k’ àgbàlagbà,",
               "Kríst’ Olùṣ’àgùtàn ni,",
@@ -28499,7 +28464,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Má jẹ́k’ ènìyàn gbọ́ wípé,",
               "“Kò sí ǹkan t’ èmi lè ṣe,”",
@@ -28529,7 +28494,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "ÌWỌ tí òkùnkùn",
               "Gb’ ọ̀rọ̀ agbára Rẹ,",
@@ -28542,7 +28507,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "‘Wọ t’ ìyé apá Rẹ",
               "Mú ìríran w’ ayé,",
@@ -28555,7 +28520,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìwọ Ẹ̀mí òtítọ́,",
               "Tí o ńf’ ìyè fún wa,",
@@ -28568,7 +28533,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mẹ́talọ́kan Mímọ́,",
               "Ọgbọ́n, Ìfẹ́, Ipá,",
@@ -28597,7 +28562,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "KÈFÈRÍ ńṣègbé lójójó,",
               "Ẹgbẹgbẹ̀rún l’ ó ńkọjá lọ;",
@@ -28607,7 +28572,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọrọ̀, owó, ẹ fi tọrẹ,",
               "Ná k’ ẹ sì ná kí nwọn lè yè;",
@@ -28633,7 +28598,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "WÁ, máa ṣiṣẹ́,",
               "Ta ni gbọdọ̀ s’ọ̀lẹ nínú oko,",
@@ -28644,7 +28609,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "Wá, máa ṣiṣẹ́,",
               "Gba ‘pè gíga tí ángẹ́lì kò ní –",
@@ -28655,7 +28620,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "Wá, máa ṣiṣẹ́,",
               "Oko pọ̀, alágbàṣe kò sì tó,",
@@ -28666,7 +28631,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "Wá, máa ṣiṣẹ́,",
               "Lé ‘yèméjì òun àìgbàgbọ́ jìnnà,",
@@ -28677,7 +28642,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "Wá, máa ṣiṣẹ́,",
               "‘Simi kò sí nígbàt’ iṣẹ́ ọ̀sán,",
@@ -28688,7 +28653,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "Wá, máa ṣiṣẹ́,",
               "Làálàá náà dùn, èrè náà sì dájú.",
@@ -28715,7 +28680,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "WO b’ íkórè ti pọ̀",
               "L’ ọ̀tún l’ òsì wa,",
@@ -28729,7 +28694,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "Ègbè:",
               "Wo b’ íkórè ti pọ̀",
@@ -28740,7 +28705,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ogunlọ́gọ̀ l’ ó wà",
               "Nínú àìmọ̀kan,",
@@ -28754,7 +28719,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Rántí pé Jésù kú",
               "Fún gbogbo ayé:",
@@ -28768,7 +28733,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Gb’ ohùn reré ẹkún",
               "Ní Masidonia,",
@@ -28782,7 +28747,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ohun ayé wa yìí",
               "Kò ní àyọ̀lé,",
@@ -28796,7 +28761,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìṣẹ́ ayé l’ èrè",
               "Ọrọ̀ kíkójọ,",
@@ -28826,7 +28791,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ FUN ‘pè náà kíkan,",
               "Ìpè ìhìnrere,",
@@ -28836,7 +28801,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Ègbè:",
               "Ọdún ìdásílẹ̀ ti dé,",
@@ -28845,7 +28810,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fún ‘pè t’ Ọ̀d’àgùtàn",
               "T’ a ti pa s’ ètùtù;",
@@ -28855,7 +28820,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin ẹrú ẹ̀ṣẹ̀,",
               "Ẹ sọ ‘ra yín d’ ọmọ,",
@@ -28865,7 +28830,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olórí Àlùfáà",
               "L’ Olùgbàlà íṣe,",
@@ -28875,7 +28840,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọkàn aláàárẹ̀, wá,",
               "Simi l’ áyà Jésù;",
@@ -28901,7 +28866,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ÌRÁNṢẸ́ Olúwa!",
               "Ẹ dúró níd’ iṣẹ́;",
@@ -28911,7 +28876,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k’ ìmọ́lẹ̀ yín tán,",
               "Ẹ tún fìtílà ṣe;",
@@ -28921,7 +28886,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣọ́ra! L’ àṣẹ Jésù,",
               "B’ a ti ńsọ kò jìnnà,",
@@ -28931,7 +28896,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìránṣẹ́ ‘re l’ ẹni",
               "Tí a bá n’ ipò yìí;",
@@ -28941,7 +28906,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Krístì tìkálarẹ̀",
               "Y’ó tẹ́ tábìlì fún,",
@@ -28967,7 +28932,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MÁ ṣiṣẹ́ lọ, máṣe sáré,",
               "Fi ayọ̀ ṣiṣẹ́ Baba rẹ;",
@@ -28977,7 +28942,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má ṣiṣẹ́ lọ, l’ ójójúmọ́,",
               "Òkùnkùn ayé fẹ́rẹ́ dé;",
@@ -28987,7 +28952,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Púpọ̀ púpọ̀ l’ àwọn t’ ó kú",
               "Tí wọn kò n’ írètí ọ̀run;",
@@ -28997,7 +28962,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má ṣiṣẹ́ lọ, má yọ̀ pẹ̀lú,",
               "Lẹ́yìn iṣẹ́, ‘wọ ó simi;",
@@ -29023,7 +28988,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ y’ó jọba ní gbogbo",
               "Ibit’ a bá lè rí oòrùn;",
@@ -29033,7 +28998,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òun l’ a ó máa gb’àdúrà sí,",
               "Àwọn ọba y’ó pè l’ Ọba;",
@@ -29043,7 +29008,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbogbo onírúurú èdè,",
               "Y’ó f’ ilé Rẹ̀ kọ ‘rin dídùn;",
@@ -29053,7 +29018,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Bùkún pọ̀ níbit’ Òun jọba;",
               "A tú àwọn òǹdè sílẹ̀;",
@@ -29063,7 +29028,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí gbogbo ẹ̀dá k’ ó dìde,",
               "Kí wọn f’ ọlá fún Ọba wọn;",
@@ -29089,7 +29054,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "GBỌ́! Orin ti Jubili,",
               "Ó dàbí sísán àrá;",
@@ -29103,7 +29068,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Hallelúyà! Gbọ́ ìró,",
               "Láti ayé dé ọ̀run,",
@@ -29117,7 +29082,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Y’ó jọba yí ayé ká,",
               "Pẹ̀lú agbára ńláńlá,",
@@ -29147,7 +29112,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "FÚNRÚGBÌN l’ òwúrọ̀,",
               "Má simi tít’ alẹ́;",
@@ -29157,7 +29122,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Wọ kò mọ ‘yí tí ńhù,",
               "T’ òrò tàbí t’ alẹ́;",
@@ -29167,7 +29132,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yíò sì hù jáde",
               "L’ ẹwà tútù yọ̀yọ̀,",
@@ -29177,7 +29142,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Wọ k’y’ó ṣiṣẹ́ lásán!",
               "Òjò, ìrì, oòrùn",
@@ -29187,7 +29152,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́ níkẹyìn ọjọ́,",
               "Nígbàt’ òpin bá dé,",
@@ -29213,7 +29178,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀RỌ̀ díẹ̀ fún Jésù;",
               "Ọ̀rẹ́ òtítọ́ ni;",
@@ -29223,7 +29188,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀rọ̀ díẹ̀ fún Jésù,",
               "Yíò gba wa l’ ọ̀nà wa,",
@@ -29233,7 +29198,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀RỌ̀ díẹ̀ fún Jésù,",
               "Ìwọ rí ‘dáríjì,",
@@ -29243,7 +29208,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀RỌ̀ díẹ̀ fún Jésù,",
               "Kò lè n’ íbànújẹ́;",
@@ -29253,7 +29218,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀RỌ̀ díẹ̀ fún Jésù",
               "Má jẹ́ k’ ákókò lọ",
@@ -29263,7 +29228,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀RỌ̀ díẹ̀ fún Jésù",
               "Bí ‘gbàgbọ́ rẹ ńkú lọ,",
@@ -29289,7 +29254,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "LỌ kéde ìgbàlà Jésù",
               "Gbogbo ẹ̀yin onígbàgbọ́",
@@ -29299,7 +29264,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yíò f’ àgbàlá ‘ná yí o ká",
               "Yíò f’ ìtara kún ọkàn rẹ",
@@ -29309,7 +29274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbàtí iṣẹ́ wa bá parí",
               "A ó pàdé láì tún pínyà mọ́",
@@ -29335,7 +29300,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "AGOGO ìhìnrere",
               "Ńlù lát’ ìlú dé ‘lú",
@@ -29349,7 +29314,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "‘Hìnrere b’ó ti ńlù,",
               "Láti ìlú dé ìlú,",
@@ -29359,7 +29324,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Agogo ìhìnrere",
               "Ńpe wa sí àsè náà,",
@@ -29373,7 +29338,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Agogo náà ńmáa ńkìlọ̀;",
               "B’ó ti ńlù lójójúmọ́,",
@@ -29387,7 +29352,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ayọ̀ ni agogo náà,",
               "Fi ńlù káàkiri ayé,",
@@ -29417,7 +29382,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "FÚNRÚGBÌN l’ òwúrọ̀, irúgbìn inú ‘re",
               "Fúnrúgbìn l’ ọ̀sán gangan, àti ní alẹ́",
@@ -29427,7 +29392,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ru ìtí wọlé, ru ìtí wọlé",
               "A ó f’ ayọ̀ padà ru ìtí wọlé",
@@ -29437,7 +29402,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fúnrúgbìn nín’ oòrùn, àti nín’òjìji",
               "Láìbẹ̀rù ìkùkù, tàbí òtútù",
@@ -29447,7 +29412,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí a tilẹ̀ ńf’ omijé ṣiṣẹ́ f’ Olúwa",
               "Àdánù t’a ńrí lè m’ ọkàn wa gbọgbẹ́",
@@ -29473,7 +29438,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "ÀTI gbọ́ ìró dídùn,",
               "Jésù lè gba ni là,",
@@ -29487,7 +29452,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ sọọ́ l’ orí ‘jì òkun",
               "Jésù lè gba ni là",
@@ -29501,7 +29466,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Kọrin náà s’ókè kíkan",
               "Jésù lè gba ni là;",
@@ -29515,7 +29480,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Afẹ́fẹ́, gbóhùn sókè",
               "Jésù lè gba ni là;",
@@ -29545,7 +29510,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "KRÍSTÌ fún gbogb’ ayé",
               "Ìṣẹ́ ńlá náà bẹ̀rẹ̀",
@@ -29559,7 +29524,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ó dáwó…. a ó gbàdúrà…..",
               "A ó wàásù Rẹ̀ lójójúmọ́",
@@ -29569,7 +29534,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Krístì fún gbogb’ ayé!",
               "K’ á f’ ọ̀rọ̀ Rẹ̀ ránṣẹ́",
@@ -29583,7 +29548,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Krístì fún gbogb’ ayé!",
               "‘Ránṣẹ́ Rẹ̀ yíò kéde",
@@ -29613,7 +29578,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "ÌLÚ mi, orin rẹ,",
               "Ìlú mi òmìnira",
@@ -29626,7 +29591,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìlú t’ a gbé bí mi,",
               "‘Lé àwọn òmìnira,",
@@ -29639,7 +29604,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "K’ afẹ́fẹ́ òmìnira,",
               "Bí lu gbogbo igi,",
@@ -29652,7 +29617,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run, Baba wa,",
               "‘Wọ t’ Ó dá òmìnira,",
@@ -29681,7 +29646,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA, ‘gbàt’ a ńgbàdúrà",
               "Fún gbogbo ènìyàn,",
@@ -29691,7 +29656,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ibòjì àwọn baba wa,",
               "‘Bùsùn àwọn ará,",
@@ -29701,7 +29666,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣọ́ ilé wa lọ́wọ́ ọ̀tá,",
               "Sì bùkún àlà wa;",
@@ -29711,7 +29676,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "F’ ìfẹ́ mímọ́ sì òtítọ́",
               "So gbogbo wa d’ ọ̀kan;",
@@ -29721,7 +29686,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A f’ ìlú wa lé Ọ lọ́wọ́,",
               "Olúwa gbogb’ ayé;",
@@ -29747,7 +29712,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA, jẹ́kí oore Rẹ,",
               "Tọ ‘lú wa pẹ̀l’ agbára Rẹ;",
@@ -29757,7 +29722,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí gbogbo ‘lẹ Ọlọ́run dá",
               "Orin ‘ṣẹ́gun t’ ìyìn mímọ́;",
@@ -29767,7 +29732,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Síbẹ̀ kò jẹ́ ayọ̀ wa ńlá,",
               "Láti rìn bí n’ íwájú Rẹ;",
@@ -29793,7 +29758,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ÁFÍK’ ‘lẹ wàrà àt’ oyin,",
               "Ní orílẹ̀ ayé ńwò sí,",
@@ -29803,7 +29768,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀tẹ̀ òwò-ẹrú ‘gbàní,",
               "Kò f’ ọkàn baba wa balẹ̀,",
@@ -29813,7 +29778,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òṣè àt’ ẹkún gb’ ilé kan,",
               "Gb’ ọkọ, aya, baba, ọmọ,",
@@ -29823,7 +29788,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n b’ Ọlọ́run Olóore",
               "Ti rántí Ísírẹ́lì nígbàní,",
@@ -29833,7 +29798,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Síbẹ̀ ọ̀pọ̀ gbàgbé ‘lé wọn,",
               "Olúwa à ńbẹ̀, ṣe ‘rànwọ́,",
@@ -29843,7 +29808,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀kọ́, ‘làjú ‘gbàgbọ́ pípé,",
               "Ìrẹ́pọ̀ àt’ ìfẹ́ tòótọ́,",
@@ -29853,7 +29818,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa Olódùmarè,",
               "Jẹ́ k’ ilé wa wúlò fún wa,",
@@ -29879,7 +29844,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "NÀÌJÍRÍÀ, a kí ọ,",
               "Orílẹ̀ wa ọ̀wọ́n",
@@ -29891,7 +29856,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àsíá wa yíò j’ àmì,",
               "Pé ètò ló ńjọba;",
@@ -29903,7 +29868,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run gbogbo ẹ̀dá",
               "Gbọ́ àdúrà wa yìí",
@@ -29931,7 +29896,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN orílẹ̀-èdè,",
               "Lát’ ibùgbé Rẹ l’ ókè,",
@@ -29941,7 +29906,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí ẹ̀ṣẹ̀ t’ ó b’ ọkàn wa jẹ́,",
               "Ńf’ ohùn rara ké f’ ẹ̀san;",
@@ -29951,7 +29916,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́k’ ìfẹ́ bo ‘rélọjá wa,",
               "K’ ẹ̀jẹ̀ náà fọ ẹ̀bi wa,",
@@ -29961,7 +29926,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A padà pẹ̀lú ìrònu,",
               "A wólẹ̀ ní ẹsẹ̀ Rẹ,",
@@ -29987,7 +29952,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA, Ìwọ l’ àwa ńpé,",
               "A kúnlẹ̀ síwájú ‘tẹ́ Rẹ,",
@@ -29997,7 +29962,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa, àwa yípadà",
               "S’ ọ̀dọ̀ Rẹ t’ a ti kọ̀ sílẹ̀;",
@@ -30007,7 +29972,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Or’-ọ̀fẹ́ Rẹ li ẹ̀bẹ̀ wa,",
               "Ẹ̀jẹ̀ Ọmọ Rẹ l’ a mú wá,",
@@ -30017,7 +29982,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀bẹ̀ nípa or’-ọ̀fẹ́ wọ̀nyí,",
               "Ti m’ ọ̀pọ̀ ‘bùkún sọ̀kalẹ̀,",
@@ -30043,7 +30008,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ORÍSUN laí, t’ ayọ̀ gbogbo,",
               "Kí ìyìn Rẹ gba ẹnu wa,",
@@ -30053,7 +30018,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí ayé yìí ti tóbi tó,",
               "Ọwọ́ Rẹ l’ ó d’ ọ̀pọ̀ rẹ̀ mú",
@@ -30063,7 +30028,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìtànná yọ li àṣẹ Rẹ,",
               "Òdòdó ṣe ilẹ̀ l’ ọ̀ṣọ́,",
@@ -30073,7 +30038,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L’ ákókò ‘kórè ọwọ́ Rẹ",
               "Tu oúnjẹ ká s’ ilé gbogbo,",
@@ -30083,7 +30048,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́k’ a f’ ayọ̀ sin Ọlọ́run,",
               "L’ òwúrọ̀ àti l’ àṣálẹ́,",
@@ -30109,7 +30074,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yin Ọlọ́run Ọba wa;",
               "Ẹ gbé ohùn ìyìn ga;",
@@ -30119,7 +30084,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yin Ẹni t' ó dá oòrùn",
               "Tí ó ń rán l' ójójúmọ́;",
@@ -30129,7 +30094,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àti òṣùpá l'óru",
               "Tí ó ń tàn 'mọ́lẹ̀ jẹ́jẹ́;",
@@ -30139,7 +30104,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yin Ẹni t' Ó ń m'òjò rọ̀,",
               "T' Ó ń mú irúgbìn dàgbà;",
@@ -30149,7 +30114,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹni t' Ó pàṣẹ fún 'lẹ̀",
               "Láti mú èso pọ̀ sí;",
@@ -30159,7 +30124,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yìn fún ìkórè oko,",
               "Ó mú kí àká wa kún;",
@@ -30169,7 +30134,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yin f' oúnjẹ t' ó ju yí lọ,",
               "Ẹ̀rí 'bùkún àìlópin;",
@@ -30179,7 +30144,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ògo f'Ọba olóore:",
               "Kí gbogbo ẹ̀dá gbèrin:",
@@ -30205,7 +30170,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb' ọpẹ́ mi, Olúwa,",
               "Lát' ọkàn l' ó ti wá,",
@@ -30215,7 +30180,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tìrẹ l' ẹran gbogbo,",
               "Tí ń fò lórí òkè;",
@@ -30225,7 +30190,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíni 'bá dámú Rẹ?",
               "Kí l' Ó fẹ́ tí kò sí?",
@@ -30235,7 +30200,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ohun ìdúpẹ́ kọ́",
               "L' Ó fẹ́, bí ọkàn wa;",
@@ -30245,7 +30210,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èyí ni mo mú wá, –",
               "Ọkàn t' ó kún fún ìfẹ́,",
@@ -30271,7 +30236,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "A F'ọpẹ́ F'Ọlọ́run",
               "L'ọkàn àti ohùn wa,",
@@ -30285,7 +30250,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọba Oníbúọrẹ́,",
               "Má fi wá sílẹ̀ láéláé,",
@@ -30299,7 +30264,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "K'a f'ìyìn ọpẹ́",
               "F'Ọlọ́run Baba, Ọmọ,",
@@ -30329,7 +30294,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwa ń bẹ̀bẹ̀ fún 'lẹ̀ wa,",
               "Kí Áfíríkà kó pé;",
@@ -30339,7 +30304,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìbùkún f' àwọn tó fẹ́,",
               "Ìrọ̀rùn n'nú odi rẹ̀,",
@@ -30349,7 +30314,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fún gbogb' àwọn ọmọ rẹ̀,",
               "T' ó ń jà fún ire rẹ̀,",
@@ -30359,7 +30324,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí gbogbo ọmọ Áfíríkà,",
               "F' ohùn kan ké pe Ọ;",
@@ -30369,7 +30334,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jèhófà Baba jọ̀wọ́,",
               "Ìwọ l' a gbẹ́kẹ̀lé;",
@@ -30395,7 +30360,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÚWA wa, a ńkọrin ti",
               "Ọwọ́ ńlá t’ ó mú wa dúró;",
@@ -30405,7 +30370,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L’ ọ̀sán l’ óru, n’ ilé, l’ ayọ̀,",
               "Olúwa wa l’ ó ńtọ́jú wa;",
@@ -30415,7 +30380,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A s’ ọpẹ́ fún ‘yí t’ ó kọjá;",
               "Èyítí ńbọ̀ – àwa kò mọ̀;",
@@ -30425,7 +30390,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nínú ire tàbí ibi,",
               "Má j’ ayọ̀ àt’ ìsimi wa;",
@@ -30435,7 +30400,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gba ‘kú bá f’ òpin s’ orin wa,",
               "T’ ó sì s’ ahọ́n ẹ̀sẹ̀ d’ odi;",
@@ -30461,7 +30426,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "WÁ, jẹ́ k' a tún pìlẹ̀ṣẹ̀ àjò wa,",
               "K' a b' ọdún yípo,",
@@ -30470,7 +30435,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Ìfẹ́ rere Rẹ̀, jẹ́ k' a f' ayọ̀ mú ṣe,",
               "K' a máa lo ẹ̀bùn wa,",
@@ -30479,7 +30444,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Ayé wa b' àlá, ìgbà wa b' odò",
               "Ńṣàn jáde Kánkán,",
@@ -30488,7 +30453,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "A ti ta 'fà náà, ìgbà sì lọ tán,",
               "Ọdún Olúwa,",
@@ -30497,7 +30462,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Gbogbo wa 'bá lè wí l' ọjọ́ wíwá Kríst' pé",
               "“Ẹ̀mí ti lo 'pa mi,",
@@ -30506,7 +30471,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Gbogbo wa 'bá lè gbọ́ l' ẹnu Olúwa wa,",
               "“Ìwọ ti ṣe rere!",
@@ -30531,7 +30496,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A yìn Ọ́, Olùrànlọ́wọ́ wa,",
               "T' ìfẹ́ Rẹ wà bákannáà láé,",
@@ -30541,7 +30506,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Láàrin ẹgbẹgbẹ̀rún 'dánwò,",
               "A dúró nípa ìtọ́jú Rẹ;",
@@ -30551,7 +30516,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Dé 'hìn l' apá Rẹ sìn wá,",
               "Dé 'hìn l' a ròyìn àánú Rẹ;",
@@ -30561,7 +30526,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb' ọkàn wa gúnlẹ̀ Jọ́dánì,",
               "Wọn ó tún gbé ọ̀pọ̀ kan ró,",
@@ -30587,7 +30552,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa fi apá Rẹ hàn,",
               "Sì jẹ́ k'a r' ògo Rẹ,",
@@ -30597,7 +30562,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K' àánú yọ wá nínú ẹ̀bi,",
               "Gbogb' ẹ̀ṣẹ̀ t' a àti dá,",
@@ -30607,7 +30572,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Rán Ẹ̀mí Rẹ lát' òkè wá,",
               "K' a lè fẹ́ Ọ jùlọ,",
@@ -30617,7 +30582,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbà t' a bá dé 'wájú Rẹ,",
               "N' ilé ayérayé,",
@@ -30643,7 +30608,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ àti àkókò ńlọ,",
               "Wọn ń sún wa s' etí 'bojì;",
@@ -30653,7 +30618,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù, 'Wọ Olùràpadà,",
               "Jí ọkàn t' ó kú s' ẹ̀ṣẹ̀:",
@@ -30663,7 +30628,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí àkókò ti ń súnmọ́lé,",
               "Jẹ́ k' a rò ibi t' a ń lọ;",
@@ -30673,7 +30638,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ayé wa ńlọ!",
               "Ikú dé tán.",
@@ -30686,7 +30651,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ayé wa ń kọjá b' òjìji,",
               "Ó sì ń fò lọ bí kùkù;",
@@ -30696,7 +30661,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kọ́ wa láti ka ọjọ́ wa,",
               "Láti bá ẹ̀ṣẹ̀ wa jẹ́;",
@@ -30706,7 +30671,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbogbo wa fẹ́rẹ̀ dúró náà,",
               "Níwájú ìtẹ́ 'dájọ́;",
@@ -30716,7 +30681,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ayé wa ńlọ",
               "Ikú dé tán.",
@@ -30742,7 +30707,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Baba, jẹ́ n yà ọdún yìí",
               "Sí mímọ́ fún Ọ,",
@@ -30756,7 +30721,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọm' ọwọ́ ha lè pàṣẹ",
               "'Bi tí òun y'ó gbé?",
@@ -30770,7 +30735,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Nínú àánú, b' Ìwọ bá",
               "Fún mi li ayọ̀,",
@@ -30784,7 +30749,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B' Ó mú 'pọ́njú wá bá mi,",
               "T' ó nà mi sọkún,",
@@ -30814,7 +30779,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "ỌDÙN mìíràn ti kọjá,",
               "Wàwà l’ àkókò náà lọ,",
@@ -30828,7 +30793,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ayé bí ibi’ìjà,",
               "Ẹgbẹgbẹ̀rún l’ ó ńṣubú,",
@@ -30842,7 +30807,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ a gba wá lọ́wọ́ ẹ̀ṣẹ̀",
               "Nípa oore-ọ̀fẹ́ Rẹ,",
@@ -30872,7 +30837,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ALÁKÒSO ti ọ̀run,",
               "Aláàánú àt’ Ọlọ́gbọ́n;",
@@ -30882,7 +30847,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àṣẹ Rẹ l’ ó dá ayé",
               "Àti ibí mi pẹ̀lú,",
@@ -30892,7 +30857,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìgb’ àìsàn òun ìlera,",
               "Ìgbà ìṣẹ́ òun ọrọ̀,",
@@ -30902,7 +30867,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìgbà ìrídí Èṣù,",
               "Ìgbà ‘tó fẹ́ Jésù wò,",
@@ -30912,7 +30877,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ Olúwa Olóore-ọ̀fẹ́,",
               "‘Wọ ni mo f’ ẹ̀mí Rẹ,",
@@ -30938,7 +30903,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "OLÚWA àlàáfíà wa",
               "L’ Ó paṣẹ t’ ọdún yípo;",
@@ -30950,7 +30915,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "A dúpẹ́ fún ìpamọ́ wa",
               "Ní ọdún tí ó kọjá;",
@@ -30962,7 +30927,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "K’ àgbà k’ ó múra láti sìn",
               "L’ ọ̀kan kan ní ọdún yìí;",
@@ -30974,7 +30939,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "K’ Ẹ̀mí Mímọ́ lát’ òkè wá",
               "Bà lé wa ní ọdún yìí,",
@@ -31002,7 +30967,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN t’ ọdún t’ ó kọjá,",
               "Ìrèt’ èyí tí ńbọ̀;",
@@ -31012,7 +30977,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lábẹ́ òjìji ìtẹ́ Rẹ",
               "L’ àwọn ènìà Rẹ ńgbé!",
@@ -31022,7 +30987,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ àwọn òkè k’ ó tó dúró,",
               "Tàbí k’ a tó d’ ayé,",
@@ -31032,7 +30997,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN t’ ọdún t’ ó kọjá,",
               "Ìrèt’ èyí tí ńbọ̀,",
@@ -31058,7 +31023,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B’ OÒRÙN l’ àìdúró tí rìn,",
               "La ọdún tí ó lọ já",
@@ -31068,7 +31033,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A sọ wọ́n l’ ọjọ́ láéláé,",
               "Tiwọn parí li ayé;",
@@ -31078,7 +31043,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb’ ọpẹ́ f’ àánú t’ ó kọjá",
               "Tún dárí ẹ̀ṣẹ̀ jì wá;",
@@ -31088,7 +31053,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bùkún f’éwé àt’ àgbà,",
               "F’ ìfẹ́ Olúwa kún wa;",
@@ -31114,7 +31079,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "OLÚWA àt’ ‘ìgbàlà wa,",
               "L’ ó kó wa jọ l’ alẹ́ òní,",
@@ -31128,7 +31093,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù t’ ó jókòó lór’ ìtẹ́,",
               "L’ a fi halleluya wa fún;",
@@ -31158,7 +31123,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NÍ àkókò ìpínyà,",
               "Jẹ́kí a fi ara wa,",
@@ -31168,7 +31133,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù gbọ́ àdúrà wa,",
               "‘Wọ tí ńṣọ́ àgùntàn",
@@ -31178,7 +31143,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ a l’ agbára n’ ipá Rẹ,",
               "F’ ádùn s’ ìrora gbogbo,",
@@ -31204,7 +31169,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A Ó ha pàdé l’ etí odò,",
               "T’ ẹsẹ̀ ańgẹ́lì ti tẹ̀,",
@@ -31214,7 +31179,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ó ha pàdé l’ etí odò,",
               "Odò dídán, odò dídán náà,",
@@ -31224,7 +31189,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L’ etí bèbè odò náà yìí,",
               "Pẹ̀l’ Olùṣ’-àgùntàn wa,",
@@ -31234,7 +31199,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ a tó dé odò dídán náà,",
               "A ó s’ ẹrù wa kalẹ̀;",
@@ -31244,7 +31209,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́ lẹ́bàá odò tútù náà,",
               "A ó r’ ojú Olùgbàlà;",
@@ -31270,7 +31235,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ ỌLỌ́RUN ṣọ́ ọ, k’ a tún pàdé",
               "Kí ìmọ̀ràn Rẹ̀ gbé ọ ró,",
@@ -31280,7 +31245,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ a pàdé!… k’ a pàdé!",
               "K’ a pàdé l’ ẹsẹ̀ Jésù!",
@@ -31290,7 +31255,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ Ọlọrun ṣọ́ ọ, k’ a tún pàdé!",
               "K’ Ó f’ ìyẹ́ Rẹ̀ dáàbò bò ọ,",
@@ -31300,7 +31265,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ Ọlọrun ṣọ́ ọ, k’ a tún pàdé!",
               "Nígbàt’ ewu bá yí ọ ká,",
@@ -31310,7 +31275,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ Ọlọrun ṣọ́ ọ, k’ a tún pàdé!",
               "K’ Ó f’ ìfẹ́ Rẹ̀ ràdọ̀ bò ọ,",
@@ -31336,7 +31301,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "NÍHÌN l’ àwa ńjẹ ‘rora,",
               "Níhìn ni a máa pínyà,",
@@ -31345,7 +31310,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Háà! bí yíò ti dùn tó!",
               "Dùn tó, dùn tó, dùn tó!",
@@ -31355,7 +31320,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Àwọn t’ ó fẹ́ràn Jésù,",
               "Nwọn ó lọ s’ òkè ọ̀run,",
@@ -31364,7 +31329,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Ọmọdé yíò wà níbẹ̀,",
               "T’ ó wá Ọlọ́run l’ ayé,",
@@ -31373,7 +31338,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Olùkọ́, baba, ìyá,",
               "Nwọn ó pàdé níbẹ̀ náà,",
@@ -31382,7 +31347,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Bí a tó ti yọ̀ pọ̀ tó!",
               "Gbat’ a bá r’ Olùgbàlà,",
@@ -31391,7 +31356,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Níbẹ̀ l’ a ó kọrin ayọ̀,",
               "Títí ayé àìlópin,",
@@ -31416,7 +31381,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K’ OORE-Ọ̀FẸ́ Krist’ Olúwa,",
               "Ìfẹ́ Baba àìlópin,",
@@ -31426,7 +31391,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Báyìí l’ a lè wà ní ‘rẹ́pọ̀",
               "Nínú wa àt’ Olúwa;",
@@ -31452,7 +31417,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "ỌLỌ́RUN l’ ọ̀dọ̀ ẹnití",
               "‘Tójú ìfẹ́ tí ńwá,",
@@ -31462,7 +31427,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pín wọn fún olúkúlùkù,",
               "Bí wọn ti s'àìní sí",
@@ -31472,7 +31437,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí ọjọ́ náà yára dé",
               "T’ ikú kì yíò sí mọ́,",
@@ -31482,7 +31447,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run l’ ọjọ́ ìkẹyìn",
               "Gb’ ohun gbogbo parí,",
@@ -31508,7 +31473,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ àwa ńwo Ọ fún",
               "‘Wòsàn aláìlera yìí",
@@ -31518,7 +31483,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò s’ oníṣègùn bí Rẹ;",
               "Tí w’ ara àt’ ọkàn sàn,",
@@ -31528,7 +31493,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lásárù ti s’ àìsàn rí,",
               "Ó kú, a sin Í n’bòjí,",
@@ -31538,7 +31503,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù jọ̀ dárí jìn wá,",
               "Bá wa wo aláìsàn yìí,",
@@ -31548,7 +31513,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wọ kò w’ àìsàn kan tí rí,",
               "Nínú ìgbé ayé Rẹ,",
@@ -31574,7 +31539,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ ‘wọ Oníṣègùn ńlá,",
               "T’ olókùnrùn ńf’ àìlera mọ̀,",
@@ -31584,7 +31549,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Afọ́jú, arọ, aláìsàn,",
               "Nwọn kò sàì rí ‘tọ́jú Rẹ gbà,",
@@ -31594,7 +31559,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìrora tí ‘wọ là kọjá,",
               "Jésù ‘Wọ lè ṣe ‘wòsàn rẹ̀,",
@@ -31604,7 +31569,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa jẹ́ kí ìrora,",
               "M’ aláìsàn túbọ̀ súnmọ́ Ọ,",
@@ -31614,7 +31579,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣe ‘wòsàn ọkàn tó gbogbé,",
               "Sì gba ọkàn ẹ̀ṣẹ̀ wa là,",
@@ -31640,7 +31605,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MO gbẹ́kẹ̀ mi lé Ọ,",
               "Lórí ibùsùn mi,",
@@ -31650,7 +31615,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò s’ ẹlòmíràn mọ́,",
               "Tí mo tún gbẹ́kẹ̀lé,",
@@ -31660,7 +31625,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Obìnrin ìgbàanì,",
               "Pẹ̀lú ìsun ẹ̀jẹ̀,",
@@ -31670,7 +31635,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wò mí sàn Olúwa,",
               "Nínú àìlera mi,",
@@ -31696,7 +31661,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "IṢẸ́ Rẹ Olúwa,",
               "Awámárídìí ni,",
@@ -31706,7 +31671,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O rí àìlera mi,",
               "Àìsàn àt’ àìgbádùn",
@@ -31716,7 +31681,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wo wàhálà mi yìí,",
               "‘Wọ Oníṣègùn ńlá,",
@@ -31726,7 +31691,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "W’ àwọn tó ńṣìkẹ́ mi,",
               "Àti oníṣègùn,",
@@ -31736,7 +31701,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má wo àìlera mi,",
               "Dárí ẹ̀ṣẹ̀ jìn mí,",
@@ -31746,7 +31711,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mú mi wúlò fún Ọ,",
               "Lẹ́yìn ìlera mi,",
@@ -31772,7 +31737,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ ODÒ ti ńyára ṣàn lọ,",
               "Li ọ̀nà gbòrò rẹ̀,",
@@ -31786,7 +31751,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ àwọn òṣùpá ti ńwọ̀,",
               "Tí oòrùn ńsáré lọ,",
@@ -31800,7 +31765,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Wí, ọkàn rẹ ha ti tò",
               "Ìṣúra rẹ s’ òkè?",
@@ -31830,7 +31795,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "KỌ́ mi ní ìwọ̀n ọjọ́ mi,",
               "Ìwọ Ẹlẹ́dàá mi;",
@@ -31840,7 +31805,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹsẹ̀ kan péré ni tiwa,",
               "Ìṣẹ́jú kan l’ a ní,",
@@ -31850,7 +31815,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíni mba fẹ́, tí mba retí",
               "Lọ́w’ ẹrù òun ilẹ̀?",
@@ -31860,7 +31825,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo dá ‘rètí ara l’ ẹ́kùn,",
               "Mo pe ‘fẹ́ mi padà,",
@@ -31886,7 +31851,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run lát’ ìrandíran,",
               "‘Wọ n’ ìsinmi àt’ ààbò wa,",
@@ -31896,7 +31861,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O ti ńjọba k’ ìgbà tó wà,",
               "Tàbí k’ a tó dá ènìyàn;",
@@ -31906,7 +31871,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ikú, bí ọkọ̀, ńgbá wa lọ,",
               "Ayé wa bí ìtàn lásán,",
@@ -31916,7 +31881,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k’ a mọ àìlera ẹ̀dá,",
               "K’ Ó sún ọjọ́ wa síwájú,",
@@ -31942,7 +31907,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "LÁB’ ẹsẹ̀, àti l’ òkè wa,",
               "Ni ìkìlọ̀ tí ńdún,",
@@ -31952,7 +31917,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ikú gun afẹ́fẹ́ l’ ẹṣin,",
               "Ó wà nínú ‘tànná,",
@@ -31962,7 +31927,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Padà, ẹlẹ́ṣẹ̀, n’ ewu rẹ,",
               "Níbikíbi t’ o ńlọ,",
@@ -31972,7 +31937,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Onígbàgbọ́, ẹ yípadà,",
               "K’ ẹ sì gba òtítọ́,",
@@ -31998,7 +31963,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé 'simi, mo ń retí rẹ,",
               "'Gbawo n' ìgbà yíò dé,",
@@ -32008,7 +31973,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ó ṣiṣẹ́ Jésù,",
               "A ó ṣiṣẹ́ Jésù,",
@@ -32018,7 +31983,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò s' ayọ̀ tí mo mọ̀ l' ayé,",
               "Kò s' ibi ìsinmi,",
@@ -32028,7 +31993,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo tọ Jésù wá fún 'simi,",
               "Ó ní kí n yé kirí,",
@@ -32038,7 +32003,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Arìnká yìí tilẹ̀ sú mi,",
               "N'nú ẹ̀ṣẹ̀ àt' òṣì,",
@@ -32064,7 +32029,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àkókò àti lọ mi yá,",
               "Mo gb' ohùn tó ń pè mí lọ 'lé,",
@@ -32074,7 +32039,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo ti sáré ìje mi tán,",
               "Ìjà parí, mo ti gb' èrè,",
@@ -32084,7 +32049,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "N kò gbẹ́kẹ̀lé òdodo mi,",
               "Mo wólẹ̀ ní iwájú Rẹ,",
@@ -32094,7 +32059,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa, mo dé l' àṣẹ Rẹ,",
               "Mo f' ẹ̀mí mi lé Ọ lọ́wọ́,",
@@ -32120,7 +32085,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ará, b' a kò tilẹ̀ gbọ́",
               "Ohùn kan lát' òkè wá;",
@@ -32130,7 +32095,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí ó d' omijé fún ọ,",
               "Ìwọ ọmọ Ọlọ́run,",
@@ -32140,7 +32105,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ará, nínú 'rètí yìí",
               "A fi ọ fún ekuru,",
@@ -32150,7 +32115,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbat' a ń sọkún bí Jésù,",
               "Ìwọ ó sùn b' Ó ti sùn,",
@@ -32176,7 +32141,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb' ohùn t' ó ọ̀run wá ti wí",
               "F' àwọn mímọ́ t' ó kú,",
@@ -32186,7 +32151,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Wọn kú n'nú Jésù, oorun wọn",
               "Sì kún fún ìbùkún!",
@@ -32196,7 +32161,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Jìnnà s' ayé ìyọnu yìí,",
               "Wọn wà lọ́d' Olúwa;",
@@ -32222,7 +32187,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíkú n'nú Jésù, ikú rè",
               "T' a kì jí sínú rẹ̀ sọkún,",
@@ -32232,7 +32197,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíkú n'nú Jésù ti dùn tó,",
               "A bá lè yẹ fún ọ̀run yìí,",
@@ -32242,7 +32207,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíkú n'nú Jésù jẹ́ 'simi,",
               "Tí àjínde rẹ̀ n' ìbùkún,",
@@ -32268,7 +32233,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ikú l' òpin ohun gbogbo;",
               "B' ó ti wù k' ẹ̀mí gùn,",
@@ -32278,7 +32243,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lẹ́yìn ọjọ́ díẹ̀ l' ayé,",
               "T' a lò nínú làálàá,",
@@ -32288,7 +32253,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀rín l' òrọ̀, ẹkún l' alẹ́,",
               "Ayọ̀ òun 'bànújẹ́,",
@@ -32298,7 +32263,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Há! ègún 're f' àwọn t' ó kú",
               "Nínú Olùgbàlà;",
@@ -32308,7 +32273,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀nà l' ó jẹ́ sínú ìyè",
               "F' àwọn onígbàgbọ́,",
@@ -32318,7 +32283,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gba wá lọ́wọ́ ikú kejì,",
               "Jésù Olùgbàlà,",
@@ -32344,7 +32309,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Ó sùn,” ni Jésù wí",
               "Nípa ti Lasaru,",
@@ -32354,7 +32319,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òkú ọjọ́ mẹ́rin,",
               "L' ojú Jésù, sùn ni,",
@@ -32364,7 +32329,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀rẹ́ Jésù kì í kú,",
               "Wọn a máa pàràdà,",
@@ -32374,7 +32339,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Sùn, ará, olùfẹ́,",
               "Jésù dúró tì ọ́,",
@@ -32384,7 +32349,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O fẹ́rẹ̀ gb' ohùn náà,",
               "Lát' ojú orun rẹ,",
@@ -32394,7 +32359,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A kò ní b' ará jẹ́",
               "Bí aláìn' ìrètí,",
@@ -32404,7 +32369,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwa pẹ̀lú yíò sùn",
               "Li àkókò ti wa;",
@@ -32430,7 +32395,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbàt' a kún fún 'bànújẹ́,",
               "Gb' omijé ń ṣàn l' ojú wa,",
@@ -32440,7 +32405,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Wọ ti gbé ara wa wọ̀;",
               "Ó sì mọ 'bànújẹ́ wa;",
@@ -32450,7 +32415,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Wọ ti tẹríba fún 'kú;",
               "'Wọ ti t' ẹ̀jẹ̀ Rẹ sílẹ̀;",
@@ -32460,7 +32425,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbàt' ọkàn wa bá bàjẹ́,",
               "Nítorí ẹ̀ṣẹ̀ t' a dá;",
@@ -32470,7 +32435,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Wọ ò ti mọ ẹ̀rù ẹ̀ṣẹ̀,",
               "Ẹ̀ṣẹ̀ tí kì í ṣe Tìrẹ;",
@@ -32480,7 +32445,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó ti ṣí ìlẹ̀kùn ikú,",
               "Ó ti ṣ' ètùtù f' ẹ̀ṣẹ̀,",
@@ -32506,7 +32471,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìtànná t' ó bo 'gbé l' aṣọ,",
               "T'ó tutù yọ̀yọ̀ bẹ́;",
@@ -32516,7 +32481,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àpẹẹrẹ yìí yẹ f' ara wa,",
               "B' ọ̀r' Ọlọ́run ti wí;",
@@ -32526,7 +32491,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Há! má gbẹ́kẹ̀lé ẹ̀mí rẹ,",
               "Má pe 'gbà rẹ n' tìrẹ;",
@@ -32536,7 +32501,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin t' a dá sí di òní,",
               "Láìpẹ́, ẹ̀mí y'ó pin,",
@@ -32546,7 +32511,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Koríko, b' ó kú, kì jí mọ́;",
               "Ẹ kú láti tún yè;",
@@ -32556,7 +32521,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa, jẹ́ k' a j' ìpè Rẹ,",
               "K' a kúrò n'nú ẹ̀ṣẹ̀;",
@@ -32582,7 +32547,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ránṣẹ́ Ọlọ́run ṣeun;",
               "Sinmi n'nú làálàá rẹ;",
@@ -32596,7 +32561,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Igbé ta l' ọ̀gànjọ́",
               "“Pàdé Ọlọ́run rẹ.”",
@@ -32610,7 +32575,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìrora ikú kọjá,",
               "Làálàá àt' ìṣẹ́ tán;",
@@ -32640,7 +32605,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Máa sùn lọ, olùfẹ́; sá máa sinmi,",
               "F' orí rẹ lé àyà Olùgbàlà;",
@@ -32650,7 +32615,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀run rẹ dùn bí oorun ọmọdé,",
               "B' ó sì jí, ẹkún kò sí fún ọ mọ́,",
@@ -32660,7 +32625,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Títí òkùnkùn ayé y'ó fi tán,",
               "Títí a ó fi ko ìkórè wọ 'lé;",
@@ -32670,7 +32635,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Títí òòrùn àjínde y'ó fi yọ,",
               "Tí àwọn òkú Jésù y'ó dìde;",
@@ -32680,7 +32645,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Títí ẹwà ọ̀run y'ó jẹ́ tìrẹ,",
               "Tí ìwọ ó máa tàn nínú ògo,",
@@ -32690,7 +32655,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó d' òwúrọ̀ sá ni, olùfẹ́ mi,",
               "A tún fẹ́rẹ̀ rí 'ra náà n' ibití",
@@ -32700,7 +32665,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tít' a ó fi pàdé níwájú ìtẹ́,",
               "Nín' aṣọ ìgúnwà àwọn Tìrẹ,",
@@ -32726,7 +32691,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí a tó d' àwọn òkè ńlá,",
               "Tàbí kí ayé tó dúró,",
@@ -32736,7 +32701,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹgbẹ̀rún ọdún l' ojú Rẹ",
               "Dàbí àná, bí wọn tí ń lọ,",
@@ -32746,7 +32711,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọj' ayé wa dàbí àlá,",
               "Bí èrò ọkàn tí kì pẹ́,",
@@ -32756,7 +32721,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa, fún wa ní ọgbọ́n",
               "K' a lè l' àkókò wa r' èrè,",
@@ -32782,7 +32747,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Làálàá alágbàṣe tán;",
               "Ọjọ́ ogun ti parí;",
@@ -32792,7 +32757,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Baba lábẹ́ ìtọ́jú Rẹ",
               "L' àwa f' ìránṣẹ́ Rẹ yìí sí."
@@ -32800,7 +32765,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbẹ̀ l' a rẹ̀ wọ́n l' ẹ́kún",
               "Níbẹ̀ wọn m' ohun gbogbo;",
@@ -32810,7 +32775,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbẹ̀ l' Olùṣ' àgùtàn",
               "Ń kó àwọn àgùtàn lọ",
@@ -32820,7 +32785,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbẹ̀ l' àwọn ẹlẹ́ṣẹ̀",
               "T' ó tẹjú m' àgbélébù",
@@ -32830,7 +32795,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbẹ̀ l' agbára Èṣù",
               "Kò lè b' ayọ̀ wọn jẹ́ mọ́;",
@@ -32840,7 +32805,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Erùpẹ̀ fún erùpẹ̀,”",
               "L' èdè wa nísiìsíyìí;",
@@ -32866,7 +32831,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìbùkún ni f' òkú,",
               "T' ó sinmi lé Jésù;",
@@ -32876,7 +32841,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìran 'bùkún l' èyí,",
               "Kòsí bójú láàrin;",
@@ -32886,7 +32851,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wọn bọ́ lọ́wọ́ ayé,",
               "Pẹ̀lú àníyàn rẹ̀;",
@@ -32896,7 +32861,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lórí ibojì wọn,",
               "L' àwa ń sokún lónìí,",
@@ -32906,7 +32871,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A k' yó gbóhùn wọn mọ́,",
               "Ohùn ìfẹ́ dídùn;",
@@ -32916,7 +32881,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin onínúrere",
               "A fi wá sílẹ̀ lọ;",
@@ -32926,7 +32891,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n a fẹ́ gbóhùn",
               "Olódùmarè náà;",
@@ -32952,7 +32917,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb' ohùn t'ó t' ọ̀run wá ti wí,",
               "Bùkún f' òkú onígbàgbọ́",
@@ -32962,7 +32927,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Má sokún mọ́, Má sokún mọ́,",
               "Onígbàgbọ́ má sokún mọ́",
@@ -32971,7 +32936,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èṣé t' onígbàgbọ́ ń ṣọ̀fọ̀,",
               "F' àwọn t'ó sùn nínú Kristi,",
@@ -32981,7 +32946,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Onígbàgbọ́ t'ó kú l' ayé,",
               "F' ìbànújẹ́ f' àwọn ará,",
@@ -32991,7 +32956,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù sì f' ojú ayọ̀ wò,",
               "Ọmọ ọ̀dọ̀ náà l' ẹsẹ̀ Rẹ̀,",
@@ -33001,7 +32966,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Onígbàgbọ́ má jáfara,",
               "Nínú àjò rẹ l' ayé yìí,",
@@ -33027,7 +32992,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàt' ìpè bá dún,",
               "N'go dìde n'nú 'bojì,",
@@ -33037,7 +33002,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀l' ayọ̀ tàb' ẹkún,",
               "Ni n'go f' ibojì 'lẹ̀,",
@@ -33047,7 +33012,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "N'nú kí n bá Jésù gbé,",
               "Tàbí k' a tà mí nù,",
@@ -33057,7 +33022,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ tí kò fẹ́ 'kú",
               "Ẹlẹ́ṣẹ̀ kaǹṣoṣo,",
@@ -33067,7 +33032,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kọ́ mi bí a ti yẹ",
               "Ọ̀nà 'bínú sílẹ̀,",
@@ -33093,7 +33058,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́ Onídàájọ́ yíò wá?",
               "Ǹjẹ́ òkú yíò jí dìde?",
@@ -33103,7 +33068,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bá'wo l' ọkàn mi yíò ti",
               "Gba ẹ̀rù ọjọ́ náà,",
@@ -33113,7 +33078,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n k' ìpè tó mi",
               "'Bùgbé àwọn òkú,",
@@ -33123,7 +33088,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Wá, ẹlẹ́ṣẹ̀, w' àánú",
               "Ẹn't' ìbínú Rẹ̀ pọ̀,",
@@ -33148,7 +33113,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Gbà 'Wọ Onídàájọ́ bá dé",
               "Láti m' àwọn Tírẹ̀ lọ 'lé,",
@@ -33160,7 +33125,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ bá wọn péjọ níhìn,",
               "Láti máa wólẹ̀ l' ẹ̀sẹ̀ Rẹ,",
@@ -33172,7 +33137,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "K' àánú Rẹ má jẹ́ k' ó rí bẹ́,",
               "Olúwa, ṣe 'bi 'sábi mi,",
@@ -33184,7 +33149,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí ń wà l' áàrin ènìyàn Rẹ,",
               "Gbàt' ìpè Ańgẹ́lì bá dún,",
@@ -33212,7 +33177,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Kò s' àyè 'jáfara níhìn",
               "Fún 'retí àt' ẹ̀rù ayé;",
@@ -33224,7 +33189,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Kò s' ohun tí n bá rò níhìn,",
               "Lẹ́hìn bí n'go ti ṣe sálà,",
@@ -33236,7 +33201,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù, f' ojú àánú wò mí,",
               "Ṣe Olùtọ́ àt' Ọ̀nà mi,",
@@ -33264,7 +33229,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù Olúwa ń bọ̀,",
               "Láti ṣe 'dájọ́ wa,",
@@ -33274,7 +33239,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀bùn t' ó fífún wa,",
               "Láti fi s' iṣẹ́ fún,",
@@ -33284,7 +33249,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k' a múra láti",
               "Fi ẹ̀bùn wa ṣiṣẹ́,",
@@ -33294,7 +33259,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A fẹ́rẹ́ gb' ohùn Rẹ̀",
               "Li àwọsánmà náà,",
@@ -33304,7 +33269,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yíò sì wí fún wá pé",
               "Wá, alábùkúnfún,",
@@ -33330,7 +33295,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbàt' Ó bá dé, gbàt' Ó bá dé,",
               "Láti ka ọ̀ṣọ́ Rẹ̀;",
@@ -33340,7 +33305,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Bí ìràwọ̀ òwúrọ̀,",
               "Wọn ń s' adé Rẹ̀ l' ọ̀ṣọ́,",
@@ -33349,7 +33314,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yíò kó jọ, yíò kó jọ,",
               "Ọ̀ṣọ́ ìjọba Rẹ̀;",
@@ -33359,7 +33324,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwọn ewé, àwọn ewé,",
               "T' ó fẹ́ Olùgbàlà,",
@@ -33385,7 +33350,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọjọ́ 'dájọ́, ọjọ́ ẹ̀rù!",
               "Gbọ́ bí ìpè ti ń dún tó!",
@@ -33397,7 +33362,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Wo Onídàájọ́ l' àwọ̀ wa,",
               "Ó wọ ògo ńlá l' aṣọ,",
@@ -33409,7 +33374,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ní pípè Rẹ̀, òkú yíò jí",
               "Lát' òkun, ilẹ̀, s' ìyè",
@@ -33421,7 +33386,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n f' àwọn t' ó jẹ́wọ́ Rẹ̀,",
               "T' wọn fẹ́, tí wọn sìn l' ayé,",
@@ -33449,7 +33414,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Níhìn mo j' àlejò,",
               "Ọ̀run n' ilé.",
@@ -33463,7 +33428,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Bí ìjì tilẹ̀ ń jà,",
               "Ọ̀run n' ilé.",
@@ -33477,7 +33442,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Lọ́dọ̀ Olùgbàlà,",
               "Ọ̀run n' ilé.",
@@ -33491,7 +33456,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Njẹ́ n kì y'ó kùn, 'torí",
               "Ọ̀run n' ilé.",
@@ -33521,7 +33486,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jerúsálémù ibi ayọ̀,",
               "T' ó ṣe ọ̀wọ́n fún mi;",
@@ -33531,7 +33496,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbàwo ni ojú mi yíò rí",
               "Ẹnu-bodè pearl rẹ?",
@@ -33541,7 +33506,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbàwo, ìlú Ọlọ́run mi,",
               "L' èmi ó d' ààfin rẹ?",
@@ -33551,7 +33516,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èéṣe t' èmi ó kọ ìyà,",
               "Ikú àt' ìpọ́njú?",
@@ -33561,7 +33526,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Apọ́stélì, martir', wòlíì,",
               "Wọn y' Olùgbàlà ká;",
@@ -33571,7 +33536,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jerúsálémù ìlú ayọ̀,",
               "Ọkàn mi ń fà sí ọ;",
@@ -33597,7 +33562,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lẹ́hìn ọdún díẹ̀,",
               "Lẹ́hìn ìgbà díẹ̀,",
@@ -33607,7 +33572,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù Olúwa mi!",
               "Mú mi múra dè Ọ́;",
@@ -33617,7 +33582,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lẹ́hìn ọjọ́ díẹ̀",
               "L' ayé búburú yìí,",
@@ -33627,7 +33592,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lẹ́hìn 'yọnu díẹ̀,",
               "Lẹ́hìn 'pínyà díẹ̀,",
@@ -33637,7 +33602,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ 'simi díẹ̀",
               "L' a ní tún rí l' ayé;",
@@ -33647,7 +33612,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ díẹ̀ l' ó kù,",
               "Òun y'ó tún padà wá;",
@@ -33673,7 +33638,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jerúsálẹ́mù t' ọ̀run,",
               "Orin mi, ìlú mi!",
@@ -33683,7 +33648,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ibi ayọ̀!",
               "Nígbàwo ni,",
@@ -33693,7 +33658,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Odi rẹ, ìlú mi,",
               "L' a fi péálì ṣe l' ọ̀ṣọ́;",
@@ -33703,7 +33668,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oòrùn kì rán níbẹ̀,",
               "Bẹ́ni kò s' òṣùpá;",
@@ -33713,7 +33678,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbẹ̀ l' Ọba mi wà,",
               "T' a dá l' ẹ̀bi l' ayé,",
@@ -33723,7 +33688,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Patriáki ìgbàanì,",
               "Pari ayọ̀ wọn níbẹ̀;",
@@ -33733,7 +33698,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbẹ̀ ni mo lè rí",
               "Àwọn apọ́stélì,",
@@ -33743,7 +33708,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ní àgbàlá wọ̀nyí,",
               "Ni àwọn martiru wà;",
@@ -33753,7 +33718,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "T' èmi yìí sá sú mi,",
               "Tí mo ń gb' àgọ́ Kédárì!",
@@ -33779,7 +33744,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ilé ẹ̀wà wọ̀nyí, b' ó ti dára tó!",
               "Ibùgbé Ọlọ́run, t' ojú kò tíì rí;",
@@ -33789,7 +33754,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwọn wọ̀nyí, t' ó jí nínú oorun wọn;",
               "Àwọn t' ó ní ìgbàgbọ́ sí nǹkan t' a kò rí;",
@@ -33799,7 +33764,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwọn tí kò nání gbogbo nǹkan ayé,",
               "Àwọn t' ó lè s' òtítọ́ dé ojú ikú,",
@@ -33809,7 +33774,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìtìjú ni fún yín, Ọmọ-ogun Jésù,",
               "Ẹ̀yin ará ìlú ibùgbé ọ̀run,",
@@ -33819,7 +33784,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí ìgbì omi ayé sì ti ń kọlù wá,",
               "Jésù, Ọba-Ògo, sọ sí wa l' etí",
@@ -33845,7 +33810,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọkàn àárẹ̀, ilé kan ḿbẹ,",
               "Jìnnà réré s' ayé ìṣẹ́;",
@@ -33855,7 +33820,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "Dúró... rọ́jú dúró, má ṣe kùn!:",
               "Dúró, dúró, sá rọ́jú, dúró má ṣe kùn."
@@ -33863,7 +33828,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí wàhálà bò ọ mọ́ 'lẹ̀",
               "Bí ìpín rẹ l' ayé bá burú,",
@@ -33873,7 +33838,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí ẹ̀gún bá wà l' ọ̀nà rẹ,",
               "Rántí orí t' a f' ẹ̀gún dé;",
@@ -33883,7 +33848,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Maa ṣiṣẹ́ lọ, má ṣe rò pé",
               "A kò gbọ́ àdúrà ẹ̀dùn rẹ;",
@@ -33909,7 +33874,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ilé ayọ̀ kan wà",
               "Tí ó jìnnà,",
@@ -33923,7 +33888,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Wá s' ilé ayọ̀ náà,",
               "Wá, wá ká lọ;",
@@ -33937,7 +33902,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ojú gbogbo wọn ń dán",
               "N' ilé ayọ̀;",
@@ -33967,7 +33932,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí n ní ipò mi lọ́dọ̀ Rẹ,",
               "Jésù, Ìwọ ìsimi mi;",
@@ -33977,7 +33942,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí n ní ipò mi lọ́dọ̀ Rẹ,",
               "K' èmi k' ó lè rí ògo Rẹ;",
@@ -33987,7 +33952,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí n ní ipò mi lọ́dọ̀ Rẹ,",
               "Níbi àwọn mímọ́ ń yìn Ọ,",
@@ -33997,7 +33962,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí n ní ipò mi lọ́dọ̀ Rẹ,",
               "Níbi a kì y'ó yí ipò padà,",
@@ -34023,7 +33988,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! Wọn ti gún s' ébúté,",
               "L' òkè ọ̀run; L' òkè ọ̀run;",
@@ -34034,7 +33999,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! Wọn kò wá fìtílà,",
               "L' òkè ọ̀run; L' òkè ọ̀run",
@@ -34045,7 +34010,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! Wúrà n' ìta wọn jẹ́,",
               "L' òkè ọ̀run; L' òkè ọ̀run",
@@ -34056,7 +34021,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! Òtútù kìí mú mọ́",
               "L' òkè ọ̀run; L' òkè ọ̀run",
@@ -34067,7 +34032,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! Wọn dẹ́kun ìjà jà,",
               "L' òkè ọ̀run; L' òkè ọ̀run",
@@ -34078,7 +34043,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! Wọn kò ní sọkún mọ́,",
               "L' òkè ọ̀run; L' òkè ọ̀run",
@@ -34089,7 +34054,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "À! A ó dàpọ̀ mọ́ wọn,",
               "L' òkè ọ̀run; L' òkè ọ̀run",
@@ -34116,7 +34081,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À! Rò ti ìbùgbé ọ̀run,",
               "Ní ẹ̀bá odò ìmọ́lẹ̀,",
@@ -34126,7 +34091,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L' ókè ọ̀run! L' ókè ọ̀run!",
               "À! Rò ti ìbùgbé ọ̀run!",
@@ -34136,7 +34101,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À! Rò t' àwọn ọ̀rẹ́ níbẹ̀,",
               "Àwọn tí ó ti lọ ṣájú wa,",
@@ -34146,7 +34111,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olùgbàlà mi wà níbẹ̀,",
               "Níbẹ̀ l' àwọn ìbátan mi ń simi,",
@@ -34156,7 +34121,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo fẹ́rẹ̀ dé ìbùgbé náà,",
               "Nítorí mo r' òpin àjò mi,",
@@ -34182,7 +34147,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbà tí ayé yìí bá kọjá,",
               "Tí oòrùn rẹ̀ bá sì wọ̀,",
@@ -34194,7 +34159,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbà mo bá dé ibi ìtẹ́ Rẹ,",
               "L' ẹ̀wà tí kì ṣe t' èmi;",
@@ -34206,7 +34171,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbà n bá ń gbọ́ orin ọ̀run,",
               "Tí ń dún bí ohùn àrá,",
@@ -34218,7 +34183,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Olúwa, jọ̀, jẹ́ k' a rí",
               "Òjìji Rẹ l' ayé yìí;",
@@ -34230,7 +34195,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Oore-ọ̀fẹ́ l' ó yàn mí,",
               "L' ó yọ mí Olùgbàlà mi,",
@@ -34258,7 +34223,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ojú kò tíì rí, etí kò tíì gbọ́",
               "Èrè t' Olùgbàlà pa f' ènìyàn Rẹ̀,",
@@ -34268,7 +34233,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí ọ̀run ti dùn tó, kò s' ẹni lè mọ̀,",
               "Ayọ̀ rẹ̀ kò tíì là s' ọkàn ẹ̀dá,",
@@ -34278,7 +34243,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìlú àìl' ẹ̀ṣẹ̀ tí kò sí ikú,",
               "Níbití a kì pé “ó dìgbòóṣe,”",
@@ -34288,7 +34253,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìpàdé pẹ̀lú àwọn t' ó ti lọ,",
               "Baba t' òun t' ọmọ, ọkọ t' òun t' aya,",
@@ -34298,7 +34263,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀lú àwọn mímọ́ láti máa kọ",
               "Orin Mósè àti Ọ̀dọ́-àgùtàn;",
@@ -34308,7 +34273,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí n pàdánù ayé òun ọrọ̀ rẹ̀,",
               "K' ẹsẹ̀ mi le ìlú ògo yìí,",
@@ -34334,7 +34299,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Párádísè! Párádísè!",
               "Ta ni kò fẹ́ simi?",
@@ -34344,7 +34309,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níb' àwọn olóòótọ́",
               "Wà láé nínú 'mọ́lẹ̀,",
@@ -34354,7 +34319,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Párádísè! Párádísè!",
               "Ayé ń darúgbó lọ;",
@@ -34364,7 +34329,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Párádísè! Párádísè!",
               "Ayé yìí má su mi!",
@@ -34374,7 +34339,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Párádísè! Párádísè!",
               "Mo fẹ́ kí n yé d' ẹ̀ṣẹ̀,",
@@ -34384,7 +34349,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Párádísè! Párádísè!",
               "N kò ní dúró pẹ́ mọ́:",
@@ -34394,7 +34359,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù, Ọba Párádísè,",
               "Pa mí mọ́ nínú 'fẹ́ Rẹ;",
@@ -34420,7 +34385,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A sọ̀rọ̀ ilé ìbùkún ni",
               "Ilé dídán, àt' ilé ẹ̀wà",
@@ -34430,7 +34395,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ń s' ọ̀rọ̀ ìta wúrà rẹ̀,",
               "Ọ̀ṣọ́ odi rẹ̀ tí kò l' ẹgbẹ́;",
@@ -34440,7 +34405,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ń sọ p' ẹ̀ṣẹ̀ kò sí níbẹ̀,",
               "Kò s' àníyàn àt' ìbànújẹ́,",
@@ -34450,7 +34415,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Tí a kò lè f' orin ayé wé,",
               "B' ó ti wu k' orin wa dùn tó,",
@@ -34459,7 +34424,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ń s' ọ̀rọ̀ ìsìn ìfẹ́ rẹ̀,",
               "Ti agbádá t' àwọn mímọ́ ń wọ̀;",
@@ -34469,7 +34434,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jọ̀, Olúwa, t' ibi, t' ire,",
               "Sá ṣe ẹ̀mí wa yẹ fún ọ̀run,",
@@ -34495,7 +34460,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "F'àwọn ènìyàn Rẹ t'ó lọ 'simi",
               "Àwọn tí ó f' ìgbàgbọ́ jẹ́wọ́ Rẹ,",
@@ -34505,7 +34470,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ l' àpáta wọn àt' odi wọn,",
               "Ìwọ ni Balógun wọn l' ojú 'jà",
@@ -34515,7 +34480,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k' àwọn ọmọ-ogun Rẹ l' ayé,",
               "Jàgun nítòótọ́ b' àwọn t' ìgbàanì",
@@ -34525,7 +34490,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìdàpọ̀ ìbùkún wo l'ó tó yìí!",
               "Àwa ń jà níhìn-ín, àwọn ń yọ̀ lọ́hùn-ún;",
@@ -34535,7 +34500,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbàt' ìjà bá ń gbóná, tí ogun ń le,",
               "A dàbí ẹni ń gbọ́rin ayọ̀ wọn;",
@@ -34545,7 +34510,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ ń lọ, oòrùn wa fẹ́rẹ̀ wọ̀ á,",
               "Àwọn ajagun tòótọ́ y'ó simi;",
@@ -34555,7 +34520,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lẹ́hìn èyí ọjọ́ ayọ̀ kan ń bọ̀,",
               "Àwọn mímọ́ y'ó dìde n'nú ògo;",
@@ -34565,7 +34530,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lát' òpin ilẹ̀, lát' òpin òkun,",
               "Ọ̀gọ̀ọ̀rọ̀ ń rọ́ wọ 'bodè péálì",
@@ -34591,7 +34556,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òkè kan ń bẹ jìnà réré",
               "Lẹ́yìn odi ìlú,",
@@ -34601,7 +34566,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A kò lè mọ̀, a kò lè sọ,",
               "B' ìrora rẹ̀ ti lọ,",
@@ -34611,7 +34576,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó kú k' a lè rí 'dáríjì,",
               "K' a lè hùwà rere;",
@@ -34621,7 +34586,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò tún s' ẹni 're mìíràn mọ́",
               "T' ó lè sanwó ẹ̀ṣẹ̀;",
@@ -34631,7 +34596,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À! b' ìfẹ́ Rẹ̀ ti s' ọ̀wọ́n tó!",
               "Ó yẹ k' a fẹ́ràn Rẹ̀!",
@@ -34657,7 +34622,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "“Láé lọ́dọ̀ Olúwa!”",
               "Àmín, bẹ́ẹ̀ni k'ó rí,",
@@ -34671,7 +34636,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ilé Baba lókè,",
               "Ilé ọkàn mi ni;",
@@ -34685,7 +34650,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọsánmà dìde,",
               "Gbogbo èrò mi pin;",
@@ -34699,7 +34664,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "L'òórọ̀ àti l' alẹ́",
               "L' ọ̀sán àti l' òru,",
@@ -34729,7 +34694,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Lẹ́yìn ayé búburú yìí",
               "Ayé ẹkún òun òṣì yìí,",
@@ -34741,7 +34706,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "'Lẹ̀kùn ògo rẹ̀ ti mọ́ ẹsẹ̀,",
               "Ohun ẹ̀rí kò lè wọ 'bẹ̀",
@@ -34753,7 +34718,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ta n' y'ó dé bẹ̀? Onírẹ̀lẹ̀",
               "T' ó f' ìbẹ̀rù sìn Olúwa,",
@@ -34781,7 +34746,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Alábùkún n'nú Jésù",
               "Ni àwọn ọm' Ọlọ́run",
@@ -34791,7 +34756,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x" ],
+            musicSigns: ["x", "x"],
             lines: [
               "A bá jẹ́ ká wà mọ́ wọn,",
               "L'ayé yìí, àti l'ọ̀run."
@@ -34799,7 +34764,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwọn tí a dá láre",
               "Nípa oore-ọ̀fẹ́ Rẹ̀;",
@@ -34809,7 +34774,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wọn ń s'èso oore-ọ̀fẹ́;",
               "Nínú iṣẹ́ òdodo,",
@@ -34819,7 +34784,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nípa ẹ̀j' Ọ̀dọ́-àgùntàn,",
               "Wọn ń bá Ọlọ́run k'ẹgbẹ́,",
@@ -34845,7 +34810,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À kò n’ íbùgbé kan níhìn-ín,",
               "Èyí ba ẹlẹ́ṣẹ̀ n’nú jẹ́;",
@@ -34855,7 +34820,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À kò n’ íbùgbé kan níhìn-ín,",
               "Ó burú b’ íhìn jẹ́ ‘lé wa;",
@@ -34865,7 +34830,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À kò n’ íbùgbé kan níhìn-ín,",
               "A ńwá ìlú ńlá t’ a kò rí;",
@@ -34875,7 +34840,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ tí ṣe ‘bùgbé ìfẹ́,",
               "Níbití èrò gbé ńsimi;",
@@ -34885,7 +34850,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Dákẹ́ ọkàn mi, má bínú,",
               "Àkókò Olúwa, l’ ó yẹ;",
@@ -34911,7 +34876,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn mímọ́! Ìjà nwọn pín,",
               "Nwọn ṣẹ́gun ayé níkẹhìn,",
@@ -34923,7 +34888,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn mímọ́! Ìrìn wọn pín,",
               "Nwọn kò tún súré ìje mọ́,",
@@ -34935,7 +34900,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn mímọ́! Àjò wọn pín,",
               "Nwọn gún s’ ébúté ayọ̀ ni,",
@@ -34947,7 +34912,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn mímọ́! Nwọn ńsọ ọnà,",
               "‘Gbát’ ara wọn sùn n’ ibojì,",
@@ -34959,7 +34924,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run, Ìwọ l’ a ńképè,",
               "Olùgbàlà, bá wa bẹ̀bẹ̀;",
@@ -34987,7 +34952,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Tal’ àwọn wọ̀nyí b’ ìranwò,",
               "Níwájú ‘tẹ́ Ọlọ́run?",
@@ -34999,7 +34964,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ta li àwọn tí ńkọ mọ̀nà,",
               "T’ a wọ̀ l’ aṣọ òdodo;",
@@ -35011,7 +34976,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn wọ̀nyí l’ ó ti jagun,",
               "F’ ọlá Olùgbàlà wọn,",
@@ -35023,7 +34988,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn yìí l’ ọkàn wọn gbogbẹ́,",
               "Nínú ‘dánwò kíkorò,",
@@ -35035,7 +35000,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwọn wọ̀nyí l’ ó ti ṣọ́nà,",
               "Nwọn f’ ìfẹ́ wọn fún Kristi,",
@@ -35063,7 +35028,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹgbẹ̀gbẹ̀rún àìmoye",
               "Nwọn wọ aṣọ àlà,",
@@ -35077,7 +35042,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìró Halleluyah wọn",
               "Ló gb’ayé, ọ̀run kàn;",
@@ -35091,7 +35056,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "À! Ayọ̀ t’ a kò lè sọ",
               "Lẹ́ti bébè Kénáánì,",
@@ -35105,7 +35070,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mú ‘gbàlà ńlá Rẹ fún wa,",
               "Ọ̀d-àgùtàn t’ a pa;",
@@ -35135,7 +35100,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀pọ̀ ìkán omi,",
               "Yanrìn kékèké;",
@@ -35145,7 +35110,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìṣẹ́jú wa kọ̀ọ̀kan,",
               "Tí a kò kàsí,",
@@ -35155,7 +35120,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwà oore díẹ̀,",
               "Ọ̀rọ̀ ‘fẹ́ díẹ̀,",
@@ -35165,7 +35130,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìṣísẹ̀ kékèké",
               "L’ ó ńmú ọkàn ṣìnà,",
@@ -35175,7 +35140,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìṣẹ́ àánú díẹ̀",
               "T’ a ṣe l’ ọmọdé,",
@@ -35185,7 +35150,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àwọn ewé l’ ògo",
               "Ńgbèrin Ańgẹ́lì;",
@@ -35211,7 +35176,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Máṣe hùwà ẹ̀ṣẹ̀,",
               "Má sọ̀rọ̀ ẹ̀ṣẹ̀;",
@@ -35221,7 +35186,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Krist’ jẹ́ onínúrere,",
               "Àt’ ẹni mímọ́;",
@@ -35231,7 +35196,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀mí ibi kan wà,",
               "T’ ó ńṣọ́ ìrìn rẹ;",
@@ -35241,7 +35206,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ máṣe gbọ́ tirẹ̀;",
               "B’ ó tilẹ̀ ṣòro",
@@ -35251,7 +35216,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin tó fẹ́ Jésù",
               "Ẹ ṣe ìfẹ́ Rẹ̀",
@@ -35261,7 +35226,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọmọ Kristi ní ìyìn,",
               "Ẹ kọ̀ láti bá",
@@ -35271,7 +35236,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù l’ Olúwa nyín,",
               "Ó ṣe ẹnirere;",
@@ -35297,7 +35262,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Gbàtí Sámúẹ́lì jí",
               "Tó ‘gb’ ohùn Ẹlẹ́dàá",
@@ -35309,7 +35274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "B’ Ọlọ́run bá pè mí",
               "Pé, ọ̀rẹ́ mi li Òun,",
@@ -35321,7 +35286,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Kò há ńbá ni sọ̀rọ̀?",
               "Bẹ́ẹ̀ni n’nú Ọ̀rọ̀ Rẹ̀?",
@@ -35333,7 +35298,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo lè f’ orí pamọ́",
               "S’ abẹ́ ìtọ́jú Rẹ̀,",
@@ -35345,7 +35310,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "‘Gbà mo bá ka ọ̀rọ̀ Rẹ̀,",
               "Kí n wí bí Sámúẹ́lì pé",
@@ -35373,7 +35338,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Ọj’ òní lọ",
               "Jésù Baba,",
@@ -35382,7 +35347,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "‘Wọ Ìmọ́lẹ̀,",
               "Ṣe ‘tọ́jú mi;",
@@ -35391,7 +35356,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Olùgbàlà,",
               "Nkò ní bẹ̀rù,",
@@ -35400,7 +35365,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Nígbà gbogbo,",
               "Ní ojú Rẹ,",
@@ -35409,7 +35374,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Nígbà gbogbo",
               "Ni etí Rẹ",
@@ -35418,7 +35383,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Nítorí náà",
               "Láìsí fòyà",
@@ -35427,7 +35392,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Baba Ọmọ,",
               "Ẹ̀mí Mímọ́",
@@ -35452,7 +35417,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù Onírẹ̀lẹ̀,",
               "Ọmọ Ọlọ́run:",
@@ -35462,7 +35427,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi ẹ̀ṣẹ̀ wa jìn wa",
               "Sì dá wa n’ ìdè;",
@@ -35472,7 +35437,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fún wa ní òmìnira,",
               "F’ ìfẹ́ s’ ọkàn wa;",
@@ -35482,7 +35447,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Tọ́ wa l’ ọ́nà àjò,",
               "Sì jẹ́ ọ̀nà wa;",
@@ -35492,7 +35457,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù Onírẹ̀lẹ̀",
               "Ọmọ Ọlọ́run,",
@@ -35518,7 +35483,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb'àdúrà wa Olúwa,",
               "F'àwọn ọmọ t'O fún wa,",
@@ -35528,7 +35493,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k'ọkàn wọn súnmọ́ Ọ,",
               "Nígbà wọn wà l'ọmọdé,",
@@ -35538,7 +35503,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi ẹ̀jẹ̀ Olùgbàlà,",
               "Wẹ ọkàn wọn mọ́ tótó;",
@@ -35548,7 +35513,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àánú yìí l'a ńbẹ̀bẹ̀ fún,",
               "K'O sì gbọ́ àdúrà wa;",
@@ -35574,7 +35539,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run Bẹ́tẹ́lì, Ẹnití",
               "Ó ńbọ́ àwọn Tirẹ̀;",
@@ -35584,7 +35549,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A mú ẹ̀jẹ́ àt'ẹ̀bẹ̀ wa",
               "Wá 'wájú ìtẹ́ Rẹ,",
@@ -35594,7 +35559,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nínú ìdààmú ayé yìí,",
               "Máa tọ́jú ipa wa,",
@@ -35604,7 +35569,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Na òjìji 'yẹ́ Rẹ bò wá,",
               "Tít'àjò wa ó pin,",
@@ -35614,7 +35579,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Irú ìbùkún bí èyí,",
               "L'a ńbéèrè lọ́wọ́ Rẹ;",
@@ -35640,7 +35605,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù pe ọmọdé,",
               "Ó gbé wọn s'àyà Rẹ;",
@@ -35650,7 +35615,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù gb'ọmọdé yìí,",
               "T'a gbé wá s'ilé Rẹ,",
@@ -35660,7 +35625,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gb'àwọn ọmọdé wa,",
               "Tí wọn ńwá 'wájú Rẹ,",
@@ -35686,7 +35651,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má sọ fún mi l'ohùn arò",
               "Pé iyè dàbí àlá;",
@@ -35696,7 +35661,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Iyè ńbẹ ṣe! Iyè ńbẹ ṣe!",
               "'Bojì kì sì s'òpin rẹ̀;",
@@ -35706,7 +35671,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kì 's'ayọ̀ tàbí 'bànújẹ́",
               "Ni àlà t'a pa fún wa",
@@ -35716,7 +35681,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀nà gùn, àkókò ńkọjá,",
               "Ọkàn wa b'ó ti le ní,",
@@ -35726,7 +35691,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "La 'jú 'jà ayé t'ó tẹ́jú",
               "Ní búdó ogun ayé,",
@@ -35736,7 +35701,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má gbẹ́kẹ̀lé ọ̀la b'ó dùn!",
               "Jẹ́ k'àná sin 'kú àná,",
@@ -35746,7 +35711,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òkìkí àwọn ẹni ńlá",
               "Sọ pé àwa lè tọ̀ wọ́n;",
@@ -35772,7 +35737,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Yíká or'ìtẹ́ Ọlọ́run,",
               "Ẹgbẹ̀rún ewé wá;",
@@ -35782,14 +35747,14 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x" ],
+            musicSigns: ["x"],
             lines: [
               "Ńkọrin Ògo, ògo, ògo."
             ]
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wò! Olúkúlùkù wọn wọ",
               "Aṣọ àlà mímọ́",
@@ -35799,7 +35764,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíl'ó mú wọn dé ayé náà,",
               "Ọ̀run t'ó ṣe mímọ́,",
@@ -35809,7 +35774,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Torí wọn, Jésù ta 'jẹ̀ Rẹ̀,",
               "Láti k'ẹ̀ṣẹ̀ wọn lọ;",
@@ -35819,7 +35784,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L'áyé, nwọn wá Olùgbàlà,",
               "Nwọn fẹ́ orúkọ Rẹ̀;",
@@ -35829,7 +35794,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Orísun náà há ńṣàn lónìí?",
               "Jésù, mú wa dé 'bẹ̀;",
@@ -35855,7 +35820,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọ̀rẹ́ kan ńbẹ fún ọmọdé",
               "Nínú àwọn ọ̀run;",
@@ -35869,7 +35834,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìsimi kan ńbẹ f'ọmọdé",
               "Nínú àwọn ọ̀run;",
@@ -35883,7 +35848,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ilé kan ńbẹ fún ọmọdé",
               "Nínú àwọn ọ̀run;",
@@ -35897,7 +35862,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Adé kan ńbẹ fún ọmọdé",
               "Nínú àwọn ọ̀run;",
@@ -35927,7 +35892,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbà kan ní Bẹ́tẹ́lẹ́hẹ́mù",
               "Ilé kékeré kan wà;",
@@ -35939,7 +35904,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ó t'ọ̀run wá s'óde ayé,",
               "Òun l'Ọlọ́run Olúwa;",
@@ -35951,7 +35916,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ní gbogbo ìgbà ewé Rẹ̀",
               "Ó ńgbọ́ràn, Ó sì ńtẹríba",
@@ -35963,7 +35928,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "'Torí Òun jẹ́ àwòṣe wa,",
               "A máa dàgbà bí àwa,",
@@ -35975,7 +35940,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwa ó sì f'ojú wa rí",
               "Ní agbára ìfẹ́ Rẹ̀,",
@@ -35987,7 +35952,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Kìíṣe ní ibùjẹ ẹran",
               "Níbití màlúù ńjẹun",
@@ -36015,7 +35980,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Sá dákẹ́, ọkàn mi,",
               "Olúwa rẹ wà n’bẹ̀,",
@@ -36025,7 +35990,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òun ti fá ọ lọ́wọ́,",
               "Ó mú ọ dé ‘hìnyí,",
@@ -36035,7 +36000,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàt’ ìwọ ti bọ́",
               "Sínú wàhálà rí,",
@@ -36045,7 +36010,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B’ ọ̀nà kò tilẹ̀ dán,",
               "Yíò mú ọ dé ‘lé;",
@@ -36071,7 +36036,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Kíni gbogbo làálàá Rẹ",
               "L'orí mi fún, Jésù,",
@@ -36085,7 +36050,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Èése tí O fi fà mí",
               "S'ìmọ̀ àṣírí Rẹ?",
@@ -36099,7 +36064,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Nígbàtí mba rònyú rẹ̀,",
               "Mo há lè ṣàì béèrè",
@@ -36113,7 +36078,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìfẹ́ Baba l'orí mi",
               "Láti ayérayé,",
@@ -36143,7 +36108,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "TA L’ ó mọ adùn ìsimi,",
               "B’ ó yẹ l’ àwọn t’ ó ní,",
@@ -36153,7 +36118,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ta l’ ó lè sọ ‘jìnlẹ̀ ayọ̀,",
               "T’ ó ńsun lí ọkàn wọn,",
@@ -36163,7 +36128,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nwọn n’ ìtẹ́lọ́rùn ‘dáríjì,",
               "Nwọn mọ ‘pò wọn dájú;",
@@ -36173,7 +36138,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀ṣẹ̀ kò lè ṣe ‘fisùn wọn;",
               "Kristi Onídàájọ́",
@@ -36183,7 +36148,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀rù ikú kò lè bà wọ́n,",
               "Nwọn ti gba ìyè náà;",
@@ -36193,7 +36158,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "À! k’ èyí ‘pín mi, Jésù,",
               "Ṣe mí l’ àyànfẹ́ Rẹ,",
@@ -36219,7 +36184,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ, nígbà ayé Rẹ,",
               "O kò dẹ́kun wo àrùn;",
@@ -36229,7 +36194,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ojú àánú Rẹ kò gba",
               "K' ẹlẹ́ṣẹ̀ má jẹ 'rora,",
@@ -36239,7 +36204,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nínú ìjà kí èmi",
               "Lè bọ́ l' ọ́wọ́ ìparun,",
@@ -36249,7 +36214,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B' aláìsàn ìjọ wa wò",
               "Lór' àkéte ìrora,",
@@ -36259,7 +36224,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "F' ọ̀pọ̀ ìtùnú fún u,",
               "K' ó lè gbé ara lé Ọ,",
@@ -36269,7 +36234,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Má jẹ́ k' ó ṣiyèméjì,",
               "Kí ìrora mú bọ 'hùn,",
@@ -36278,7 +36243,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "K' ó lè wù Ọ láti wo",
               "Aláìsàn ìjọ wa sàn,",
@@ -36304,7 +36269,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èéṣe t' onígbàgbọ́ ńbẹ̀rù?",
               "Kíni 'bá máa dà wọ́n l' áàmú?",
@@ -36314,7 +36279,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kíl' olórí ẹdùn ọkàn?",
               "Kíni gbogbo ẹ̀dá ńtọrọ,",
@@ -36324,7 +36289,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àìmọ̀ dájú onígbàgbọ́",
               "Li ó mú iyèméjì wá;",
@@ -36334,7 +36299,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó kò kọ̀ láti f' ara hàn",
               "Ọm'-ọ̀dọ̀ aláìgbàgbọ́ ni,",
@@ -36344,7 +36309,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A mọ̀ p' Olùgbàlà ni Ọ",
               "T' a rán láti gba ẹ̀dá là;",
@@ -36354,7 +36319,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A ó dág bétó f' ẹ̀rù gbogbo,",
               "Ìdààmú wa yíò sì fò lọ,",
@@ -36380,7 +36345,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọm' Ọlọ́run, a kò rí Ọ,",
               "'Gbàt' O wá s' ayé ikú yìí;",
@@ -36392,7 +36357,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "A kò rí Ọ lórí igi,",
               "T' ènìyàn búburú kàn Ọ́,",
@@ -36404,7 +36369,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "A kò dúró lét' ibojì,",
               "Níbití a gbé tẹ́ Ọ sí;",
@@ -36416,7 +36381,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "A kò r' àwọn wọ̀nyí t' O yàn",
               "Láti rí 'gòkè r' ọ̀run Rẹ;",
@@ -36428,7 +36393,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìwọ ńjọba l' òkè lónìí,",
               "'Wọ sì ńbùkún àwọn Tìrẹ,",
@@ -36456,7 +36421,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìgbàgbọ́ l' atẹ́gùn t' ó so",
               "Ọ̀run àt' ayé pọ̀;",
@@ -36466,7 +36431,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìgbàgbọ́ ni kẹ̀kẹ́ Énọ́k'",
               "Tí ó gùn lọ s' ọ̀run;",
@@ -36476,7 +36441,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lór' ìgbàgbọ́ ni Nóà kọ",
               "Ọkọ̀ ìgbàlà ni;",
@@ -36486,7 +36451,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìgbàgbọ́ n' ìpìlẹ̀ 'retí,",
               "Ó lè ṣe ohun ńlá;",
@@ -36496,7 +36461,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òun l' agbára àṣẹ 'kíní",
               "T' ó mú kí ayé wà;",
@@ -36506,7 +36471,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“K' ó rí fún ọ b' ìgbàgbọ́ rẹ,”",
               "L' Olùgbàlà wa wí,",
@@ -36532,7 +36497,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Olórí ìjọ t' ọ̀run,",
               "L' ayọ̀ l' a wólẹ̀ fún Ọ;",
@@ -36546,7 +36511,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Bí a wà nínú 'pọ́njú,",
               "T' a ńkọjá nínú iná,",
@@ -36560,7 +36525,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìwọ mú àwọn ènìyàn Rẹ",
               "Kọjá ìṣàn ìdánwò;",
@@ -36574,7 +36539,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Àwa f' ìgbàgbọ́ r' ògo,",
               "T' O ńfẹ́ láti fi wá sí,",
@@ -36604,7 +36569,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Ta ni yíò gbé Jákọ́b' dìde?”",
               "Ọ̀rẹ́ Jákọ́b' kò pọ̀;",
@@ -36614,7 +36579,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "″Ta ni yíò gbé Jákọ́b' dìde?”",
               "Ọ̀tá Jákọ́b' n' ipá;",
@@ -36624,7 +36589,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Ta ni yíò gbé Jákọ́b' dìde?”",
               "A há r' ẹni lè wí?",
@@ -36634,7 +36599,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa mi, iṣẹ́ Rẹ ni!",
               "Kò s' ẹ́mí t' ó lè ṣe;",
@@ -36660,7 +36625,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọlọ́run fẹ́ aráyé,",
               "Ó fẹ́ tóbẹ́ẹ̀ gẹ́,",
@@ -36674,7 +36639,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Lóòótọ́, Ọlọ́run fẹ́ mi,",
               "Àní-àní kò sí,",
@@ -36688,7 +36653,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù s' àgbélébù Rẹ̀,",
               "Ngó kan ẹ̀ṣẹ̀ mi mọ́;",
@@ -36718,7 +36683,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níhìn l' Olúwa sìn mí dé,",
               "Dé 'hìn n' ipá Rẹ̀ sún ọjọ́ mi,",
@@ -36728,7 +36693,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀pọ̀ ìgbà mi l' ó ṣòfò,",
               "Bẹ́ bóyá mo súnmọ́ 'lé mi;",
@@ -36738,7 +36703,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo f'ara lé 'lẹ̀ láti sùn,",
               "Àlàáfíà n' ìrọ̀rí mi,",
@@ -36748,7 +36713,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gba òru ikú yíò bá dé,",
               "Ara mi yíò sùn nínú 'lẹ̀,",
@@ -36774,7 +36739,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Láàrin ewu àt' òṣì,",
               "Kristian, má tẹ̀ síwájú,",
@@ -36784,7 +36749,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kristian, má ṣe tẹ̀ síwájú",
               "Wá k' a dojú kọ ọ̀tá;",
@@ -36794,7 +36759,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí ọkàn k' yọ̀;",
               "Mú 'hámọ́ra ọ̀run wọ̀;",
@@ -36804,7 +36769,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Má jẹ́ k' inú yín bàjẹ́,",
               "Òun fẹ́ n' omijé yín nù;",
@@ -36814,7 +36779,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́, ẹ má tẹ̀ síwájú,",
               "Ẹ ó jú aṣẹ́gun lọ;",
@@ -36840,7 +36805,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èrédí ìwà s' ayé mi?",
               "'Torí kíl' a bí mi?",
@@ -36850,7 +36815,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nínú gbogbo ohun t' a dá,",
               "Ènìyàn l' ó ga jù;",
@@ -36860,7 +36825,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìdàgbà hàn l' ọ̀tún, l' òsì,",
               "Kò s' ohun t' ó dúró;",
@@ -36870,7 +36835,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìṣísẹ̀ ayé mi pọ̀jù,",
               "Mo y' aràrá l' èmi,",
@@ -36880,7 +36845,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jí mi nínú ìjáfarà,",
               "Ẹ̀mí Mímọ́, jí mi,",
@@ -36906,7 +36871,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jẹ́jẹ́, láì sí ariwo,",
               "Jẹ́jẹ́ lí ọ̀run ńrán,",
@@ -36920,7 +36885,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Kòkòrò 'yùn n'nú òkun,",
               "Kò s' ẹni t' ó gbọ́ 'gbé rẹ̀;",
@@ -36934,7 +36899,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Òkùnkùn t' ó n' ipá jù",
               "Kò wá pẹ̀lú iró;",
@@ -36948,7 +36913,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù, jẹ́k' iṣẹ́ oore wa,",
               "Lọ pẹ̀lú ìpamọ́,",
@@ -36978,7 +36943,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Olúwa, ìjì ń fẹ́ s' ókè!",
               "Ìgbì omi ń rú s' ókè!",
@@ -36992,8 +36957,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-          musicSigns: [ "x", "x", "x", "x", "x", "x", "x" ],
-            musicSigns: ["cr","","","","","f","ff"],
+            musicSigns: ["cr", "x", "x", "x", "x", "f", "ff"],
             lines: [
               "Afẹ́fẹ́ àt' ìgbì y'ó ṣe 'fẹ́ Mi; Dákẹ́ jẹ́!",
               "Ìbáṣe ìbínú ríru òkun,",
@@ -37006,7 +36970,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Olúwa pẹ̀l' ẹ̀dùn ẹ̀mí mi,",
               "Mo tẹríba n' ìronú,",
@@ -37020,7 +36984,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Olúwa, ẹ̀rù ti kọjá,",
               "Ìdákẹ́jẹ́ sì ti dé,",
@@ -37050,7 +37014,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Òjò ìbùkún yíò ṣíro!”",
               "Èyí n' ìlérí ìfẹ́;",
@@ -37060,7 +37024,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x" ],
+            musicSigns: ["x", "x", "x"],
             lines: [
               "Òjò ìbùkún! Òjò ìbùkún l' a ń fẹ́;",
               "Ìrì àánú wà yí wa ká,",
@@ -37069,7 +37033,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Òjò ìbùkún yíò ṣíro!”",
               "Ìsọjí iyebíye;",
@@ -37079,7 +37043,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Òjò ìbùkún yíò ṣíro!”",
               "Rán wọn sí wa, Olúwa!",
@@ -37089,7 +37053,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "“Òjò ìbùkún yíò ṣíro!”",
               "Wọn 'bá jẹ́ lè wá lónìí!",
@@ -37115,7 +37079,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbà Jésù bá dé láti pín èrè,",
               "B' ó j' ọ̀sán tàbí l' òru,",
@@ -37125,7 +37089,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A lè wípé a múra tán, Ará,",
               "Láti lọ s' ilé dídán?",
@@ -37135,7 +37099,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bí l' òwúrọ̀ ní àfẹ̀mọ́júmọ́",
               "Ni yíò pè wá l' ọ̀kọ̀ọ̀kan;",
@@ -37145,7 +37109,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "A ṣ' òtítọ́ nínú ìlànà Rẹ̀,",
               "Ti sa ipá wa gbogbo,",
@@ -37156,7 +37120,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìbùkún ni fún àwọn tí ń ṣ' ọnà,",
               "Wọn ó pín nín' ògo Rẹ̀,",
@@ -37182,7 +37146,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Lábẹ́ àgbélébùú Jésù",
               "Mo fẹ́ láti dúró, –",
@@ -37196,7 +37160,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Àbò ayọ̀ t'ó dájú,",
               "Ib'ìsádi t'ó dùn,",
@@ -37210,7 +37174,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n ní apá kejì,",
               "Lábẹ́ òjìji rẹ̀,",
@@ -37224,7 +37188,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Lórí àgbélébùú Jésù",
               "Ojú mi lè máa rí",
@@ -37238,7 +37202,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Àgbélébùú, mo f'òjìji rẹ,",
               "Ṣe ib'ìsimi mi,",
@@ -37268,7 +37232,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fún mi n'íwà pẹ̀lẹ́,",
               "Ọkàn tútù;",
@@ -37282,7 +37246,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fún mi n'ìtẹ́lọ́rùn",
               "N'ipò k'ipò;",
@@ -37296,7 +37260,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fún mi ní ìtara",
               "S'ipa Tìrẹ;",
@@ -37310,7 +37274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Fún mi ní ìgbàgbọ́",
               "Àt'ìrètí;",
@@ -37340,7 +37304,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "L'ayọ̀ l'a rò t'ore-ọ̀fẹ́",
               "Àlùfáà wa l'ókè;",
@@ -37350,7 +37314,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nípa ìbákẹ́dùn ọkàn,",
               "Ó mọ àìlera wa;",
@@ -37360,7 +37324,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ní ọjọ́ àìlera ara,",
               "Ó ké, Ó sì sọkún,",
@@ -37370,7 +37334,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ kí a fi ìgbàgbọ́ bẹ̀",
               "F'àánú àt'ipá Rẹ̀;",
@@ -37396,7 +37360,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oore-ọ̀fẹ́! Ohùn",
               "Adùn ni l'etí wa;",
@@ -37406,7 +37370,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oore-ọ̀fẹ́ sá,",
               "N'ìgbẹ́kẹ̀lé mi;",
@@ -37416,7 +37380,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oore-ọ̀fẹ́ l'ó kọ",
               "Orúkọ mi l'ọ̀run;",
@@ -37426,7 +37390,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oore-ọ̀fẹ́ tọ́ mi",
               "S'ọ̀nà àlàáfíà;",
@@ -37436,7 +37400,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oore-ọ̀fẹ́ kọ́ mi",
               "Bí a ti gb'àdúrà;",
@@ -37446,7 +37410,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́ k'oore-ọ̀fẹ́ yìí,",
               "F'agbára f'ọkàn mi;",
@@ -37472,7 +37436,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Oníṣègùn ńlá wà níhìn-ín,",
               "Jésù abánikẹ́dùn;",
@@ -37482,7 +37446,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìró dídùn l'orin Séráfù,",
               "Orúkọ dídùn l'ahọ́n,",
@@ -37492,7 +37456,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A fi gbogb'ẹ̀ṣẹ̀ rẹ jì ọ;",
               "Háà! gbọ́ ohùn ti Jésù!",
@@ -37502,7 +37466,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbogb'ògo fún Krist' t'Ó jínde!",
               "Mo gbàgbọ́ nísinsìyí;",
@@ -37512,7 +37476,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Orúkọ Rẹ̀ l'ẹ̀rù mi lọ;",
               "Kò sí orúkọ mìíràn;",
@@ -37522,7 +37486,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Arákùnrin, ẹ bá mi yìn,",
               "Háà, yìn orúkọ Jésù!",
@@ -37532,7 +37496,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọmọdé àt'àgbàlagbà,",
               "T'ó fẹ́ orúkọ Jésù,",
@@ -37542,7 +37506,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàt'a bá sì dé ọ̀run,",
               "Tí a bá sì rí Jésù,",
@@ -37568,7 +37532,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò tọ́ k'àwọn mímọ́ bẹ̀rù,",
               "Kí nwọn sọ 'rètí nù;",
@@ -37578,7 +37542,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàtí Ábrámù mú ọ̀bẹ,",
               "Ọlọ́run ní, “Dúró;”",
@@ -37588,7 +37552,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbà Jónà rì sínú omi,",
               "Kò rò láti yọ mọ́;",
@@ -37598,7 +37562,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B'irú ipá àt'ìfẹ́ yìí",
               "Ti pọ̀ l'ọ̀rọ̀ Rẹ̀ tó!",
@@ -37608,7 +37572,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ dúró de ìrànwọ́ Rẹ̀,",
               "B'ó tilẹ̀ pẹ́, dúró;",
@@ -37634,7 +37598,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ fẹ́ mi, èmi mọ̀;",
               "Bíbélì sọ fún mi bẹ́ẹ̀;",
@@ -37644,7 +37608,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù fẹ́ mi, Ó ti kú",
               "Láti ṣí ọ̀run sílẹ̀;",
@@ -37654,7 +37618,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù fẹ́ mi, Ó fẹ́ mi,",
               "Bí èmi tilẹ̀ ṣ'àìsàn,",
@@ -37664,7 +37628,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù fẹ́ mi, yíò dúró",
               "Ti mi l'ọ̀nà mi gbogbo;",
@@ -37690,7 +37654,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀lú mi níbití mo ń lọ",
               "Kọ́ mi l'ohun t'èmi ó ṣe",
@@ -37700,7 +37664,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fi ọ̀pọ̀ ìfẹ́ Rẹ fún mi",
               "Máa ṣe aláàbò mi láéláé",
@@ -37710,7 +37674,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kọ́ mi bí a ti gbàdúrà",
               "Jẹ́ kí èmi gba Ìwọ gbọ́",
@@ -37736,7 +37700,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù l'Olùṣọ́-àgùntàn mi,",
               "Ọ̀rẹ́ Ẹnití kì í yẹ̀!",
@@ -37746,7 +37710,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níb'odò omi ìyè ń ṣàn",
               "Níbẹ̀ l'ó ń m'ọkàn mi lọ;",
@@ -37756,7 +37720,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo ti fi wèrè sako lọ,",
               "N'ìfẹ́, Ó sì wá mi rí;",
@@ -37766,7 +37730,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "N kò bẹ̀rù òjìji ikú",
               "B'Ìwọ bá wà lọ́dọ̀ mi;",
@@ -37776,7 +37740,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ìwọ tẹ́ tábìlì fún mi;",
               "‘Wọ d'òróró s'orí mi;",
@@ -37786,7 +37750,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ l'ọjọ́ ayé mi gbogbo",
               "Oore Rẹ kì y'ó yẹ̀ láé;",
@@ -37812,7 +37776,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nínú òru ìbànújẹ́,",
               "L'àwọn ẹgbẹ́ èrò ayọ̀,",
@@ -37822,7 +37786,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níwájú wa nín'òkùnkùn,",
               "Ni ìmọ́lẹ̀ dídán ńtàn,",
@@ -37832,7 +37796,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀kan ni ìmọ́lẹ̀ ọ̀run,",
               "Tí ńtàn s'ara ènìyàn Rẹ̀;",
@@ -37842,7 +37806,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀kan ni ìrìn àjò wa,",
               "Ọ̀kan ni ìgbàgbọ́ wa,",
@@ -37852,7 +37816,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀kan l'orin t'ẹgbẹ̀rún ńkọ,",
               "Bí láti ọkàn kan wá;",
@@ -37862,7 +37826,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀kan ni inú dídùn wa,",
               "L'ébúté àìnípẹ̀kun;",
@@ -37872,7 +37836,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ǹjẹ́ k'a máa nṣọ́ arákùnrin,",
               "T'àwa ti àgbélébù;",
@@ -37882,7 +37846,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 8,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Àjíǹde ńlá fẹ́rẹ̀ dé ná,",
               "'Bojì fẹ́rẹ̀ ṣí sílẹ̀,",
@@ -37908,7 +37872,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run ẹ̀mí wa, àt'ìgbàlà wa,",
               "'Mọ́lẹ̀ òkùnkùn wa, 'retí ilé wa,",
@@ -37918,7 +37882,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wò bí ìbínú ti yí Áàkì Rẹ ká,",
               "Wò b'àwọn ọ̀tá Rẹ ti ńt'àsíá wọn,",
@@ -37928,7 +37892,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Wọ lè ṣe 'rànwọ́, b'ìrànwọ́ ayé yẹ̀,",
               "'Wọ lè gbà níb' a b'òkú ẹ̀ṣẹ̀ gbíjà;",
@@ -37938,7 +37902,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ràn wá lọ́wọ́ tít'ọ̀tá ó pẹ̀hìndà,",
               "K'àwọn 'lótò Rẹ kí nwọn ní 'dáríjì,",
@@ -37964,7 +37928,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù máa tọ́ wa",
               "Tít' a ó fi simi;",
@@ -37976,7 +37940,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "B'ọ̀nà bá l'éwu,",
               "B'ọ̀tá súnmọ́ wa,",
@@ -37988,7 +37952,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Gbàt' a fẹ́ 'tùnú",
               "Nínú 'bànújẹ́,",
@@ -38000,7 +37964,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù máa tọ́ wa",
               "Tít' a ó fi simi,",
@@ -38028,7 +37992,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "A! Jésù, Ìwọ ń dúró",
               "L'óde, lẹ́yìn 'lẹ̀kùn,",
@@ -38042,7 +38006,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "A! Jésù, Ìwọ ń kànkùn",
               "Ọwọ́ náà sì l'apá,",
@@ -38056,7 +38020,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "A! Jésù, Ìwọ ń bẹ̀bẹ̀",
               "L'ohùn pẹ̀lẹ́pẹ̀lẹ́,",
@@ -38086,7 +38050,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù t'Ó wà l'ókè-ọ̀run,",
               "Sọ̀kalẹ̀ d'ènìyàn, ó kú;",
@@ -38096,7 +38060,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó ń kiri, Ó sì ń ṣe rere,",
               "Ó ń la 'jú àwọn afọ́jú;",
@@ -38106,7 +38070,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ju wọ̀nyí lọ, Ó wí fún wọn,",
               "Ohun wọ̀nyí t'Ọlọ́run fẹ́;",
@@ -38116,7 +38080,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n ikú t'Ó kú burú,",
               "A fi kọ́ 'rí àgbélébùú;",
@@ -38126,7 +38090,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó mọ̀ b'ènìyàn ti burú,",
               "Ó mọ̀ b'ìyà ẹ̀ṣẹ̀ ti rí,",
@@ -38136,7 +38100,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 6,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ l'Ó kú nítorí 'yí náà,",
               "Ó d'ènìyàn k'Ó ba lè kú,",
@@ -38146,7 +38110,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 7,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run, Ó sì f'ẹ̀ṣẹ̀ jì",
               "Àwọn t'ó ronúpìwàdà;",
@@ -38172,7 +38136,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹnìkan ń bẹ t'Ó fẹ́ràn wa,",
               "Á! Ó fẹ́ wa!",
@@ -38186,7 +38150,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìyè ni fún wa b'a bá mọ̀,",
               "Á! Ó fẹ́ wa!",
@@ -38200,7 +38164,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọ̀rẹ́ òdodo ni Jésù,",
               "Á! Ó fẹ́ wa!",
@@ -38214,7 +38178,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Òun l'Ó jẹ́ k'a r' ìdáríjì,",
               "Á! Ó fẹ́ wa!",
@@ -38244,7 +38208,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olúwa wò wá l'ẹsẹ̀ Rẹ",
               "Òtòṣì ẹlẹ́ṣẹ̀;",
@@ -38254,7 +38218,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A wá ń bẹ̀bẹ̀ f'àwọn 'mọ wa,",
               "T'Ìwọ ti fi fún wa;",
@@ -38264,7 +38228,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A kò béèrè ọrọ̀ fún wọn,",
               "N'ìjàkadì ayé;",
@@ -38274,7 +38238,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A wá ń fẹ́ Ẹ̀mí ìsọjí,",
               "K'Ó tún ọkàn wọn ṣe,",
@@ -38300,7 +38264,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Sí pẹpẹ Olúwa,",
               "Mo mú 'bànújẹ́ wá;",
@@ -38310,7 +38274,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kristi Ọ̀dọ́-àgùntàn",
               "Ni ìgbàgbọ́ mi ń wò;",
@@ -38320,7 +38284,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbàtí Jésù mi kú,",
               "A tẹ́ òfin l'ọ̀rùn;",
@@ -38346,7 +38310,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Mọ́kàndínlọ́gọ́run dúbúlẹ̀ jẹ́,",
               "Lábẹ́ òjì nín' agbo;",
@@ -38358,7 +38322,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "“Mọ́kàndínlọ́gọ́run Tìrẹ l' èyí;",
               "Jésù, nwọn kò ha fún Ọ?”",
@@ -38370,7 +38334,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ọ̀kan nín' àwọn t' a rà padà",
               "Kò mọ jíjìn omi náà,",
@@ -38382,7 +38346,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "“Níbo n' iró ẹ̀jẹ̀ ní ti wá,",
               "T' ó f' ọ̀nà ór' òkè hàn?”",
@@ -38394,7 +38358,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ṣùgbọ́n ní gbogbo orí òkè",
               "Àti lórí àpáta,",
@@ -38422,7 +38386,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ gbọ́ ìtàn kan náà",
               "T' àwọn Áńgẹ́lì ń sọ;",
@@ -38436,7 +38400,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo yọ̀ pé Olùgbàlà,",
               "Ti jẹ́ ọmọdé rí;",
@@ -38450,7 +38414,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ìfẹ́ àti àánú Rẹ̀,",
               "Y' ó jẹ́ orin fún mi;",
@@ -38480,7 +38444,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Wá, ẹ̀yin ọlọ́pẹ́, wá,",
               "Gbé orin ìkórè ga;",
@@ -38494,7 +38458,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Oko Ọlọ́run l' ayé,",
               "Láti s' èso ìyìn Rẹ̀;",
@@ -38508,7 +38472,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "N' torí Ọlọ́run wa ń bọ̀,",
               "Y' ó sì kórè Rẹ̀ sílẹ̀;",
@@ -38522,7 +38486,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ni, máa wá, Olúwa",
               "Sí ìkórè ìkẹyìn;",
@@ -38552,7 +38516,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ohun ògo Rẹ l' a ń ròyìn,",
               "Síónì ti Ọlọ́run wa;",
@@ -38566,7 +38530,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Wo! Ipa omi aláìgbẹ,",
               "N' ti ìfẹ́ Ọlọ́run sun wá,",
@@ -38580,7 +38544,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ará Síónì alábùkún,",
               "T' a f' ẹ̀jẹ̀ Olúwa wẹ̀;",
@@ -38610,7 +38574,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Olúwa ni Ọba;",
               "Ẹ bọ Olúwa yín;",
@@ -38622,7 +38586,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Olùgbàlà jọba,",
               "Ọlọ́run òtítọ́;",
@@ -38632,7 +38596,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ó ńbẹ lọ́dọ̀ Baba,",
               "Títí gbogbo ọ̀tá,",
@@ -38642,7 +38606,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Yọ̀ n' ìrètí ògo,",
               "Onídàájọ́ ńbọ̀ wá;",
@@ -38670,7 +38634,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Yọ̀, ẹ̀yin onígbàgbọ́,",
               "Jẹ́ k' ìmọ́lẹ̀ yín tàn;",
@@ -38684,7 +38648,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ bẹ fìtílà yín wò,",
               "F' òróró sínú wọn;",
@@ -38698,7 +38662,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin ìyàwó mímọ́,",
               "Gbé ohùn yín sókè",
@@ -38712,7 +38676,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin tí ẹ ńfi sùúrù",
               "Ru àgbélébùú yín,",
@@ -38726,7 +38690,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù, 'Wọ ìrètí wa",
               "F' ara Rẹ hàn fún wa,",
@@ -38756,7 +38720,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo fẹ́ràn ìwé ọ̀rọ̀ Rẹ;",
               "Ó f' ìmọ́lẹ̀ àt' ayọ̀ fún",
@@ -38768,7 +38732,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀rù Rẹ jí mi n' n' òògbé mi,",
               "Ó sọ 'bi t' ewu mi gbé wà;",
@@ -38780,7 +38744,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "Ta ni mọ ẹbi ọkàn rẹ̀?",
               "Dárí 'ṣìṣe kọ̀kọ̀ jì mí,",
@@ -38808,7 +38772,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù, aṣọ òdodo Rẹ",
               "L' ẹ̀wà àt' ẹ̀wù ògo mi,",
@@ -38818,7 +38782,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "'Gbà mba dìde n'nú ara 'kú,",
               "Láti gba 'bùgbé mi l' ókè,",
@@ -38828,7 +38792,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mímọ́ li aṣọ náà títí,",
               "'Gbà ara mi bá di ogbó;",
@@ -38838,7 +38802,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jẹ́kí òkú kí ó gb' ohùn Rẹ,",
               "Kí àwọn tí a tánù yọ̀;",
@@ -38864,7 +38828,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wá bá mi gbé! Alẹ́ fẹ́rẹ̀ lẹ́ tán,",
               "Òkùnkùn ńṣú; Olúwa bá mi gbé,",
@@ -38874,7 +38838,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọjọ́ ayé mi ńsáré lọ s' ópin,",
               "Ayọ̀ ayé ńkú, ògo rẹ̀ ńwọ 'mi;",
@@ -38884,7 +38848,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo ńfẹ́ Ọ rí ní wákàtí gbogbo;",
               "Kí l' ó lè ṣẹ́gun Èṣù b' ore Rẹ?",
@@ -38894,7 +38858,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Pẹ̀lú 'Bùkún Rẹ, ẹ̀rù kò bà mí;",
               "Ibi kò wúwo, ẹkún kò korò;",
@@ -38904,12 +38868,2797 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [ "x", "x", "x", "x" ],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí nr' ọ̀rọ̀ Rẹ ní wákàtí ikú,",
               "Ṣe 'mọ́lẹ̀ mi, sì tọ́ka sí ọ̀run;",
               "B' ayé ti kọjá, k' ilẹ̀ ọ̀run",
               "Ní yíyè, ní kíkú, wá bá mi gbé."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH600": {
+        title: "BÀBÁ ọ̀run! Ẹ̀mí fẹ́ wa",
+        number: "YBH600",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "BABA orun! Emi fe wa",
+              "N’ iwa mimo, l’ ododo;",
+              "Sugbon ife eran’-ara",
+              "Ntan mi je nigbagbogbo."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Alailera l’ emi se,",
+              "Emi mi at’ ara mi;",
+              "Ese ‘gbagbogbo ti mo nda",
+              "Wo mi l’ orun b’ eru nla."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ofin kan mbe li okan mi,",
+              "‘Wo papa l’ O fi sibe;",
+              "‘Tori eyi ni mo fi fe",
+              "Tele ‘fe at’ ase Re."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Sibe bi mo fe se rere,",
+              "Lojukanna mo sina;",
+              "Rere l’ oro Re ima so;",
+              "Buburu l’ emi sin se."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Nigba pupo ni mo njowo",
+              "Ara mi fun idanwo;",
+              "Bi a tile nkilo fun mi",
+              "Lati gafara f’ ese."
+            ]
+          },
+          {
+            number: 6,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Baba orun, Iwo nikan",
+              "L’ O to lati gba mi la;",
+              "Olugbala ti O ti ran",
+              "On na ni ngo gbamora."
+            ]
+          },
+          {
+            number: 7,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Fi Emi Mimo Re to mi",
+              "S’ ona titun ti mba gba;",
+              "Ko mi, so mi, k’ O si to mi",
+              "Iwo Emi Olorun."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH601": {
+        title: "ỌKÀN mi, ọdún kan nínú",
+        number: "YBH601",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "OKAN mi, odun kan ninu",
+              "Aiye re koja lo;",
+              "Eni ko le gbe ihin pe,",
+              "Eyi le j’ opin mi."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ji okan mi, f’ opo suru",
+              "Be iduro re wo;",
+              "Kini ohun t’ o gbekele?",
+              "Kini ireti re?"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Wo! odun miran tun bere;",
+              "Tun mura ajo re,",
+              "Wa anu fun ese t’ o da,",
+              "L’ ofe ninu Kristi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Fi ara re fun Olorun,",
+              "Gbekele or-ofe Re,",
+              "F’ itara to ona orun,",
+              "‘Kehin re yio l’ ayo."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH602": {
+        title: "LÁSÁN ni èrò mi ńwá ‘pa",
+        number: "YBH602",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "LASAN ni ero mi nwa ‘pa,",
+              "T’ o ye fun okan mi kiri;",
+              "Okan mi ko le n’ isimi,",
+              "Tor’ aiye ko le bukun mi."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A ha le ri ayo pipe",
+              "Nibiti igba nyipada,",
+              "T’ akoko nfi iyara gba,",
+              "Afe aiye lo loju wa?"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Dide, ‘wo okan mi, dide,",
+              "F’ aiye sile fo lo s’ oke,",
+              "Nibe l’ ayo gbe wa titi,",
+              "Gba akoko ba koja tan."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Oluwa fun mi l’ or-ofe",
+              "Ore Re le gb’ okan mi ga,",
+              "De ‘b’ ayo pipe t’ o l’ ogo,",
+              "T’ akoko ko le da duro."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH603": {
+        title: "JÉSÙ b’ olùṣọ́, má sìn wa",
+        number: "YBH603",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "JESU b’ oluso, ma sin wa,",
+              "A nfe, ki Re pupo;",
+              "F’ onje didara Re bow a,",
+              "Tun agbo Re se fun wa;",
+              "Olugbala",
+              "O ra wa, Tire l’ a se."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "O se ‘leri lati gba wa,",
+              "Pel’ ese at’ aini wa;",
+              "O l’ anu lati fi wow a,",
+              "Ipa lati da wa n’de;",
+              "Olugbala",
+              "O ra wa, Tire l’ a se."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Je k’ a tete w’ ojure Re,",
+              "K’ a se ‘fe Re ni kutu;",
+              "Oluwa at’ Olugbala,",
+              "F’ ife Re kun aiya wa;",
+              "Olugbala",
+              "O ra wa, Tire l’ a se."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH604": {
+        title: "BÀBÁ, a f’ ara wa",
+        number: "YBH604",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "BABA, a f’ ara wa,",
+              "S’ iso Re l’ ale yi;",
+              "Da bobo wa, k’ O pa wa mo,",
+              "Tit’ ile o fi mo."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH605": {
+        title: "BÀBÁ, Ọmọ, òun Ẹ̀mí",
+        number: "YBH605",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "BABA, Omo, on Emi,",
+              "Eni Metalokan lai,",
+              "Jo, masai dabobo wa,",
+              "K’ a le ri ‘mole ola."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH606": {
+        title: "Ọ̀nà tó mi lọ ìró ‘bùkún",
+        number: "YBH606",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "ONTO mi lo iro ‘bukun,",
+              "Oro t’ orun tu mi ninu,",
+              "Ohun ti o wu kemi se",
+              "Sibe Olorun nto mi lo."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Onto mi lo, Onto mi lo,",
+              "Owo Re l’ O fi nto mi lo,",
+              "L’ otito ni mo fe te le E",
+              "Nitoriti Onto mi lo."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Nigbamiran t’ iponju wa,",
+              "Nigbamiran l’ ogba Eden",
+              "L’ eba odo l’ okun ponju,",
+              "Sibe Olorun nto mi lo."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Oluwa mo d’ owo Re mu",
+              "Nko ni kun nko ni banuje,",
+              "F’ ohun yow u ti mo le ri",
+              "Niwon t’ Olorun mi nto mi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Nigba ‘se mi l’ aiye ba pin,",
+              "T’ or’-ofe Re fun mi n’isegun,",
+              "Emi ko ni beru iku,",
+              "Niwon t’ Olorun mi nto mi."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH607": {
+        title: "ÌGBÀLÀ ni, ìgbàlà ni",
+        number: "YBH607",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "IGBALA ni, igbala ni,",
+              "Awa elese nfe;",
+              "Nitori ninu buburu,",
+              "T’ a se l’ awa nsegbe."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ise owo wa ti a nse,",
+              "O nwi nigba gbogbo",
+              "Pe igbala ko si nibe,",
+              "Ise ko le gba ni."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Awa nsebo, awa nrubo,",
+              "A nkorin a si njo;",
+              "Sugbon a ko ri igbala,",
+              "Ninu gbogbo wonyi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Nibo ni igbala gbe wa?",
+              "Fi han ni, fi han ni;",
+              "B’ o wa loke, bi isale,",
+              "B’ o ba mo wi fun wa."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jesu ni se Olugbala,",
+              "Jesu l’ Oluwa wa;",
+              "Igbala wa li owo re,",
+              "Fun awa elese."
+            ]
+          },
+          {
+            number: 6,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Wa nisisiyi, wa toro,",
+              "Ife wa ninu re;",
+              "Enyin t’ o se ‘buru l’ o pe,",
+              "E wa gba igbala."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH608": {
+        title: "ÌTÀN ìyanu t’ ìfẹ́",
+        number: "YBH608",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "ITAN iyanu t’ ife! So fun mi lekan si,",
+              "Itan iyanu t’ ife! Ti dun l’eti kikan!",
+              "Awon Angeli rohin re, awon oluso si gbagbo",
+              "Elese iwo ki yio gbo? Itan iyanu t’ife."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x"],
+            lines: [
+              "Iyanu! Iyanu!",
+              "Iyanu! Iyanu!",
+              "Iyanu! Itan iyanu t’ ife!"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Itanu iyanu t’ ife! B’ iwo tile sako,",
+              "Itan iyanu t’ ife! Sibe o npe l’oni;",
+              "Lat’ ori oke Kalfari, lati orisun Krystali;",
+              "Lati isedale aiye; Itan iyanu t’ ife."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Itan iyanu t’ ife! Jesu ni isimi;",
+              "Itan iyanu t’ ife! Fun awon oloto,",
+              "T’ o simi n’ ilu nla orun, Pel’awon t’ o saju wa lo;",
+              "Nwon nko orin ayo orun, itan iyanue t’ ife."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH609": {
+        title: "JÉSÙ ńf’ ohùn jẹ́jẹ́ pè ọ wá ‘lé",
+        number: "YBH609",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "JESU nf’ ohun jeje pe o wa ‘le",
+              "O npe loni, o npe loni!",
+              "Ese t’ o fi ko ife Re sile,",
+              "T’ o sako jinna rere?"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "O npe loni",
+              "O npe loni",
+              "Jesu npe jeje, O npe jeje, gbo",
+              "ipe Re."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jesu npe alare fun isimi –",
+              "O npe loni, o npe loni!",
+              "Gb’ eru re to O wa, yio bukun",
+              "Ki yio le o pada."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Wa nisiyi, Jesu nduro de o!",
+              "Nduro loni, nduro loni!",
+              "F’ irele gb’ ese re sab’ ese Re",
+              "Wa, mase tun duro mo."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH610": {
+        title: "A kò ní ‘bùgbé kan nihin",
+        number: "YBH610",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A KO ni ‘bugbe kan nihin,",
+              "Onile e roar yanran;",
+              "B’ o fi gbogb’ aiye ko Garet,",
+              "Ese mefa ni busun wa."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A ko ni ‘bugbe kan nihin,",
+              "Or’ aiye fowoba fi le",
+              "Ni horiho la sa w’ aiye",
+              "Ni horiho lao pada lo."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A ko ni ‘bugbe kan nihin",
+              "O ko gbagbo p’ ajo l’ o wa?",
+              "Lo wo ‘boji w’ awon to sun,",
+              "Awon ni nwon de ‘bi simi."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH611": {
+        title: "ÒBÌNRIN t’ a mú nínú panságà ‘ṣẹ",
+        number: "YBH611",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "OBIRIN t’ a mu ninu pansaga ‘se",
+              "On la mu wa fi sun niwaju Jesu;",
+              "Jesu terire ba. O nkowe n’ ile;",
+              "T’ agba t’ ewe nf’ obirin yi seleya."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x"],
+            lines: [
+              "We mi, emi o mo,",
+              "We mi, emi o mo;",
+              "Jo we mi emi o fun bi egbon owu."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Nigbati Jesu gbe ori re soke",
+              "O wo gbogbo awon Olufisun ni;",
+              "O l’ enikeni ti ko se ‘ru yi ri,",
+              "Ko tete s’ omobirin yi l’ okuta."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jesu sit un te ori re ba sile,",
+              "T’ agba t’ ewe won si nyo lo lokokan",
+              "Gba Jesu sit un gbe ori soke,",
+              "Ko r’ enikan a f’ obirin yi nikan."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Gbana ni Jesu wi f’ obirin na pe;",
+              "Nibo l’ awon Olufisun re ni wa?",
+              "Gbogbo won ti lo lai da o l’ ebi,",
+              "A dariji o ma si se ‘ru re mo."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH612": {
+        title: "Ọlọ́run mi, Ọlọ́run mi",
+        number: "YBH612",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "OLORUN mi! Olorun mi!",
+              "Mo f’ ara mi fun O;",
+              "Dari aisedede ji mi,",
+              "Ma je ki nsako mo,"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "F’ oju anu wo mi,",
+              "Ma je ki ndese mo,",
+              "Se mi l’ oniwa rere;",
+              "Bi awon angeli."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Olorun mi! Olorun mi!",
+              "We mi n’nu eje Re;",
+              "Fi hisopu fo mi Baba,",
+              "Emi yio si mo."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Olorun mi! Olorun mi!",
+              "Mu ese mi duro;",
+              "Ki nma siyemeji l’ ona,",
+              "Ti O dari mi si."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Olorun mi! Olorun mi!",
+              "Jo, ranti, mi loni,",
+              "Ka mi m’ awon ayanfe Re,",
+              "Ke mi, k’ o si ge mi."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Olorun mi! Olorun mi!",
+              "Aiye nfe rerin mi,",
+              "Esu nin’ agbara re nla",
+              "Gbe tosi re si mi,"
+            ]
+          },
+          {
+            number: 6,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Olorun mi! Olorun mi!",
+              "Mo kanu ese mi,",
+              "Ese l’ o ti gbe mi subu,",
+              "Ti nko fi le sin O."
+            ]
+          },
+          {
+            number: "Egbé",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Se ‘gba mi ni tire,",
+              "Ma jeki nw’ ehin mo,",
+              "Ki mba o rin l’ aiye yi,",
+              "Ki nle gb’ adun orun."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH613": {
+        title: "Kì í ṣe l’ àìnírètí",
+        number: "YBH613",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "KI se l’ ainireti,",
+              "Ni mo to o wa,",
+              "Ki se l’ aini ‘gbagbo,",
+              "Ni mo kunle;",
+              "Ese ti gori mi,",
+              "Eyi sa l’ ebe mi,",
+              "Eyi sa l’ ebe mi,",
+              "Jesu ti ku."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "A! ese mi poju",
+              "O pon koko;",
+              "Adale, adale,",
+              "Ni mo ndese!",
+              "Ese aiferan Re;",
+              "Ese aigba O gbo;",
+              "Ese aigba O gbo;",
+              "Ese nlanla!"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Oluwa mo jewo",
+              "Ese nla mi;",
+              "O mo bi mo ti ri;",
+              "Bi mo ti wa;",
+              "Jo we ese mi nu!",
+              "K’ okan mi mo loni,",
+              "K’ okan mi mo loni;",
+              "Ki ndi mimo."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Olododo ni O,",
+              "O ndariji;",
+              "L’ ese agbalebu,",
+              "Ni mo wole;",
+              "Je k’ eje iwenu,",
+              "Eje Odagutan,",
+              "Eje Oduagutan;",
+              "We okan mi."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "‘Gbana Alafia",
+              "Y’ o d’ okan mi;",
+              "‘Gbana ngo ba O rin,",
+              "Ore airi;",
+              "Em’ o f’ ara ti O;",
+              "Jo ma to mi s’ ona,",
+              "Jo ma to mi s’ ona,",
+              "Titi aiye."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH614": {
+        title: "ALEJO kan ma nkankun",
+        number: "YBH614",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "ALEJO kan ma",
+              "nkankun, Pe E wole",
+              "O ti npara ‘be tip e",
+              "Pe E wole.",
+              "Pe wole ki o to lo,",
+              "Pe wole, Eni Mimo,",
+              "Jésù Krist’ Omo Baba, Pe",
+              "E wole!"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Silekun okan re fun u",
+              "Pe E wole;",
+              "B’o ba pe y’o pada lo, Pe",
+              "E wole!",
+              "Pe wole ore re ni",
+              "Y’o dabobo okan re",
+              "Y’o pa o mo de opin,",
+              "Pe E wole."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "O ko ha ngbo ohun Re?",
+              "Pe E wole;",
+              "Se l’ore, re nisiyi",
+              "Pe E wole!",
+              "O nduro l’ enu ‘lekun, Yio",
+              "fun o l’ ayo,",
+              "‘Wo o yin oruko Re,",
+              "Pe E wole!"
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "P’ alejo Ọ̀run wole",
+              "Pe E wole!",
+              "Yio se ase fun o,",
+              "Pe E wole!",
+              "Y’o dari ese ji o,",
+              "Gbat’ o ba f’aiye sile",
+              "Y’o mu o de ‘le Ọ̀run",
+              "Pe E wole."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH615": {
+        title: "ETUN won ko fun mi ki ngbo",
+        number: "YBH615",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "ETUN won ko fun mi ki ngbo",
+              "Oro ‘yanu t’ Iye!",
+              "Je ki nsi tun ewa won ri,",
+              "Oro ‘yanu t’ Iye,",
+              "Oro iye at’ ewa, ti mko mi n’ igbagbo!"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x"],
+            lines: [
+              "Oro didun! Oro ‘yanu",
+              "Oro ‘yanu t’ Iye."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Kristi nikan lo fi fun ni",
+              "Oro ‘yanu t’ Iye!",
+              "Elese gbo ‘pe ife na",
+              "Oro ‘yanu t’ Iye,",
+              "L’ ofe la fifun wa, ko le to wa s’orun"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Gbo ohun ihinrere na,",
+              "Oro ‘yanu t’ Iye!",
+              "F’ igbala lo gbogbo enia",
+              "Oro ‘yanu t’ Iye,",
+              "Jésù Olugbala, we wa mo titi lai!"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH616": {
+        title: "MO fi gbogbo re fun Jésù",
+        number: "YBH616",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "MO fi gbogbo re fun Jésù",
+              "Patapata laiku kan;",
+              "Ngo ma fe ngo si gbekele,",
+              "Ngo si ma ba gbe titi."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo fi gbogbo re,",
+              "Mo fi gbogbo re,",
+              "Fun O Olugbala mi ni",
+              "Mo fi won sile."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo fi gbogbo re fun Jésù ;",
+              "Mo si wole lese Re;",
+              "Mo fi afe aiye sile",
+              "Jésù jo gba mi wayi."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo fi gbogbo re fun Jésù,",
+              "Jésù se mi ni tire;",
+              "Jek’ Ẹmí Mimo s’ eleri",
+              "P’emi tire, ‘wo t’emi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo fi gbogbo re fun Jésù",
+              "Mo f’ ara mi f’ Olúwa;",
+              "F’ ife at’ agbara kun mi,",
+              "Si fun mi n’ ibukun Re."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo fi gbogbo re fun Jésù,",
+              "Okan mi ngbona wayi;",
+              "A! ayo igbala kikun!",
+              "Ògo ni f’ Orúkọ Re."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH617": {
+        title: "OLUWA mi, mo kepe O",
+        number: "YBH617",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "OLUWA mi, mo kepe O",
+              "Ngo ku b’ O ko ran mi lowo;",
+              "Jo, fi igbala Re fun mi",
+              "Gbi mi bi mo ti ri."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Gba mi bi mo ti ri (2)",
+              "Kristi ku fun mi l’ebe mi",
+              "Gba mi bi mo ti ri.",
+              ""
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ẹmí kun fun ese pupo,",
+              "O ta ‘je Re sile fun mi",
+              "O le se mi bi mo ti ri.",
+              "Gba mi bi mo ti ri, etc."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ko si ‘le ti mo le pa mo,",
+              "Nko le duro ti ‘pinnu mi;",
+              "Sibe ‘tori Tire gba mi,",
+              "Gba mi bi mo ti ri."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Wo mi! mo wole l’ese Re,",
+              "Se mi bi o ba ti to si,",
+              "Bere ‘se Re si pari re,",
+              "Gba mi bi mo ti ri."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH618": {
+        title: "MO Fe mo nipa Jésù sii",
+        number: "YBH618",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "MO Fe mo nipa Jésù sii,",
+              "F’or’ ofe Re h’ elomiran;",
+              "Ki nle ri ‘gbala kikun Re,",
+              "Ki ng mo ‘fe ‘ni to ku fun mi."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ki nmo nipa Jésù sii,",
+              "Ki nmo nipa Jésù sii;",
+              "Ki nle ri ‘gbala kikun Re,",
+              "Ki ng mo ‘fe ‘ni to ku fun mi"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mgo ko nipa Jésù sii,",
+              "Ki nda ‘fe Re mimo mo si i;",
+              "K’ em’ Ọlọrun j’oruko mi,",
+              "Ki nmo nipa etc."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ki nmo Jésù si n’oro Re,",
+              "Ki nma b’Olúwa mi soro;",
+              "Ki nsi gbo ‘ro Re lokokan,",
+              "So ‘ro ‘tito Re di t’emi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ki nmo Jésù l’ori ‘te Re,",
+              "Pel’ oro gbogbo Ògo Re;",
+              "Mo bi’joba Re ti npo si,",
+              "Bibo re Ọba ‘lafia"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH619": {
+        title: "GBAGBO awon ‘ya wa, ‘gbagbo aaye",
+        number: "YBH619",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "ONIRUURU",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "GBAGBO awon ‘ya wa, ‘gbagbo aaye",
+              "Nn’ orin at’adura, ale;",
+              "N’ alo at’ ife eba ina,",
+              "Ibagbe re si wa yi wa ka,",
+              "‘Gbagbo’ awon ‘ya wa, aaye ni,",
+              "Ao di o mu titi d’opin."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "‘Gbagbo awon ‘ya wa, aaye ni,",
+              "‘Bi ‘gbekele ‘t’ or’ofe ti nwa",
+              "Yiya si mimo re ba a le je,",
+              "‘Bere iran olola nla;",
+              "Igbagbo ‘ya wa, ife ni,",
+              "Ao di o mu titi d’opin."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "‘Gbagbo awon ‘ya wa nfona han ni,",
+              "Nnu ‘reti at’ aigbagbo odo,",
+              "B’oju at’ona wa tile sookun,",
+              "T’ao ko tile le r’itoju Re.",
+              "‘Gbagbo Iya wa, ti Kristi ni,",
+              "Ao di o mu titi d’opin."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "‘Gbagbo Iya wa, ti Kristi ni,",
+              "N’otito to ta ‘jewo way o,",
+              "O ntoju ‘le o si gba ijo la,",
+              "Iwa wa si nf’ emi re han;",
+              "‘Gbagbo ‘ya wa ti Kristi ni,",
+              "Ao di o mu titi d’opin. 619."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH620": {
+        title: "BABA jowo gb’ adura wa",
+        number: "YBH620",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon t'o wa ninu oko",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "BABA jowo gb’ adura wa,",
+              "Bi a tin lo loju omi;",
+              "Iwo ma je ebute wa,",
+              "Si ma je ile isimi."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jésù Olugbala ‘wo ti",
+              "O ti mu ‘ji dake roro;",
+              "Ma je ayo fun asofo,",
+              "F’isimi f’okan aibale."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "‘Wo Ẹmí Mimo eniti",
+              "O tan mole nijo kini;",
+              "Je k’ ibukun at ipa Re",
+              "Tu wa ninu l’akoko yi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "‘Wo Ọlọrun Metalokan,",
+              "Ti awa nsin ti awa nbo,",
+              "Ma se ‘bi ‘sadi wa l’ aiye",
+              "Si je ibi isimi wa."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH621": {
+        title: "BABA wa Olodumare",
+        number: "YBH621",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon t'o wa ninu oko",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "BABA wa Olodumare,",
+              "‘Wo t’ o kawo igbi omi,",
+              "‘Wo t’ o ti f’ ipo okun fun.",
+              "Ti ko le ri ibe koja;",
+              "Gbo ti wa, gbat’ a nke pe O,",
+              "F’ awon t’ o rin l’oju omi,"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Olugbala ‘wo t’ oro Re,",
+              "Mu igbi omi pa roro,",
+              "Iwo t’ o rin l’ori omi,",
+              "T’ O sun b’ enipe ko si nkan,",
+              "Gbo ti wa, gbat’ a nke pe O,",
+              "F’ awon t’ o rin l’oju omi,"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "‘Wo Ẹmí Mimo t’ o rado",
+              "B’ omi aiye nijo kini,",
+              "T’ o mu ‘binu re pa roro",
+              "Olúwa ‘mole ati ‘ye;",
+              "Gbo ti wa, gbat’ a nke pe O,",
+              "F’ awon t’ o rin l’oju omi,"
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Metalokan, Alagbara,",
+              "Wo awon t’ o wa loj’ omi,",
+              "Dabobo won lowo omi,",
+              "Ati ina ati ota’",
+              "Si je k’iyin Re ma dide",
+              "L’or’ ile ati lor’ omi."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH622": {
+        title: "OLORUN so wa n’nu oko",
+        number: "YBH622",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon t'o wa ninu oko",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "OLORUN so wa n’nu oko",
+              "Larin omi jinjin,",
+              "S’ oluso wa bati nwa lo,",
+              "Ninu ajin oru."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Eru ko ye ki o ba wa,",
+              "Larin iji ti nja,",
+              "Niwon gba t’ O wa nitosi",
+              "Larin omi ti nru."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Iparoro ati iji,",
+              "T’ o nkoja lori ‘le,",
+              "Iwo ni o da gbogbo won,",
+              "Nwon wa nikawo Re."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Nigbat’ awon Aposteli,",
+              "Wa lori ‘gbi okun,",
+              "Ase kan lat’ odo Re wa,",
+              "Mu dake roro wa."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Gbati iji to buru ju,",
+              "Ba nru l’ atokan wa,",
+              "Olúwa ma sai ba wa be",
+              "F’ alafia ba wa gbe."
+            ]
+          },
+          {
+            number: 6,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ninu wahala aiye yi,",
+              "Ma se amona wa,",
+              "Titi ao fi de ‘le rere,",
+              "Nibi t’ ese ko si."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH623": {
+        title: "APATA wa n’ ile are",
+        number: "YBH623",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "APATA wa n’ ile are,",
+              "Ojiji Re bo si iyanrin,",
+              "O npe awon ero ti nkoja,",
+              "Lati wa si boji l’ aginju."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Etise t’ e o ku?",
+              "Etise t’ e o ku?",
+              "Nigbati Apata Abo wa?",
+              "Etise t’ e o ku?"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Kanga kan wa li aginju kan,",
+              "Omi re npe l’ ohun iyanu,",
+              "“Elese ti orungbe ngbe,",
+              "Wa mu lofe, iwo yio ye.”"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Agbo nla wa t’ ilekun re si,",
+              "F’ agutan t’ o sonu lor’ oke",
+              "Oluso aguntan gun oke,",
+              "O nwa agutan Re t’ sonu."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Agbelebu wa ‘bi Jésù ku,",
+              "Eje Re nsan nitori ese,",
+              "O je ebo fun elese,",
+              "Lofe fun eniti o wo ‘le,",
+              "Etise t’ e o ku? Etise t’ e o ku?",
+              "‘Gbati agbelebu wa f’ elese"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH624": {
+        title: "GBATI ‘ji goke l’ ona re",
+        number: "YBH624",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "GBATI ‘ji goke l’ ona re,",
+              "T’ o f’ aniyan kun okan mi,",
+              "N’ gbekele w’ oke, wipe,",
+              "“Mo mo p’ Olúwa wa n’ tosi.”",
+              "“Ma beru” b’ oju orun su,",
+              "E gbekele Olugbala,",
+              "O ngbo, O si mbe nitosi,",
+              "O wi fun o pe “ma foya.”"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Sa wo, Jésù nwi jeje pe,",
+              "E gbekele atoko nyin,",
+              "Galili nru ‘mi l’ aiye yi,",
+              "“Ẹmí pelu re, ma foya.”"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Mase beru, Olugbala,",
+              "Wa n’ ibi itoko loni,",
+              "Y’o m’ oko gunle lailewu,",
+              "F’ iyemeji, eru sile",
+              "O te l’ oju iru omi,",
+              "O mu itura wa fun o,",
+              "Gbekele On y’o gba tire la,",
+              "Bi t’ ori omi Galili gbani."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Olugbala mo gbeke l’ O,",
+              "Mo be O le eru mi lo,",
+              "Mo mo p o mu m’ gunle n’ iye",
+              "B’ o ti wu ki ‘ji na le to,",
+              "Sa t’ oju orun su t’ igbi ga,",
+              "Ẹmí ki o pe O lasan;",
+              "Ma wi fun mi pe, “emi ni.”",
+              "Sa mu irumi dake je."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH625": {
+        title: "SION yara, k’ o je ise giga re",
+        number: "YBH625",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "SION yara, k’ o je ise giga re,",
+              "So f’ aiye pe Ọlọrun ni mole,",
+              "Eni to da ‘won orilede ko fe,",
+              "K’ enikan segbe s’ inu okunkun."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x"],
+            lines: [
+              "Je gbogb’ eda gbo ‘yin alafia,",
+              "‘Hin rere pe Jésù ti r’ elese pada."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "W’ egbegberun ti won sun sinu ese,",
+              "B’ a ti de won, sinu tubu ese,",
+              "Lai reni so ‘ku Olugbala fun won,",
+              "Tab’ iye t’ O fun won ninu ‘ku Re."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Kede f’ enia ati orile-ede,",
+              "Pe Ìfẹ́ ni Ọlọrun to da won,",
+              "So p’ O re ‘ra re sile lati gb’ eda,",
+              "O ku li aiye k’ eda le gb’ orun,"
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ran omokunrin nyin ki won j’ ise na,",
+              "N’ oro re fun won ni ‘rin ajo won,",
+              "S’ adura fun won lat’ okan ki won segun,",
+              "Jésù y’o san ohun t’o na pada fun o."
+            ]
+          },
+          {
+            number: 5,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "O npada bo, ara Sion k’ O to de,",
+              "Je gbogb’ okan mo ‘gbala ore-ofe Re,",
+              "Ma je nikan nin’ awon ti O gbala,",
+              "S alaipade Re nipa ‘jata re."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH626": {
+        title: "JE ran orun kekere nibiti o nlo",
+        number: "YBH626",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "JE ran orun kekere nibiti o nlo,",
+              "Se ranlowo lati le okunkun l’ aiye,",
+              "‘Wo o ri b’ okunkun yio ti lo kuro,",
+              "B’ iwo ba je ‘mole njojumo."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Je mole kekere b’ o ti wu k’ o mo,",
+              "Je mole t’ o dara wo ‘nu okunkun,",
+              "E o ri b’ okukun yio ti yara lo,",
+              "B’ iwo ba je mole njojumo."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Je ran kekere nibiti o nlo,",
+              "Ran, a ran fun Jésù Imole didan,",
+              "Omo kekere le m’ aiye ese mole,",
+              "Ran mole wura sinu aiye."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Je ran orun kekere, mole kedere,",
+              "Enia n’ tosi re le nu s’ okun aiye,",
+              "O le se ranwo lati l’ okunkun lo,",
+              "Mu won to Jésù ti se Mole."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH627": {
+        title: "ITAN kan wa f’ awon orile",
+        number: "YBH627",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "ITAN kan wa f’ awon orile,",
+              "Ti yio tun okan won se,",
+              "Itan otito ti o si dun,",
+              "Itan alafia on ‘mole,",
+              "Itan alafia on ‘mole,"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Tori okunkun yio di oye,",
+              "Oye y’o o di osan gangan,",
+              "Ijoba nla Krist y’o gba aiye,",
+              "Joba ‘fe at’ imole."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "A ni orin kan ko f’ orilede,",
+              "Ti yio gb’ okan won s’ Olúwa,",
+              "Orin t’ a fi segun Esu,",
+              "Ao se oko ao si run ‘da,",
+              "Ao se oko ao si run ‘da,"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "A ni ise kan je f’ orile-ede,",
+              "P’ Olúwa to j’oba loke,",
+              "Ti ran ‘mo Re lati gba wa la,",
+              "O fi han w ape ‘Fe l’ Ọlọrun,",
+              "Pe Ìfẹ́ ni Ọlọrun."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "A l’ Olugbala kan fi han ‘raiye,",
+              "En’ to koja nu ‘banuje,",
+              "Ki gbogbo enia agbaiye,",
+              "Le gb’ otito oro Ọlọrun,",
+              "Le gb’ otito oro Ọlọrun,"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH628": {
+        title: "NGO je ‘mole fun Jésù",
+        number: "YBH628",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "NGO je ‘mole fun Jésù,",
+              "Ki ntan nigba gbogbo,",
+              "Ki ntan s’ ibi to fe mi,",
+              "Ki ntan l’ojojumo,",
+              "L’ oro ‘fe ati n’ ise,",
+              "Lo mi Olúwa mi;",
+              "Ki ntun ‘le on ‘le mi se,",
+              "Titi okun y’o fi lo"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ẹmí yio tan ‘mole nibiti mo le,",
+              "Ngo m’ okan funfun Jésù,",
+              "Titi d’ ojo na.",
+              ""
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Egbe imole ntan,",
+              "Yika gbogbo aiye,",
+              "Ero awon omode npapo,",
+              "Ninu re Ọlọrun,",
+              "Baba lo ailera wa,",
+              "Ko to eni gbogbo,",
+              "Si gbagbo bi t’ omode,",
+              "K’ aiye kun fun orin."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo le se ‘mole fun Jésù,",
+              "Bi mo ba gbiyanju;",
+              "Ki nsi sin On nigbagbogbo,",
+              "Ki mba On gbe l’ orun,"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH629": {
+        title: "WA, obirin, e ko",
+        number: "YBH629",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "WA, obirin, e ko",
+              "Orin iye nipa Olugbala,",
+              "Krist, ‘Mole Ọlọrun,",
+              "Krist, t’ O jinde n’ipa,",
+              "Krist, t’ O de nyin l’ ade, On ni k’e yin."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "E o awon ‘mode",
+              "Ati arabinrin N’ ile gbogbo,",
+              "Fun awon elese,",
+              "F’ awon alailera,",
+              "At’ eni okunkun Ma gbadura."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Sise pelu ‘gboiya,",
+              "Ojumo fere mo Eni ife.",
+              "‘Rawo yio tan fun nyin,",
+              "Inu nyin yio si dun,",
+              "Ati nipa ‘fe Re E ma reti."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "‘Gbat ‘kore ba de",
+              "Aka Olúwa wa Yio kun pupo.",
+              "‘Reti Onirele,",
+              "Krist, ti gbogbo wa nwa,",
+              "Krist, y’ o fun nyin l’ ere Pelu ayo."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH630": {
+        title: "A YIN O ‘lorun",
+        number: "YBH630",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x"],
+            lines: [
+              "A YIN O ‘lorun, nitor’ Omo ‘fe Re,",
+              "Fun Jésù ti o ku to si lo soke"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Halleluya, tire logo",
+              "Halleluya, Amin;",
+              "Halleluya, tire logo,",
+              "Tun mu soji."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x"],
+            lines: [
+              "A yin O ‘lorun, f’ emi ‘mole Re,",
+              "To f’ Olugbala han To mu ‘mole wa."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x"],
+            lines: [
+              "Ògo ati ‘yin f’ odagutan ta pa,",
+              "To ru gbogb’ ese wa to w’ eri wa nu."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x"],
+            lines: [
+              "Sa mu soji, f’ ife Re k’ okan wa;",
+              "K’ okan gbogbo gbina fun ina orun."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH631": {
+        title: "ORIN t’o dun wa s’okan mi",
+        number: "YBH631",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "ORIN t’o dun wa s’okan mi,",
+              "Orin ayo inu-didun,",
+              "Ngo korin alafia didun,",
+              "Ebun ife t’Ọlọrun."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A- la-fi-a;",
+              "Ebun ‘yanu lat’ orun!",
+              "Alafia t’o ga julo!",
+              "Ebun ife t’ Ọlọrun!"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Kristi lori agbelebu,",
+              "Ti san gbogbo igbese mi,",
+              "Ko si ohun miran t’ o le,",
+              "Ma alafia didun na wa."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "‘Gba Jésù di Olúwa mi,",
+              "Alafia yi k’ okan mi,",
+              "Lodo Re mo r’ ibukun rere,",
+              "Alafia t’ orun wa."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "F’ alafia yi ni mo wa,",
+              "Mo si sunmo odo Jésù,",
+              "Lodo Re alafia wa,",
+              "Ebun ife t’ Ọlọrun."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH632": {
+        title: "A RE mu o okan re poruru",
+        number: "YBH632",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A RE mu o okan re poruru?",
+              "So o fun Jésù, so o fun Jésù;",
+              "Ibanuje dipo ayo fun o?",
+              "So o fun Jésù nikan."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "So o fun Jésù; so o fun Jésù,",
+              "On l’ore ti yio mo,",
+              "Ko tun s’ ore",
+              "Ati ‘yekan bi Re,",
+              "So o fun Jésù nikan."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Asun-dakun omije l’ o nsun bi?",
+              "So o fun Jésù, so o fun,",
+              "O l’ ese t’o farasin f’ enia,",
+              "So o fun Jésù nikan."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "‘Banuje teri okan re ba bi?",
+              "So o fun Jésù, so o fun Jésù,",
+              "O ha nsaniyan ojo ola bi?",
+              "So o fun Jésù nikan."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ironu iku mu o damu bi?",
+              "So ofun Jésù, so o funJesu,",
+              "Okan re nfe ijoba Jésù bi!",
+              "So o fun Jésù nikan."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH633": {
+        title: "B’O ti dun lati gba Jésù",
+        number: "YBH633",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "B’O ti dun lati gba Jésù",
+              "Gbo gege bi oro Re;",
+              "K’ a simi lor’ ileri Re,",
+              "Sa gbogbo l’ Olyuwa wi."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jésù, Jésù emi gbagbo,",
+              "Mo gbekele ngbagbogbo;",
+              "Jésù, Jésù, Alabukun,",
+              "Ki nle gbekele O si!"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "B’ o ti dun lati gba Jésù,",
+              "K’ a gb’ eje ‘wenumo Re;",
+              "Igbagbo ni ki a fib o",
+              "Sin ‘eje wenumo na."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "B’ o ti dun lati Jésù,",
+              "Ki nk’ ara ese sile;",
+              "Ki ngb’ ayo, iye, isimi",
+              "Lati odo Jésù mi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo yo mo gbeke mi le O,",
+              "Jésù mi, Alabukun;",
+              "Mo mo pe O wa pelu,",
+              "Ntoju mi titi d’ opin."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH634": {
+        title: "T’ IFE Jésù t’o wa mi",
+        number: "YBH634",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "T’ IFE Jésù t’o wa mi,",
+              "Gbat’ mo nu n’ ese;",
+              "T’ ore ofe t’ o mu mi",
+              "Pada bo sin’ agbo;",
+              "Ti giga jinle anu,",
+              "To jin ju okun lo,"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Dun si b’ odun ti nkoja,",
+              "Dun si b’ odun ti nkoja,",
+              "Ìfẹ́ na nkun f’ayo;",
+              "Ìfẹ́ Jésù ndun si,",
+              "Dun si b’ odun ti nkoja."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "On ti rin ni Judea,",
+              "L’ ona ti aiye yi;",
+              "Opo enia nyi ka,",
+              "Lati r’ or’ ofe Re;",
+              "On w’ onirobinuje,",
+              "On m’ afoju reran;"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Ìfẹ́ ‘yanu l’ o mu U",
+              "Jiya lati gba wa",
+              "Ti ko f’ ibaraje ru",
+              "Irora ‘gbekele,",
+              "Pel’ awon Mimo logo,",
+              "Ka gbohun wa soke,"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH635": {
+        title: "NWON duro fun ete kan",
+        number: "YBH635",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "NWON duro fun ete kan",
+              "Nwon gbo t’Ọlọrun;",
+              "Bola fun Olotito",
+              "K’a nyin egbe Daniel –"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ki a se bi Daniel,",
+              "K’a fi igboya",
+              "Pa ete otito kan",
+              "T’o ma han nigbangba."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Fun awon ti o nsubu",
+              "Ti ko n’igboya",
+              "Aye isegun ti wa",
+              "Ninu egbe Daniel."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Awon ota enia",
+              "T’o nrin kakiri",
+              "Y’o subu l’ogedengbe",
+              "Niwaju egbe yi."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Gbe asia Krist soke",
+              "E k’a lo segun,",
+              "Egbe esu ni a ngan",
+              "K’a ki egbe Daniel."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH636": {
+        title: "ENIKAN se ise wura",
+        number: "YBH636",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "ENIKAN se ise wura;",
+              "On wa b’ ore nigba aini;",
+              "Enikan ko orin ayo,",
+              "Nmu sanma dan ni gbogb’ ojo."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x"],
+            lines: [
+              "Eni na ni o bi?",
+              "Eni na ni o bi?"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Enikan ns’ ole ngba gbogbo,",
+              "O nte ‘tanna aiye mole",
+              "Enikan f’ aiye re sofo,",
+              "O ti lo emi re lasan."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Enikan ri adun l’ aiye",
+              "Ni fifi ini re tore;",
+              "Enikan ja ij’ akoni",
+              "Ni fif’ emi lele f’ oto."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Enikan f’ imole k’ ojo,",
+              "On f’ aisimi le oru lo;",
+              "Nise ayo alafia,",
+              "Daju aiye re ko le pin."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH637": {
+        title: "ORE ni Jésù fun mi",
+        number: "YBH637",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "ORE ni Jésù fun mi, tito ‘b’ Ìfẹ́ Re po,",
+              "Ìfẹ́ nla ti ko le sa,",
+              "Bi mo tile s’ aito,",
+              "S’ife Re yi ni mo ti se;",
+              "Sugbon ngba mo kunle,",
+              "Mo jewo gbogb’ aise mi,",
+              "Eru ese sib o."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Beni Jésù ri, O nle okunkun lo,",
+              "Beni Jésù ri, lojojo npa mi mo,",
+              "Beni Jésù ri, l’ aginju yi ja,",
+              "Gege bi ife nla Re."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Nigbat’ okunkun ‘yonu sub o sanma l’ oke",
+              "Ti nko le ri Olugbala,",
+              "Mo gbagbe ife nla Re;",
+              "Lat ite Anu Re l’ orun,",
+              "O r’ ainireti mi,",
+              "L’anu O m’ awosanma si,",
+              "O fi han pe On wa."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "A! mo le Korin titi, orin ife Jésù,",
+              "Orin anu itoju Re,",
+              "L’or’ elese b’ emi,",
+              "Ìfẹ́ nla Re ‘li aiye, igbi lile gboran,",
+              "Jésù pase pe “dake je,”",
+              "O le okunkun lo.",
+              ""
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH638": {
+        title: "GBATI ipe Olúwa ba dun",
+        number: "YBH638",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "GBATI ipe Olúwa ba dun",
+              "T’ akoko ba si pin,",
+              "T’ imole owuro mimo ntan lailai;",
+              "Gbat’ awon t’ a ti gbala,",
+              "Y’o pejo s’ oke odo na."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Gbat’ a npe oruko lohun ngo wan be,",
+              "Gbat’ a npe oruko lohun,",
+              "Gbat’ a npe oruko lohun,",
+              "Gbat’ a npe oruko lohun,",
+              "Gbat’ a npe oruko lohun ngo wa nbe."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "L’ oro daradarat’ awon",
+              "Oku mimo y’o dide,",
+              "T’ ogo ajinde Jésù o je ti won;",
+              "Gbat’ awon ayanfe Re y’o",
+              "Pejo nile lok’ orun,"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Jek’ a sise f’ Olúwa lat’",
+              "Owuro titi d’ ale,",
+              "Ka soro ‘fe ‘yanu at’ itoju Re;",
+              "Gbati aiye ba d’ opin t’ ise",
+              "Wa si pari nihin,"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH639": {
+        title: "IJA ti de, ipe sin dun kikankikan",
+        number: "YBH639",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "IJA ti de, ipe sin dun kikankikan,",
+              "“Wo ‘hamora!” nigbe jake-jado;",
+              "Olúwa omo-ogun nlo si isegun,",
+              "Ko pe ti segun Krist’ y’o farahan."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
+            lines: [
+              "Ija ti de, Krsitian ologun,",
+              "L’ ojukoju n’opo ija",
+              "B’ opagun ti nfe;",
+              "Ti hamora ndan, Are, ebi koju loni!",
+              "Ija ti de, ma sise sare;",
+              "Se akoni n’agbara Re",
+              "B’ Ọlọrun l’a ja, ab’ opagun Re,",
+              "Ao korin ‘segun nikehin!"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ija ti se, om’ ogun oto e dide!",
+              "Jehofa nsaju, isegun daju;",
+              "E d’ ihamora t’ Ọlọrun ti fi fun nyin,",
+              "N’ agbara Re fi ori ti d’opin."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Olúwa nto nyin lo si segun t’odaju;",
+              "Ileri Re ti han n’ ila-orun;",
+              "Ile gbogbo y’o f’ iyin f’ ogo ‘ruko Re,",
+              "Owuro y’o mu alafia de."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH640": {
+        title: "IMOLE k’ okan mi loni",
+        number: "YBH640",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "IMOLE k’ okan mi loni,",
+              "T’ o logo t’ o si ndan,",
+              "T’ o tan ju t’ awosanma lo,",
+              "Jésù n’ imole mi."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A, imole, ‘mole Mimo,",
+              "B’ akoko ti nfayo sare lo",
+              "Ti Jésù nfoju ‘fe Re han",
+              "Imole kun okan mi."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Orin kun okan mi loni,",
+              "Orin si Ọba na,",
+              "Bi Jésù ti nteti sile,",
+              "Gbo’ orin ti nko le mo."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ayo kun okan mi loni,",
+              "Olúwa ko jinna,",
+              "Alafia mbe l’ okan mi,",
+              "Or’ofe farahan."
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ireti k’ okan mi loni,",
+              "Orin ‘yin at’ ife,",
+              "Ibukun ti On fi fun mi,",
+              "Ayo t’ o wa loke."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH641": {
+        title: "IWO ha nberu p’ ota yio segun",
+        number: "YBH641",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "IWO ha nberu p’ ota yio segun?",
+              "Òkun su lode o sis u ju ninu?",
+              "Si ferese ati ilekun sile,",
+              "Jeki ‘ran orun wole."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jeki ‘ran orun wole.",
+              "Jeki ‘ran orun wole.",
+              "Si ferese ati ilekun sile,",
+              "Jeki ‘ran orun wole."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Igbagbo re nkere ‘nu ‘ja t’ iwo fe?",
+              "Ọlọrun ko ha gbo adura re bi?",
+              "Si ferese ati ilekun sile,",
+              "Jeki ‘ran orun wole."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Iwo fe fi ayo lo s’ oke orun?",
+              "Ko si orun mo bikose imole?",
+              "Si ferese ati ilekun sile,",
+              "Jeki ‘ran orun wole."
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH642": {
+        title: "JESU fe k’ emi je ‘mole",
+        number: "YBH642",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "JESU fe k’ emi je ‘mole,",
+              "Ki ntan lojojumo;",
+              "Nibi gbogbo kin le wu On,",
+              "N’ ile, ni skul, l’ode."
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Imole, imole,",
+              "Jésù fe’ k’ emi je ‘mole;",
+              "Imole, imole,",
+              "L’emi o je fun Jésù."
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Jésù fe ki emi feran,",
+              "Gbogb’ ohun ti mo ri,",
+              "Ki nfi itara at’ ayo,",
+              "T’ omode Re le je,"
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Mo le se ‘mole fun Jésù,",
+              "Bi mo ba gbiyanju;",
+              "Ki nsi sin On nigbagbogbo,",
+              "Ki mba On gbe l’ orun,"
+            ]
+          }
+        ],
+        history: "Traditional Yoruba hymn."
+      },
+      "YBH643": {
+        title: "GBOGBO aiye ti nu s’ okunkun ese",
+        number: "YBH643",
+        author: "Unknown",
+        composer: "Unknown",
+        tune: "Unknown",
+        meter: "Unknown",
+        key: "Unknown",
+        scripture: "Unknown",
+        theme: "Awon Asayan Orin",
+        year: "Traditional",
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "GBOGBO aiye ti nu s’ okunkun ese",
+              "Imole aiye ni Jésù!",
+              "B’ iran orun l’ osan gangan l’ ogo Re,",
+              "Imole aiye ni Jésù,"
+            ]
+          },
+          {
+            number: "Egbe",
+            musicSigns: ["x", "x", "x", "x", "x"],
+            lines: [
+              "Wa ‘nu ‘mole,",
+              "Ti o tan fun o,",
+              "Didun-didun l’ o tan s’ ori mi;",
+              "O ti m’emi afoju riran;",
+              "Imole aiye ni Jésù!"
+            ]
+          },
+          {
+            number: 2,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Ko ‘s okunkun fun wa t’ o wa t’ o wa ‘nu Jésù,",
+              "Imole aiye ni Jésù!",
+              "A nrin n’ imole b’ a ntel’ amona wa,",
+              "Imole aiye ni Jésù."
+            ]
+          },
+          {
+            number: 3,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "Eni okunkun t’ ese ti fo l’ oju,",
+              "Imole aiye ni Jésù!",
+              "Lo we nip’ ase Re imole y’o de,",
+              "Imole aiye ni Jésù!"
+            ]
+          },
+          {
+            number: 4,
+            musicSigns: ["x", "x", "x", "x"],
+            lines: [
+              "A ko fe ‘mole orun l’ orun l’ a gbo,",
+              "Imole aiye ni Jésù!",
+              "Odagutan n’ orun ilu Ọlọrun,",
+              "Imole aiye ni Jésù!"
             ]
           }
         ],
@@ -38930,7 +41679,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "JÉSÙ ńfẹ́ k’ á f’ ìmọ́lẹ̀ tí ó pé tán,",
               "Bí fìtílà kékeré nínú òru;",
@@ -38940,7 +41689,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù ńfẹ́ k’ á kọ́ tàn ‘mọ́lẹ̀ fún Un,",
               "Òun mọ̀ dájú b’ ìmọ́lẹ̀ wa ńṣókùnkùn;",
@@ -38950,7 +41699,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù ńfẹ́ k’ á tàn, nígbànáà f’ àwọn,",
               "T’ ó wà n’ ókùnkùn ‘bànújẹ́ ayé yìí,",
@@ -38960,7 +41709,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù ńfẹ́ k’ á tàn, ‘nú iṣẹ́ fún Un,",
               "Ká m’ àwọn t’ ó ṣìnà n’ẹ̀ṣẹ̀ padà wá;",
@@ -38986,7 +41735,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "JÉSÙ ni gbogb’ ayé fún mi,",
               "Ìyè àt’ ayọ̀ mi,",
@@ -39000,7 +41749,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù ni gbogb’ ayé fún mi,",
               "Ọ̀rẹ́ n’ ìgbà ‘dánwò,",
@@ -39014,7 +41763,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù ni gbogb’ ayé fún mi,",
               "Nkò sì ní tan Òun jẹ,",
@@ -39028,7 +41777,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Jésù ni gbogb’ ayé fún mi,",
               "Nkò fẹ́ ẹlòmíràn,",
@@ -39058,7 +41807,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "KÒ s’ ọ̀rẹ́ bí Jésù onírẹ̀lẹ̀,",
               "Kò s’ ọ̀kan! Kò s’ ọ̀kan!",
@@ -39068,7 +41817,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Jésù mọ gbogbo ìdààmú wa,",
               "Y’ó tọ́jú wa d’ òpin ọjọ́;",
@@ -39078,7 +41827,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò s’ ọ̀rẹ́ bí Rẹ̀ t’ ó ga ní Mímọ́,",
               "Kò s’ ọ̀kan! Kò s’ ọ̀kan!",
@@ -39088,7 +41837,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kò s’ àkókò tí Òun kò súnmọ́ wa,",
               "Kò s’ ọ̀kan! Kò s’ ọ̀kan!",
@@ -39098,7 +41847,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹnìkan ha ti r’ ọ̀rẹ́ yìí kọ̀ ní",
               "Kò s’ ọ̀kan! Kò s’ ọ̀kan!",
@@ -39108,7 +41857,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 5,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀bùn kan ha wà bí Jésù fún wa?",
               "Kò s’ ọ̀kan! Kò s’ ọ̀kan!",
@@ -39134,7 +41883,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "LÁSÁN l’ adùn ayé ńpè mí;",
               "Mo fẹ́ kí ńjọ Jésù,",
@@ -39144,7 +41893,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Kí ńjọ Jésù, l’orin mi,",
               "Bí n’ilé tàbí l’ óde;",
@@ -39154,7 +41903,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òun ti dá gbogbo ìdè mi,",
               "Mo fẹ́ kí ńjọ Jésù;",
@@ -39164,7 +41913,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Láti ayé dé ‘nú ògo,",
               "Mo fẹ́ kí ńjọ Jésù;",
@@ -39190,7 +41939,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MO n’ Olùgbàlà t’ ó ńbẹ̀rẹ̀ nín’ Ògo,",
               "Òun náà kò kọ́ ni bí ọ̀rẹ́ ayé sá;",
@@ -39200,7 +41949,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Fún ọ mo ńgbàdúrà,",
               "Fún ọ mo ńgbàdúrà,",
@@ -39210,7 +41959,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo ní Bàbá; t’ ó fún mi ní ìlérí",
               "Ìrètí àìnípẹ̀kun t’ ó ní ‘bùkún;",
@@ -39220,7 +41969,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo n’ ágbádá t’ ó mọ́ nínú ẹwà rẹ̀,",
               "Ńdúró nín’ ògo fún ‘yanu mi l’ ókè",
@@ -39230,7 +41979,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbà Jésù ti rí ọ, rọ ‘tàn náà káàlẹ̀",
               "P’ Olùgbàlà mi sì jẹ́ tìrẹ pẹ̀lú;",
@@ -39256,7 +42005,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "MO n’ Ọ̀rẹ́ kan, Á, Ọ̀rẹ́ náà!",
               "N’ ífẹ́ mi k’ èmi tó mọ̀,",
@@ -39270,7 +42019,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo n’ Ọ̀rẹ́ kan, Á, Ọ̀rẹ́ náà!",
               "Ó kú fún ìgbàlà mi;",
@@ -39284,7 +42033,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo n’ Ọ̀rẹ́ kan, Á, Ọ̀rẹ́ náà!",
               "Gbogb’ agbára ni Tirẹ̀;",
@@ -39298,7 +42047,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Mo n’ Ọ̀rẹ́ kan, Á, Ọ̀rẹ́ náà!",
               "J’ olóòótọ́ àt’ aláàánú,",
@@ -39328,7 +42077,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OLÙṢỌ́-ÀGÙNTÀN ni ńpè mí,",
               "Kúrò nínú aginjù ẹ̀ṣẹ̀,",
@@ -39338,7 +42087,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mú wọn wá, mú wọn wá,",
               "Mú wọn wá, kúrò l’ ọkọ ẹ̀ṣẹ̀;",
@@ -39348,7 +42097,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Rán Olùṣọ́-Àgùntàn lọ́wọ́",
               "Láti wá ‘gùntàn Rẹ̀ t’ ó nù,",
@@ -39358,7 +42107,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Gbọ́ igbe wọn nín’ aginjù,",
               "Àti lórí òkè gíga,",
@@ -39384,7 +42133,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "B’ ÌFẸ́ Olùgbàlà ti dùn tó!",
               "Bí t’ òkun ìwọ̀n rẹ̀ tayọ;",
@@ -39394,7 +42143,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ńdùn sí, ńdùn sí ni fún mi,",
               "Ó ńdára lójojúmọ́,",
@@ -39404,7 +42153,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo mọ̀ p’ ó wà lọ́dọ̀ mi títí!",
               "Ayérayé ni yíò fi;",
@@ -39414,7 +42163,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Níbikíbi èmi ó tẹ̀lé,",
               "Nín’ ayọ̀ tàb’ ìbànújẹ́;",
@@ -39424,7 +42173,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lọ́jọ́ kan ngó rí i lójúkojú,",
               "Bí ayọ̀ náà y’ ó ti pọ̀ tó;",
@@ -39450,7 +42199,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NGÓ ha kú ní ọwọ́ ofo,",
               "Kí nìbá Olúwa mi bẹ́",
@@ -39460,7 +42209,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ngó ha kú ní ọwọ́ ofo",
               "Ngó ha r’ Olúwa mi bẹ́",
@@ -39470,7 +42219,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ikú kọ́ l’ ó dẹ́rùbà mí",
               "‘Torí Jésù ńgbà mí là,",
@@ -39480,7 +42229,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Á! Àkókò tí mo sọnù",
               "Ǹbá lè pè é padà,",
@@ -39490,7 +42239,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹni mímọ́ f’ ìtara jí,",
               "Dìde, ṣiṣẹ́, l’ ọjọ́ yìí,",
@@ -39516,7 +42265,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NGÓ kọrin ìtàn ‘yanu náà,",
               "Ti Jésù t’ ó kú fún mi,",
@@ -39526,7 +42275,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Á! ngó kọrin ‘tàn ‘yanu náà –",
               "Ti Jésù t’ ó kú fún mi",
@@ -39536,7 +42285,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo ti nù, Jésù sì rí mi,",
               "Àgùntàn t’ ó ti sọnù;",
@@ -39546,7 +42295,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Mo f’ ara pa Jésù wò mí,",
               "Ìṣubú sọ mí d’ òkú,",
@@ -39556,7 +42305,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Òun y’ó sọ́ mi títí omi,",
               "Odò náà ńkàn mí l’ẹ́sẹ̀;",
@@ -39582,7 +42331,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "MÁṢE f’òìyà ohun t’ ó lè dé,",
               "Ọlọ́run y’ó ṣọ́ ọ;",
@@ -39592,7 +42341,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọlọ́run y’ó ṣọ́ ọ,",
               "Lọ́jọ́ gbogbo l’ ọ̀nà gbogbo;",
@@ -39602,7 +42351,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lọ́jọ́ ìṣẹ́ t’ àárẹ̀ m’ ọkàn rẹ,",
               "Ọlọ́run y’ó ṣọ́ ọ;",
@@ -39612,7 +42361,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Èyíkéyìí t’ ìdánwò lè jẹ́,",
               "Ọlọ́run y’ó ṣọ́ ọ;",
@@ -39638,7 +42387,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O TI tọ Jésù f’ agbára ‘wẹ̀numọ́?",
               "A wẹ̀ ọ nín’ ẹ̀jẹ̀ Ọ̀dọ́àgùntàn?",
@@ -39648,7 +42397,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x"],
             lines: [
               "A wẹ̀ ọ́?",
               "Nín’ ẹ̀jẹ̀",
@@ -39660,7 +42409,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "O ńbá Olùgbàlà rìn lójojúmọ́?",
               "A wẹ̀ ọ nín’ ẹ̀jẹ̀ Ọ̀dọ́àgùntàn?",
@@ -39670,7 +42419,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Aṣọ rẹ funfun láti pád’ Olúwa?",
               "Ó mọ́ láú nín’ ẹ̀jẹ̀ Ọ̀dọ́àgùntàn?",
@@ -39696,7 +42445,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "WO kákiri f’ ẹnít’ ó ṣ’ aláìní,",
               "R’ ènìyàn lọ́wọ́ lónìí!",
@@ -39706,7 +42455,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x"],
             lines: [
               "R’ ènìyàn lọ́wọ́ lónìí,",
               "Ènìyàn l’ ọ́nà ayé yìí;",
@@ -39717,7 +42466,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀pọ̀ l’ó ńsọ ọ̀rọ̀ ímu ‘nú dùn,",
               "R’ ènìyàn lọ́wọ́ lónìí!",
@@ -39727,7 +42476,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀pọ̀ l’ ó ńkú lọ fún ẹrù wíwúwo,",
               "R’ ènìyàn lọ́wọ́ lónìí!",
@@ -39737,7 +42486,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ọ̀kan wà tí pa mí nín’ àárẹ̀,",
               "R’ ènìyàn lọ́wọ́ lónìí!",
@@ -39763,7 +42512,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NKÒ lè ṣàì gb’ ọ̀nà agbélébùú lọ ‘lé,",
               "Kò tún sí ọ̀nà míràn;",
@@ -39773,7 +42522,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "S’ ílé l’ ọn’ agbélébùú,",
               "S’ ílé l’ ọn’ agbélébùú,",
@@ -39783,7 +42532,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nkò lè ṣàì gb’ ọ̀nà tí ẹ̀jẹ̀ ti ta sí,",
               "Ọ̀nà t’ Olùgbàlà tọ̀;",
@@ -39793,7 +42542,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Njẹ́ mo kí ọ̀nà ará, ” Ódìgbóṣe”",
               "Láì máṣe rìn n’bẹ̀ mọ́;",
@@ -39819,7 +42568,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "NÍGBÀ ìgbì ayé bá dìde sí ọ,",
               "T’ ọkàn rẹ bàjẹ́ pé gbogbo nkan ṣègbé,",
@@ -39829,7 +42578,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ro ‘bùkún rẹ ka wọn lọ́kọ̀ọ̀kan,",
               "Ro ohun t’ Ọlọrun ṣe fún ọ;",
@@ -39839,7 +42588,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹrù àníyàn ha ti ńpa ọkàn rẹ?",
               "Agbélébùú tí ‘wọ ńrù ha sì wúwo?",
@@ -39849,7 +42598,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Nígbàt’ iní ẹlòmíì kún ọ lójú,",
               "Rántí Krístì n’ ọrọ̀ àìmọye fún ọ,",
@@ -39859,7 +42608,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Bẹ́ẹ̀ni láàrin ìjà b’ ó ti wù kó rí,",
               "Máṣe b’ ọkàn jẹ́ mọ̀ p’ Ọlọ́run mbẹ,",
@@ -39886,7 +42635,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀YIN èrò, níbo l' ẹ ńlọ",
               "T' ẹ̀yin t' ọ̀pá lọ́wọ́ nyín?",
@@ -39902,7 +42651,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin èrò, ẹ sọ fún ni,",
               "T' ìrètí tí ẹ̀yin ní?",
@@ -39918,7 +42667,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Ẹ kò bẹ̀rù ọ̀nà t' ẹ ńrìn,",
               "Ẹ̀yin èrò kékeré?",
@@ -39934,7 +42683,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
             lines: [
               "Èrò, a lè bá nyín kẹ́gbẹ́,",
               "L' ọ̀nà àjò s' ilé náà?",
@@ -39967,7 +42716,7 @@ function YorubaHymnDetail({ theme }) {
         verses: [
           {
             number: 1,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "OHÙN ìpè kan ti òkè pẹ̀tẹ́lẹ̀ wá,",
               "S' olótìtọ́, 'lótìtọ́, 'lótìtọ́ sí Kristi,",
@@ -39977,7 +42726,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: "Egbe",
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Lọ sí ìṣẹ́gun, lọ sí ìṣẹ́gun,",
               "Ní àṣẹ Balógun wa,",
@@ -39987,7 +42736,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 2,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Ẹ̀yin akin ẹ gbọ́, ìró t' ó mi ayé,",
               "S' olótìtọ́, 'lótìtọ́, 'lótìtọ́ sí Kristi,",
@@ -39997,7 +42746,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 3,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "Wá dapọ̀ m' ẹgbẹ́ wa, a ó kọjú Òmìrán náà,",
               "S' olótìtọ́, 'lótìtọ́, 'lótìtọ́ sí Kristi,",
@@ -40007,7 +42756,7 @@ function YorubaHymnDetail({ theme }) {
           },
           {
             number: 4,
-            musicSigns: [],
+            musicSigns: ["x", "x", "x", "x"],
             lines: [
               "A fi agbára wa lé Olúwa lọ́wọ́,",
               "S' olótìtọ́, 'lótìtọ́, 'lótìtọ́ sí Kristi,",
@@ -40024,7 +42773,72 @@ function YorubaHymnDetail({ theme }) {
     // Return the hymn details or null if not found
     // Standardize the key by ensuring it starts with "YBH"
     const key = hymnId.startsWith('YBH') ? hymnId : `YBH${hymnId}`;
-    return yorubaHymns[key] || null;
+    const base = yorubaHymns[key];
+    if (!base) {
+      const meta = Array.isArray(yorubaHymnIndex)
+        ? yorubaHymnIndex.find((h) => h.id === key || `YBH${h.number}` === key)
+        : null;
+
+      if (!meta) return null;
+
+      const fallbackVerseLines = Array.isArray(meta.lyrics) && meta.lyrics.length > 0
+        ? meta.lyrics
+        : [meta.title || `Orin ${key.replace('YBH', '')}`];
+
+      return {
+        title: meta.title || `Orin ${key.replace('YBH', '')}`,
+        number: key,
+        author: meta.author || 'Unknown',
+        composer: meta.composer || 'Unknown',
+        tune: meta.tune || 'Unknown',
+        meter: meta.meter || 'Unknown',
+        key: meta.key || 'Unknown',
+        scripture: meta.scripture || 'Unknown',
+        theme: meta.theme || 'ONIRUURU',
+        year: meta.year || 'Traditional',
+        musicSigns: [],
+        verses: [
+          {
+            number: 1,
+            musicSigns: ['x'],
+            lines: fallbackVerseLines
+          }
+        ],
+        history: meta.history || 'Traditional Yoruba hymn.'
+      };
+    }
+
+    const normalizeMusicSignsArray = (arr) => {
+      if (!Array.isArray(arr)) return arr;
+      return arr.map((value) => {
+        if (value == null) return 'x';
+        const t = String(value);
+        return t.trim() === '' ? 'x' : value;
+      });
+    };
+
+    const normalizedVerses = Array.isArray(base.verses)
+      ? base.verses.map((verse) => {
+        const lines = Array.isArray(verse.lines) ? verse.lines : [];
+          let musicSigns = Array.isArray(verse.musicSigns) ? normalizeMusicSignsArray(verse.musicSigns) : [];
+
+          if (lines.length > 0) {
+            if (!Array.isArray(verse.musicSigns) || verse.musicSigns.length === 0) {
+              musicSigns = Array.from({ length: lines.length }, () => 'x');
+            } else if (musicSigns.length < lines.length) {
+              musicSigns = musicSigns.concat(Array.from({ length: lines.length - musicSigns.length }, () => 'x'));
+            } else if (musicSigns.length > lines.length) {
+              musicSigns = musicSigns.slice(0, lines.length);
+            }
+          }
+
+        return { ...verse, musicSigns };
+      })
+      : base.verses;
+
+    const normalizedMusicSigns = Array.isArray(base.musicSigns) ? normalizeMusicSignsArray(base.musicSigns) : base.musicSigns;
+
+    return { ...base, musicSigns: normalizedMusicSigns, verses: normalizedVerses };
   };
 
   const hymn = getYorubaHymnDetails(id);
@@ -40103,15 +42917,15 @@ function YorubaHymnDetail({ theme }) {
 
         <div className="hymn-content">
           <div className="navigation-arrows">
-            <button 
-              className="nav-arrow prev-arrow" 
+            <button
+              className="nav-arrow prev-arrow"
               onClick={handlePreviousHymn}
               disabled={parseInt(id.replace('YBH', '')) <= 1}
             >
               <span className="icon">←</span>
             </button>
-            <button 
-              className="nav-arrow next-arrow" 
+            <button
+              className="nav-arrow next-arrow"
               onClick={handleNextHymn}
               disabled={parseInt(id.replace('YBH', '')) >= 660}
             >
@@ -40120,15 +42934,15 @@ function YorubaHymnDetail({ theme }) {
           </div>
 
           <div className="metadata-box">
-             <div className="metadata-item">
-               <span className="label">Nọ́mbà:</span>
-               <span className="value">{id.replace('YBH', '')}</span>
-             </div>
-             <div className="metadata-item">
-               <span className="value" style={{textAlign: 'center', width: '100%', fontStyle: 'italic'}}>
-                 Alaye orin ko si.
-               </span>
-             </div>
+            <div className="metadata-item">
+              <span className="label">Nọ́mbà:</span>
+              <span className="value">{id.replace('YBH', '')}</span>
+            </div>
+            <div className="metadata-item">
+              <span className="value" style={{ textAlign: 'center', width: '100%', fontStyle: 'italic' }}>
+                Alaye orin ko si.
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -40265,14 +43079,35 @@ function YorubaHymnDetail({ theme }) {
         }}>
           {(() => {
             if (hymn.verses) {
-              const isEgbe = (n) => {
-                const t = String(n || '').toLowerCase();
-                return t === 'egbe' || t === 'egbé' || t === 'ègbè';
+              const normalizeRefrainLines = (lines) => {
+                const nonEmpty = (Array.isArray(lines) ? lines : []).filter((l) => String(l).trim() !== '');
+                if (nonEmpty.length === 0) return nonEmpty;
+                const first = String(nonEmpty[0]).trim().toLowerCase();
+                if (first === 'egbe:' || first === 'egbé:' || first === 'ègbè:') return nonEmpty.slice(1);
+                return nonEmpty;
               };
-              const refrainVerse = hymn.verses.find(v => isEgbe(v.number));
-              const refrainLines = refrainVerse ? (refrainVerse.lines || []).filter(l => String(l).trim() !== "") : null;
+
+              const isRefrainVerse = (verse) => {
+                const n = String(verse?.number ?? '').toLowerCase().trim();
+                if (n === 'egbe' || n === 'egbé' || n === 'ègbè' || n === 'refrain' || n === 'chorus') return true;
+                const firstLine = Array.isArray(verse?.lines) ? String(verse.lines[0] ?? '').toLowerCase().trim() : '';
+                return firstLine === 'egbe:' || firstLine === 'egbé:' || firstLine === 'ègbè:';
+              };
+
+              const refrainCandidates = hymn.verses.filter((v) => isRefrainVerse(v));
+              const refrainFollowedByStanzaCount = refrainCandidates.reduce((acc, rv) => {
+                const idx = hymn.verses.indexOf(rv);
+                if (idx >= 0 && hymn.verses.slice(idx + 1).some((v) => !isRefrainVerse(v))) return acc + 1;
+                return acc;
+              }, 0);
+
+              const useSequentialRefrains = refrainCandidates.length > 1 && refrainFollowedByStanzaCount >= 2;
+              const egbeVerses = refrainCandidates;
+              const refrainVerse = egbeVerses.length > 0 ? egbeVerses[0] : null;
+              const extraRefrains = egbeVerses.length > 1 ? egbeVerses.slice(1) : [];
+              const refrainLines = refrainVerse ? normalizeRefrainLines(refrainVerse.lines) : null;
               const refrainSigns = refrainVerse ? (refrainVerse.musicSigns || []) : [];
-              const stanzas = hymn.verses.filter(v => !isEgbe(v.number));
+              const stanzas = hymn.verses.filter((v) => !isRefrainVerse(v));
               let distributed = {};
               if (Array.isArray(hymn.musicSigns) && hymn.musicSigns.length > 0) {
                 const flat = hymn.musicSigns.filter(s => s !== "");
@@ -40287,12 +43122,81 @@ function YorubaHymnDetail({ theme }) {
                 }
               }
 
-              return stanzas.map((verse, vIndex) => (
+              const renderRefrainBlock = (lines, signs, keyPrefix) => (
+                <div className="refrain-container" style={{ marginTop: '12px', marginBottom: '12px' }}>
+                  {lines.map((line, rIndex) => {
+                    const rSign = signs[rIndex];
+                    const isTransparent = !rSign;
+                    return (
+                      <div key={`${keyPrefix}-refrain-line-${rIndex}`} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
+                        <div className={`music-signs ${isTransparent ? 'transparent' : ''}`}>
+                          {rSign || 'x'}
+                        </div>
+                        <div className="stanza-number"></div>
+                        <div className="stanza-text">
+                          <div className="line" style={{
+                            fontStyle: 'italic',
+                            ...(rIndex > 0 ? { marginLeft: '45px' } : { marginLeft: '4px' }),
+                            marginTop: 0,
+                            marginBottom: '4px'
+                          }}>
+                            {rIndex === 0 ? <span className="refrain-marker" style={{ fontWeight: 'bold', fontStyle: 'italic', marginRight: '10px' }}>Ègbè:</span> : ""}
+                            {line}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+
+              if (useSequentialRefrains) {
+                return hymn.verses.map((verse, idx) => {
+                  if (isRefrainVerse(verse)) {
+                    const lines = normalizeRefrainLines(verse.lines);
+                    if (lines.length === 0) return null;
+                    const signs = verse.musicSigns || [];
+                    return (
+                      <div key={`seq-refrain-${idx}`} className="stanza-container" style={{ marginTop: 0, marginBottom: '20px' }}>
+                        {renderRefrainBlock(lines, signs, `seq-refrain-${idx}`)}
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div key={`seq-verse-${idx}`} className="stanza-container" style={{ marginTop: 0, marginBottom: '20px' }}>
+                      {(verse.lines || []).map((line, lineIndex) => {
+                        const verseSigns = (verse.musicSigns && verse.musicSigns.length > 0) ? verse.musicSigns : [];
+                        const musicSign = verseSigns[lineIndex];
+                        const isTransparent = !musicSign;
+
+                        return (
+                          <div key={lineIndex} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
+                            <div className={`music-signs ${isTransparent ? 'transparent' : ''}`}>
+                              {musicSign || 'x'}
+                            </div>
+                            <div className="stanza-number">
+                              {lineIndex === 0 ? `${verse.number}.` : ''}
+                            </div>
+                            <div className="stanza-text">
+                              <div className="line" style={{ marginTop: 0, marginBottom: '1px' }}>
+                                {line}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                }).filter(Boolean);
+              }
+
+              const rendered = stanzas.map((verse, vIndex) => (
                 <div key={`verse-${vIndex}`} className="stanza-container" style={{ marginTop: 0, marginBottom: '20px' }}>
                   {verse.lines.map((line, lineIndex) => {
                     const verseSigns = (verse.musicSigns && verse.musicSigns.length > 0) ? verse.musicSigns : (distributed[vIndex] || []);
                     const musicSign = verseSigns[lineIndex];
-                    const isTransparent = musicSign === 'x' || !musicSign;
+                    const isTransparent = !musicSign;
 
                     return (
                       <div key={lineIndex} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
@@ -40311,35 +43215,24 @@ function YorubaHymnDetail({ theme }) {
                     );
                   })}
 
-                  {refrainLines && (
-                    <div className="refrain-container" style={{ marginTop: '12px', marginBottom: '12px' }}>
-                      {refrainLines.map((line, rIndex) => {
-                        const rSign = refrainSigns[rIndex];
-                        const isTransparent = rSign === 'x' || !rSign;
-                        return (
-                          <div key={`refrain-line-${rIndex}`} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
-                            <div className={`music-signs ${isTransparent ? 'transparent' : ''}`}>
-                              {rSign || 'x'}
-                            </div>
-                            <div className="stanza-number"></div>
-                            <div className="stanza-text">
-                              <div className="line" style={{
-                                fontStyle: 'italic',
-                                ...(rIndex > 0 ? { marginLeft: '45px' } : { marginLeft: '4px' }),
-                                marginTop: 0,
-                                marginBottom: '4px'
-                              }}>
-                                {rIndex === 0 ? <span className="refrain-marker" style={{ fontWeight: 'bold', fontStyle: 'italic', marginRight: '10px' }}>Ègbè:</span> : ""}
-                                {line}
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
+                  {refrainLines && !(extraRefrains.length > 0 && vIndex === stanzas.length - 1) && renderRefrainBlock(refrainLines, refrainSigns, `verse-${vIndex}`)}
                 </div>
               ));
+
+              if (extraRefrains.length === 0) return rendered;
+
+              const extraBlocks = extraRefrains.map((rv, idx) => {
+                const lines = normalizeRefrainLines(rv.lines);
+                const signs = rv.musicSigns || [];
+                if (lines.length === 0) return null;
+                return (
+                  <div key={`extra-egbe-${idx}`} className="stanza-container" style={{ marginTop: 0, marginBottom: '20px' }}>
+                    {renderRefrainBlock(lines, signs, `extra-egbe-${idx}`)}
+                  </div>
+                );
+              }).filter(Boolean);
+
+              return rendered.concat(extraBlocks);
             }
 
             let musicSignIndex = 0;
@@ -40388,7 +43281,7 @@ function YorubaHymnDetail({ theme }) {
                 <div key={`stanza-${index}`} className="stanza-container" style={{ marginTop: 0, marginBottom: 0 }}>
                   {item.lines.map((line, lineIndex) => {
                     const musicSign = hymn.musicSigns && hymn.musicSigns[musicSignIndex];
-                    const isTransparent = musicSign === 'x' || !musicSign;
+                    const isTransparent = !musicSign;
                     musicSignIndex++;
 
                     return (
@@ -40469,7 +43362,7 @@ function YorubaHymnDetail({ theme }) {
 
       {showNoteModal && (
         <div className="modal-overlay" onClick={() => setShowNoteModal(false)} style={{
-          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, 
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
           backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1000,
           display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
@@ -40479,7 +43372,7 @@ function YorubaHymnDetail({ theme }) {
             color: theme === 'dark' ? '#fff' : '#000'
           }}>
             <h3>Akiyesi Orin</h3>
-            <textarea 
+            <textarea
               value={note}
               onChange={(e) => setNote(e.target.value)}
               placeholder="Kọ àkíyèsí rẹ fún orin yìí..."
@@ -40491,7 +43384,7 @@ function YorubaHymnDetail({ theme }) {
                 border: '1px solid #ccc'
               }}
             />
-            <div className="modal-actions" style={{display: 'flex', justifyContent: 'flex-end', gap: '10px'}}>
+            <div className="modal-actions" style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
               <button onClick={() => setShowNoteModal(false)} style={{
                 padding: '8px 16px', borderRadius: '4px', border: 'none',
                 backgroundColor: '#ccc', cursor: 'pointer'

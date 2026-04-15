@@ -16,6 +16,7 @@ import IgboHymnDetail from './components/IgboHymnDetail';
 import EditionHausa from './components/EditionHausa';
 import HausaHymnDetail from './components/HausaHymnDetail';
 import MinistersCompanion from './components/MinistersCompanion';
+import MinisterCompanionDetail from './components/MinisterCompanionDetail';
 import Resources from './components/Resources';
 import ChurchCovenant from './components/ChurchCovenant';
 import ResponsiveReading from './components/ResponsiveReading';
@@ -29,6 +30,7 @@ import DocView from './components/DocView';
 import Settings from './components/Settings';
 import UserProfile from './components/UserProfile';
 import Community from './components/Community';
+import CommunityMemberDetail from './components/CommunityMemberDetail';
 import BrowseHymns from './components/BrowseHymns';
 import FeelingList from './components/FeelingList';
 import FeelingDetail from './components/FeelingDetail';
@@ -58,6 +60,26 @@ function App() {
   const [pushNotifications, setPushNotifications] = useState(true);
   const [enableSharing, setEnableSharing] = useState(true);
   const [autoSync, setAutoSync] = useState(false);
+
+  useEffect(() => {
+    // Initialize AdMob if in Native environment
+    const initAdMob = async () => {
+      const isNative = typeof window !== 'undefined' && window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform();
+      if (isNative) {
+        try {
+          // Import dynamically to prevent web bundle errors if needed, but static import is fine in Capacitor
+          const { AdMob } = await import('@capacitor-community/admob');
+          await AdMob.initialize({
+            requestTrackingAuthorization: true,
+            initializeForTesting: false,
+          });
+        } catch (e) {
+          console.error("AdMob initialization failed", e);
+        }
+      }
+    };
+    initAdMob();
+  }, []);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('hymnTheme');
@@ -93,6 +115,8 @@ function App() {
     const savedSync = localStorage.getItem('hymnAutoSync');
     if (savedSync) setAutoSync(savedSync === 'true');
   }, []);
+
+ 
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
@@ -182,6 +206,7 @@ function App() {
                 <Route path="/edition/hausa" element={<EditionHausa theme={theme} />} />
                 <Route path="/hausa-hymn/:id" element={<HausaHymnDetail theme={theme} />} />
                 <Route path="/ministers-companion" element={<ProtectedRoute><MinistersCompanion theme={theme} /></ProtectedRoute>} />
+                <Route path="/ministers-companion/:id" element={<ProtectedRoute><MinisterCompanionDetail theme={theme} /></ProtectedRoute>} />
                 <Route path="/browse" element={<ProtectedRoute><BrowseHymns theme={theme} /></ProtectedRoute>} />
                 <Route path="/feelings" element={<FeelingList theme={theme} />} />
                 <Route path="/feelings/:id" element={<ProtectedRoute><FeelingDetail theme={theme} /></ProtectedRoute>} />
@@ -203,6 +228,7 @@ function App() {
                 <Route path="/membership" element={<Membership theme={theme} />} />
                 <Route path="/settings/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
                 <Route path="/settings/community" element={<Community />} />
+                <Route path="/settings/community/:memberId" element={<CommunityMemberDetail />} />
                 <Route path="/settings/app" element={<AppSettings />} />
                 <Route path="/settings/donation" element={<Donation />} />
                 <Route path="/settings/auth" element={<AuthScreen />} />
