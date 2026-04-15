@@ -31,6 +31,7 @@ export const useAuth = () => useContext(AuthContext);
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [ready, setReady] = useState(false);
+  const enableMockAuth = process.env.REACT_APP_ENABLE_MOCK_AUTH === 'true';
 
   useEffect(() => {
     if (!auth) {
@@ -69,17 +70,20 @@ export function AuthProvider({ children }) {
   const signInWithGoogle = async () => {
     try {
       if (!auth || !googleProvider) {
-        console.warn("Firebase is not configured. Using Mock Sign In.");
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        const mockUser = {
-          id: 'mock-user-google',
-          name: 'Mock User',
-          email: 'mockuser@example.com',
-          provider: 'google',
-          photoURL: 'https://via.placeholder.com/150'
-        };
-        setUser(mockUser);
-        return mockUser;
+        if (enableMockAuth) {
+          console.warn("Firebase is not configured. Using Mock Sign In.");
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          const mockUser = {
+            id: 'mock-user-google',
+            name: 'Mock User',
+            email: 'mockuser@example.com',
+            provider: 'google',
+            photoURL: 'https://via.placeholder.com/150'
+          };
+          setUser(mockUser);
+          return mockUser;
+        }
+        throw new Error('Firebase is not configured. Set REACT_APP_FIREBASE_* values (or firebaseConfig.js) to enable Google sign-in.');
       }
       const isNative = typeof window !== 'undefined' && window.Capacitor && typeof window.Capacitor.getPlatform === 'function' && (window.Capacitor.getPlatform() === 'android' || window.Capacitor.getPlatform() === 'ios');
       if (isNative) {
@@ -100,18 +104,21 @@ export function AuthProvider({ children }) {
   const signInWithPhoneAndPin = async (phoneNumber, pin) => {
     const email = `${phoneNumber}@hymnal.phone`;
     if (!auth) {
-      console.warn("Firebase is not configured. Using Mock Sign In.");
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: 'mock-user-phone-pin',
-        name: phoneNumber,
-        email: email,
-        phoneNumber: phoneNumber,
-        provider: 'password', // acts as password provider
-        photoURL: ''
-      };
-      setUser(mockUser);
-      return mockUser;
+      if (enableMockAuth) {
+        console.warn("Firebase is not configured. Using Mock Sign In.");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const mockUser = {
+          id: 'mock-user-phone-pin',
+          name: phoneNumber,
+          email: email,
+          phoneNumber: phoneNumber,
+          provider: 'password', // acts as password provider
+          photoURL: ''
+        };
+        setUser(mockUser);
+        return mockUser;
+      }
+      throw new Error('Firebase is not configured. Cannot sign in.');
     }
     const res = await signInWithEmailAndPassword(auth, email, pin);
     return res.user;
@@ -120,18 +127,21 @@ export function AuthProvider({ children }) {
   const signUpWithPhoneAndPin = async (phoneNumber, pin) => {
     const email = `${phoneNumber}@hymnal.phone`;
     if (!auth) {
-      console.warn("Firebase is not configured. Using Mock Sign Up.");
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: 'mock-user-phone-pin-new',
-        name: phoneNumber,
-        email: email,
-        phoneNumber: phoneNumber,
-        provider: 'password',
-        photoURL: ''
-      };
-      setUser(mockUser);
-      return mockUser;
+      if (enableMockAuth) {
+        console.warn("Firebase is not configured. Using Mock Sign Up.");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const mockUser = {
+          id: 'mock-user-phone-pin-new',
+          name: phoneNumber,
+          email: email,
+          phoneNumber: phoneNumber,
+          provider: 'password',
+          photoURL: ''
+        };
+        setUser(mockUser);
+        return mockUser;
+      }
+      throw new Error('Firebase is not configured. Cannot sign up.');
     }
     const res = await createUserWithEmailAndPassword(auth, email, pin);
     return res.user;
@@ -139,35 +149,41 @@ export function AuthProvider({ children }) {
 
   const signInWithPhone = async (phoneNumber, appVerifier) => {
     if (!auth) {
-      console.warn("Firebase is not configured. Using Mock Sign In.");
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: 'mock-user-phone',
-        name: phoneNumber,
-        email: '',
-        phoneNumber: phoneNumber,
-        provider: 'phone',
-        photoURL: ''
-      };
-      setUser(mockUser);
-      return { confirm: async () => mockUser };
+      if (enableMockAuth) {
+        console.warn("Firebase is not configured. Using Mock Sign In.");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const mockUser = {
+          id: 'mock-user-phone',
+          name: phoneNumber,
+          email: '',
+          phoneNumber: phoneNumber,
+          provider: 'phone',
+          photoURL: ''
+        };
+        setUser(mockUser);
+        return { confirm: async () => mockUser };
+      }
+      throw new Error('Firebase is not configured. Cannot sign in.');
     }
     return await signInWithPhoneNumber(auth, phoneNumber, appVerifier);
   };
 
   const signInWithEmail = async (email, password) => {
     if (!auth) {
-      console.warn("Firebase is not configured. Using Mock Sign In.");
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: 'mock-user-' + Date.now(),
-        name: email.split('@')[0],
-        email: email,
-        provider: 'password',
-        photoURL: ''
-      };
-      setUser(mockUser);
-      return mockUser;
+      if (enableMockAuth) {
+        console.warn("Firebase is not configured. Using Mock Sign In.");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const mockUser = {
+          id: 'mock-user-' + Date.now(),
+          name: email.split('@')[0],
+          email: email,
+          provider: 'password',
+          photoURL: ''
+        };
+        setUser(mockUser);
+        return mockUser;
+      }
+      throw new Error('Firebase is not configured. Cannot sign in.');
     }
     const res = await signInWithEmailAndPassword(auth, email, password);
     return res.user;
@@ -175,17 +191,20 @@ export function AuthProvider({ children }) {
 
   const signUpWithEmail = async (email, password) => {
     if (!auth) {
-      console.warn("Firebase is not configured. Using Mock Sign Up.");
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: 'mock-user-' + Date.now(),
-        name: email.split('@')[0],
-        email: email,
-        provider: 'password',
-        photoURL: ''
-      };
-      setUser(mockUser);
-      return mockUser;
+      if (enableMockAuth) {
+        console.warn("Firebase is not configured. Using Mock Sign Up.");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const mockUser = {
+          id: 'mock-user-' + Date.now(),
+          name: email.split('@')[0],
+          email: email,
+          provider: 'password',
+          photoURL: ''
+        };
+        setUser(mockUser);
+        return mockUser;
+      }
+      throw new Error('Firebase is not configured. Cannot sign up.');
     }
     const res = await createUserWithEmailAndPassword(auth, email, password);
     return res.user;
@@ -193,18 +212,21 @@ export function AuthProvider({ children }) {
 
   const signInAnonymous = async () => {
     if (!auth) {
-      console.warn("Firebase is not configured. Using Mock Anonymous Sign In.");
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const mockUser = {
-        id: 'mock-user-anon-' + Date.now(),
-        name: 'Guest',
-        email: '',
-        provider: 'anonymous',
-        photoURL: '',
-        isAnonymous: true
-      };
-      setUser(mockUser);
-      return mockUser;
+      if (enableMockAuth) {
+        console.warn("Firebase is not configured. Using Mock Anonymous Sign In.");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const mockUser = {
+          id: 'mock-user-anon-' + Date.now(),
+          name: 'Guest',
+          email: '',
+          provider: 'anonymous',
+          photoURL: '',
+          isAnonymous: true
+        };
+        setUser(mockUser);
+        return mockUser;
+      }
+      throw new Error('Firebase is not configured. Cannot sign in anonymously.');
     }
     const res = await signInAnonymously(auth);
     return res.user;
