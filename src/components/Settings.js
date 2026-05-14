@@ -24,10 +24,15 @@ function Settings({ theme }) {
   };
 
   const handleFeedback = () => {
-    const email = 'support@mstraybiz.com';
-    const subject = 'App Feedback: Multilingual Baptist Hymnal';
-    const body = 'Hello, I have some feedback regarding the app...';
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const phoneNumber = '2348100425687';
+    const message = encodeURIComponent('Hello, I have some feedback regarding the Multilingual Baptist Hymnal app...');
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+  const handleEmailFeedback = () => {
+    const email = 'mstraybiz@gmail.com';
+    const subject = encodeURIComponent('Feedback: Multilingual Baptist Hymnal');
+    window.open(`mailto:${email}?subject=${subject}`, '_blank');
   };
 
   const handleRateApp = () => {
@@ -97,7 +102,8 @@ function Settings({ theme }) {
 
   const quickActions = [
     { id: 'share', label: "Share App", icon: "fas fa-share-alt", color: "#27ae60", action: handleShareApp },
-    { id: 'feedback', label: "Feedback", icon: "fas fa-comment-alt", color: "#3498db", action: handleFeedback },
+    { id: 'whatsapp', label: "WhatsApp", icon: "fab fa-whatsapp", color: "#25D366", action: handleFeedback },
+    { id: 'email', label: "Email", icon: "fas fa-envelope", color: "#3498db", action: handleEmailFeedback },
     { id: 'rate', label: "Rate App", icon: "fas fa-star", color: "#f1c40f", action: handleRateApp }
   ];
 

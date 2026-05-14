@@ -57,6 +57,21 @@
   margin: 10px 0;
 }
 
+.contact-link {
+  cursor: pointer;
+  color: #25D366 !important; /* WhatsApp Green */
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
+}
+
+.contact-link i {
+  margin-right: 5px;
+}
+
 .profile-field-group {
   margin-top: 10px;
 }

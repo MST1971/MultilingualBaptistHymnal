@@ -10,6 +10,29 @@ function MinistersCompanion({ theme }) {
   const { language: settingsLanguage } = useSettings();
   const [language, setLanguage] = useState('english');
   const [searchTerm, setSearchTerm] = useState('');
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = (itemId) => `MC-${itemId}`;
+
+  const toggleFavorite = (e, itemId) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const favoriteId = getFavoriteId(itemId);
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(id => id !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   useEffect(() => {
     const savedLang = localStorage.getItem('ministersCompanionLanguage');
@@ -91,6 +114,20 @@ function MinistersCompanion({ theme }) {
               <Link to={`/ministers-companion/${item.id}`} key={item.id} className="hymn-card">
                 <div className="hymn-number">{index + 1}</div>
                 <div className="hymn-title">{item.title}</div>
+                <button
+                  className={`favorite-button ${favorites.includes(getFavoriteId(item.id)) ? 'active' : ''}`}
+                  onClick={(e) => toggleFavorite(e, item.id)}
+                  aria-label={
+                    favorites.includes(getFavoriteId(item.id))
+                      ? 'Remove from favorites'
+                      : 'Add to favorites'
+                  }
+                  style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+                >
+                  <span className="favorite-icon">
+                    {favorites.includes(getFavoriteId(item.id)) ? '★' : '☆'}
+                  </span>
+                </button>
               </Link>
             ))}
           </div>

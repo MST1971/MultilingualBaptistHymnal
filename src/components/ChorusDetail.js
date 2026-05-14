@@ -12,6 +12,32 @@ function ChorusDetail({ theme }) {
   const navigate = useNavigate();
   const [chorus, setChorus] = useState(null);
   const [language, setLanguage] = useState('english');
+  const [favorites, setFavorites] = useState([]);
+
+  // Load favorites from localStorage
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = () => `CHO-${language.toUpperCase().substring(0, 1)}-${id}`;
+
+  const toggleFavorite = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    const favoriteId = getFavoriteId();
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(favId => favId !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   const getChorusesForLanguage = (lang) => {
     const normalized = String(lang || '').toLowerCase();
@@ -103,7 +129,16 @@ function ChorusDetail({ theme }) {
         <div style={{ flex: 1, textAlign: 'center' }}>
           <h1 style={{ fontSize: '18px', margin: 0 }}>{getCategory(chorus.id)}</h1>
         </div>
-        <div style={{ width: '40px' }}></div>
+        <button 
+          className={`favorite-button ${favorites.includes(getFavoriteId()) ? 'active' : ''}`}
+          onClick={toggleFavorite}
+          title={favorites.includes(getFavoriteId()) ? "Remove from favorites" : "Add to favorites"}
+          style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px' }}
+        >
+          <span className="favorite-icon" style={{ fontSize: '20px', color: favorites.includes(getFavoriteId()) ? 'gold' : 'inherit' }}>
+            {favorites.includes(getFavoriteId()) ? '★' : '☆'}
+          </span>
+        </button>
       </div>
 
       <div className="hymn-list-section" style={{ height: 'auto', background: 'transparent', padding: '0' }}>

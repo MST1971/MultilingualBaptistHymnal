@@ -7,6 +7,13 @@ import { hymns2008 } from '../data/hymns2008';
 import { yorubaHymns } from '../data/hymnsYoruba';
 import { hausaHymns } from '../data/hymnsHausa';
 import { igboHymns } from '../data/hymnsIgbo';
+import { ministerCompanionData } from '../data/ministerCompanionData';
+import { feelingsData } from '../data/feelings';
+import { choruses } from '../data/choruses';
+import { chorusesYoruba } from '../data/chorusesYoruba';
+import { chorusesIgbo } from '../data/chorusesIgbo';
+import { chorusesHausa } from '../data/chorusesHausa';
+import { responsiveReadings, yorubaResponsiveReadings, igboResponsiveReadings, hausaResponsiveReadings } from '../data/responsiveReadings';
 import './FavoritesPage.css';
 
 function FavoritesPage({ theme }) {
@@ -49,18 +56,37 @@ function FavoritesPage({ theme }) {
 
   const handleHymnClick = (id) => {
     const idStr = id.toString();
-    if (idStr.startsWith('YBH')) {
-      navigate(`/yoruba-hymn/${id}`);
+    if (idStr.startsWith('CHO-')) {
+      const parts = idStr.split('-');
+      const langMap = { 'E': 'english', 'Y': 'yoruba', 'I': 'igbo', 'H': 'hausa' };
+      const langCode = parts[1];
+      const chorusId = parts[2];
+      navigate(`/chorus/${chorusId}?lang=${langMap[langCode] || 'english'}`);
+    } else if (idStr.startsWith('RR-')) {
+      const readingId = idStr.substring(3);
+      navigate(`/reading/${readingId}`);
+    } else if (idStr.startsWith('MC-')) {
+      const itemId = idStr.substring(3);
+      navigate(`/ministers-companion/${itemId}`);
+    } else if (idStr.startsWith('CC-')) {
+      navigate('/church-covenant');
+    } else if (idStr.startsWith('FEEL-')) {
+      const feelingId = idStr.substring(5);
+      navigate(`/feelings/${feelingId}`);
+    } else if (idStr.startsWith('YBH')) {
+      navigate(`/yoruba-hymn/${idStr}`);
     } else if (idStr.startsWith('HBH')) {
-      navigate(`/hausa-hymn/${id}`);
+      navigate(`/hausa-hymn/${idStr}`);
     } else if (idStr.startsWith('IBH')) {
-      navigate(`/igbo-hymn/${id}`);
+      navigate(`/igbo-hymn/${idStr}`);
     } else if (idStr.startsWith('1975-')) {
       navigate(`/hymn/${idStr.split('-')[1]}?edition=1975`);
     } else if (idStr.startsWith('1991-')) {
       navigate(`/hymn/${idStr.split('-')[1]}?edition=1991`);
     } else if (idStr.startsWith('2008-')) {
       navigate(`/hymn/${idStr.split('-')[1]}?edition=2008`);
+    } else if (idStr.startsWith('1956-')) {
+      navigate(`/hymn/${idStr.split('-')[1]}?edition=1956`);
     } else {
       navigate(`/hymn/${id}`);
     }
@@ -104,20 +130,74 @@ function FavoritesPage({ theme }) {
                 let category = 'Saved Favorite';
                 const idStr = id.toString();
 
-                if (idStr.startsWith('YBH')) {
-                  hymn = yorubaHymns.find(h => h.id === id);
+                if (idStr.startsWith('CHO-')) {
+                  const parts = idStr.split('-');
+                  const langCode = parts[1];
+                  const chorusId = parts[2];
+                  let source = choruses;
+                  let langName = "English";
+                  if (langCode === 'Y') { source = chorusesYoruba; langName = "Yoruba"; }
+                  else if (langCode === 'I') { source = chorusesIgbo; langName = "Igbo"; }
+                  else if (langCode === 'H') { source = chorusesHausa; langName = "Hausa"; }
+                  
+                  hymn = source.find(c => c.id.toString() === chorusId.toString());
+                  if (hymn) {
+                    title = hymn.title;
+                    category = `${langName} Chorus`;
+                  }
+                } else if (idStr.startsWith('RR-')) {
+                  const readingId = idStr.substring(3);
+                  const isNumeric = !isNaN(readingId) && !isNaN(parseFloat(readingId));
+                  if (isNumeric) {
+                    hymn = responsiveReadings.find(r => r.id === parseInt(readingId));
+                    category = "Responsive Reading";
+                  } else if (readingId.startsWith('YRR')) {
+                    hymn = yorubaResponsiveReadings.find(r => r.id === readingId);
+                    category = "Yoruba Responsive Reading";
+                  } else if (readingId.startsWith('IRR')) {
+                    hymn = igboResponsiveReadings.find(r => r.id === readingId);
+                    category = "Igbo Responsive Reading";
+                  } else if (readingId.startsWith('HRR')) {
+                    hymn = hausaResponsiveReadings.find(r => r.id === readingId);
+                    category = "Hausa Responsive Reading";
+                  }
+                  if (hymn) {
+                     title = hymn.title;
+                   }
+                 } else if (idStr.startsWith('MC-')) {
+                   const itemId = idStr.substring(3);
+                   hymn = ministerCompanionData.find(m => m.id === itemId);
+                   if (hymn) {
+                     title = hymn.title;
+                     category = "Minister's Companion";
+                   }
+                 } else if (idStr.startsWith('CC-')) {
+                   title = "Church Covenant";
+                   category = "Covenant";
+                 } else if (idStr.startsWith('FEEL-')) {
+                   const feelingId = idStr.substring(5);
+                   const feeling = feelingsData.find(f => f.id === feelingId);
+                   if (feeling) {
+                     title = feeling.title.english;
+                     category = "Feeling";
+                   }
+                 } else if (idStr.startsWith('YBH')) {
+                  const num = idStr.includes('-') ? idStr.split('-')[1] : idStr.replace('YBH', '');
+                  hymn = yorubaHymns.find(h => h.id === `YBH${num}`);
                   if (hymn) {
                     title = hymn.title;
                     category = "Yoruba Hymn";
                   }
                 } else if (idStr.startsWith('HBH')) {
-                  hymn = hausaHymns.find(h => h.id === id);
+                  const num = idStr.includes('-') ? idStr.split('-')[1] : idStr.replace('HBH', '');
+                  hymn = hausaHymns.find(h => h.id === `HBH${num}`);
                   if (hymn) {
                     title = hymn.title;
                     category = hymn.theme || "Hausa Hymn";
                   }
                 } else if (idStr.startsWith('IBH')) {
-                  hymn = igboHymns.find(h => h.id === id);
+                  const num = idStr.includes('-') ? idStr.split('-')[1] : idStr.replace('IBH', '');
+                  hymn = igboHymns.find(h => h.id === `IBH${num}`);
                   if (hymn) {
                     title = hymn.title;
                     category = hymn.theme || "Igbo Hymn";
@@ -143,18 +223,30 @@ function FavoritesPage({ theme }) {
                     title = hymn.title;
                     category = "2008 Baptist Hymnal";
                   }
+                } else if (idStr.startsWith('1956-')) {
+                  const num = idStr.split('-')[1];
+                  hymn = getHymnById(num);
+                  if (hymn) {
+                    title = hymn.title;
+                    category = "1956 Baptist Hymnal";
+                  }
                 } else {
-                  // 1956 Edition
+                  // legacy 1956 Edition without prefix
                   hymn = getHymnById(id);
                   if (hymn) {
                     title = hymn.title;
-                    category = hymn.theme || 'Unknown';
+                    category = "1956 Baptist Hymnal";
                   }
                 }
                 
+                const displayBadge = idStr.includes('-') ? idStr.split('-').pop() :
+                                   idStr.startsWith('YBH') ? idStr.substring(3) :
+                                   idStr.startsWith('HBH') ? idStr.substring(3) :
+                                   idStr.startsWith('IBH') ? idStr.substring(3) : idStr;
+                
                 return (
                   <div key={index} className="hymn-list-card" onClick={() => handleHymnClick(id)}>
-                    <div className="hymn-badge">{id}</div>
+                    <div className="hymn-badge">{displayBadge}</div>
                     <div className="hymn-info">
                       <h4 className="hymn-title-text">{title}</h4>
                       <div className="hymn-meta">{category}</div>
@@ -184,13 +276,16 @@ function FavoritesPage({ theme }) {
                 const idStr = id.toString();
                 
                 if (idStr.startsWith('YBH')) {
-                  hymn = yorubaHymns.find(h => h.id === id);
+                  const num = idStr.includes('-') ? idStr.split('-')[1] : idStr.replace('YBH', '');
+                  hymn = yorubaHymns.find(h => h.id === `YBH${num}`);
                   if (hymn) title = hymn.title;
                 } else if (idStr.startsWith('HBH')) {
-                  hymn = hausaHymns.find(h => h.id === id);
+                  const num = idStr.includes('-') ? idStr.split('-')[1] : idStr.replace('HBH', '');
+                  hymn = hausaHymns.find(h => h.id === `HBH${num}`);
                   if (hymn) title = hymn.title;
                 } else if (idStr.startsWith('IBH')) {
-                  hymn = igboHymns.find(h => h.id === id);
+                  const num = idStr.includes('-') ? idStr.split('-')[1] : idStr.replace('IBH', '');
+                  hymn = igboHymns.find(h => h.id === `IBH${num}`);
                   if (hymn) title = hymn.title;
                 } else if (idStr.startsWith('1975-')) {
                   const num = idStr.split('-')[1];
@@ -203,6 +298,10 @@ function FavoritesPage({ theme }) {
                 } else if (idStr.startsWith('2008-')) {
                   const num = idStr.split('-')[1];
                   hymn = hymns2008.find(h => h.number.toString() === num.toString());
+                  if (hymn) title = hymn.title;
+                } else if (idStr.startsWith('1956-')) {
+                  const num = idStr.split('-')[1];
+                  hymn = getHymnById(num);
                   if (hymn) title = hymn.title;
                 } else {
                   hymn = getHymnById(id);

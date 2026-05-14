@@ -6,13 +6,40 @@ import { yorubaHymns } from '../data/hymnsYoruba';
 import { hausaHymns } from '../data/hymnsHausa';
 import { igboHymns } from '../data/hymnsIgbo';
 import './FeelingDetail.css';
+import './HymnList.css';
 
 function FeelingDetail({ theme }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [language, setLanguage] = useState('english');
   const [hymns, setHymns] = useState([]);
-  
+  const [favorites, setFavorites] = useState([]);
+
+  // Load favorites from localStorage
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = () => `FEEL-${id}`;
+
+  const toggleFavorite = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    const favoriteId = getFavoriteId();
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(favId => favId !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
+
   const feeling = feelingsData.find(f => f.id === id);
   const englishHymns = Object.values(englishHymnsObj);
 
@@ -75,11 +102,25 @@ function FeelingDetail({ theme }) {
   return (
     <div className={`feeling-detail-container ${theme}`}>
       <div className="detail-header" style={{ backgroundColor: feeling.color }}>
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <i className="fas fa-arrow-left"></i>
-        </button>
+        <div className="header-top-row" style={{ display: 'flex', alignItems: 'center', width: '100%', marginBottom: '15px' }}>
+          <button className="back-btn" onClick={() => navigate(-1)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'inherit' }}>
+            <i className="fas fa-arrow-left"></i>
+          </button>
+          <div style={{ flex: 1, textAlign: 'center' }}>
+            <h1 style={{ fontSize: '18px', margin: 0 }}>{feeling.title[language]}</h1>
+          </div>
+          <button 
+            className={`favorite-button ${favorites.includes(getFavoriteId()) ? 'active' : ''}`}
+            onClick={toggleFavorite}
+            title={favorites.includes(getFavoriteId()) ? "Remove from favorites" : "Add to favorites"}
+            style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px', color: 'inherit' }}
+          >
+            <span className="favorite-icon" style={{ fontSize: '20px', color: favorites.includes(getFavoriteId()) ? 'gold' : 'inherit' }}>
+              {favorites.includes(getFavoriteId()) ? '★' : '☆'}
+            </span>
+          </button>
+        </div>
         <div className="header-content">
-          <h1>{feeling.title[language]}</h1>
           <p>{hymns.length} hymns</p>
         </div>
       </div>

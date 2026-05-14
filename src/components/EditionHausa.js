@@ -61,9 +61,10 @@ function EditionHausa({ theme }) {
     e.preventDefault(); // Prevent navigation to hymn detail
     e.stopPropagation(); // Prevent event bubbling
     
-    const newFavorites = favorites.includes(hymnId)
-      ? favorites.filter(id => id !== hymnId)
-      : [...favorites, hymnId];
+    const favoriteId = `HBH-${hymnId}`;
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(id => id !== favoriteId)
+      : [...favorites, favoriteId];
     
     setFavorites(newFavorites);
     localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
@@ -148,14 +149,14 @@ function EditionHausa({ theme }) {
         <div className="hymn-grid">
           {currentHymns.map(hymn => (
             <Link to={`/hausa-hymn/${hymn.id}`} key={hymn.id} className="hymn-card">
-              <div className="hymn-number">{hymn.number}</div>
+              <div className="hymn-number">{hymn.id}</div>
               <div className="hymn-title">{hymn.title}</div>
               <button 
-                className={`favorite-button ${favorites.includes(hymn.id) ? 'active' : ''}`}
+                className={`favorite-button ${favorites.includes(`HBH-${hymn.id}`) ? 'active' : ''}`}
                 onClick={(e) => toggleFavorite(e, hymn.id)}
               >
                 <span className="favorite-icon">
-                  {favorites.includes(hymn.id) ? '★' : '☆'}
+                  {favorites.includes(`HBH-${hymn.id}`) ? '★' : '☆'}
                 </span>
               </button>
             </Link>

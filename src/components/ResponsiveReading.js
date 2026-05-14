@@ -94,7 +94,30 @@ function ResponsiveReading({ theme }) {
   const [searchTerm, setSearchTerm] = useState('');
   const { language: settingsLanguage } = useSettings();
   const [language, setLanguage] = useState('english');
+  const [favorites, setFavorites] = useState([]);
   const ITEMS_PER_PAGE = 40;
+
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = (readingId) => `RR-${readingId}`;
+
+  const toggleFavorite = (e, readingId) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const favoriteId = getFavoriteId(readingId);
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(id => id !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   useEffect(() => {
     const savedLang = localStorage.getItem('responsiveReadingLanguage');
@@ -256,6 +279,20 @@ function ResponsiveReading({ theme }) {
               <Link to={`/reading/${reading.id}`} key={reading.id} className="hymn-card">
                 <div className="hymn-number">{reading.id}</div>
                 <div className="hymn-title">{reading.title}</div>
+                <button
+                  className={`favorite-button ${favorites.includes(getFavoriteId(reading.id)) ? 'active' : ''}`}
+                  onClick={(e) => toggleFavorite(e, reading.id)}
+                  aria-label={
+                    favorites.includes(getFavoriteId(reading.id))
+                      ? 'Remove from favorites'
+                      : 'Add to favorites'
+                  }
+                  style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+                >
+                  <span className="favorite-icon">
+                    {favorites.includes(getFavoriteId(reading.id)) ? '★' : '☆'}
+                  </span>
+                </button>
               </Link>
             ))}
           </div>

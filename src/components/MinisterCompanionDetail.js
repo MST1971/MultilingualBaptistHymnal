@@ -1,11 +1,36 @@
-import React, { useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { ministerCompanionData } from '../data/ministerCompanionData';
 import './Edition.css';
 
 function MinisterCompanionDetail({ theme }) {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const [favorites, setFavorites] = useState([]);
+
+  // Load favorites from localStorage
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = () => `MC-${id}`;
+
+  const toggleFavorite = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    const favoriteId = getFavoriteId();
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(favId => favId !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   const item = ministerCompanionData.find(d => d.id === id);
 
@@ -127,7 +152,16 @@ function MinisterCompanionDetail({ theme }) {
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
           <h1 style={{ color: 'orange', margin: 0, fontSize: '18px' }}>{currentIndex + 1}. {item.title}</h1>
         </div>
-        <div style={{ width: '40px' }}></div>
+        <button 
+          className={`favorite-button ${favorites.includes(getFavoriteId()) ? 'active' : ''}`}
+          onClick={toggleFavorite}
+          title={favorites.includes(getFavoriteId()) ? "Remove from favorites" : "Add to favorites"}
+          style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px' }}
+        >
+          <span className="favorite-icon" style={{ fontSize: '20px', color: favorites.includes(getFavoriteId()) ? 'gold' : 'inherit' }}>
+            {favorites.includes(getFavoriteId()) ? '★' : '☆'}
+          </span>
+        </button>
       </div>
       
       <div className="hymn-list-section" style={{ height: 'auto', background: 'transparent', padding: '0' }}>

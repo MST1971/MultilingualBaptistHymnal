@@ -280,3 +280,119 @@
 .theme-sepia .edition-history-box {
   background: rgba(91, 70, 54, 0.1);
 }
+
+/* Search Input */
+.hymn-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: center;
+}
+
+.hymn-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.theme-light .hymn-search-input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.theme-light .hymn-search-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.theme-sepia .hymn-search-input {
+  border: 1px solid rgba(91, 70, 54, 0.3);
+}
+.theme-sepia .hymn-search-input::placeholder {
+  color: rgba(91, 70, 54, 0.5);
+}
+
+/* Pagination Controls */
+.pagination-arrow {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  opacity: 0.8;
+}
+.pagination-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.pagination-text {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Clean List Style */
+.hymn-list-clean {
+  display: flex;
+  flex-direction: column;
+}
+
+.clean-hymn-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.theme-light .clean-hymn-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.theme-sepia .clean-hymn-row {
+  border-bottom: 1px solid rgba(91, 70, 54, 0.1);
+}
+
+.clean-hymn-number {
+  color: #d32f2f;
+  width: 50px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.clean-hymn-title {
+  flex: 1;
+  font-size: 12px;
+  text-align: left;
+  padding-right: 40px;
+}
+
+.clean-hymn-star {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.favorite-button.active .clean-hymn-star,
+.clean-hymn-star.active {
+  color: #ffd700;
+}
+
+.theme-light .clean-hymn-star {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-light .favorite-button.active .clean-hymn-star,
+.theme-light .clean-hymn-star.active {
+  color: #ff9800;
+}
+
+.theme-sepia .clean-hymn-star {
+  color: rgba(91, 70, 54, 0.4);
+}
+
+.theme-sepia .favorite-button.active .clean-hymn-star,
+.theme-sepia .clean-hymn-star.active {
+  color: #d84315;
+}

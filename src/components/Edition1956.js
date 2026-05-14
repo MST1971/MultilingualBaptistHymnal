@@ -45,9 +45,10 @@ function Edition1956({ theme }) {
     e.preventDefault(); // Prevent navigation to hymn detail
     e.stopPropagation(); // Prevent event bubbling
     
-    const newFavorites = favorites.includes(hymnId)
-      ? favorites.filter(id => id !== hymnId)
-      : [...favorites, hymnId];
+    const favoriteId = `1956-${hymnId}`;
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(id => id !== favoriteId)
+      : [...favorites, favoriteId];
     
     setFavorites(newFavorites);
     localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
@@ -737,11 +738,11 @@ function Edition1956({ theme }) {
               <div className="hymn-number">{hymn.id}</div>
               <div className="hymn-title">{hymn.title}</div>
               <button 
-                className={`favorite-button ${favorites.includes(hymn.id) ? 'active' : ''}`}
+                className={`favorite-button ${favorites.includes(`1956-${hymn.id}`) ? 'active' : ''}`}
                 onClick={(e) => toggleFavorite(e, hymn.id)}
               >
                 <span className="favorite-icon">
-                  {favorites.includes(hymn.id) ? '★' : '☆'}
+                  {favorites.includes(`1956-${hymn.id}`) ? '★' : '☆'}
                 </span>
               </button>
             </Link>
@@ -750,10 +751,9 @@ function Edition1956({ theme }) {
         
         {filteredHymns.length === 0 && (
           <div className="no-results">
-            <p>No hymns found matching your search.</p>
+            <p>No hymns found matching "{searchTerm}"</p>
           </div>
         )}
-        
       </div>
     </div>
   );

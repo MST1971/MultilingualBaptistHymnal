@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Baptist Hymnal</string>
     <string name="title_activity_main">Baptist Hymnal</string>
-    <string name="package_name">com.baptisthymnal.app</string>
-    <string name="custom_url_scheme">com.baptisthymnal.app</string>
+    <string name="package_name">com.mstraybiz.multilingualbaptisthymnal</string>
+    <string name="custom_url_scheme">com.mstraybiz.multilingualbaptisthymnal</string>
+    <string name="admob_app_id">ca-app-pub-6283300909154451~6076353838</string>
 </resources>

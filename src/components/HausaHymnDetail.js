@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import React, { useState, useEffect } from 'react';
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './HymnDetail.css';
 
@@ -14171,7 +14171,7 @@ function HausaHymnDetail({ theme }) {
                           const musicSign = hymn.musicSigns && hymn.musicSigns[index] && hymn.musicSigns[index][lineIndex];
                           return (
                             <div key={lineIndex} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
-                              <div className="music-signs" style={{ color: musicSign ? '#888' : 'transparent' }}>
+                              <div className="music-signs" style={{ color: (musicSign && musicSign !== 'x') ? '#888' : 'transparent' }}>
                                 {musicSign || 'x'}
                               </div>
                               <div className="stanza-number">{lineIndex === 0 ? `${verseObj.verse}.` : ''}</div>
@@ -14188,23 +14188,29 @@ function HausaHymnDetail({ theme }) {
                       {/* Inject Korus after each stanza if it exists */}
                       {korusVerse && (
                         <div className="refrain-container" style={{ marginTop: '12px', marginBottom: '12px' }}>
-                          {korusVerse.text.map((line, lineIndex) => (
-                            <div key={`korus-${index}-${lineIndex}`} className="refrain" style={{
-                              fontStyle: 'italic',
-                              marginLeft: '40px',
-                              marginTop: 0,
-                              marginBottom: 0
-                            }}>
-                              <div className="line" style={{
-                                ...(lineIndex > 0 ? { marginLeft: '45px' } : { marginLeft: '4px' }),
-                                marginTop: 0,
-                                marginBottom: '4px'
-                              }}>
-                                {lineIndex === 0 ? <span className="refrain-marker" style={{ fontWeight: 'bold', fontStyle: 'italic', marginRight: '10px' }}>Korus:</span> : ""}
-                                {line}
+                          {korusVerse.text.map((line, lineIndex) => {
+                            const korusIndex = hymn.lyrics.indexOf(korusVerse);
+                            const musicSign = hymn.musicSigns && hymn.musicSigns[korusIndex] && hymn.musicSigns[korusIndex][lineIndex];
+                            return (
+                              <div key={`korus-${index}-${lineIndex}`} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
+                                <div className="music-signs" style={{ color: (musicSign && musicSign !== 'x') ? '#888' : 'transparent' }}>
+                                  {musicSign || 'x'}
+                                </div>
+                                <div className="stanza-number"></div>
+                                <div className="stanza-text">
+                                  <div className="line" style={{
+                                    fontStyle: 'italic',
+                                    ...(lineIndex > 0 ? { marginLeft: '45px' } : { marginLeft: '4px' }),
+                                    marginTop: 0,
+                                    marginBottom: '4px'
+                                  }}>
+                                    {lineIndex === 0 ? <span className="refrain-marker" style={{ fontWeight: 'normal', fontStyle: 'italic', marginRight: '10px' }}>Korus:</span> : ""}
+                                    {line}
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       )}
                       
@@ -14238,7 +14244,7 @@ function HausaHymnDetail({ theme }) {
                       const musicSign = hymn.musicSigns && hymn.musicSigns[globalLineIndex];
                       return (
                         <div key={lineIndex} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
-                          <div className="music-signs" style={{ color: musicSign ? '#888' : 'transparent' }}>
+                          <div className="music-signs" style={{ color: (musicSign && musicSign !== 'x') ? '#888' : 'transparent' }}>
                             {musicSign || 'x'}
                           </div>
                           <div className="stanza-number">{lineIndex === 0 ? `${stanzaCounter}.` : ''}</div>

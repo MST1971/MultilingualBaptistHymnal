@@ -209,7 +209,7 @@
   color: #888;
   text-align: left;
   flex-shrink: 0;
-  font-weight: bold;
+  font-weight: normal;
   padding-right: 5px;
   line-height: 1.8;
   font-family: 'Merriweather', serif !important;

@@ -170,8 +170,11 @@ function HymnList({ theme }) {
     if (language === '1975') return `1975-${hymn.number}`;
     if (language === '1991') return `1991-${hymn.number}`;
     if (language === '2008') return `2008-${hymn.number}`;
-    if (language === '1956') return hymn.number;
-    return hymn.id;
+    if (language === '1956') return `1956-${hymn.number}`;
+    if (language === 'yoruba') return `YBH-${hymn.number}`;
+    if (language === 'hausa') return `HBH-${hymn.number}`;
+    if (language === 'igbo') return `IBH-${hymn.number}`;
+    return hymn.id || hymn.number;
   };
 
   // Toggle favorite status

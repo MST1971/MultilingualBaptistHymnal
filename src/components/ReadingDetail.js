@@ -7,6 +7,32 @@ function ReadingDetail({ theme }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [reading, setReading] = useState(null);
+  const [favorites, setFavorites] = useState([]);
+
+  // Load favorites from localStorage
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = () => `RR-${id}`;
+
+  const toggleFavorite = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    const favoriteId = getFavoriteId();
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(favId => favId !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   useEffect(() => {
     let foundReading = null;
@@ -62,7 +88,16 @@ function ReadingDetail({ theme }) {
             </p>
           )}
         </div>
-        <div style={{ width: '40px' }}></div> {/* Spacer for alignment */}
+        <button 
+          className={`favorite-button ${favorites.includes(getFavoriteId()) ? 'active' : ''}`}
+          onClick={toggleFavorite}
+          title={favorites.includes(getFavoriteId()) ? "Remove from favorites" : "Add to favorites"}
+          style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px' }}
+        >
+          <span className="favorite-icon" style={{ fontSize: '20px', color: favorites.includes(getFavoriteId()) ? 'gold' : 'inherit' }}>
+            {favorites.includes(getFavoriteId()) ? '★' : '☆'}
+          </span>
+        </button>
       </div>
 
       <div className="hymn-list-section" style={{ height: 'auto', background: 'transparent', padding: '0' }}>

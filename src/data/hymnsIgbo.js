@@ -1,14 +1,14 @@
-export const igboHymns = Array.from({ length: 100 }, (_, i) => ({
-  id: `IBH${i + 1}`,
-  number: i + 1,
-  title: i === 0 ? "Amara Dị Ebube (Amazing Grace)" : 
-         i === 1 ? "Chineke Nke Igwe (God of Heaven)" :
-         i === 2 ? "Jesu Nke M Huru N'anya (Jesus Whom I Love)" :
-         `Abu Igbo ${i + 1} (Igbo Hymn ${i + 1})`,
-  lyrics: [
-    "Placeholder lyrics for Igbo hymn...",
-    "Line 2...",
-    "Line 3..."
-  ],
-  theme: "General"
-}));
+import { igboHymnDetailsByNumber } from './igboHymnDetails';
+
+export const igboHymns = Array.from({ length: 400 }, (_, i) => {
+  const number = i + 1;
+  const detail = igboHymnDetailsByNumber[number];
+
+  return {
+    id: `IBH${number}`,
+    number,
+    title: detail?.title ?? `Abu Igbo ${number} (Igbo Hymn ${number})`,
+    theme: detail?.theme ?? "General",
+    tune: detail?.tune ?? ""
+  };
+});

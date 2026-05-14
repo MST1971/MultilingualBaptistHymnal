@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './HymnDetail.css';
+import { igboHymnDetailsByNumber } from '../data/igboHymnDetails';
+
 
 function IgboHymnDetail({ theme }) {
   const { id } = useParams();
@@ -12,6 +14,32 @@ function IgboHymnDetail({ theme }) {
   const [showShareTooltip, setShowShareTooltip] = useState(false);
   const [showNoteModal, setShowNoteModal] = useState(false);
   const [note, setNote] = useState('');
+  const [favorites, setFavorites] = useState([]);
+
+  // Load favorites from localStorage
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = () => `IBH-${id.replace('IBH-', '')}`;
+
+  const toggleFavorite = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    const favoriteId = getFavoriteId();
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(favId => favId !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   // Load history from localStorage on component mount
   useEffect(() => {
@@ -191,7 +219,7 @@ function IgboHymnDetail({ theme }) {
 
   const handleNextHymn = () => {
     const currentNumber = parseInt(id.replace('IBH', ''));
-    const totalHymns = 100; // Placeholder count from EditionIgbo.js
+    const totalHymns = 400; // Limit updated to include new hymns
     if (currentNumber < totalHymns) {
       navigate(`/igbo-hymn/IBH${currentNumber + 1}`);
     }
@@ -211,10 +239,15 @@ function IgboHymnDetail({ theme }) {
   };
 
   const getIgboHymnDetails = (hymnId) => {
-    // Return null for non-IBH IDs or IDs > 100
+    // Return null for non-IBH IDs or IDs > 400
     if (!hymnId.startsWith('IBH')) return null;
     const num = parseInt(hymnId.replace('IBH', ''));
-    if (isNaN(num) || num < 1 || num > 100) return null;
+    if (isNaN(num) || num < 1 || num > 400) return null;
+
+    
+
+    const updated = igboHymnDetailsByNumber[num];
+    if (updated) return updated;
 
     // Placeholder data generation
     return {
@@ -222,36 +255,30 @@ function IgboHymnDetail({ theme }) {
              num === 2 ? "Chineke Nke Igwe (God of Heaven)" :
              num === 3 ? "Jesu Nke M Huru N'anya (Jesus Whom I Love)" :
              `Abu Igbo ${num} (Igbo Hymn ${num})`,
-      number: hymnId,
-      author: "Unknown Author",
-      composer: "Unknown Composer",
-      tune: "UNKNOWN",
-      meter: "8.8.8.8",
-      key: "C Major",
-      scripture: "Psalms 100",
-      theme: "Praise",
-      year: "2024",
+      number: num,
+      author: "Amaghị",
+      composer: "Amaghị",
+      tune: "Amaghị",
+      meter: "Amaghị",
+      key: "Amaghị",
+      scripture: "Amaghị",
+      theme: "General",
+      year: "Amaghị",
       lyrics: [
         {
           verse: 1,
           text: [
-            "This is a placeholder for Igbo hymn lyrics.",
-            "The actual content will be added later.",
-            "Praise the Lord, O my soul.",
-            "And all that is within me, praise His holy name."
+            "..."
           ]
         },
         {
           verse: 2,
           text: [
-            "Verse 2 placeholder text.",
-            "Sing praises to the King.",
-            "Rejoice in His love.",
-            "Forever and ever. Amen."
+            "..."
           ]
         }
       ],
-      history: "History for this hymn is not yet available."
+      history: "A maghị akụkọ abu a."
     };
   };
 
@@ -304,7 +331,7 @@ function IgboHymnDetail({ theme }) {
             <button 
               className="nav-arrow next-arrow" 
               onClick={handleNextHymn}
-              disabled={parseInt(id.replace('IBH', '')) >= 100}
+              disabled={parseInt(id.replace('IBH', '')) >= 400}
             >
               <span className="icon">→</span>
             </button>
@@ -329,11 +356,23 @@ function IgboHymnDetail({ theme }) {
   return (
     <div className={`hymn-detail-page theme-${theme}`}>
       <div className="header-top-row">
+        <button className="back-button icon-only" onClick={() => navigate(-1)}>
+          <span className="icon">←</span>
+        </button>
         <div className="header-spacer"></div>
+        <button 
+          className={`favorite-button ${favorites.includes(getFavoriteId()) ? 'active' : ''}`}
+          onClick={toggleFavorite}
+          title={favorites.includes(getFavoriteId()) ? "Remove from favorites" : "Add to favorites"}
+        >
+          <span className="favorite-icon">
+            {favorites.includes(getFavoriteId()) ? '★' : '☆'}
+          </span>
+        </button>
       </div>
 
       <div className="hymn-topic-section">
-        <h1>{formatTitleCase(hymn.title)}</h1>
+        <h1>{hymn.title}</h1>
         <div className="hymn-topic">{hymn.theme}</div>
         <div className="hymn-source">Igbo Baptist Hymnal</div>
       </div>
@@ -350,7 +389,7 @@ function IgboHymnDetail({ theme }) {
           <button 
             className="nav-arrow next-arrow" 
             onClick={handleNextHymn}
-            disabled={parseInt(id.replace('IBH', '')) >= 100}
+            disabled={parseInt(id.replace('IBH', '')) >= 400}
           >
             <span className="icon">→</span>
           </button>
@@ -428,21 +467,47 @@ function IgboHymnDetail({ theme }) {
           msUserSelect: 'text'
         }}>
           {hymn.lyrics.map((verse, index) => (
-            <div key={index} className="stanza" style={{marginTop: 0, marginBottom: 0, display: 'flex', flexDirection: 'row'}}>
-              <div className="stanza-number" style={{marginRight: '10px', fontWeight: 'bold'}}>{verse.verse}.</div>
-              <div className="stanza-text">
-                {verse.text.map((line, lineIndex) => (
-                  <div key={lineIndex} className="line" style={{marginTop: 0, marginBottom: '1px'}}>
-                    {line}
-                  </div>
-                ))}
+            <React.Fragment key={index}>
+              <div className="stanza" style={{marginTop: 0, marginBottom: 0, display: 'flex', flexDirection: 'row'}}>
+                <div className="stanza-number" style={{marginRight: '10px', fontWeight: 'normal'}}>{verse.verse}.</div>
+                <div className="stanza-text">
+                  {verse.text.map((line, lineIndex) => (
+                    <div key={lineIndex} className="line" style={{marginTop: 0, marginBottom: '1px'}}>
+                      {line}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+
+              {hymn.chorus?.lines?.length > 0 && (
+                <div className="refrain-container" style={{ marginTop: '2px', marginBottom: '6px' }}>
+                  {hymn.chorus.lines.map((line, chorusIndex) => (
+                    <div key={chorusIndex} className="stanza" style={{ marginTop: 0, marginBottom: '1px' }}>
+                      <div className="music-signs" style={{ color: 'transparent' }}>
+                        x
+                      </div>
+                      <div className="stanza-number"></div>
+                      <div className="stanza-text">
+                        <div className="line" style={{
+                          fontStyle: 'italic',
+                          ...(chorusIndex > 0 ? { marginLeft: '48px' } : { marginLeft: '4px' }),
+                          marginTop: 0,
+                          marginBottom: '4px'
+                        }}>
+                          {chorusIndex === 0 ? <span className="refrain-marker" style={{ fontWeight: 'normal', fontStyle: 'italic', marginRight: '10px' }}>{hymn.chorus.label}</span> : ""}
+                          {line}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </div>
 
         <div className="hymn-history">
-          <h3>History</h3>
+          <h3>Akụkọ</h3>
           <p>{hymn.history}</p>
         </div>
       </div>

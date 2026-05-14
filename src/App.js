@@ -9,6 +9,7 @@ import Edition1956 from './components/Edition1956';
 import Edition1975 from './components/Edition1975';
 import Edition1991 from './components/Edition1991';
 import Edition2008 from './components/Edition2008';
+import HymnDetail2008 from './components/HymnDetail2008';
 import EditionYoruba from './components/EditionYoruba';
 import YorubaHymnDetail from './components/YorubaHymnDetail';
 import EditionIgbo from './components/EditionIgbo';
@@ -199,6 +200,7 @@ function App() {
                 <Route path="/edition/1975" element={<Edition1975 theme={theme} />} />
                 <Route path="/edition/1991" element={<Edition1991 theme={theme} />} />
                 <Route path="/edition/2008" element={<Edition2008 theme={theme} />} />
+                <Route path="/hymn2008/:id" element={<HymnDetail2008 theme={theme} />} />
                 <Route path="/edition/yoruba" element={<EditionYoruba theme={theme} />} />
                 <Route path="/yoruba-hymn/:id" element={<YorubaHymnDetail theme={theme} />} />
                 <Route path="/edition/igbo" element={<EditionIgbo theme={theme} />} />

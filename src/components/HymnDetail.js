@@ -14,6 +14,7 @@ function HymnDetail({ theme }) {
   const [history, setHistory] = useState([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [showShareTooltip, setShowShareTooltip] = useState(false);
+  const [favorites, setFavorites] = useState([]);
   
   // Note state
   const [showNoteModal, setShowNoteModal] = useState(false);
@@ -40,6 +41,40 @@ function HymnDetail({ theme }) {
       // Legacy fallback
       hymn = isNumericId ? getHymnById(slug) : getHymnBySlug(slug);
   }
+
+  // Load saved data on initial render
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem('hymnFavorites');
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  const getFavoriteId = () => {
+    if (!hymn) return null;
+    if (edition === '1975') return `1975-${hymn.number}`;
+    if (edition === '1991') return `1991-${hymn.number}`;
+    if (edition === '2008') return `2008-${hymn.number}`;
+    if (edition === '1956') return `1956-${hymn.number}`;
+    return isNumericId ? `1956-${hymn.number}` : `1975-${hymn.number}`;
+  };
+
+  const toggleFavorite = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    const favoriteId = getFavoriteId();
+    if (!favoriteId) return;
+
+    const newFavorites = favorites.includes(favoriteId)
+      ? favorites.filter(id => id !== favoriteId)
+      : [...favorites, favoriteId];
+    
+    setFavorites(newFavorites);
+    localStorage.setItem('hymnFavorites', JSON.stringify(newFavorites));
+  };
 
   // Load note
   useEffect(() => {
@@ -263,9 +298,10 @@ function HymnDetail({ theme }) {
     const search = location.search;
     
     if (!isNaN(currentNumber)) {
-      // Allow navigation to next number without hard limit
-      // (User will see empty page if out of bounds, or we could add bounds check per edition)
-      navigate(`/hymn/${currentNumber + 1}${search}`);
+      const maxHymns = edition === '1975' ? 512 : 572;
+      if (currentNumber < maxHymns) {
+        navigate(`/hymn/${currentNumber + 1}${search}`);
+      }
     } else {
       const nextSlug = getNextHymnSlug(slug);
       if (nextSlug) {
@@ -404,9 +440,12 @@ function HymnDetail({ theme }) {
     // Return a simplified view with navigation if hymn is not found
     return (
       <div className={`hymn-detail-page theme-${theme}`}>
-        <div className="header-top-row">
-          <div className="header-spacer"></div>
-        </div>
+      <div className="header-top-row">
+        <button className="back-button icon-only" onClick={() => navigate(-1)}>
+          <span className="icon">←</span>
+        </button>
+        <div className="header-spacer"></div>
+      </div>
 
         <div className="hymn-topic-section">
           <h1>Hymn {slug}</h1>
@@ -426,7 +465,7 @@ function HymnDetail({ theme }) {
             <button
               className="nav-arrow next-arrow"
               onClick={handleNextHymn}
-              disabled={isNumericId ? parseInt(slug) >= 572 : !getNextHymnSlug(slug)}
+              disabled={isNumericId ? parseInt(slug) >= (edition === '1975' ? 512 : 572) : !getNextHymnSlug(slug)}
             >
               <span className="icon">→</span>
             </button>
@@ -478,7 +517,19 @@ function HymnDetail({ theme }) {
   return (
     <div className={`hymn-detail-page theme-${theme}`}>
       <div className="header-top-row">
+        <button className="back-button icon-only" onClick={() => navigate(-1)}>
+          <span className="icon">←</span>
+        </button>
         <div className="header-spacer"></div>
+        <button 
+          className={`favorite-button ${favorites.includes(getFavoriteId()) ? 'active' : ''}`}
+          onClick={toggleFavorite}
+          title={favorites.includes(getFavoriteId()) ? "Remove from favorites" : "Add to favorites"}
+        >
+          <span className="favorite-icon">
+            {favorites.includes(getFavoriteId()) ? '★' : '☆'}
+          </span>
+        </button>
       </div>
 
       <div className="hymn-topic-section">
@@ -499,7 +550,7 @@ function HymnDetail({ theme }) {
           <button
             className="nav-arrow next-arrow"
             onClick={handleNextHymn}
-            disabled={isNumericId ? parseInt(slug) >= 572 : !getNextHymnSlug(slug)}
+            disabled={isNumericId ? parseInt(slug) >= (edition === '1975' ? 512 : 572) : !getNextHymnSlug(slug)}
           >
             <span className="icon">→</span>
           </button>
@@ -599,7 +650,7 @@ function HymnDetail({ theme }) {
               </div>
             ) : (
               <div key={`stanza-${index}`} className="stanza" style={{ marginTop: 0, marginBottom: 0, display: 'flex', flexDirection: 'row' }}>
-                <div className="stanza-number" style={{ marginRight: '10px', fontWeight: 'bold' }}>{stanzaCounter++}.</div>
+                <div className="stanza-number" style={{ marginRight: '10px', fontWeight: 'normal' }}>{stanzaCounter++}.</div>
                 <div className="stanza-text">
                   {item.lines.map((line, lineIndex) => (
                     <div key={lineIndex} className="line" style={{ marginTop: 0, marginBottom: '1px' }}>

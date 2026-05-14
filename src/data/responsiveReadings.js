@@ -1875,14 +1875,1852 @@ export const yorubaResponsiveReadings = [
 export const igboResponsiveReadings = [
   {
     id: 'IRR1',
-    title: "Oku Otuto",
-    scripture: "Abụ Ọma 100:1-5",
+    title: "Ọkpụkpọ Òkù Itoo Chineke",
+    scripture: "Abụ Ọma 100:1-5; 67:3-7",
     verses: [
-      "Nokuanu Jehova, unu ala nile.",
-      "Feenu Jehova n'ọṅụ: Bianu n'iru Ya n'iti-nkpu ọṅụ.",
-      "Maranu na Jehova, Ya onwe-ya bu Chineke: Ya onwe-ya kere ayi, ayi bu kwa nke Ya; Ayi bu ndi Ya, na aturu nke ọzụzụ-aturu-Ya.",
-      "Bianu n'ọnu-uzọ-ama-Ya nile n'ekele, Bianu n'ogige-Ya nile n'otuto: Kelenu Ya, gọzienu aha-Ya.",
-      "N'ihi na Jehova di nma; ebere-Ya di rue mgbe ebighi-ebi; Ezi-okwu-Ya di kwa rue ọgbọ nile."
+      "Kpọkuonụ Jehova n’olu ọṅụ, unu ala niile.",
+      "Feenụ Jehova ofufe n’ọṅụ; bịa n’ihu Ya na-abụ abụ.",
+      "Maranụ na Jehova bụ Chineke; Ọ bụ Ya kere anyị, ọ bụghị anyị onwe anyị; anyị bụ ndị Ya, atụrụ nke ebe ịzụ atụrụ Ya.",
+      "Bànyenụ n’ọnụ ụzọ ámá Ya na ekele, n’ogige Ya na otuto; kelenu Ya, gọzienụ aha Ya.",
+      "N’ihi na Jehova dị mma; ebere Ya dịru mgbe ebighị ebi; eziokwu Ya dịru ọgbọ niile.",
+      "Ka ndị mmadụ too Gị, Chineke; ka ndị mmadụ niile too Gị.",
+      "Ka mba niile nwee ọṅụ ma tie mkpu ọṅụ; n’ihi na Ị ga-ekpe ndị mmadụ ikpe n’ezi omume, Ị ga-edu mba ndị dị n’ụwa.",
+      "Ka ndị mmadụ too Gị, Chineke; ka ndị mmadụ niile too Gị.",
+      "Mgbe ahụ ụwa ga-amịpụta ihe ubi ya; Chineke, Chineke anyị, ga-agọzi anyị.",
+      "Chineke ga-agọzi anyị; ndị niile nọ n’ọnụ ụwa ga-atụ egwu Ya."
+    ]
+  },
+  {
+    id: 'IRR2',
+    title: "Mmekọrịta Ndị Kraịst",
+    scripture: "Rom. 12:9-10, 13, 15-18; Gal. 6:2, 10; I John 4:11",
+    verses: [
+      "Ka ịhụnanya bụrụ nke na-enweghị aghụghọ. Kpọọ asị ihe ọjọọ; rapara n’ihe ọma.",
+      "Ka unu hụ ibe unu n’anya dịka ụmụnna; n’ịsọpụrụ, ka onye ọ bụla buru ụzọ gọzie ibe ya.",
+      "Kekọrịtanụ ndị nsọ ihe ha chọrọ; na-anabata ndị ọbịa.",
+      "Soronụ ndị na-aṅụrị ọṅụ; soronụ ndị na-ebe ákwá.",
+      "Ka uche unu bụrụ otu n’ebe ibe unu nọ. Echekwala ihe dị elu; kama soro ndị dị ala. Unu echela na unu bụ ndị amamihe n’anya unu.",
+      "Ekwela onye ọ bụla ihe ọjọọ maka ihe ọjọọ. Chekwanụ ihe dị mma n’anya mmadụ niile.",
+      "Ọ bụrụ na o kwere, dịka o si dị n’aka unu, biri n’udo na mmadụ niile.",
+      "Buru unu ibu ibe unu, otú ahụ ka unu ga-emezu iwu Kraịst.",
+      "Ya mere, mgbe anyị nwere ohere, ka anyị mee ihe ọma nye mmadụ niile, karịsịa ndị nọ n’ụlọ okwukwe.",
+      "Ndị m hụrụ n’anya, ọ bụrụ na Chineke hụrụ anyị n’anya otú ahụ, anyị kwesịkwara ịhụ ibe anyị n’anya."
+    ]
+  },
+  {
+    id: 'IRR3',
+    title: "Alaeze Chineke",
+    scripture: "Heb. 1:1-2, 8; Matt. 13:33, 45-46; 1 Cor. 15:24-25; Rev. 11:15",
+    verses: [
+      "Chineke, onye kwuru n’oge gara aga ọtụtụ ugboro na n’ụzọ dị iche iche nye nna nna anyị site n’ọnụ ndị amụma,",
+      "N’ụbọchị ikpeazụ ndị a, Okwu ya gwara anyị site n’Ọkpara Ya, onye O tinyere ka ọ bụrụ onye nketa ihe niile, onye site n’aka Ya kwa O kere ụwa.",
+      "Ma nye Ọkpara, Ọ sịrị: Ocheeze Gị, Chineke, dịru mgbe ebighị ebi; mkpanaka nke ezi omume bụ mkpanaka nke alaeze Gị.",
+      "Jizọs kwuru ha ilu ọzọ: Alaeze eluigwe dị ka yist, nke nwanyị were zoo n’ime okpukpu atọ nke ntụ ọka, ruo mgbe nke niile ghọrọ yist.",
+      "Ọzọkwa, alaeze eluigwe dị ka onye ahịa na-achọ mkpuru oké ọnụ ahịa mara mma.",
+      "Mgbe ọ hụrụ otu mkpuru oké ọnụ ahịa dị oke ọnụ, ọ gara ree ihe niile o nwere, wee zụta ya.",
+      "Ọzọkwa, alaeze eluigwe dị ka ụgbụ e tụrụ n’ime osimiri, nke kpọkọtara ụdị azụ niile.",
+      "Mgbe o juputara, ha dọtara ya n’akụkụ osimiri, nọdụ ala, kpokọta ndị ọma n’ime ite, ma tụfuo ndị ọjọọ.",
+      "Otu a ka ọ ga-adị n’ọgwụgwụ ụwa: ndị mmụọ ozi ga-apụta, kewaa ndị ajọ mmadụ n’etiti ndị ezi omume.",
+      "Mgbe ahụ ọgwụgwụ ga-abịa, mgbe Kraịst ga-enye alaeze ahụ n’aka Chineke, bụ Nna, mgbe O kwụsịrị ọchịchị niile, ike na ikike niile.",
+      "N’ihi na Ọ ga-achị eze, ruo mgbe O tinyere ndị iro Ya niile n’okpuru ụkwụ Ya.",
+      "Alaeze nke ụwa aghọwo alaeze nke Onyenweanyị anyị na nke Kraịst Ya; Ọ ga-achị eze ruo mgbe ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR4',
+    title: "Nnukwu N’eziokwu",
+    scripture: "Matt. 18:1-4; John 13:13-16; Mark 10:43-45",
+    verses: [
+      "N’oge ahụ, ndị na-eso ụzọ bịakwutere Jizọs, sị: Ònye ka ukwuu n’alaeze eluigwe?",
+      "Jizọs kpọrọ obere nwa, guzobe ya n’etiti ha,",
+      "Sị: N’eziokwu, agwa m unu, ma unu agbanweghị ma bụrụ dịka ụmụntakịrị, unu agaghị abanye n’alaeze eluigwe.",
+      "Ya mere, onye ga-azụda onwe ya dịka nwa a, ya bụ onye ka ukwuu n’alaeze eluigwe.",
+      "Unu na-akpọ m Nna-ukwu na Onyenweanyị; unu kwuru nke ọma, n’ihi na otu ahụ ka m dị.",
+      "Ya mere, ọ bụrụ na m, Onyenweanyị na Nna-ukwu unu, sachara unu ụkwụ, unu kwesịkwara ịsa ibe unu ụkwụ.",
+      "N’ihi na enyela m unu ihe atụ, ka unu mee dịka m mere unu.",
+      "N’eziokwu, n’eziokwu, agwa m unu, ohu adịghị ukwuu karịa nna ya ukwu; onye e zitere adịghịkwa ukwuu karịa onye zitere ya.",
+      "Ma onye chọrọ ịbụ nnukwu n’etiti unu, ga-abụ onye na-ejere unu ozi; onye chọrọ ịbụ mbụ, ga-abụ ohu mmadụ niile.",
+      "N’ihi na Ọkpara nke mmadụ abịaghị ka e jeere Ya ozi, kama ka Ọ jee ozi, nye ndụ Ya ka ọ bụrụ mgbapụta maka ọtụtụ mmadụ."
+    ]
+  },
+  {
+    id: 'IRR5',
+    title: "Ụwa Chineke na Okwu Ya",
+    scripture: "Psalm 19",
+    verses: [
+      "Eluigwe na-ekwupụta ebube Chineke; mbara igwe na-egosi ọrụ aka Ya.",
+      "Ụbọchị na-ekwu okwu nye ụbọchị, abalị na-akọwa ọmụma nye abalị.",
+      "Ọ dịghị okwu ma ọ bụ asụsụ, ebe a na-anụghị olu ha.",
+      "Ahịrị ha apụtala n’ụwa niile, okwu ha ruo n’ókè ụwa.",
+      "N’ime ha ka O debere ụlọ maka anyanwụ, nke dị ka nwoke-alụ-nwunye na-apụta n’ime ụlọ ya, na-aṅụrị ọṅụ dịka dike na-agba ọsọ.",
+      "Ịpụpụta ya si na njedebe eluigwe, okirikiri ya ruo n’ókè ya niile; ọ dịghị ihe zoro ezo n’ọkụ ya.",
+      "Iwu Jehova zuru oke, na-agbanwe mkpụrụ obi.",
+      "Akaebe Jehova kwụ ọtọ, na-eme ka onye na-amaghị ihe bụrụ onye amamihe.",
+      "Ntụziaka Jehova dị mma, na-aṅụrị obi ọṅụ.",
+      "Iwu Jehova dị ọcha, na-enwu anya.",
+      "Ịtụ egwu Jehova dị ọcha, na-adịru mgbe ebighị ebi.",
+      "Ikpe Jehova bụ eziokwu, dịkwa ezi omume niile ọnụ.",
+      "Ha ka a chọrọ karịa ọlaedo, ee, karịa ọtụtụ ọlaedo kachasị mma.",
+      "Ha dịkwa ụtọ karịa mmanụ aṅụ na mmanụ aṅụ nke akpa ya.",
+      "Site n’aka ha ka e ji dọọ ohu Gị aka ná ntị; n’idebe ha, e nwere nnukwu ụgwọ ọrụ.",
+      "Ònye pụrụ ịghọta mmejọ ya? Sachapụ m n’ime mmejọ zoro ezo.",
+      "Chekwaa ohu Gị pụọ n’ime mmehie mpako; ekwela ka ha chị m.",
+      "Ka okwu ọnụ m na nchegharị obi m bụrụ ihe nabatara n’ihu Gị, Jehova, Ike m na Onye mgbapụta m."
+    ]
+  },
+  {
+    id: 'IRR6',
+    title: "Udo N’ime",
+    scripture: "Rom. 5:1; 8:6; Isa. 26:3-4; Phil. 4:6-7; Heb. 13:20-21",
+    verses: [
+      "Ya mere, ebe a gụụrụ anyị n’aka Chineke n’ezi omume site n’okwukwe, anyị nwere udo na Chineke site n’Onyenweanyị anyị Jizọs Kraịst.",
+      "N’ihi na iche echiche nke anụ ahụ bụ ọnwụ; ma iche echiche nke Mmụọ bụ ndụ na udo.",
+      "Ị ga-edebe onye uche ya jigidere n’ebe Gị nọ n’udo zuru oke, n’ihi na ọ tụkwasịrị Gị obi.",
+      "Tụkwasịnụ Jehova obi ruo mgbe ebighị ebi; n’ihi na n’ime Jehova, Jehova n’onwe Ya, e nwere ike nke na-adịru mgbe ebighị ebi.",
+      "Unu echegbula ihe ọ bụla; kama n’ihe niile, site n’ekpere na arịrịọ, na ekele, mee ka a mara arịrịọ unu n’ihu Chineke.",
+      "Udo Chineke, nke karịrị nghọta niile, ga-edobe obi unu na uche unu n’ime Kraịst Jizọs.",
+      "Ugbu a, Chineke nke udo, onye kpụtakwara Onyenweanyị anyị Jizọs n’ọnwụ, Onye Ọzụzụ Atụrụ ukwu ahụ, site n’ọbara ọgbụgba ndụ ebighị ebi, mee ka unu zuo oke n’ọrụ ọma niile ka unu mee uche Ya,",
+      "Na-arụ ọrụ n’ime unu ihe na-atọ Ya ụtọ, site n’aka Jizọs Kraịst; Onye otuto dịrị ruo mgbe ebighị ebi. Amen."
+    ]
+  },
+  {
+    id: 'IRR7',
+    title: "Ọ Dị Mma Ịkele",
+    scripture: "Psalm 92",
+    verses: [
+      "Ọ bụ ihe ọma ịkele Jehova, ịkpọ abụ otuto nye aha Gị, Onye Kasị Elu.",
+      "Ikwupụta ịhụnanya Gị n’ụtụtụ, na ntụkwasị obi Gị n’abalị niile.",
+      "N’elu ngwá egwú eriri iri, na n’elu psaltri; n’elu ubo-aka na ụda nsọ.",
+      "N’ihi na Ị, Jehova, emeela m obi ụtọ site n’ọrụ Gị; aga m aṅụrị ọṅụ n’ọrụ aka Gị.",
+      "Jehova, otu ọrụ Gị siri ukwuu! Echiche Gị dị omimi nke ukwuu.",
+      "Onye nzuzu anaghị ama; onye ara adịghị aghọta nke a.",
+      "Mgbe ndị ajọ mmadụ na-eto dịka ahịhịa, mgbe ndị na-arụ ajọ omume niile na-amịpụta, ọ bụ ka e bibie ha ruo mgbe ebighị ebi.",
+      "Ma Ị, Jehova, bụ Onye Kasị Elu ruo mgbe ebighị ebi.",
+      "N’ihi na, lee, ndị iro Gị, Jehova, ga-ala n’iyi; ndị na-arụ ajọ omume ga-agbasasị.",
+      "Ndị ezi omume ga-eto dịka osisi nkwụ; ọ ga-eto dịka osisi sida nke Lebanọn.",
+      "Ndị a kụrụ n’ụlọ Jehova ga-eto n’ogige Chineke anyị.",
+      "Ha ga-amị mkpụrụ n’oge agadi;",
+      "Iji gosi na Jehova kwụ ọtọ; Ọ bụ nkume m, e nweghị ajọ omume n’ime Ya."
+    ]
+  },
+  {
+    id: 'IRR8',
+    title: "Ọma Chineke",
+    scripture: "Psalm 103",
+    verses: [
+      "Gọzie Jehova, mkpụrụ obi m; ka ihe niile dị n’ime m gọzie aha Ya dị nsọ.",
+      "Gọzie Jehova, mkpụrụ obi m, e chefukwala uru Ya niile.",
+      "Onye na-agbaghara mmehie gị niile; Onye na-agwọ ọrịa gị niile.",
+      "Onye na-agbapụta ndụ gị n’mbibi; Onye na-ekpuchi gị okpueze nke ịhụnanya na ebere dị nro.",
+      "Onye na-eju ọnụ gị afọ n’ihe ọma; ka ịlụ ọhụrụ gị wee bụrụ dịka ugo.",
+      "Jehova na-eme ezi omume na ikpe n’ihi ndị niile a na-emegbu.",
+      "O mere ka ụzọ Ya mara Mose, ọrụ Ya nye ụmụ Izrel.",
+      "Jehova bụ onye ebere na amara, na-adị nwayọọ n’ị怒, juputakwa n’ebere.",
+      "Ọ gaghị agbachitere mgbe niile; ọ gaghịkwa edebe iwe Ya ruo mgbe ebighị ebi.",
+      "Ọ naghị eme anyị dịka mmehie anyị si dị; ọ naghịkwa akwụghachi anyị dịka ajọ omume anyị.",
+      "Dịka eluigwe siri dị elu karịa ụwa, otu a ka ebere Ya siri ukwuu n’ebe ndị na-atụ egwu Ya nọ.",
+      "Dịka ọdịda anyanwụ siri dị anya n’ebe ọwụwa anyanwụ nọ, otu a ka O si wepụ mmejọ anyị n’ebe anyị nọ.",
+      "Dịka nna si ewere ụmụ ya ebere, otu a ka Jehova si ewere ndị na-atụ egwu Ya ebere.",
+      "Ebere Jehova sitere n’ebe ebighị ebi ruo n’ebe ebighị ebi n’ebe ndị na-atụ egwu Ya nọ; ezi omume Ya ruo n’ụmụ ụmụ ha."
+    ]
+  },
+  {
+    id: 'IRR9',
+    title: "Iwu",
+    scripture: "Ex. 20:1-4, 7-8, 12-17; Mark 12:28-31",
+    verses: [
+      "Chineke kwuru okwu ndị a niile, sị: Abụ m Jehova Chineke gị. I gaghị enwe chi ọzọ n’ihu m.",
+      "I gaghị emere onwe gị ihe arụkpụ akpụ, ma ọ bụ oyiyi ihe ọ bụla.",
+      "I gaghị akpọ aha Jehova Chineke gị n’efu; n’ihi na Jehova agaghị ahapụ onye kpọrọ aha Ya n’efu n’enweghị ntaramahụhụ.",
+      "Cheta ụbọchị izuike, ka i doo ya nsọ.",
+      "Sọpụrụ nna gị na nne gị, ka ụbọchị gị wee bụrụ ogologo n’ala Jehova Chineke gị na-enye gị.",
+      "I gaghị egbu mmadụ.",
+      "I gaghị akwa iko.",
+      "I gaghị ezu ohi.",
+      "I gaghị agba ama ụgha megide onye agbata obi gị.",
+      "I gaghị anọ n’anya ihe ọ bụla bụ nke onye agbata obi gị.",
+      "Otu onye odeakwụkwọ bịara, nụkọta ha na-ekwurịta okwu, hụkwa na Jizọs zara ha nke ọma, jụọ Ya: Kedu iwu mbụ n’ime iwu niile?",
+      "Jizọs zara ya, sị: Iwu mbụ bụ: Nụrụ, Izrel; Onyenweanyị Chineke anyị bụ otu Onyenweanyị.",
+      "Ị ga-ahụ Onyenweanyị Chineke gị n’anya n’obi gị niile, n’ime mkpụrụ obi gị niile, n’uche gị niile, na n’ike gị niile; nke a bụ iwu mbụ.",
+      "Nke abụọ dị ka ya bụ: Ị ga-ahụ onye agbata obi gị n’anya dịka onwe gị. E nweghị iwu ọzọ karịrị ndị a."
+    ]
+  },
+  {
+    id: 'IRR10',
+    title: "Ụzọ Amamihe",
+    scripture: "Job 28:12-13, 15, 20, 23, 28; Prov. 3:13-17; James 1:5",
+    verses: [
+      "Ebee ka a ga-ahụ amamihe? Ebee ka ebe nghọta dị?",
+      "Mmadụ amaghị ọnụ ahịa ya; a naghịkwa ahụ ya n’ala ndị dị ndụ.",
+      "A pụghị inweta ya site n’ọlaedo, a pụghịkwa ịtụ ọlaọcha bụrụ ọnụ ahịa ya.",
+      "Olee ebe amamihe si abịa? Ebee ka ebe nghọta dị?",
+      "Chineke na-aghọta ụzọ ya, Ọ ma ebe ya.",
+      "O kwuru nye mmadụ, sị: Lee, ịtụ egwu Jehova, nke ahụ bụ amamihe; ịhapụ ihe ọjọọ bụ nghọta.",
+      "Onye hụrụ amamihe, ọṅụ dịrị ya; onye nwetara nghọta, ọṅụ dịrị ya.",
+      "N’ihi na uru ya ka uru ọlaọcha; ihe a na-enweta site na ya ka ọlaedo kacha mma.",
+      "Ọ dị oké ọnụ ahịa karịa rubi; ihe niile ị pụrụ ịchọ a pụghị iji tụnyere ya.",
+      "N’aka nri ya e nwere ogologo ụbọchị; n’aka ekpe ya e nwere akụ na ụba na nsọpụrụ.",
+      "Ụzọ ya bụ ụzọ ụtọ; ụzọ ya niile bụ udo.",
+      "Ọ bụrụ na onye ọ bụla n’ime unu enweghị amamihe, ka o rịọ Chineke, onye na-enye mmadụ niile n’ụba, na-enweghị ịba mba; a ga-enye ya."
+    ]
+  },
+  {
+    id: 'IRR11',
+    title: "Nkwupụta Onye Nmehie",
+    scripture: "Psalm 51:1-13, 17",
+    verses: [
+      "Mere m ebere, Chineke, dịka ịhụnanya Gị siri dị.",
+      "Dịka ọtụtụ ebere dị nro Gị si dị, hichapụ mmejọ m.",
+      "Sachapụ m nke ọma pụọ n’ajọ omume m, mee ka m dị ọcha pụọ n’mmehie m.",
+      "N’ihi na amaara m mmejọ m; mmehie m dị n’ihu m mgbe niile.",
+      "Megide Gị, Gị naanị, ka m mere mmehie, mee ihe ọjọọ n’ihu Gị.",
+      "Ka Ị wee bụrụ onye ezi omume mgbe Ị na-ekwu okwu, bụrụkwa onye dị ọcha mgbe Ị na-ekpe ikpe.",
+      "Lee, e kere m n’ajọ omume; n’mmehie ka nne m mụtara m.",
+      "Lee, Ị chọrọ eziokwu n’ime ime; n’ime ihe zoro ezo, Ị ga-eme ka m mara amamihe.",
+      "Sachapụ m na hisop, m ga-adị ọcha; saa m, m ga-adị ọcha karịa snow.",
+      "Mee ka m nụ ọṅụ na obi ụtọ; ka ọkpụkpụ ndị ị kụpụrụ wee ṅụrị ọṅụ.",
+      "Zobe ihu Gị pụọ n’mmehie m, hichapụ ajọ omume m niile.",
+      "Kere m obi dị ọcha, Chineke; megharịa mmụọ kwụ ọtọ n’ime m.",
+      "Atụfukwala m pụọ n’ihu Gị; ewepụkwala mmụọ nsọ Gị n’aka m.",
+      "Weghachite m ọṅụ nke nzọpụta Gị; kwado m site n’mmụọnwụ Gị nke dị n’efu.",
+      "Mgbe ahụ aga m akụziri ndị mmehie ụzọ Gị; ndị mmehie ga-alọghachi n’ebe Gị nọ.",
+      "Àjà Chineke bụ mmụọ gbajiri agbaji; obi gbajiri agbaji na nke juru n’ịkwa ụta, Chineke, Ị gaghị eleghara ya anya."
+    ]
+  },
+  {
+    id: 'IRR12',
+    title: "Chineke Na-adị Mgbe Nile",
+    scripture: "Psalm 139",
+    verses: [
+      "Jehova, Ị nyochala m, Ị makwaara m.",
+      "Ị maara mgbe m nọdụ ala na mgbe m biliri; Ị ghọtara echiche m site n’ebe dị anya.",
+      "Ị na-elekọta ụzọ m na ịrahụ m; Ị maara ụzọ m niile.",
+      "N’ihi na okwu adịghị n’ire m, ma lee, Jehova, Ị maara ya dum.",
+      "Ị gbara m gburugburu azụ na ihu; Ị tinyekwara aka Gị n’ahụ m.",
+      "Ọmụma dị otu a karịrị m; ọ dị elu, enweghị m ike iru ya.",
+      "Ebee ka m ga-aga pụọ n’mmụọ Gị? Ebee ka m ga-agba ọsọ pụọ n’ihu Gị?",
+      "Ọ bụrụ na m arịgo eluigwe, Ị nọ ebe ahụ.",
+      "Ọ bụrụ na m were ala mmụọ bụrụ akwa m, lee, Ị nọ ebe ahụ.",
+      "Ọ bụrụ na m were nku nke ụtụtụ, biri n’ókè osimiri dị anya,",
+      "N’ebe ahụ ka aka Gị ga-edu m, aka nri Gị ga-ejide m.",
+      "Ọ bụrụ na m asị, n’eziokwu ọchịchịrị ga-ekpuchi m, ọbụna abalị ga-abụ ọkụ gbara m gburugburu.",
+      "Ee, ọchịchịrị anaghị ezoro Gị ezo; abalị na-enwu dịka ụbọchị; ọchịchịrị na ìhè bụ otu n’ebe Gị nọ.",
+      "Aga m eto Gị; n’ihi na e kere m n’ụzọ dị egwu ma dị ebube: ọrụ Gị dị ebube, mkpụrụ obi m makwaara nke ọma.",
+      "Echiche Gị dị oké ọnụ ahịa nye m, Chineke! Olee otú ọnụ ọgụgụ ha siri ukwuu!",
+      "Nyochaa m, Chineke, mara obi m; nwalee m, mara echiche m.",
+      "Hụ ma e nwere ụzọ ọjọọ n’ime m, duru m n’ụzọ ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR13',
+    title: "Ofufe Nabata",
+    scripture: "Psalm 24; John 4:23-24",
+    verses: [
+      "Ụwa bụ nke Jehova, na ihe niile dị n’ime ya; ụwa na ndị bi na ya.",
+      "N’ihi na O guzobere ya n’elu oke osimiri, kwadokwa ya n’elu mmiri.",
+      "Ònye ga-arịgo ugwu Jehova? Ònye ga-eguzo n’ebe Ya dị nsọ?",
+      "Onye nwere aka dị ọcha na obi dị ọcha; onye na-ebulighị mkpụrụ obi ya nye ihe efu, ma ọ bụ ịṅụ iyi ụgha.",
+      "Ọ ga-anata ngọzi n’aka Jehova, na ezi omume n’aka Chineke nke nzọpụta ya.",
+      "Nke a bụ ọgbọ nke ndị na-achọ Ya, ndị na-achọ ihu Gị, Jekọb.",
+      "Bulie isi unu, unu ọnụ ụzọ ámá; buliekwa onwe unu elu, unu ọnụ ụzọ ebighị ebi; ka Eze ebube bịa n’ime.",
+      "Ònye bụ Eze ebube a?",
+      "Jehova dị ike na ike; Jehova dị ike n’agha.",
+      "Bulie isi unu, unu ọnụ ụzọ ámá; buliekwa onwe unu elu, unu ọnụ ụzọ ebighị ebi; ka Eze ebube bịa n’ime.",
+      "Ònye bụ Eze ebube a?",
+      "Jehova nke ndị agha, Ọ bụ Eze ebube ahụ.",
+      "Ma oge na-abịa, ugbu a kwa ọ bụ, mgbe ndị na-efe ofufe n’eziokwu ga-efe Nna ofufe n’ime mmụọ na n’eziokwu; n’ihi na Nna na-achọ ndị dị otu a ka ha feere Ya ofufe.",
+      "Chineke bụ Mmụọ; ndị na-efe ofufe Ya kwesịrị ife Ya ofufe n’ime mmụọ na n’eziokwu."
+    ]
+  },
+  {
+    id: 'IRR14',
+    title: "Ugwu Mmadu",
+    scripture: "Psalm 8; 1 John 3:1-3",
+    verses: [
+      "Jehova Onyenweanyị anyị, aha Gị dị ebube n’ụwa niile! Ị debere ebube Gị n’eluigwe.",
+      "Site n’ọnụ ụmụntakịrị na ụmụ ara, Ị haziri ike n’ihi ndị iro Gị.",
+      "Mgbe m na-atụle eluigwe Gị, ọrụ mkpịsị aka Gị, ọnwa na kpakpando ndị Ị dobere,",
+      "Gịnị bụ mmadụ, ka Ị na-echeta ya? ma ọ bụ nwa mmadụ, ka Ị na-elekọta ya?",
+      "Ị mere ya ntakịrị ala karịa ndị mmụọ ozi, kpuchiekwa ya okpueze nke ebube na nsọpụrụ.",
+      "Ị mere ka o nwee ọchịchị n’elu ọrụ aka Gị;",
+      "Ị tinyere ihe niile n’okpuru ụkwụ ya: atụrụ na ehi niile, ee, anụ ọhịa nke ọhịa,",
+      "Nnụnụ nke ikuku, na azụ nke oke osimiri, na ihe niile na-agafe ụzọ oke osimiri.",
+      "Jehova Onyenweanyị anyị, aha Gị dị ebube n’ụwa niile!",
+      "Lee ụdị ịhụnanya Nna nyere anyị, ka a kpọọ anyị ụmụ Chineke.",
+      "Ndị m hụrụ n’anya, ugbu a anyị bụ ụmụ Chineke, a pụtaghịkwa ugbu a ihe anyị ga-abụ.",
+      "Ma anyị maara na mgbe Ọ ga-apụta, anyị ga-adị ka Ya; n’ihi na anyị ga-ahụ Ya dịka Ọ dị.",
+      "Onye ọ bụla nwere olileanya a n’ime ya na-eme ka onwe ya dị ọcha, dịka Ọ dị ọcha."
+    ]
+  },
+  {
+    id: 'IRR15',
+    title: "Onyenweanyị bụ Onye Ọzụzụ Atụrụ M",
+    scripture: "Psalm 23",
+    verses: [
+      "Jehova bụ onye ọzụzụ atụrụ m; agaghị m enwe ụkọ.",
+      "O na-eme ka m dinara n’ubi akwụkwọ ndụ; Ọ na-eduga m n’akụkụ mmiri dị jụụ.",
+      "O na-eme ka mkpụrụ obi m laghachi ndụ; Ọ na-eduga m n’ụzọ ezi omume n’ihi aha Ya.",
+      "Ee, ọbụna ma m na-aga n’ndagwurugwu nke onyinyo ọnwụ, agaghị m atụ egwu ihe ọjọọ; n’ihi na Ị nọnyere m; mkpanaka Gị na ọkpọkọ Gị na-akasi m obi.",
+      "Ị na-akwadebe tebụl n’ihu m n’ihu ndị iro m; Ị na-ete isi m mmanụ; iko m na-asọba.",
+      "N’eziokwu, ịdị mma na ebere ga-eso m ụbọchị ndụ m niile; aga m ebikwa n’ụlọ Jehova ruo mgbe ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR16',
+    title: "Jizọs, Enyi Anyị",
+    scripture: "Luke 15:1-2; 5:31-32; John 6:37; 15:16, 9, 13-15",
+    verses: [
+      "Mgbe ahụ ndị na-anakọta ụtụ isi na ndị mmehie niile bịakwutere Jizọs ka ha nụ Ya.",
+      "Ma ndị Farisii na ndị odeakwụkwọ na-ata ahụhụ, sị: Nwoke a na-anabata ndị mmehie, na-eso ha eri nri.",
+      "Jizọs zara ha, sị: Ndị ahụike adịghị mkpa dibịa, kama ndị ọrịa.",
+      "Abịaghị m ịkpọ ndị ezi omume, kama ndị mmehie ka ha chegharịa.",
+      "Onye na-abịa n’ebe m nọ, agaghị m achụpụ ya n’ụzọ ọ bụla.",
+      "Unu ahọpụtaghị m, kama m họpụtara unu.",
+      "Dịka Nna hụrụ m n’anya, otu ahụ ka m hụrụ unu n’anya; nọgidenụ n’ịhụnanya m.",
+      "Ọ dịghị ịhụnanya karịrị nke a: ka mmadụ nyere ndụ ya n’ihi ndị enyi ya.",
+      "Unu bụ ndị enyi m ma ọ bụrụ na unu na-eme ihe m nyere unu iwu.",
+      "Site ugbu a, anaghị m akpọ unu ndị ohu; n’ihi na ohu amaghị ihe nna ya ukwu na-eme; kama akpọrọ m unu ndị enyi, n’ihi na ihe niile m nụrụ n’aka Nna m ka m mere ka unu mara."
+    ]
+  },
+  {
+    id: 'IRR17',
+    title: "Ndidi",
+    scripture: "Psalm 27:13-14; James 1:2-4; Rom. 5:3-5; James 5:7-8",
+    verses: [
+      "A gaara m daa mba, ma ọ bụrụ na ekweghị m na m ga-ahụ ịdị mma Jehova n’ala ndị dị ndụ.",
+      "Chere Jehova; nwee obi ike, Ọ ga-eme ka obi gị sie ike; chere Jehova, ka m na-ekwu.",
+      "Ụmụnna m, gụọ ya dịka ọṅụ zuru oke mgbe unu na-abanye n’ule dị iche iche,",
+      "N’ịma na nnwale okwukwe unu na-arụpụta ndidi.",
+      "Ma ka ndidi rụchaa ọrụ ya zuru oke, ka unu wee bụrụ ndị zuru oke na ndị dum, na-enweghị ụkọ.",
+      "Anyị na-aṅụrị ọṅụ kwa n’ime mkpagbu, n’ịma na mkpagbu na-arụpụta ndidi;",
+      "Ndidi na-arụpụta ahụmahụ; ahụmahụ na-arụpụta olileanya;",
+      "Olileanya anaghị eme ka mmadụ daa mba, n’ihi na ịhụnanya Chineke awụsala n’obi anyị site n’aka Mmụọ Nsọ e nyere anyị.",
+      "Ya mere, nwee ndidi, ụmụnna, ruo n’ọbịbịa Onyenweanyị. Lee, onye ọrụ ubi na-echere mkpụrụ bara uru nke ala, na-enwe ndidi ogologo oge ruo mgbe ọ natara mmiri mbụ na nke ikpeazụ.",
+      "Unu kwa nwee ndidi; kwado obi unu; n’ihi na ọbịbịa Onyenweanyị dị nso."
+    ]
+  },
+  {
+    id: 'IRR18',
+    title: "Okwu Chineke",
+    scripture: "Psalm 119:12, 11, 14-16, 73, 105, 111; 2 Tim. 3:16-17",
+    verses: [
+      "A gọziri Gị, Jehova; kụziere m ụkpụrụ Gị.",
+      "E zoro m okwu Gị n’obi m, ka m ghara imehie megide Gị.",
+      "Anụrịla m ọṅụ n’ụzọ nke akaebe Gị, dịka n’akụ na ụba niile.",
+      "Aga m atụgharị uche n’iwu Gị, elebara ụzọ Gị anya.",
+      "Aga m enwe ụtọ n’ụkpụrụ Gị; agaghị m echefu okwu Gị.",
+      "Aka Gị kere m, mekwaa m; nye m nghọta, ka m mụta iwu Gị.",
+      "Okwu Gị bụ oriọna nye ụkwụ m, bụkwa ìhè nye ụzọ m.",
+      "Akaebe Gị ka m were dịka ihe nketa ruo mgbe ebighị ebi; n’ihi na ha bụ obi ụtọ nke obi m.",
+      "Akwụkwọ Nsọ niile sitere n’ike mmụọ nsọ Chineke, bara uru maka nkuzi, maka ịbara mba, maka ịkọziri ụzọ, maka ịzụlite n’ezi omume,",
+      "Ka mmadụ Chineke wee zuo oke, kwadebere nke ọma maka ọrụ ọma niile."
+    ]
+  },
+  {
+    id: 'IRR19',
+    title: "Ido Nsọ",
+    scripture: "Gal. 5:22-23; Rom. 8:12-14; 6:12-14",
+    verses: [
+      "Ma mkpụrụ nke Mmụọ bụ ịhụnanya, ọṅụ, udo, ndidi ogologo, ịdị nwayọọ, ịdị mma, okwukwe, ịdị umeala n’obi, ijide onwe: megide ihe ndị a, iwu adịghị.",
+      "Ndị bụ nke Kraịst akpọgidela anụ ahụ n’obe, na agụụ na ọchịchọ ya.",
+      "Ọ bụrụ na anyị na-adị ndụ n’ime Mmụọ, ka anyị na-eje ije n’ime Mmụọ kwa.",
+      "Ya mere, ụmụnna, anyị bụ ndị ji ụgwọ, ọ bụghị nye anụ ahụ, ka anyị bie ndụ dịka anụ ahụ.",
+      "N’ihi na ọ bụrụ na unu na-adị ndụ dịka anụ ahụ, unu ga-anwụ; ma ọ bụrụ na unu site n’ime Mmụọ na-egbu ọrụ nke ahụ, unu ga-adị ndụ.",
+      "N’ihi na ndị niile Mmụọ Chineke na-eduga, ha bụ ụmụ Chineke.",
+      "Ya mere, ekwela ka mmehie chị n’ahụ unu nke na-anwụ anwụ, ka unu soro agụụ ya.",
+      "E nyefekwala akụkụ ahụ unu dịka ngwá ọrụ nke ajọ omume nye mmehie,",
+      "Kama nyefeenụ onwe unu nye Chineke, dịka ndị dị ndụ site n’ọnwụ; nyefeenụkwa akụkụ ahụ unu dịka ngwá ọrụ nke ezi omume nye Chineke.",
+      "N’ihi na mmehie agaghị achị unu: n’ihi na unu adịghị n’okpuru iwu, kama n’okpuru amara."
+    ]
+  },
+  {
+    id: 'IRR20',
+    title: "Ịhụ Ala Anyị n’Anya (Nke Ndị Kraịst)",
+    scripture: "Psalm 33:12; Prov. 14:34; Rom. 13:1-5; 1 Peter 2:13-14, 17; Matt. 22:21",
+    verses: [
+      "A gọziri mba nke Chineke ya bụ Jehova; ndị mmadụ O họpụtara ka ha bụrụ ihe nketa Ya.",
+      "Ezi omume na-ebuli mba elu; ma mmehie bụ ihere nye mmadụ ọ bụla.",
+      "Ka mkpụrụ obi ọ bụla nọrọ n’okpuru ndị ọchịchị dị elu. N’ihi na ike adịghị ma e wezụga nke Chineke; ike ndị dị, Chineke kwadoro ha.",
+      "Ya mere, onye na-emegide ike, na-emegide iwu Chineke; ndị na-emegide ga-enweta ikpe na mmejọ n’isi ha.",
+      "N’ihi na ndị ọchịchị abụghị ihe egwu nye ọrụ ọma, kama nye ihe ọjọọ. Ị chọghị ịtụ egwu ike? Mee ihe ọma, ị ga-enweta otuto n’aka ya.",
+      "N’ihi na ọ bụ onye na-ejere Chineke ozi nye gị maka ihe ọma. Ma ọ bụrụ na ị mee ihe ọjọọ, tụọ egwu; n’ihi na ọ naghị ebu mma agha n’efu: ọ bụ onye na-ejere Chineke ozi, onye na-akwụ ụgwọ iwe n’ahụ onye na-eme ihe ọjọọ.",
+      "Ya mere, unu ga-adị n’okpuru ya, ọ bụghị naanị n’ihi iwe, kamakwa n’ihi akọ na uche.",
+      "Nyefeenụ onwe unu n’okpuru iwu mmadụ ọ bụla n’ihi Onyenweanyị:",
+      "Ma ọ bụ eze dịka onye kachasị elu; ma ọ bụ ndị ọchịchị dịka ndị e zitere ya, ka ha kpaa ndị na-eme ihe ọjọọ ikpe, ma too ndị na-eme ihe ọma.",
+      "Sọpụrụ mmadụ niile. Hụnụ ndị ụmụnna n’anya. Tụọ Chineke egwu. Sọpụrụ eze.",
+      "Ya mere, nyefeenụ Siza ihe bụ nke Siza, nyefeenụ Chineke ihe bụ nke Chineke."
+    ]
+  },
+  {
+    id: 'IRR21',
+    title: "Ndị Ndú Ụka Dị Mma",
+    scripture: "Eph. 4:11-12; 1 Tim. 4:11-16; 2 Tim. 1:13; 2 Cor. 4:7; 1 Peter 4:10",
+    verses: [
+      "O nyere ụfọdụ ka ha bụrụ ndịozi; ụfọdụ ndị amụma; ụfọdụ ndị mgbasa oziọma; ụfọdụ ndị ụkọchukwu na ndị nkuzi.",
+      "Maka ime ka ndị nsọ zuo oke, maka ọrụ ije ozi, maka iwulite ahụ Kraịst.",
+      "Ihe ndị a nye iwu ma kụziere. Ka mmadụ ọ bụla ghara ileda nwata gị anya; kama bụrụ ihe atụ nye ndị kwere ekwe, n’okwu, n’omume, n’ịhụnanya, n’mmụọ, n’okwukwe, n’ịdị ọcha.",
+      "Ruo mgbe m ga-abịa, lekọta ịgụ akwụkwọ, ịgba ume, na nkuzi.",
+      "Echefula onyinye dị n’ime gị, nke e nyere gị site n’amụma, na itinye aka nke ndị okenye ụka.",
+      "Tụgharịa uche n’ihe ndị a; nye onwe gị dum n’ime ha, ka mmụba gị pụta ìhè nye mmadụ niile.",
+      "Chebara onwe gị na nkuzi echiche; nọgide n’ime ha; n’ihi na site n’ime nke a, ị ga-azọpụta onwe gị na ndị na-anụ gị.",
+      "Gụọ akwụkwọ ka i gosi onwe gị onye nabatara n’ihu Chineke, onye ọrụ na-enweghị ihere, na-ekewa okwu eziokwu nke ọma.",
+      "Ma anyị nwere akụ a n’ime ite ụrọ, ka ịdị ukwuu nke ike ahụ bụrụ nke Chineke, ọ bụghị nke anyị.",
+      "Dịka onye ọ bụla natara onyinye, otu a ka o si jeere ibe ya ozi, dịka ndị nlekọta ọma nke amara Chineke nke dị ọtụtụ ụzọ."
+    ]
+  },
+  {
+    id: 'IRR22',
+    title: "Onyenweanyị Ike M",
+    scripture: "Psalm 27:1-8, 13-14",
+    verses: [
+      "Jehova bụ ìhè m na nzọpụta m; ònye ka m ga-atụ egwu?",
+      "Jehova bụ ike nke ndụ m; ònye ka m ga-atụ ụjọ?",
+      "Mgbe ndị ajọ mmadụ, ndị iro m na ndị na-achọ m, bịara iri anụ m, ha sịrịsịrị wee daa.",
+      "Ọ bụ ezie na ọtụtụ agha ga-ama ụlọikwuu megide m, obi m agaghị atụ egwu.",
+      "Ọ bụ ezie na agha ga-ebili megide m, n’ime nke a ka m ga-atụkwasị obi.",
+      "Otu ihe ka m rịọrọ Jehova, nke ahụ ka m ga-achọ:",
+      "Ka m nwee ike ibi n’ụlọ Jehova ụbọchị ndụ m niile, ịhụ mma Jehova, ịjụkwa ajụjụ n’ụlọ nsọ Ya.",
+      "N’ihi na n’oge nsogbu, Ọ ga-ezo m n’ụlọ ya;",
+      "N’ime ebe zoro ezo nke ụlọikwuu Ya ka Ọ ga-ezo m; Ọ ga-ebuli m n’elu nkume.",
+      "Ugbu a, isi m ga-ebuli elu karịa ndị iro m gburugburu m:",
+      "Ya mere, aga m enye àjà ọṅụ n’ụlọikwuu Ya;",
+      "Aga m abụ, ee, aga m abụ otuto nye Jehova.",
+      "Nụrụ, Jehova, mgbe m na-eti mkpu n’olu m: mere m ebere, zaa m.",
+      "Mgbe Ị kwuru, Chọọ ihu m; obi m sịrị Gị: Hụ Gị, Jehova, ka m ga-achọ.",
+      "A gaara m daa mba, ma ọ bụrụ na ekweghị m na m ga-ahụ ịdị mma Jehova n’ala ndị dị ndụ.",
+      "Chere Jehova; nwee obi ike, Ọ ga-eme ka obi gị sie ike; chere Jehova, ka m na-ekwu."
+    ]
+  },
+  {
+    id: 'IRR23',
+    title: "Ngọzi (Beatitudes)",
+    scripture: "Matt. 5:1-12",
+    verses: [
+      "Mgbe Jizọs hụrụ ọtụtụ mmadụ, Ọ rịgoro n’ugwu; mgbe Ọ nọdụrụ ala, ndị na-eso ụzọ Ya bịakwutere Ya.",
+      "O meghere ọnụ Ya, kụziere ha, sị:",
+      "A gọziri ndị ogbenye n’mmụọ, n’ihi na nke ha bụ alaeze eluigwe.",
+      "A gọziri ndị na-ebe ákwá, n’ihi na a ga-akasi ha obi.",
+      "A gọziri ndị dị nwayọọ, n’ihi na ha ga-eketa ụwa.",
+      "A gọziri ndị agụụ na-akụ na ndị akpịrị na-akụ maka ezi omume, n’ihi na a ga-eju ha afọ.",
+      "A gọziri ndị nwere ebere, n’ihi na a ga-emere ha ebere.",
+      "A gọziri ndị obi ha dị ọcha, n’ihi na ha ga-ahụ Chineke.",
+      "A gọziri ndị na-eme udo, n’ihi na a ga-akpọ ha ụmụ Chineke.",
+      "A gọziri ndị a na-emegbu n’ihi ezi omume, n’ihi na nke ha bụ alaeze eluigwe.",
+      "A gọziri unu mgbe mmadụ ga-akparị unu, kpagbuo unu, kwuo ihe ọjọọ niile megide unu n’ụgha n’ihi m.",
+      "Ṅụrịa ọṅụ, nwee obi ụtọ nke ukwuu; n’ihi na ụgwọ ọrụ unu dị ukwuu n’eluigwe: otu a ka ha si kpagbuo ndị amụma ndị nọ tupu unu."
+    ]
+  },
+  {
+    id: 'IRR24',
+    title: "Chineke, Ebe Obibi Anyị",
+    scripture: "Psalm 90:1-12",
+    verses: [
+      "Onyenweanyị, Ị bụ ebe obibi anyị n’ọgbọ niile.",
+      "Tupu a mụọ ugwu, ma ọ bụ tupu Ị kee ụwa na ụwa, site n’ebighị ebi ruo n’ebighị ebi, Ị bụ Chineke.",
+      "Ị na-eme ka mmadụ laghachi n’uzuzu, sị: Laghachinụ, ụmụ mmadụ.",
+      "N’ihi na puku afọ n’anya Gị dị ka ụnyaahụ mgbe ọ gafere, dịkwa ka nche n’abalị.",
+      "Ị na-eburu ha pụọ dịka idei mmiri; ha dị ka ụra; n’ụtụtụ ha dị ka ahịhịa na-eto.",
+      "N’ụtụtụ ọ na-ama mma ma na-eto; n’abalị a na-egbutu ya, ọ na-akpọnwụ.",
+      "N’ihi na iwe Gị na-ere anyị; ọnụma Gị na-atụ anyị egwu.",
+      "Ị tinyere ajọ omume anyị n’ihu Gị, mmehie zoro ezo anyị n’ìhè ihu Gị.",
+      "N’ihi na ụbọchị anyị niile na-agafe n’ime iwe Gị; anyị na-agwụ afọ anyị dịka akụkọ e kwuru.",
+      "Ụbọchị afọ anyị bụ iri asaa; ma ọ bụrụ na n’ihi ike ha bụrụ iri asatọ, ọbụna nke ahụ bụ ọrụ ike na mwute; n’ihi na ọ na-apụ ngwa ngwa, anyị na-efe efe.",
+      "Ònye maara ike nke iwe Gị? Dịka ịtụ egwu Gị si dị, otu a ka ọnụma Gị si dị.",
+      "Ya mere, kụziere anyị ịgụ ụbọchị anyị, ka anyị tinye obi anyị n’amamihe."
+    ]
+  },
+  {
+    id: 'IRR25',
+    title: "Ọgbụgba Ama Ndị A Gbapụtara",
+    scripture: "Psalm 107:1-8, 11-13, 20-21",
+    verses: [
+      "Keleenụ Jehova, n’ihi na Ọ dị mma; n’ihi na ebere Ya na-adịru mgbe ebighị ebi.",
+      "Ka ndị Jehova gbapụtara kwuo otú ahụ, ndị Ọ gbapụtara n’aka onye iro; kpokọta ha n’ala, site n’ọwụwa anyanwụ na ọdịda anyanwụ, site n’ugwu na ndịda.",
+      "Ha ṣịsịrị n’ọzara n’ụzọ ndị mmadụ anaghị aga; ha ahụghị obodo ka ha biri.",
+      "Agụụ na akpịrị kụwara ha; mkpụrụ obi ha na-ada mba n’ime ha.",
+      "Mgbe ahụ, ha kporo Jehova n’oge nsogbu ha, Ọ napụtara ha n’ime nsogbu ha.",
+      "O duru ha n’ụzọ ziri ezi, ka ha ruo n’obodo ebe a ga-ebi.",
+      "Ka mmadụ too Jehova n’ihi ịdị mma Ya, na n’ihi ọrụ ebube Ya nye ụmụ mmadụ!",
+      "N’ihi na ha jụrụ okwu Chineke, leghara ndụmọdụ Onye Kasị Elu anya.",
+      "Ya mere, O wedara obi ha ala n’ọrụ ike; ha dara, o nweghị onye nyere aka.",
+      "Mgbe ahụ, ha kporo Jehova n’oge nsogbu ha, Ọ zọpụtara ha n’ime nsogbu ha.",
+      "O zipụrụ okwu Ya, gwọọ ha, napụta ha n’ime mbibi ha.",
+      "Ka mmadụ too Jehova n’ihi ịdị mma Ya, na n’ihi ọrụ ebube Ya nye ụmụ mmadụ!"
+    ]
+  },
+  {
+    id: 'IRR26',
+    title: "Bụrụ Jehova Abụ",
+    scripture: "Psalm 96",
+    verses: [
+      "Bụrụ Jehova abụ ọhụrụ; bụọrọ Jehova abụ, ụwa niile.",
+      "Bụrụ Jehova abụ, gọzie aha Ya; kwupụta nzọpụta Ya kwa ụbọchị.",
+      "Kọwaa ebube Ya n’etiti mba; ọrụ ebube Ya n’etiti mmadụ niile.",
+      "N’ihi na Jehova dị ukwuu, a ga-etokwa Ya nke ukwuu: a ga-atụ Ya egwu karịa chi niile.",
+      "N’ihi na chi niile nke mba bụ arụsị; ma Jehova kere eluigwe.",
+      "Nsọpụrụ na ịdị ebube dị n’ihu Ya; ike na mma dị n’ebe nsọ Ya.",
+      "Nyenụ Jehova, unu ezinụlọ nke ndị mmadụ, nyenụ Jehova ebube na ike.",
+      "Nyenụ Jehova ebube kwesịrị aha Ya; wetanụ onyinye, bịa n’ogige Ya.",
+      "Feenụ Jehova ofufe n’ịma mma nke ịdị nsọ; tụọ Ya egwu, ụwa niile.",
+      "Kwuanụ n’etiti mba na Jehova na-achị eze:",
+      "A ga-eme ka ụwa guzosie ike, a gaghị eme ka ọ kwaga: Ọ ga-ekpe ndị mmadụ ikpe n’ezi omume.",
+      "Ka eluigwe ṅụrịa ọṅụ, ka ụwa nwekwaa obi ụtọ; ka oke osimiri tie mkpu, na ihe niile dị n’ime ya.",
+      "Ka ubi nwee obi ụtọ, na ihe niile dị n’ime ya; mgbe ahụ osisi ọhịa niile ga-aṅụrị ọṅụ n’ihu Jehova:",
+      "N’ihi na Ọ na-abịa ikpee ụwa ikpe: Ọ ga-ekpe ụwa ikpe n’ezi omume, ndị mmadụ kwa n’eziokwu Ya."
+    ]
+  },
+  {
+    id: 'IRR27',
+    title: "Aga M Kwụ Ọrụ M",
+    scripture: "Psalm 116",
+    verses: [
+      "Ahụrụ m Jehova n’anya, n’ihi na Ọ nụrụ olu m na arịrịọ m.",
+      "N’ihi na O weere ntị Ya mee m, ya mere aga m akpọ Ya ogologo ụbọchị ndụ m.",
+      "Jehova bụ onye ebere na onye ezi omume; ee, Chineke anyị bụ onye ebere.",
+      "Jehova na-echekwa ndị dị mfe; e wedara m ala, Ọ nyere m aka.",
+      "Laghachi n’izuike gị, mkpụrụ obi m; n’ihi na Jehova emeerela gị ihe ọma.",
+      "N’ihi na Ị napụtara mkpụrụ obi m n’ọnwụ, anya m n’anya mmiri, ụkwụ m n’ịdaba.",
+      "Gịnị ka m ga-akwụ Jehova maka uru Ya niile nye m?",
+      "Aga m eburu iko nzọpụta, kpọọ aha Jehova. Aga m akwụ ọrụ m nye Jehova ugbu a n’ihu ndị Ya niile.",
+      "Ọnwụ ndị nsọ Ya dị oké ọnụ ahịa n’anya Jehova.",
+      "Jehova, n’eziokwu abụ m ohu Gị; abụ m ohu Gị, nwa nke ohu nwanyị Gị: Ị tọhapụrụ agbụ m.",
+      "Aga m enye Gị àjà ekele, kpọọ aha Jehova.",
+      "Aga m akwụ ọrụ m nye Jehova ugbu a n’ihu ndị Ya niile, n’ogige ụlọ Jehova, n’etiti gị, Jerusalem. Toonụ Jehova."
+    ]
+  },
+  {
+    id: 'IRR28',
+    title: "Hụnụ Ibe Unu n’Anya",
+    scripture: "John 13:34-35; Eph. 4:31 to 5:2; 1 John 3:14-18; 4:7",
+    verses: [
+      "Iwu ọhụrụ ka m na-enye unu: ka unu hụ ibe unu n’anya; dịka m hụrụ unu n’anya, ka unu kwa hụ ibe unu n’anya.",
+      "Site n’ime nke a ka mmadụ niile ga-ama na unu bụ ndị na-eso ụzọ m, ma ọ bụrụ na unu nwere ịhụnanya n’ebe ibe unu nọ.",
+      "Ka ilu ilu niile, iwe, ọnụma, mkpọtụ, okwu ọjọọ, ka ewepụ ya n’ime unu, na ajọ obi niile.",
+      "Ma bụrụrịanụ ndị ọma n’ebe ibe unu nọ, obi ebere, na-agbaghara ibe unu, dịka Chineke gbara unu mgbaghara n’ihi Kraịst.",
+      "Ya mere, bụrụnụ ndị na-eso Chineke, dịka ụmụ a hụrụ n’anya; jeenụ ije n’ịhụnanya dịka Kraịst hụrụ anyị n’anya, nyere onwe Ya n’ihi anyị.",
+      "Anyị maara na anyị si n’ọnwụ gafee n’ime ndụ, n’ihi na anyị hụrụ ụmụnna n’anya.",
+      "Onye na-adịghị ahụ nwanne ya n’anya, nọgide n’ọnwụ.",
+      "Onye ọ bụla na-asị nwanne ya asị bụ onye ogbu mmadụ; unu makwaara na onye ogbu mmadụ enweghị ndụ ebighị ebi bi n’ime ya.",
+      "Site n’ime nke a ka anyị siri mata ịhụnanya Chineke: n’ihi na O nyere ndụ Ya n’ihi anyị; anyị kwa kwesịrị inye ndụ anyị n’ihi ụmụnna.",
+      "Ma onye ọ bụla nwere akụ nke ụwa a, hụ nwanne ya mkpa, mechie obi ebere ya n’ebe ya nọ, olee otú ịhụnanya Chineke si bi n’ime ya?",
+      "Ụmụ m nta, ka anyị ghara ịhụ n’anya n’okwu ma ọ bụ n’ire, kama n’omume na n’eziokwu.",
+      "Ndị m hụrụ n’anya, ka anyị hụ ibe anyị n’anya; n’ihi na ịhụnanya sitere n’aka Chineke; onye ọ bụla hụrụ n’anya amụrụla site n’aka Chineke, ma mara Chineke."
+    ]
+  },
+  {
+    id: 'IRR29',
+    title: "Onye Na-eso Chineke",
+    scripture: "Psalms 1; 15",
+    verses: [
+      "A gọziri nwoke nke na-ejeghị ije n’ndụmọdụ ndị ajọ mmadụ, ma ọ bụ guzo n’ụzọ ndị mmehie, ma ọ bụ nọdụ n’oche ndị na-akparị mmadụ.",
+      "Kama obi ụtọ ya dị n’iwu Jehova; n’iwu Ya ka ọ na-atụgharị uche ehihie na abalị.",
+      "Ọ ga-adị ka osisi a kụrụ n’akụkụ osimiri, nke na-amị mkpụrụ n’oge ya; akwụkwọ ya agaghị akpọnwụ; ihe ọ bụla o mere ga-aga nke ọma.",
+      "Ndị ajọ mmadụ adịghị otú ahụ: kama ha dị ka ntụ ọka ọkụkụ nke ifufe na-achụpụ.",
+      "Ya mere, ndị ajọ mmadụ agaghị eguzo n’ime ikpe, ma ọ bụ ndị mmehie n’ọgbakọ ndị ezi omume.",
+      "N’ihi na Jehova maara ụzọ ndị ezi omume; ma ụzọ ndị ajọ mmadụ ga-ala n’iyi.",
+      "Jehova, ònye ga-ebi n’ụlọikwuu Gị? Ònye ga-ebi n’ugwu Gị dị nsọ?",
+      "Onye na-eje ije n’ụzọ kwụ ọtọ, na-arụ ezi omume, na-ekwu eziokwu n’obi ya.",
+      "Onye na-adịghị asịrị mmadụ n’ire ya, ma ọ bụ eme ihe ọjọọ n’ebe onye agbata obi ya nọ, ma ọ bụ ebuli okwu ịkparị megide onye agbata obi ya.",
+      "Onye na-aṅụ iyi ọbụna ma ọ na-emerụ ya, ma na-agbanweghi. Onye na-eme ihe ndị a agaghị emegharị emegharị."
+    ]
+  },
+  {
+    id: 'IRR30',
+    title: "Chineke bụ Nchebe Anyị",
+    scripture: "Psalm 91:1-6, 9-13, 14-16",
+    verses: [
+      "Onye bi n’ebe zoro ezo nke Onye Kasị Elu ga-anọ n’okpuru onyinyo Onye Pụrụ Ime Ihe Niile.",
+      "Aga m asị maka Jehova: Ọ bụ ebe mgbaba m na ebe e wusiri ike m; Chineke m; n’ime Ya ka m ga-atụkwasị obi.",
+      "N’eziokwu, Ọ ga-anapụta gị n’ime ọnyà onye na-achụ nta, na n’ime ọrịa na-ebibi.",
+      "Ọ ga-ekpuchi gị n’akụkụ nku Ya, n’okpuru nku Ya ka ị ga-atụkwasị obi.",
+      "Eziokwu Ya ga-abụ ọta na ngwá agha gị.",
+      "Ị gaghị atụ egwu egwu abalị, ma ọ bụ ube na-efe n’ehihie,",
+      "Ma ọ bụ ọrịa na-eje ije n’ọchịchịrị, ma ọ bụ mbibi na-emebi n’ehihie.",
+      "N’ihi na i mere Jehova, bụ ebe mgbaba m, ọbụna Onye Kasị Elu, ka ọ bụrụ ebe obibi gị,",
+      "Ihe ọjọọ agaghị abịa n’ebe gị; ọrịa ọ bụla agaghị abịa nso ụlọ gị.",
+      "N’ihi na Ọ ga-enye ndị mmụọ ozi Ya iwu gbasara gị, ka ha chekwaa gị n’ụzọ gị niile.",
+      "Ha ga-ebuli gị n’aka ha, ka ụkwụ gị ghara ịkụda n’elu nkume.",
+      "N’ihi na o tinyela ịhụnanya ya n’ebe m nọ, ya mere aga m anapụta ya.",
+      "Aga m nọnyere ya n’oge nsogbu; aga m anapụta ya, gọzie ya.",
+      "Aga m eju ya afọ n’ogologo ndụ, gosi ya nzọpụta m."
+    ]
+  },
+  {
+    id: 'IRR31',
+    title: "Ịzere Ịṅụbiga Mmanya Ókè",
+    scripture: "Prov. 20:1; 23:20-21, 29-32; Luke 21:34; Rom. 13:13-14; 14:13; Eph. 5:18",
+    verses: [
+      "Mmanya bụ onye na-akwa emo, ihe ọṅụṅụ siri ike na-eme mkpọtụ; onye ọ bụla e dọọrọ ya n’ụzọ ya abụghị onye amamihe.",
+      "Unu esonyela ndị na-aṅụ mmanya nke ukwuu; ma ọ bụ ndị na-eri anụ n’ụzọ nrụ.",
+      "N’ihi na onye aṅụbiga mmanya ókè na onye na-eri nri nke ukwuu ga-abata n’ogbenye; ụra ga-eyiri mmadụ uwe agbajiri agbaji.",
+      "Ònye nwere ahụhụ? ònye nwere mwute? ònye nwere esemokwu? ònye na-ekwu okwu efu? ònye nwere ọnyá n’enweghị ihe kpatara ya? ònye nwere anya uhie?",
+      "Ndị na-anọ ogologo oge n’mmanya; ndị na-aga ịchọ mmanya agwakọrọ agwakọ.",
+      "E lekwala mmanya anya mgbe ọ bụ uhie, mgbe o na-enye agba ya n’iko, mgbe o na-agagharị nke ọma.",
+      "N’ọgwụgwụ, ọ na-ata dịka agwọ, na-agba nsí dịka ajụ.",
+      "Chebaranụ onwe unu echiche, ka obi unu ghara ibu arọ n’iri nri nke ukwuu, n’ịṅụbiga mmanya ókè, na nchegbu ndụ a, ka ụbọchị ahụ ghara ịbịakwute unu n’ụzọ mberede.",
+      "Ka anyị jee ije n’ụzọ kwesịrị ekwesị, dịka n’ehihie; ọ bụghị n’ọgba aghara na mmanya, ọ bụghị n’ime mmehie mmekọahụ na agụụ anụ ahụ, ọ bụghị n’esemokwu na ekworo.",
+      "Kama yikwasịnụ Onyenweanyị Jizọs Kraịst, unu emekwala atụmatụ maka anụ ahụ iji mezuo agụụ ya.",
+      "Ya mere, ka anyị ghara ikpe ibe anyị ikpe ọzọ; kama kpebie nke a, ka mmadụ ghara itinye ihe mgbochi ma ọ bụ ihe ịdaba n’ụzọ nwanne ya.",
+      "Unu aṅụla mmanya ruo n’ịjọọ; kama jupụtanụ n’ime Mmụọ."
+    ]
+  },
+  {
+    id: 'IRR32',
+    title: "Ikwupụta Kraịst",
+    scripture: "Matt. 16:13-18; Rom. 10:9-10; John 6:66-69",
+    verses: [
+      "Mgbe Jizọs bịara n’ógbè Sizaia Filipi, Ọ jụrụ ndị na-eso ụzọ Ya, sị: Ònye ka mmadụ na-asị na m, Ọkpara nke mmadụ, bụ?",
+      "Ha sịrị: Ụfọdụ na-asị na Ị bụ Jọn onye baptizim; ụfọdụ Ịlaịja; ndị ọzọ Jeremaịa, ma ọ bụ otu n’ime ndị amụma.",
+      "Ọ sịrị ha: Ma unu, ònye ka unu na-asị na m bụ?",
+      "Saimọn Pita zara, sị: Ị bụ Kraịst, Ọkpara Chineke dị ndụ.",
+      "Jizọs zara ya, sị: A gọziri gị, Saimọn Bajuona; n’ihi na anụ ahụ na ọbara ekpugheghị nke a nye gị, kama Nna m nọ n’eluigwe.",
+      "Aga m asịkwa gị: Ị bụ Pita, n’elu nkume a ka m ga-ewu ụka m; ọnụ ụzọ ala mmụọ agaghị emeri ya.",
+      "Ọ bụrụ na i kwupụta n’ọnụ gị na Jizọs bụ Onyenweanyị, kwere n’obi gị na Chineke kpọlitere Ya n’ọnwụ, a ga-azọpụta gị.",
+      "N’ihi na mmadụ na-ekwere n’obi ya ruo n’ezi omume; na n’ọnụ ya ka o si ekwu nkwupụta ruo nzọpụta.",
+      "Site n’oge ahụ, ọtụtụ ndị na-eso ụzọ Ya laghachiri azụ, ha ejeghịkwa ije ọzọ na Ya.",
+      "Jizọs sịrị ndị iri na abụọ ahụ: Unu kwa, unu chọrọ ịga?",
+      "Saimọn Pita zara Ya, sị: Onyenweanyị, ònye ka anyị ga-agakwuru? Ị nwere okwu ndụ ebighị ebi.",
+      "Anyị ekwere ma mara n’eziokwu na Ị bụ Kraịst, Ọkpara Chineke dị ndụ."
+    ]
+  },
+  {
+    id: 'IRR33',
+    title: "Onye Kraịst Na-eto Eto",
+    scripture: "Luke 2:52; 2 Peter 1:3-7; Phil. 3:13-15; Col. 1:9-10; 2 Peter 3:18",
+    verses: [
+      "Jizọs na-eto n’amamihe na n’ahụ, na n’amasị Chineke na mmadụ.",
+      "Na-arụsi ọrụ ike, tinye n’okwukwe unu ezi omume; tinye n’ezi omume amamihe;",
+      "Tinye n’amamihe ijide onwe; tinye n’ijide onwe ndidi; tinye n’ndidi ịdị nsọ; ",
+      "Tinye n’ịdị nsọ ịhụnanya ụmụnna; tinye n’ịhụnanya ụmụnna ịhụnanya.",
+      "Ụmụnna, anaghị m agụ onwe m dịka m jidere ya: ma otu ihe ka m na-eme, na-echefu ihe ndị dị n’azụ, na-agbatị aka ruo ihe ndị dị n’ihu,",
+      "Aga m aga n’ihu ruo akara ahụ maka nrite nke oku eluigwe Chineke n’ime Kraịst Jizọs.",
+      "Ya mere, ka anyị, ndị niile tozuru etozu, nwee uche a; ma ọ bụrụ na unu nwere uche ọzọ n’ihe ọ bụla, Chineke ga-ekpughe ya nye unu.",
+      "N’ihi nke a kwa, site n’ụbọchị anyị nụrụ ya, anyị akwụsịghị ikpe ekpere n’ihi unu, na-arịọ ka unu jupụta n’amamihe na nghọta ime mmụọ, n’ịma uche Ya,",
+      "Ka unu jee ije nke kwesịrị Onyenweanyị n’ime ihe niile na-atọ Ya ụtọ, na-amị mkpụrụ n’ọrụ ọma niile, na-abawanye n’ịma Chineke.",
+      "Tọnụ n’amara, na n’ịma Onyenweanyị anyị na Onye nzọpụta anyị Jizọs Kraịst. Otuto dịrị Ya ugbu a na ruo mgbe ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR34',
+    title: "Oziọma",
+    scripture: "1 Cor. 15:1-4; John 3:16; 2 Cor. 5:17-20; Rom. 1:16-17",
+    verses: [
+      "Ana m ekwupụta unu oziọma m kwusara unu, nke unu natakwara, nke unu guzosikwara ike n’ime ya.",
+      "Site n’ime ya kwa ka a na-azọpụta unu, ma ọ bụrụ na unu jide ihe m kwusara unu ike; ma e wezụga na unu kweere n’efu.",
+      "N’ihi na m nyefere unu mbụ ihe m natara: na Kraịst nwụrụ n’ihi mmehie anyị dịka Akwụkwọ Nsọ si dị,",
+      "Na a liri Ya, na Ọ biliri n’ọnwụ n’ụbọchị nke atọ dịka Akwụkwọ Nsọ si dị.",
+      "N’ihi na Chineke hụrụ ụwa n’anya otú a, na O nyere Ọkpara Ya nke ọ mụrụ naanị ya, ka onye ọ bụla kwere n’ime Ya ghara ịla n’iyi, kama nwee ndụ ebighị ebi.",
+      "Ya mere, ọ bụrụ na onye ọ bụla nọ n’ime Kraịst, ọ bụ ihe e kere ọhụrụ: ihe ochie agafela; lee, ihe niile aghọwo ọhụrụ.",
+      "Ihe niile sitere n’aka Chineke, onye kpara anyị udo na Ya site n’aka Jizọs Kraịst, nyekwa anyị ozi nke ime ka mmadụ na Chineke bụrụ enyi ọzọ.",
+      "Ya bụ, na Chineke nọ n’ime Kraịst, na-eme ka ụwa na Ya bụrụ enyi, na-agụghị mmejọ ha; nyefekwaara anyị okwu nke ime ka mmadụ na Chineke bụrụ enyi. Ya mere, anyị bụ ndị nnọchi anya Kraịst: mee ka unu na Chineke dị n’udo.",
+      "N’ihi na anaghị m eme ihere n’ihi oziọma Kraịst; n’ihi na ọ bụ ike Chineke maka nzọpụta nye onye ọ bụla kwere; nye Juu mbụ, nye Gris kwa.",
+      "N’ihi na n’ime ya ka a na-ekpughe ezi omume Chineke site n’okwukwe ruo n’okwukwe; dịka e dere: Onye ezi omume ga-adị ndụ site n’okwukwe."
+    ]
+  },
+  {
+    id: 'IRR35',
+    title: "Ụka",
+    scripture: "Matt. 16:18-19; Acts 2:41-42, 47; 1 Cor. 12:27, 13; Eph. 4:11-13; Col. 1:18",
+    verses: [
+      "Aga m asịkwa gị: Ị bụ Pita, n’elu nkume a ka m ga-ewu ụka m; ọnụ ụzọ ala mmụọ agaghị emeri ya.",
+      "Aga m enye gị igodo alaeze eluigwe: ihe ọ bụla i kegidere n’ụwa, a ga-ekekọkwa ya n’eluigwe; ihe ọ bụla i tọhapụrụ n’ụwa, a ga-atọhapụkwa ya n’eluigwe.",
+      "Mgbe ahụ, ndị nabatara okwu Ya n’ọṅụ ka e baptiziri; n’otu ụbọchị ahụ, e gbakwunyere ihe dị ka puku atọ mkpụrụ obi.",
+      "Ha nọgidere n’ozizi ndịozi na n’mmekọrịta, na n’ịgba achịcha, na n’ekpere.",
+      "Onyenweanyị na-agbakwunye kwa ụbọchị ndị a ga-azọpụta n’ime ụka.",
+      "Ugbu a, unu bụ ahụ Kraịst, unu bụkwa akụkụ ya n’otu n’otu. Dịka ahụ bụ otu, ma nwee ọtụtụ akụkụ; otu a ka Kraịst dị.",
+      "O nyere ụfọdụ ka ha bụrụ ndịozi; ụfọdụ ndị amụma; ụfọdụ ndị mgbasa oziọma; ụfọdụ ndị ụkọchukwu na ndị nkuzi.",
+      "Maka ime ka ndị nsọ zuo oke, maka ọrụ ije ozi, maka iwulite ahụ Kraịst.",
+      "Ruo mgbe anyị niile ga-abịa n’otu okwukwe na n’ịma Ọkpara Chineke, ruo onye zuru oke, ruo n’ogo nke ịdị zuru ezu Kraịst.",
+      "Ọ bụ isi nke ahụ, bụ ụka: Ọ bụ mbido, Ọkpara mbụ sitere n’ọnwụ, ka O wee bụrụ onye mbụ n’ihe niile."
+    ]
+  },
+  {
+    id: 'IRR36',
+    title: "Ọmụmụ Onye Nzọpụta Anyị",
+    scripture: "Luke 2:1, 4-14",
+    verses: [
+      "Ọ bịara n’oge ahụ na iwu si n’aka Siza Ọgọstọs pụta, ka a gụọ mmadụ niile n’ụwa.",
+      "Josef kwa si Galili, site n’obodo Nazaret, rịgoro Judia, ruo n’obodo Devid a na-akpọ Betlehem, n’ihi na o sitere n’ụlọ na agbụrụ Devid.",
+      "Ka a gụọ ya na Meri, nwunye ya a kpọrọ nkwa, onye dị ime.",
+      "Ọ bịara, mgbe ha nọ ebe ahụ, ụbọchị ruru ka o mụọ.",
+      "O mụrụ Ọkpara ya mbụ, kpuchie Ya n’akwa, tọgbọ Ya n’ime ebe a na-etinye anụ ụlọ, n’ihi na ebe adịghị ha n’ụlọ ndị ọbịa.",
+      "N’ógbè ahụ, e nwere ndị ọzụzụ atụrụ nọ n’ọhịa, na-eche atụrụ ha n’abalị.",
+      "Lee, mmụọ ozi Jehova bịakwutere ha, ebube Jehova gbaa gburugburu ha; ha tụrụ egwu nke ukwuu.",
+      "Mmụọ ozi ahụ sịrị ha: Unu atụla egwu; n’ihi na lee, ewetara m unu ozi ọma nke ọṅụ dị ukwuu, nke ga-abụ maka mmadụ niile.",
+      "N’ihi na e mụrụ unu Onye Nzọpụta taa n’obodo Devid, bụ Kraịst Onyenweanyị.",
+      "Nke a ga-abụ ihe ịrịba ama unu: unu ga-ahụ nwa ahụ a kpuchiri n’akwa, dinara n’ime ebe a na-etinye anụ ụlọ.",
+      "N’otu ntabi anya, e nwere ọtụtụ ndị agha eluigwe na mmụọ ozi ahụ, na-eto Chineke, sị:",
+      "Otuto dịrị Chineke n’eluigwe kachasị elu, n’ụwa udo, ịdị mma nye mmadụ."
+    ]
+  },
+  {
+    id: 'IRR37',
+    title: "Ebe Mgbaba na Ike",
+    scripture: "Psalm 46",
+    verses: [
+      "Chineke bụ ebe mgbaba anyị na ike; enyemaka dị nso n’oge nsogbu.",
+      "Ya mere, anyị agaghị atụ egwu, ọbụna ma ụwa kwaga, ma ugwu ebugharịa n’etiti oke osimiri;",
+      "Ọ bụ ezie na mmiri ya na-eti mkpu ma na-apụta ìsì, ọ bụ ezie na ugwu na-ama jijiji n’ihi ịgbawa ya.",
+      "E nwere osimiri; iyi ya ga-eme ka obodo Chineke ṅụrịa ọṅụ, ebe nsọ nke ụlọikwuu Onye Kasị Elu.",
+      "Chineke nọ n’etiti ya; a gaghị eme ka ọ kwaga: Chineke ga-enyere ya aka n’ụtụtụ.",
+      "Mba rụrụ arụ; alaeze kwagara: O kwuputara olu Ya, ụwa gbazee.",
+      "Jehova nke ndị agha nọnyere anyị; Chineke Jekọb bụ ebe mgbaba anyị.",
+      "Bịa, lee ọrụ Jehova, mbibi ndị Ọ mere n’ụwa.",
+      "Ọ na-eme ka agha kwụsị ruo n’ókè ụwa;",
+      "Ọ na-agbaji ụta, na-egbutu ube; Ọ na-ere ụgbọ agha ọkụ n’ọkụ.",
+      "Nọọrọ jụụ, mara na Abụ m Chineke: a ga-ebuli m elu n’etiti mba; a ga-ebuli m elu n’ụwa.",
+      "Jehova nke ndị agha nọnyere anyị; Chineke Jekọb bụ ebe mgbaba anyị."
+    ]
+  },
+  {
+    id: 'IRR38',
+    title: "Ihe Baptizim Pụtara",
+    scripture: "Matt. 3:13-17; Rom. 6:4-6, 11; Matt. 28:19-20",
+    verses: [
+      "Mgbe ahụ Jizọs si Galili bịa Jọdan n’ebe Jọn nọ, ka e baptiziri Ya.",
+      "Ma Jọn jụrụ, sị: M nwere mkpa ka i baptiziri m, Ị na-abịakwute m?",
+      "Jizọs zara, sị: Kwe ka o bụrụ otu a ugbu a; n’ihi na otu a ka ọ kwesịrị ka anyị mezuo ezi omume niile. Mgbe ahụ o kweere.",
+      "Mgbe e baptiziri Jizọs, Ọ si n’ime mmiri pụta ozugbo: lee, eluigwe meghere Ya, Ọ hụrụ Mmụọ Chineke na-adaba dịka nduru, na-abịa n’elu Ya.",
+      "Lee, olu si n’eluigwe kwuru, sị: Nke a bụ Ọkpara m hụrụ n’anya, onye obi dị m ụtọ n’ime Ya.",
+      "Ya mere, e liri anyị na Ya site n’ime baptizim n’ọnwụ, ka dịka Kraịst siri bilie n’ọnwụ site n’ebube Nna, otu a ka anyị kwa ga-eje ije n’ụzọ ndụ ọhụrụ.",
+      "N’ihi na ọ bụrụ na e jikọtara anyị na Ya n’iyi nke ọnwụ Ya, anyị ga-abụkwa n’iyi nke mbilite n’ọnwụ Ya.",
+      "N’ịma nke a, na mmadụ ochie anyị a kpọgidere Ya n’obe, ka ahụ nke mmehie wee bibie, ka anyị ghara ịbụ ohu mmehie ọzọ.",
+      "Otu a kwa, gụọnụ onwe unu dịka ndị nwụrụ anwụ nye mmehie, ma dị ndụ nye Chineke site n’aka Jizọs Kraịst Onyenweanyị anyị.",
+      "Ya mere, gaanụ, mee ka mba niile bụrụ ndị na-eso ụzọ, na-e baptiziri ha n’aha Nna, na nke Ọkpara, na nke Mmụọ Nsọ: na-akụzi ha ka ha debe ihe niile m nyere unu iwu; lee, anọ m unu mgbe niile, ruo n’ọgwụgwụ ụwa. Amen."
+    ]
+  },
+  {
+    id: 'IRR39',
+    title: "Nkwa Dị Oké Ọnụ",
+    scripture: "2 Peter 1:3-4; 1 Cor. 10:13; James 1:12, 5; John 15:7; Heb. 13:5; Phil. 4:19",
+    verses: [
+      "Ike Ya nke chi enyela anyị ihe niile metụtara ndụ na ịdị nsọ, site n’ịma Onye kpọrọ anyị n’ebube na ezi omume.",
+      "Site n’ime nke a ka e nyerela anyị nkwa dị ukwuu na nke dị oké ọnụ ahịa:",
+      "Ka site n’ime ha unu wee bụrụ ndị na-ekere òkè n’ime ọdịdị chi, ebe unu gbapụrụ n’ime mmebi dị n’ụwa n’ihi agụụ.",
+      "Ọ dịghị nnwale bịara unu ma e wezụga nke bụ ihe mmadụ na-ahụkarị:",
+      "Ma Chineke bụ onye ntụkwasị obi, Onye na-agaghị ekwe ka a nwalee unu karịa ihe unu pụrụ iburu; kama n’ime nnwale ahụ, Ọ ga-eme ụzọ mgbapụ, ka unu wee nwee ike iguzogide ya.",
+      "A gọziri nwoke na-enwe ndidi n’ime nnwale; n’ihi na mgbe a nwara ya, ọ ga-anata okpueze ndụ, nke Onyenweanyị kwere ndị na-ahụ Ya n’anya.",
+      "Ọ bụrụ na onye ọ bụla n’ime unu enweghị amamihe, ka o rịọ Chineke, Onye na-enye mmadụ niile n’ụba, na-enweghị ịba mba; a ga-enye ya.",
+      "Ọ bụrụ na unu nọgide n’ime m, okwu m nọgide n’ime unu, unu ga-arịọ ihe unu chọrọ, a ga-emere unu ya.",
+      "N’ihi na O kwuru: Agaghị m ahapụ gị, agaghị m atụfu gị.",
+      "Chineke ga-enye unu ihe unu chọrọ niile dịka akụnụba Ya si dị n’ebube n’ime Kraịst Jizọs."
+    ]
+  },
+  {
+    id: 'IRR40',
+    title: "Ọrụ",
+    scripture: "John 13:13-16; James 2:15-17; Matt. 7:12; Gal. 6:9-10; Col. 3:23-24",
+    verses: [
+      "Unu na-akpọ m Nna-ukwu na Onyenweanyị; unu kwuru nke ọma, n’ihi na otu ahụ ka m dị.",
+      "Ya mere, ọ bụrụ na m, Onyenweanyị na Nna-ukwu unu, sachara unu ụkwụ, unu kwesịkwara ịsa ibe unu ụkwụ.",
+      "N’ihi na enyela m unu ihe atụ, ka unu mee dịka m mere unu.",
+      "N’eziokwu, n’eziokwu, agwa m unu, ohu adịghị ukwuu karịa nna ya ukwu; onye e zitere adịghịkwa ukwuu karịa onye zitere ya.",
+      "Ọ bụrụ na nwanne nwoke ma ọ bụ nwanne nwanyị gba ọtọ, enweghịkwa nri ụbọchị, ma otu n’ime unu asị ha: Gaanụ n’udo, kpoo ọkụ, rie nke ọma;",
+      "Ma unu enyeghị ha ihe ahụ chọrọ maka ahụ, gịnị ka ọ bara uru?",
+      "Otu a kwa, okwukwe, ma ọ bụrụ na o nweghị ọrụ, ọ nwụrụ anwụ n’onwe ya.",
+      "Ya mere, ihe niile unu chọrọ ka mmadụ mee unu, meekwa unu otu ahụ n’ebe ha nọ: n’ihi na nke a bụ iwu na ndị amụma.",
+      "Ka anyị ghara ịgwụ ike n’ime ime ihe ọma; n’ihi na n’oge kwesịrị ekwesị anyị ga-akọ, ma ọ bụrụ na anyị akwụsịghị.",
+      "Ya mere, mgbe anyị nwere ohere, ka anyị mee ihe ọma nye mmadụ niile, karịsịa ndị nọ n’ụlọ okwukwe.",
+      "Ihe ọ bụla unu na-eme, meenu ya n’obi unu niile, dịka nye Onyenweanyị, ọ bụghị nye mmadụ.",
+      "N’ịma na n’aka Onyenweanyị ka unu ga-enweta ụgwọ ọrụ nke nketa; n’ihi na unu na-ejere Onyenweanyị Kraịst ozi."
+    ]
+  },
+  {
+    id: 'IRR41',
+    title: "Ịdị Nche n’ime Mmụọ",
+    scripture: "Mark 14:38; Rom. 13:11-12; 1 Thess. 5:2-6; 1 Tim. 6:11-12",
+    verses: [
+      "Nọrọnụ nche, kpeenụ ekpere, ka unu ghara ịbanye n’ọnwụnwa. Mmụọ dị njikere, ma anụ ahụ adịghị ike.",
+      "Abalị agafela nke ukwuu, ụbọchị dị nso: ya mere, ka anyị tụfuo ọrụ ọchịchịrị, yikwasịkwa ngwá agha nke ìhè.",
+      "Ka anyị jee ije n’ezi omume, dịka n’ehihie; ọ bụghị n’ọgba aghara na mmanya, ọ bụghị n’ime mmehie mmekọahụ na agụụ anụ ahụ, ọ bụghị n’esemokwu na ekworo.",
+      "Kama yikwasịnụ Onyenweanyị Jizọs Kraịst, unu emekwala atụmatụ maka anụ ahụ iji mezuo agụụ ya.",
+      "Ya mere, hụnụ na unu na-eje ije n’ụzọ amamihe, na-azọpụta oge.",
+      "N’ihi na unu onwe unu maara nke ọma na ụbọchị Onyenweanyị ga-abịa dịka onye ohi n’abalị.",
+      "Mgbe ha ga-asị, Udo na nchekwa; mgbe ahụ mbibi mberede ga-abịakwute ha, ha agaghịkwa agbapụ.",
+      "Ma unu, ụmụnna, unu anọghị n’ọchịchịrị, ka ụbọchị ahụ ghara ijide unu dịka onye ohi.",
+      "Unu niile bụ ụmụ ìhè na ụmụ ụbọchị.",
+      "Ya mere, ka anyị ghara ịrahụ ụra dịka ndị ọzọ, kama ka anyị nọọ nche, bụrụkwa ndị jidere onwe ha.",
+      "Nwoke Chineke, chụso ezi omume, ịdị nsọ, okwukwe, ịhụnanya, ndidi, ịdị umeala n’obi.",
+      "Lụọ ọgụ ọma nke okwukwe, jide ndụ ebighị ebi, nke a kpọrọ gị ka i nata, kwupụtakwa nkwupụta ọma n’ihu ọtụtụ ndị akaebe."
+    ]
+  },
+  {
+    id: 'IRR42',
+    title: "Ichebara Ndị Furu Efù Echiche",
+    scripture: "Matt. 9:36-38; John 4:35; Matt. 23:37; Luke 15:4-7; 19:10",
+    verses: [
+      "Mgbe Jizọs hụrụ ọtụtụ mmadụ, obi ebere tụrụ Ya n’ihi ha, n’ihi na ha dara mba, gbasasịrị dịka atụrụ na-enweghị onye ọzụzụ atụrụ.",
+      "Mgbe ahụ Ọ sịrị ndị na-eso ụzọ Ya: Owuwe ihe ubi dị ukwuu, ma ndị ọrụ dị ole na ole;",
+      "Ya mere, rịọnụ Onyenweanyị nke owuwe ihe ubi ka O zipu ndị ọrụ n’ime owuwe ihe ubi Ya.",
+      "Unu asịla, E nwere ọnwa anọ ọzọ ka owuwe ihe ubi bịa? Lee, ana m asị unu, welienụ anya unu, lekwasịnụ ubi; n’ihi na ha achaala ọcha maka owuwe ihe ubi.",
+      "Jerusalem, Jerusalem, gị onye na-egbu ndị amụma, na-atụkwa ndị a zitere gị nkume, ugboro ole ka m chọrọ ịchịkọta ụmụ gị ọnụ, dịka ọkụkọ si chịkọta ụmụ ya n’okpuru nku ya, ma unu achọghị!",
+      "Ònye n’ime unu nwere atụrụ narị, ma ọ tufuo otu, ọ gaghị ahapụ iri itoolu na itoolu n’ọzara, gaa ịchọ nke furu efu, ruo mgbe o chọtara ya?",
+      "Mgbe o chọtara ya, ọ na-ebuli ya n’ubu ya, na-aṅụrị ọṅụ.",
+      "Mgbe o rutere n’ụlọ, ọ kpọkọtara ndị enyi ya na ndị agbata obi ya, sị ha: Ṅụrịa ọṅụ n’ime m; n’ihi na achọtala m atụrụ m nke furu efu.",
+      "Agwa m unu, otu a ka ọṅụ ga-adị n’eluigwe n’ihi otu onye mmehie na-echegharị, karịa iri itoolu na itoolu ndị ezi omume, ndị na-enweghị mkpa nchegharị.",
+      "N’ihi na Ọkpara nke mmadụ bịara ịchọ ma zọpụta ihe furu efu."
+    ]
+  },
+  {
+    id: 'IRR43',
+    title: "Onyenweanyị Dị Ukwuu",
+    scripture: "Psalm 145:1-13",
+    verses: [
+      "Aga m eto Gị elu, Chineke m, Eze; aga m agọzi aha Gị ruo mgbe ebighị ebi.",
+      "Onyenweanyị dị ukwuu, a ga-etokwa Ya nke ukwuu; ịdị ukwuu Ya enweghị onye pụrụ ịchọta ókè ya.",
+      "Kwa ụbọchị aga m agọzi Gị; aga m eto aha Gị ruo mgbe ebighị ebi.",
+      "Ọgbọ ga-eto ọrụ Gị nye ọgbọ ọzọ, ga-akọkwa ọrụ ike Gị.",
+      "Aga m ekwu banyere nsọpụrụ ebube nke ịdị ukwuu Gị, na banyere ọrụ ebube Gị.",
+      "Mmadụ ga-ekwu maka ike nke ọrụ Gị na-atụ egwu; aga m ekwupụta ịdị ukwuu Gị.",
+      "Ha ga-ekwupụta n’ụba ncheta nke ịdị mma Gị dị ukwuu, ga-abụkwa abụ banyere ezi omume Gị.",
+      "Onyenweanyị bụ onye amara, juputakwa n’obi ebere; Ọ na-adị nwayọọ n’ịwe, juputakwa n’ebere.",
+      "Onyenweanyị dị mma nye mmadụ niile; ebere Ya dị nro dị n’elu ọrụ Ya niile.",
+      "Ọrụ Gị niile ga-eto Gị, Jehova; ndị nsọ Gị ga-agọzi Gị.",
+      "Ha ga-ekwu maka ebube nke alaeze Gị, kwuo banyere ike Gị;",
+      "Iji mee ka ụmụ mmadụ mara ọrụ ike Gị, na ebube nke ịdị ukwuu alaeze Gị.",
+      "Alaeze Gị bụ alaeze ebighị ebi; ọchịchị Gị na-adịru n’ọgbọ niile."
+    ]
+  },
+  {
+    id: 'IRR44',
+    title: "Chineke Nna",
+    scripture: "Luke 11:2; 1 Cor. 8:6; Psalm 103:13-14; Isa. 64:8; Matt. 7:9, 11; 18:14; 5:44-45, 48",
+    verses: [
+      "Jizọs sịrị ha: Mgbe unu na-ekpe ekpere, sị: Nna anyị nke nọ n’eluigwe, ka e doo aha Gị nsọ.",
+      "Ma nye anyị, e nwere naanị otu Chineke, Nna, onye ihe niile sitere n’aka Ya, anyị kwa dị n’ime Ya; e nwekwara otu Onyenweanyị Jizọs Kraịst, onye ihe niile sitere n’aka Ya, anyị kwa dị ndụ site n’aka Ya.",
+      "Dịka nna si ewere ụmụ ya ebere, otu a ka Onyenweanyị si ewere ndị na-atụ egwu Ya ebere; n’ihi na Ọ ma etu e si kee anyị; Ọ na-echeta na anyị bụ uzuzu.",
+      "Ma ugbu a, Jehova, Ị bụ Nna anyị; anyị bụ ụrọ, Ị bụ onye kpara anyị; anyị niile bụ ọrụ aka Gị.",
+      "Ònye n’ime unu, ma ọ bụrụ na nwa ya rịọ achịcha, ọ ga-enye ya nkume?",
+      "Ya mere, ọ bụrụ na unu, ndị ajọ mmadụ, maara otu esi enye ụmụ unu onyinye ọma, olee otú Nna unu nke nọ n’eluigwe ga-esi nye ihe ọma ndị na-arịọ Ya?",
+      "Otu a kwa, ọ bụghị uche Nna unu nke nọ n’eluigwe ka otu n’ime ụmụntakịrị ndị a laa n’iyi.",
+      "Hụnụ ndị iro unu n’anya, gọzienụ ndị na-akọcha unu, meere ndị na-asị unu asị ihe ọma, kpekwara ndị na-emegbu unu ma na-akpagbu unu ekpere.",
+      "Ka unu wee bụrụ ụmụ Nna unu nke nọ n’eluigwe; n’ihi na Ọ na-eme ka anyanwụ Ya bilie n’elu ndị ajọ mmadụ na ndị ọma, na-ezikwara mmiri ozuzo n’elu ndị ezi omume na ndị ajọ omume.",
+      "Ya mere, bụrụnụ ndị zuru oke, dịka Nna unu nke nọ n’eluigwe siri zuo oke."
+    ]
+  },
+  {
+    id: 'IRR45',
+    title: "A Gụrụ Anyị N’ezi Omume Site n’Okwukwe",
+    scripture: "Rom. 3:23, 5:8; 3:24-26, 28; 5:1-2; Titus 3:4-7",
+    verses: [
+      "N’ihi na mmadụ niile emehiela, ha erughị ebube Chineke. Ma mgbe anyị ka bụ ndị mmehie, Kraịst nwụrụ n’ihi anyị.",
+      "A na-agụ anyị n’ezi omume n’efu site n’amara Ya, site n’ime mgbapụta dị n’ime Kraịst Jizọs.",
+      "Onye Chineke gosipụtara ka ọ bụrụ àjà mgbaghara site n’okwukwe n’ọbara Ya, iji gosi ezi omume Ya maka ịhapụ mmehie gara aga, n’ihi ndidi Chineke.",
+      "Iji gosi ezi omume Ya n’oge a, ka Ọ bụrụ onye ezi omume, bụrụkwa onye na-agụ onye kwere na Jizọs n’ezi omume.",
+      "Ya mere, site n’omume iwu, anụ ahụ ọ bụla agaghị a gụọ n’ezi omume n’ihu Ya; n’ihi na site n’iwu ka a si amata mmehie.",
+      "Ya mere, ebe a gụụrụ anyị n’ezi omume site n’okwukwe, anyị nwere udo na Chineke site n’Onyenweanyị anyị Jizọs Kraịst.",
+      "Site n’aka Ya kwa ka anyị si nweta ụzọ banye, site n’okwukwe, n’amara a anyị guzo n’ime ya, na-aṅụrịkwa ọṅụ n’olileanya ebube Chineke.",
+      "Ma mgbe ahụ obiọma na ịhụnanya Chineke Onye Nzọpụta anyị nye mmadụ pụtara,",
+      "Ọ bụghị site n’ọrụ ezi omume anyị mere, kama dịka ebere Ya si dị, Ọ zọpụtara anyị, site n’ịsachasị nke ọmụmụ ọhụrụ, na mmegharị ọhụrụ nke Mmụọ Nsọ;",
+      "Onye Ọ wụsara anyị n’ụba site n’aka Jizọs Kraịst Onye Nzọpụta anyị; ka ebe a gụrụ anyị n’ezi omume site n’amara Ya, anyị wee bụrụ ndị nketa dịka olileanya nke ndụ ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR46',
+    title: "Nkwado Ka A Kpee Ekpere",
+    scripture: "Matt. 7:7-11; Mark 11:24-25; John 14:13-14; Rom. 8:26; Heb. 4:15-16",
+    verses: [
+      "Rịọnụ, a ga-enye unu; chọọnụ, unu ga-achọta; kụọnụ aka, a ga-emegheere unu.",
+      "N’ihi na onye ọ bụla na-arịọ na-anata; onye na-achọ na-achọta; onye na-akụ aka, a na-emegheere ya.",
+      "Ònye n’ime unu, ma ọ bụrụ na nwa ya rịọ achịcha, ọ ga-enye ya nkume? Ma ọ bụrụ na o rịọ azụ, ọ ga-enye ya agwọ?",
+      "Ya mere, ọ bụrụ na unu, ndị ajọ mmadụ, maara otu esi enye ụmụ unu onyinye ọma, olee otú Nna unu nke nọ n’eluigwe ga-esi nye ihe ọma ndị na-arịọ Ya?",
+      "Ya mere, ana m asị unu, ihe ọ bụla unu chọrọ, mgbe unu na-ekpe ekpere, kwere na unu anatarala ya, a ga-emere unu ya.",
+      "Mgbe unu guzo ekpere, gbagharanụ ma ọ bụrụ na unu nwere ihe megide onye ọ bụla, ka Nna unu nke nọ n’eluigwe kwa gbaghara unu mmejọ unu.",
+      "Ihe ọ bụla unu rịọrọ n’aha m, nke ahụ ka m ga-eme, ka e wee too Nna n’ime Ọkpara. Ọ bụrụ na unu rịọ ihe ọ bụla n’aha m, aga m eme ya.",
+      "Otu a kwa, Mmụọ Nsọ na-enyere adịghị ike anyị aka; n’ihi na anyị amaghị ihe anyị kwesịrị ịrịọ dịka kwesịrị; ma Mmụọ n’onwe Ya na-arịọ arịrịọ n’ihi anyị site n’ịkwa ákwá na-enweghị okwu.",
+      "Anyị enweghị nnukwu onye nchụàjà nke na-enweghị ike imetụta n’ịhụ mmetụta adịghị ike anyị; kama a nwara Ya n’ihe niile dịka anyị, ma Ọ nweghị mmehie.",
+      "Ya mere, ka anyị bịaruo ocheeze amara nso n’enweghị egwu, ka anyị nweta ebere, chọta amara enyemaka n’oge mkpa."
+    ]
+  },
+  {
+    id: 'IRR47',
+    title: "Ịbụ Onye Na-eso Kraịst",
+    scripture: "Matt. 10:24-25; John 13:34-35; 8:31-32; 15:8; Heb. 13:1-3",
+    verses: [
+      "Onye na-eso ụzọ adịghị elu karịa nna ya ukwu; ohu adịghịkwa elu karịa onye nwe ya.",
+      "Ọ zuru oke ka onye na-eso ụzọ bụrụ dịka nna ya ukwu, ohu bụrụkwa dịka onye nwe ya.",
+      "N’eziokwu, n’eziokwu, agwa m unu, ma ọ bụrụ na mkpụrụ ọka wit adaghị n’ala wee nwụọ, ọ na-anọ naanị ya; ma ọ bụrụ na ọ nwụọ, ọ na-amị mkpụrụ ọtụtụ.",
+      "Onye hụrụ ndụ ya n’anya ga-efunahụ ya; onye na-asị ndụ ya asị n’ụwa a ga-edebe ya ruo ndụ ebighị ebi.",
+      "Ọ bụrụ na unu nọgide n’okwu m, mgbe ahụ unu bụ ndị na-eso ụzọ m n’eziokwu; unu ga-amakwa eziokwu, eziokwu ga-eme ka unu nweere onwe unu.",
+      "Abụ m ìhè nke ụwa; onye na-eso m agaghị eje ije n’ọchịchịrị, kama ọ ga-enwe ìhè nke ndụ.",
+      "Iwu ọhụrụ ka m na-enye unu: ka unu hụ ibe unu n’anya; dịka m hụrụ unu n’anya, ka unu kwa hụ ibe unu n’anya.",
+      "N’ime nke a ka a ga-eto Nna m: ka unu mịpụta mkpụrụ ọtụtụ; otu a ka unu ga-abụ ndị na-eso ụzọ m.",
+      "Ya mere, ebe anyị gbara gburugburu n’ìgwè nnukwu ndị akaebe, ka anyị tụfuo ibu ọ bụla, na mmehie nke na-akpọrọ anyị ngwa ngwa, ka anyị gbaa ọsọ nke e debere n’ihu anyị na ndidi,",
+      "Na-elekwasị anya n’ebe Jizọs nọ, onye malitere okwukwe anyị, mekwaa ka o zuo oke."
+    ]
+  },
+  {
+    id: 'IRR48',
+    title: "Ịhụnanya Ndị Kraịst",
+    scripture: "1 Cor. 13",
+    verses: [
+      "Ọ bụ ezie na m kwuru asụsụ mmadụ na nke ndị mmụọ ozi, ma enweghị m ịhụnanya, aghọwo m dịka ọla na-ada ụda, ma ọ bụ cymbal na-ada ụda efu.",
+      "Ọ bụ ezie na m nwere onyinye amụma, ghọta ihe omimi niile na ọmụma niile; ọ bụ ezie na m nwere okwukwe niile nke ga-ebuga ugwu, ma enweghị m ịhụnanya, abụghị m ihe ọ bụla.",
+      "Ọ bụ ezie na m nyere ndị ogbenye ihe niile m nwere, ọ bụ ezie na m nyere ahụ m ka e susuo ya ọkụ, ma enweghị m ịhụnanya, ọ naghị uru m ihe ọ bụla.",
+      "Ịhụnanya na-enwe ndidi ogologo, ọ bụkwa onye obiọma; ịhụnanya anaghị ekworo; ịhụnanya anaghị akpa ọnụ; ọ naghị kwa-ama elu.",
+      "Ọ naghị eme ihe na-adịghị mma; ọ naghị achọ nke ya; a naghị ewetaghachi ya ngwa ngwa; ọ naghị eche echiche ajọ omume;",
+      "Ọ naghị aṅụrị ọṅụ n’ajọ omume, kama ọ na-aṅụrị ọṅụ n’eziokwu;",
+      "Ọ na-eburu ihe niile, na-ekwere ihe niile, na-atụ anya ihe niile, na-anọgide n’ihe niile.",
+      "Ịhụnanya anaghị ada ada: ma amụma, ha ga-akwụsị; asụsụ, ha ga-akwụsị; ọmụma, ọ ga-apụ.",
+      "N’ihi na anyị maara n’akụkụ, na-amụma n’akụkụ; ma mgbe nke zuru oke bịara, nke dị n’akụkụ ga-apụ.",
+      "Mgbe m bụ nwa, m kwuru dịka nwa, ghọta dịka nwa, chee echiche dịka nwa; ma mgbe m ghọrọ nwoke, m hapụrụ ihe ụmụaka.",
+      "Ugbu a, anyị na-ahụ site n’enyo n’ụzọ na-adịghị doo anya; ma mgbe ahụ, ihu na ihu: ugbu a ama m n’akụkụ; ma mgbe ahụ aga m ama dịka e siri mara m.",
+      "Ugbu a, okwukwe, olileanya, ịhụnanya—ha atọ ka nọgidere; ma nke kachasị n’ime ha bụ ịhụnanya."
+    ]
+  },
+  {
+    id: 'IRR49',
+    title: "Ịhụnanya Chineke",
+    scripture: "John 3:16; Rom. 5:8; 1 John 4:8-10; 3:1; 4:11-12, 18-19",
+    verses: [
+      "N’ihi na Chineke hụrụ ụwa n’anya otú a, na O nyere Ọkpara Ya nke ọ mụrụ naanị ya, ka onye ọ bụla kwere n’ime Ya ghara ịla n’iyi, kama nwee ndụ ebighị ebi.",
+      "Chineke gosipụtara ịhụnanya Ya n’ebe anyị nọ, n’ihi na mgbe anyị ka bụ ndị mmehie, Kraịst nwụrụ n’ihi anyị.",
+      "Onye na-adịghị ahụ n’anya amaghị Chineke; n’ihi na Chineke bụ ịhụnanya.",
+      "N’ime nke a ka a gosipụtara ịhụnanya Chineke n’ebe anyị nọ: na Chineke zipụrụ Ọkpara Ya nke ọ mụrụ naanị ya n’ụwa, ka anyị wee dị ndụ site n’aka Ya.",
+      "N’ime nke a ka ịhụnanya dị: ọ bụghị na anyị hụrụ Chineke n’anya, kama na Ọ hụrụ anyị n’anya, zipụkwa Ọkpara Ya ka ọ bụrụ àjà mgbaghara maka mmehie anyị.",
+      "Lee ụdị ịhụnanya Nna nyere anyị, ka a kpọọ anyị ụmụ Chineke.",
+      "Ndị m hụrụ n’anya, ọ bụrụ na Chineke hụrụ anyị n’anya otú ahụ, anyị kwesịkwara ịhụ ibe anyị n’anya.",
+      "Ọ bụrụ na anyị hụrụ ibe anyị n’anya, Chineke bi n’ime anyị, ịhụnanya Ya zuo oke n’ime anyị.",
+      "Egwu adịghị n’ime ịhụnanya; kama ịhụnanya zuru oke na-achụpụ egwu; n’ihi na egwu nwere ntaramahụhụ. Onye na-atụ egwu emezughị n’ime ịhụnanya.",
+      "Anyị na-ahụ Ya n’anya, n’ihi na Ọ hụrụ anyị n’anya mbụ."
+    ]
+  },
+  {
+    id: 'IRR50',
+    title: "Inye N’Obi Ọma",
+    scripture: "Mark 12:41-44; 1 Cor. 16:2; Luke 6:38; 2 Cor. 9:6-8; Acts 20:35",
+    verses: [
+      "Jizọs nọdụrụ n’ihu ụlọ akụ, hụ otú ndị mmadụ si atụ ego n’ime ya; ọtụtụ ndị bara ụba tụbara ọtụtụ.",
+      "Otu nwaanyị di ya nwụrụ, ogbenye, bịara tụba mkpụrụ ego abụọ, nke bụ obere.",
+      "O kpọrọ ndị na-eso ụzọ Ya, sị ha: N’eziokwu, agwa m unu, nwaanyị di ya nwụrụ a, ogbenye, atụrụla karịa ndị niile tụbara n’ụlọ akụ.",
+      "N’ihi na ha niile tụbara site n’ụba ha; ma ya, site n’ụkọ ya, tụbara ihe niile o nwere, ọbụna ihe ọ ga-eri.",
+      "N’ụbọchị mbụ nke izu, ka onye ọ bụla n’ime unu tinye ihe n’akụkụ dịka Chineke si mee ka o nwee ọganihu.",
+      "Nyenụ, a ga-enye unu; a ga-atụọ unu n’ọkpụrụkpụ ọma, a pịpịa ya, a mịnye ya, ka o na-asọba.",
+      "Nke a ka m na-ekwu: onye na-akụ obere ga-akọ obere; onye na-akụ n’ụba ga-akọ n’ụba.",
+      "Ka onye ọ bụla nye dịka o kpebiri n’obi ya, ọ bụghị n’ịkpa iwe ma ọ bụ n’ike; n’ihi na Chineke hụrụ onye na-enye n’obi ụtọ n’anya.",
+      "Chineke nwere ike ime ka amara niile bawanye n’ebe unu nọ, ka unu nwee zuru ezu n’ihe niile, bawanyekwa n’ọrụ ọma niile.",
+      "E gosipụtala m unu n’ihe niile, na site n’ịrụ ọrụ otú ahụ, unu kwesịrị inyere ndị na-adịghị ike aka, chetakwa okwu Onyenweanyị Jizọs: Ọ sịrị, Ọṅụ dị ukwuu n’ịnara karịa n’inye."
+    ]
+  },
+  {
+    id: 'IRR51',
+    title: "Ike Ekpere",
+    scripture: "Phil. 4:6-7; James 5:13-18; 1 John 5:14-15",
+    verses: [
+      "Unu echegbula ihe ọ bụla; kama n’ihe niile, site n’ekpere na arịrịọ, na ekele, mee ka a mara arịrịọ unu n’ihu Chineke.",
+      "Udo Chineke, nke karịrị nghọta niile, ga-edobe obi unu na uche unu n’ime Kraịst Jizọs.",
+      "Ọ bụrụ na onye ọ bụla n’ime unu na-enwe ahụhụ, ka o kpee ekpere. Ọ bụrụ na onye ọ bụla na-aṅụrị ọṅụ, ka o bụrụ abụ.",
+      "Ọ bụrụ na onye ọ bụla n’ime unu na-arịa ọrịa, ka o kpọọ ndị okenye ụka; ka ha kpee ekpere n’elu ya, tee ya mmanụ n’aha Onyenweanyị.",
+      "Ekpere okwukwe ga-azọpụta onye ọrịa, Onyenweanyị ga-ebuli ya; ma ọ bụrụ na o meela mmehie, a ga-agbaghara ya.",
+      "Kwupụtanụ mmejọ unu nye ibe unu, kpekwanụ ibe unu ekpere, ka a gwọọ unu. Ekpere onye ezi omume na-arụ ọrụ n’ike ukwuu.",
+      "Ilaya bụ mmadụ dịka anyị; o kpeere ekpere ike ka mmiri ghara izo, mmiri ezughị n’ala ruo afọ atọ na ọnwa isii.",
+      "O kpekwara ekpere ọzọ, eluigwe nyere mmiri, ụwa amịpụtara mkpụrụ ya.",
+      "Nke a bụ ntụkwasị obi anyị nwere n’ime Ya: ma ọ bụrụ na anyị rịọ ihe ọ bụla dịka uche Ya si dị, Ọ na-anụ anyị.",
+      "Ma ọ bụrụ na anyị maara na Ọ na-anụ anyị n’ihe ọ bụla anyị rịọrọ, anyị maara na anyị nwere arịrịọ ndị anyị rịọrọ Ya."
+    ]
+  },
+  {
+    id: 'IRR52',
+    title: "Echiche Onye Kraịst Banyere Nsogbu",
+    scripture: "Rom. 8:18, 26, 28-30; 2 Cor. 1:3-4; 4:17-18",
+    verses: [
+      "A na m atụgharị uche na ahụhụ nke oge a adịghị eru ka e jiri ya tụnyere ebube a ga-ekpughe n’ime anyị.",
+      "Mmụọ Nsọ na-enyere adịghị ike anyị aka; n’ihi na anyị amaghị ihe anyị kwesịrị ịrịọ dịka kwesịrị.",
+      "Ma Mmụọ n’onwe Ya na-arịọ arịrịọ n’ihi anyị site n’ịkwa ákwá na-enweghị okwu.",
+      "Anyị maara na ihe niile na-arụkọ ọrụ ọnụ maka ihe ọma nye ndị hụrụ Chineke n’anya, ndị a kpọrọ dịka ebumnuche Ya si dị.",
+      "N’ihi na ndị O matara tupu ụwa, ndị ahụ ka O họpụtara ka ha dị ka ọdịdị Ọkpara Ya, ka Ọ bụrụ Ọkpara mbụ n’etiti ọtụtụ ụmụnna.",
+      "Ndị O họpụtara, ndị ahụ ka O kpọrọ; ndị O kpọrọ, ndị ahụ ka O gụrụ n’ezi omume; ndị O gụrụ n’ezi omume, ndị ahụ ka O nyere ebube.",
+      "A gọziri Chineke, Nna nke Onyenweanyị anyị Jizọs Kraịst, Nna ebere, Chineke nke nkasi obi niile.",
+      "Onye na-akasi anyị obi n’ime mkpagbu anyị niile, ka anyị nwee ike ikasi ndị nọ n’nsogbu ọ bụla obi, site n’otú Chineke si kasị anyị obi.",
+      "N’ihi na mkpagbu anyị dị ọkụ, nke bụ nke ntakịrị oge, na-arụpụta anyị ibu ebube ebighị ebi nke karịrị akarị.",
+      "Mgbe anyị anaghị ele ihe a na-ahụ anya, kama ihe a na-adịghị ahụ anya: n’ihi na ihe a na-ahụ anya bụ nke oge, ma ihe a na-adịghị ahụ anya bụ nke ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR53',
+    title: "Ezinụlọ Onye Kraịst",
+    scripture: "Gen. 2:18; Matt. 19:6; Eph. 5:22-25, 28, 33; 6:1-2, 4",
+    verses: [
+      "Jehova Chineke sịrị: Ọ bụghị ihe ọma ka nwoke nọ naanị ya; aga m emere ya onye enyemaka kwesịrị ya.",
+      "Ya mere, ha abụghịzi abụọ, kama ha bụ otu anụ ahụ. Ya mere, ihe Chineke jikọtara ọnụ, ka mmadụ ghara ikewa.",
+      "Unu ndị nwunye, nọnụ n’okpuru di unu, dịka n’okpuru Onyenweanyị.",
+      "N’ihi na di bụ isi nke nwunye, dịka Kraịst si bụrụ isi nke ụka; Ọ bụkwa Onye Nzọpụta nke ahụ.",
+      "Ya mere, dịka ụka si nọrọ n’okpuru Kraịst, otu a ka nwunye ga-adị n’okpuru di ya n’ihe niile.",
+      "Unu ndị di, hụnụ nwunye unu n’anya, dịka Kraịst hụrụ ụka n’anya, nye onwe Ya n’ihi ya.",
+      "Otu a ka ndị nwoke kwesịrị ịhụ nwunye ha n’anya dịka ahụ ha. Onye hụrụ nwunye ya n’anya hụrụ onwe ya n’anya.",
+      "Ma ka onye ọ bụla n’ime unu hụ nwunye ya n’anya dịka onwe ya; ka nwunye kwa sọpụrụ di ya.",
+      "Unu ụmụ, nụrụnụ ndị mụrụ unu n’ime Onyenweanyị; n’ihi na nke a ziri ezi. Sọpụrụ nna gị na nne gị; nke ahụ bụ iwu mbụ nwere nkwa.",
+      "Unu ndị nna, unu akpasula ụmụ unu iwe; kama zụlite ha n’ọzụzụ na ndụmọdụ Onyenweanyị."
+    ]
+  },
+  {
+    id: 'IRR54',
+    title: "Ọṅụ nke Mgbaghara",
+    scripture: "Psalm 32",
+    verses: [
+      "A gọziri onye a gbagharịrị mmejọ ya, onye e kpuchiri mmehie ya.",
+      "A gọziri nwoke Onyenweanyị na-agụghị ajọ omume n’ọrụ ya, onye mmụọ ya enweghị aghụghọ.",
+      "Mgbe m jidere ọnụ, ọkpụkpụ m na-aka nká n’ihi mkpumkpu m ụbọchị niile.",
+      "N’ihi na ehihie na abalị aka Gị dị arọ n’elu m.",
+      "Uru ndụ m ghọrọ nkụ dịka n’oge ọkọchị.",
+      "A kwupụtara m mmehie m nye Gị, ezoghị m ajọ omume m.",
+      "Asịrị m: Aga m ekwupụta mmejọ m nye Jehova; Ị gbagharịrị ajọ omume mmehie m.",
+      "N’ihi nke a, onye ọ bụla dị nsọ ga-ekpe Gị ekpere n’oge a pụrụ ịchọta Gị.",
+      "N’eziokwu, idei mmiri nke nnukwu mmiri agaghị abịakwute ya.",
+      "Ị bụ ebe zoro ezo m; Ị ga-echekwa m pụọ n’nsogbu.",
+      "Ị ga-agba m gburugburu n’abụ nke nnapụta.",
+      "Aga m akuziri gị, kụziere gị ụzọ ị ga-aga; aga m edu gị site n’anya m.",
+      "Unu abụla dịka ịnyịnya ma ọ bụ mule nke na-enweghị nghọta; a ga-eji bit na bridle jide ọnụ ha ka ha ghara ịbịakwute gị.",
+      "Onye tụkwasịrị Jehova obi, ebere ga-agba ya gburugburu. Ṅụrịa ọṅụ n’ime Jehova, nwee obi ụtọ, unu ndị ezi omume."
+    ]
+  },
+  {
+    id: 'IRR55',
+    title: "Echegbula Onwe Gị",
+    scripture: "Psalm 37:1-11, 40",
+    verses: [
+      "Echegbula onwe gị n’ihi ndị na-eme ihe ọjọọ; ekwokwawala ndị na-arụ ajọ omume.",
+      "N’ihi na a ga-egbutu ha ngwa ngwa dịka ahịhịa, ha ga-akpọnwụ dịka akwụkwọ ndụ.",
+      "Tụkwasị Jehova obi, mee ihe ọma; i ga-ebi n’ala, a ga-azụkwa gị n’eziokwu.",
+      "Nwee ụtọ n’ime Jehova; Ọ ga-enye gị ọchịchọ nke obi gị.",
+      "Nyefee ụzọ gị n’aka Jehova; tụkwasịkwa Ya obi; Ọ ga-eme ka o mezuo.",
+      "Ọ ga-eme ka ezi omume gị pụta dịka ìhè, ikpe gị dịka ehihie.",
+      "Nọọrọ jụụ n’ime Jehova, chere Ya na ndidi.",
+      "Echegbula onwe gị n’ihi onye na-aga nke ọma n’ụzọ ya, n’ihi onye na-eme atụmatụ ajọ omume.",
+      "Kwụsị iwe, hapụ ọnụma; echegbula onwe gị ka i mee ajọ omume.",
+      "N’ihi na ndị na-eme ihe ọjọọ ga-ebipụ; ma ndị na-echere Jehova, ha ga-eketa ala.",
+      "N’ihi na ọ ga-adị ntakịrị, onye ajọ mmadụ agaghị adị; i ga-elekọta ebe ya, ọ gaghị adị.",
+      "Ma ndị dị umeala n’obi ga-eketa ala, ha ga-enwekwa obi ụtọ n’udo dị ukwuu. Jehova ga-enyere ha aka n’ihi na ha tụkwasịrị Ya obi."
+    ]
+  },
+  {
+    id: 'IRR56',
+    title: "Okwukwe",
+    scripture: "Jer. 17:7; John 14:1; 2 Tim. 1:12; Heb. 11:1-2, 6, 8-10; 12:1-2",
+    verses: [
+      "A gọziri nwoke nke tụkwasịrị Jehova obi, onye olileanya ya bụ Jehova.",
+      "Ka obi unu ghara ịtụ ụjọ: unu kwere na Chineke, kwekwanụ na m.",
+      "Ama m Onye m kwere; ekwenyekwara m na Ọ nwere ike ichekwa ihe m nyefere Ya, ruo ụbọchị ahụ.",
+      "Ugbu a, okwukwe bụ ntọala nke ihe a na-atụ anya, bụkwa ihe àmà nke ihe a na-adịghị ahụ. Site na ya ka ndị okenye natara akaebe ọma.",
+      "N’enweghị okwukwe, ọ gaghị ekwe omume ime ka Chineke nwee afọ ojuju; n’ihi na onye na-abịakwute Chineke ga-ekwere na Ọ dị, na Ọ na-enye ndị na-achọ Ya ụgwọ ọrụ.",
+      "Site n’okwukwe ka Abraham, mgbe a kpọrọ ya ka o pụọ gaa n’ebe ọ ga-enweta ka nketa, jiri n’ọrụ; o pụtara, na-amaghị ebe ọ na-aga.",
+      "Site n’okwukwe ka o biri n’ala nkwa dịka n’ala ndị ọbịa, biri n’ụlọikwuu ya na Aịsək na Jekọb, ndị nketa nkwa ahụ.",
+      "N’ihi na o na-achọ obodo nwere ntọala, onye na-ewu ya na onye kpara ya bụ Chineke.",
+      "Ya mere, ebe anyị gbara gburugburu n’ìgwè nnukwu ndị akaebe, ka anyị tụfuo ibu ọ bụla, na mmehie nke na-akpọrọ anyị ngwa ngwa, ka anyị gbaa ọsọ nke e debere n’ihu anyị na ndidi.",
+      "Na-elekwasị anya n’ebe Jizọs nọ, onye malitere okwukwe anyị, mekwaa ka o zuo oke; Onye n’ihi ọṅụ e debere n’ihu Ya, tụrụ obe, leghara ihere anya, nọdụkwa n’aka nri ocheeze Chineke."
+    ]
+  },
+  {
+    id: 'IRR57',
+    title: "Chineke nke Mba",
+    scripture: "Rev. 15:4; Isa. 2:2-4; Psalm 117",
+    verses: [
+      "Ònye agaghị atụ egwu Gị, Jehova, ma too aha Gị? N’ihi na naanị Gị bụ onye nsọ.",
+      "N’ihi na mba niile ga-abịa feere Gị ofufe; n’ihi na ikpe Gị emeela ka o doo anya.",
+      "Ọ ga-abịa n’ụbọchị ikpeazụ, na ugwu ụlọ Jehova ga-eguzosi ike n’elu ugwu niile, a ga-ebulikwa ya elu karịa ugwu nta.",
+      "Mba niile ga-asọba n’ebe ahụ. Ọtụtụ mmadụ ga-aga sị:",
+      "Bịa, ka anyị rịgoro n’ugwu Jehova, n’ụlọ Chineke Jekọb; Ọ ga-akuziri anyị ụzọ Ya, anyị ga-eje ije n’ụzọ Ya.",
+      "N’ihi na site na Zayọn ka iwu ga-apụta, okwu Jehova site na Jerusalem.",
+      "Ọ ga-ekpe ikpe n’etiti mba, baakwa ọtụtụ mmadụ mba; ha ga-akụ mma agha ha ghọọ ngwa ọrụ ubi, ube ha ghọọ mma ịkpụ osisi;",
+      "Mba agaghị ebuli mma agha megide mba ọzọ, ha agaghị amụta agha ọzọ.",
+      "Toonụ Jehova, unu mba niile; toonụ Ya, unu mmadụ niile.",
+      "N’ihi na obiọma ebere Ya dị ukwuu n’ebe anyị nọ; eziokwu Jehova na-adịru mgbe ebighị ebi. Toonụ Jehova."
+    ]
+  },
+  {
+    id: 'IRR58',
+    title: "Chineke, Onye Ikpe Ziri Ezi",
+    scripture: "Psalms 103:6; 50:6; 9:8; Amos 5:24; Psalm 96:9-13; Matt. 16:27",
+    verses: [
+      "Onyenweanyị na-arụ ezi omume na ikpe n’ihi ndị niile a na-emegbu.",
+      "Eluigwe ga-ekwupụta ezi omume Ya; n’ihi na Chineke bụ Onye Ikpe n’onwe Ya.",
+      "Ọ ga-ekpe ụwa ikpe n’ezi omume; Ọ ga-ekpe ndị mmadụ ikpe n’ụzọ ziri ezi.",
+      "Ka ikpe gbaa dịka mmiri, ezi omume dịka osimiri siri ike.",
+      "Feenụ Jehova ofufe n’ịma mma nke ịdị nsọ; tụọ Ya egwu, ụwa niile.",
+      "Kwuanụ n’etiti mba na Jehova na-achị eze: a ga-eme ka ụwa guzosie ike, a gaghị eme ka ọ kwaga; Ọ ga-ekpe ndị mmadụ ikpe n’ezi omume.",
+      "Ka eluigwe ṅụrịa ọṅụ, ka ụwa nwekwaa obi ụtọ; ka oke osimiri tie mkpu, na ihe niile dị n’ime ya.",
+      "Ka ubi nwee obi ụtọ, na ihe niile dị n’ime ya; mgbe ahụ osisi ọhịa niile ga-aṅụrị ọṅụ n’ihu Jehova.",
+      "N’ihi na Ọ na-abịa, ee, Ọ na-abịa ikpee ụwa ikpe: Ọ ga-ekpe ụwa ikpe n’ezi omume, ndị mmadụ kwa n’eziokwu Ya.",
+      "N’ihi na Ọkpara nke mmadụ ga-abịa n’ebube Nna Ya na ndị mmụọ ozi Ya; mgbe ahụ Ọ ga-akwụghachi mmadụ ọ bụla dịka ọrụ ya si dị."
+    ]
+  },
+  {
+    id: 'IRR59',
+    title: "Nraranye Ụka",
+    scripture: "1 Kings 8:12-13, 27-30; Hag. 2:9; 1 Peter 2:5, 9; Matt. 28:19-20",
+    verses: [
+      "Mgbe ahụ Solomọn kwuru: E wuru m ụlọ ka Ị biri n’ime ya, ebe kwụsiri ike ka Ị nọrọ ruo mgbe ebighị ebi.",
+      "Ma Chineke ga-ebi n’ụwa n’eziokwu? Lee, eluigwe ọbụna eluigwe nke eluigwe apụghị ibu Gị; olee otú ụlọ a m wuru si ga-ebu Gị?",
+      "Ma lee ekpere nke ohu Gị na arịrịọ ya anya, Jehova Chineke m, ka anya Gị mepee n’ihu ụlọ a ehihie na abalị.",
+      "Gee ntị n’arịrịọ ohu Gị na nke ndị Gị mgbe ha ga-ekpe ekpere n’ebe a.",
+      "Nụrụ n’eluigwe, ebe obibi Gị; mgbe Ị nụrụ, gbaghara.",
+      "Ebube nke ụlọ ikpeazụ a ga-adị ukwuu karịa nke mbụ, ka Jehova nke ndị agha kwuru.",
+      "Unu kwa, dịka nkume dị ndụ, a na-ewu unu ka unu bụrụ ụlọ ime mmụọ, ịbụ ndị nchụàjà dị nsọ, inye àjà ime mmụọ nabatara Chineke site n’aka Jizọs Kraịst.",
+      "Unu bụ ọgbọ a họpụtara, ndị nchụàjà eze, mba dị nsọ, ndị pụrụ iche, ka unu kwupụta otuto Onye kpọrọ unu si n’ọchịchịrị banye n’ìhè Ya dị ebube.",
+      "Ya mere, gaanụ, kụziere mba niile, na-e baptiziri ha n’aha Nna, na nke Ọkpara, na nke Mmụọ Nsọ;",
+      "Na-akụzi ha ka ha debe ihe niile m nyere unu iwu; lee, anọ m unu mgbe niile, ruo n’ọgwụgwụ ụwa. Amen."
+    ]
+  },
+  {
+    id: 'IRR60',
+    title: "Ịdị Ntụkwasị Obi",
+    scripture: "Matt. 24:45-47; Luke 16:10-13; Rev. 2:10; 1 Cor. 15:57-58",
+    verses: [
+      "Ònye bụ ohu ntụkwasị obi na onye amamihe, onye nna ya ukwu tinyere n’elu ụlọ ya, inye ha nri n’oge kwesịrị ekwesị?",
+      "A gọziri ohu ahụ, onye nna ya ukwu, mgbe ọ bịara, ga-ahụ na ọ na-eme otu a.",
+      "N’eziokwu, agwa m unu, Ọ ga-eme ka ọ bụrụ onye na-ahụ maka ihe ya niile.",
+      "Onye ntụkwasị obi n’ihe nta, ntụkwasị obi kwa n’ihe ukwuu; onye na-adịghị ezi omume n’ihe nta, na-adịghị ezi omume kwa n’ihe ukwuu.",
+      "Ya mere, ọ bụrụ na unu e mechaghị ntụkwasị obi n’ihe akụ na ụba na-adịghị ezi omume, ònye ga-enye unu ezi akụ ka unu lekọta?",
+      "Ọ bụrụ na unu e mechaghị ntụkwasị obi n’ihe nke onye ọzọ, ònye ga-enye unu nke unu?",
+      "Ohu enweghị ike ife nna ukwu abụọ: n’ihi na ọ ga-asị otu asị, hụ ọzọ n’anya; ma ọ bụ jide otu, leghara ọzọ anya. Unu apụghị ife Chineke na akụnụba.",
+      "Atụla egwu ihe ndị ị ga-ata ahụhụ: lee, ekwensu ga-atụ ụfọdụ n’ime unu n’ụlọ mkpọrọ ka e nwalee unu; bụrụ onye ntụkwasị obi ruo ọnwụ, aga m enye gị okpueze ndụ.",
+      "Ekele dịrị Chineke onye na-enye anyị mmeri site n’Onyenweanyị anyị Jizọs Kraịst.",
+      "Ya mere, ụmụnna m hụrụ n’anya, guzosienụ ike, ghara ịkwaga, na-abawanye mgbe niile n’ọrụ Onyenweanyị, ebe unu maara na ọrụ unu abụghị n’efu n’ime Onyenweanyị."
+    ]
+  },
+  {
+    id: 'IRR61',
+    title: "Mgbaghara Chineke",
+    scripture: "Isa. 5:6-7; Psalm 86:5; Mic. 7:18; Psalm 103:10-12; 1 John 1:9; Isa. 1:18; Psalm 32:1-2",
+    verses: [
+      "Aga m hapụ ya ka ọ bụrụ ihe fọdụrụ n’efu: a gaghị akụ ya, a gaghịkwa kụwaa ya; kama ahịhịa ogwu na ogwu ga-eto n’ime ya; aga m nye igwe ojii iwu ka ha ghara izo mmiri n’elu ya.",
+      "N’ihi na ubi vaịn Jehova nke ndị agha bụ ụlọ Izrel, ndị Juda bụ osisi Ọ hụrụ n’anya; Ọ chọpụtara ikpe ziri ezi, ma lee mmegbu; chọpụtara ezi omume, ma lee mkpu.",
+      "N’ihi na Gị, Jehova, dị mma, dịkwa njikere ịgbaghara; ebere Gị dị ukwuu nye ndị niile na-akpọ Gị.",
+      "Ònye bụ Chineke dịka Gị, Onye na-agbaghara ajọ omume, na-agafe mmejọ nke fọdụrụ n’ime ihe nketa Ya? Ọ naghị edobe iwe Ya ruo mgbe ebighị ebi, n’ihi na Ọ na-enwe ụtọ n’ebere.",
+      "Ọ naghị eme anyị dịka mmehie anyị si dị; ọ naghịkwa akwụghachi anyị dịka ajọ omume anyị.",
+      "Dịka eluigwe siri dị elu karịa ụwa, otu a ka ebere Ya siri ukwuu n’ebe ndị na-atụ egwu Ya nọ.",
+      "Ọ bụrụ na anyị kwupụta mmehie anyị, Ọ bụ onye ntụkwasị obi na onye ezi omume, ka Ọ gbaghara anyị mmehie anyị, sachapụkwa anyị pụọ n’ajọ omume niile.",
+      "Ọ bụ ezie na mmehie unu dị ka agba ọbara, ha ga-adị ọcha dịka snow; ọ bụ ezie na ha dị uhie dịka crimson, ha ga-adị ọcha dịka ajị anụ.",
+      "A gọziri onye a gbagharịrị mmejọ ya, onye e kpuchiri mmehie ya.",
+      "A gọziri nwoke Onyenweanyị na-agụghị ajọ omume n’ọrụ ya, onye mmụọ ya enweghị aghụghọ."
+    ]
+  },
+  {
+    id: 'IRR62',
+    title: "Ọrụ Ebube Chineke",
+    scripture: "Gen. 1:1-5, 26-27; Psalm 104:13-15, 24; Isa. 40:18, 22; Psalm 103:22",
+    verses: [
+      "N’mmalite, Chineke kere eluigwe na ụwa.",
+      "Ụwa enweghị ọdịdị, tọgbọgbọ; ọchịchịrị dị n’elu miri; Mmụọ Chineke na-agagharị n’elu mmiri.",
+      "Chineke sịrị: Ka ìhè dị; ìhè dị.",
+      "Chineke hụrụ ìhè ahụ, na ọ dị mma; Chineke kewara ìhè na ọchịchịrị.",
+      "Chineke kpọrọ ìhè ahụ Ụbọchị, kpọrọ ọchịchịrị ahụ Abalị. Anyasị na ụtụtụ bụ ụbọchị mbụ.",
+      "Chineke sịrị: Ka anyị kee mmadụ n’onyinyo anyị, dịka ịdị ka anyị; ka ha nwee ọchịchị n’elu ụwa niile.",
+      "Ya mere, Chineke kere mmadụ n’onyinyo Ya; n’onyinyo Chineke ka O kere ya; nwoke na nwanyị ka O kere ha.",
+      "Ọ na-enye ugwu mmiri site n’ụlọ ya; ụwa na-eju afọ n’ime mkpụrụ ọrụ Gị.",
+      "Ọ na-eme ka ahịhịa too maka anụ ụlọ, na mkpụrụ osisi maka ọrụ mmadụ, ka o wepụta nri n’ala;",
+      "Na achịcha nke na-eme ka obi mmadụ sie ike.",
+      "Jehova, otu ọrụ Gị siri ọtụtụ! N’amamihe ka Ị kere ha niile; ụwa juputara n’akụ Gị.",
+      "Ònye ka unu ga-eji tụnyere Chineke? Ma ọ bụ ụdị ihe gịnị ka unu ga-eji tụnyere Ya?",
+      "Ọ bụ Ya na-anọ n’elu okirikiri ụwa; Ọ na-agbatị eluigwe dịka ákwà, gbasaa ya dịka ụlọikwuu ka e biri.",
+      "Gọzie Jehova, unu ọrụ Ya niile n’ebe niile nke ọchịchị Ya; gọzie Jehova, mkpụrụ obi m."
+    ]
+  },
+  {
+    id: 'IRR63',
+    title: "A Zọpụtara Anyị Site n’Amara",
+    scripture: "John 1:17; Rom. 5:8, 20; Eph. 2:8-9; Titus 3:5-7; 2:11-12",
+    verses: [
+      "Iwu si n’aka Mose bịa, ma amara na eziokwu sitere n’aka Jizọs Kraịst.",
+      "Chineke gosipụtara ịhụnanya Ya n’ebe anyị nọ, n’ihi na mgbe anyị ka bụ ndị mmehie, Kraịst nwụrụ n’ihi anyị.",
+      "Ebe mmehie juru, amara juru karịa.",
+      "N’ihi na site n’amara ka a zọpụtara unu site n’okwukwe; ọ bụghị nke unu onwe unu: ọ bụ onyinye Chineke.",
+      "Ọ bụghị site n’ọrụ, ka mmadụ ọ bụla ghara ịnya isi.",
+      "Ọ bụghị site n’ọrụ ezi omume anyị mere, kama dịka ebere Ya si dị, Ọ zọpụtara anyị, site n’ịsachasị nke ọmụmụ ọhụrụ, na mmegharị ọhụrụ nke Mmụọ Nsọ;",
+      "Onye Ọ wụsara anyị n’ụba site n’aka Jizọs Kraịst Onye Nzọpụta anyị.",
+      "Ka ebe a gụụrụ anyị n’ezi omume site n’amara Ya, anyị wee bụrụ ndị nketa dịka olileanya nke ndụ ebighị ebi.",
+      "N’ihi na amara Chineke nke na-eweta nzọpụta apụtala nye mmadụ niile,",
+      "Na-akụzi anyị ka anyị jụ ajọ omume na agụụ nke ụwa, ka anyị bie ndụ nke jidere onwe ya, nke ezi omume, nke ịdị nsọ, n’ụwa a."
+    ]
+  },
+  {
+    id: 'IRR64',
+    title: "Kraịst, Onyenweanyị Anyị",
+    scripture: "Acts 2:36; Phil. 2:9-11; Rom. 10:9; Col. 3:23-24; 1 Tim. 6:15",
+    verses: [
+      "Ya mere, ka ụlọ Izrel niile mara n’eziokwu, na Chineke mere Jizọs a, onye unu kpọgidere n’obe, ka Ọ bụrụ Onyenweanyị na Kraịst.",
+      "Ya mere, Chineke buliri Ya elu nke ukwuu, nyekwa Ya aha nke karịrị aha niile.",
+      "Ka n’aha Jizọs ikpere niile kpuo, nke ndị nọ n’eluigwe, nke ndị nọ n’ụwa, na nke ndị nọ n’okpuru ụwa.",
+      "Ka ire niile kwupụta na Jizọs Kraịst bụ Onyenweanyị, maka otuto Chineke Nna.",
+      "Ọ bụrụ na i kwupụta n’ọnụ gị na Jizọs bụ Onyenweanyị, kwere n’obi gị na Chineke kpọlitere Ya n’ọnwụ, a ga-azọpụta gị.",
+      "Ihe ọ bụla unu na-eme, meenu ya n’obi unu niile, dịka nye Onyenweanyị, ọ bụghị nye mmadụ.",
+      "N’ịma na n’aka Onyenweanyị ka unu ga-enweta ụgwọ ọrụ nke nketa.",
+      "N’ihi na unu na-ejere Onyenweanyị Kraịst ozi, Onye bụ naanị Eze ukwu, Eze nke ndị eze, Onyenweanyị nke ndị onyenwe."
+    ]
+  },
+  {
+    id: 'IRR65',
+    title: "Ịgbaghara Ibe Unu",
+    scripture: "Matt. 18:21-22; 5:23-24; 6:14-15; Eph. 4:31-32",
+    verses: [
+      "Mgbe ahụ Pita bịakwutere Ya, sị: Onyenweanyị, ugboro ole ka nwanne m ga-emehie megide m, m gbaghara ya? ruo ugboro asaa?",
+      "Jizọs sịrị ya: Anaghị m asị gị, ruo ugboro asaa; kama ruo ugboro asaa iri asaa.",
+      "Ya mere, ọ bụrụ na i wetara onyinye gị n’ebe ịchụ àjà, cheta na nwanne gị nwere ihe megide gị,",
+      "Hapụ onyinye gị n’ebe ahụ n’ihu ebe ịchụ àjà, gaa; buru ụzọ mee ka gị na nwanne gị dị n’udo, mgbe ahụ bịa nye onyinye gị.",
+      "N’ihi na ma unu gbaghara mmadụ mmejọ ha, Nna unu nke nọ n’eluigwe ga-agbaghara unu kwa.",
+      "Ma ọ bụrụ na unu agbagharaghị mmadụ mmejọ ha, Nna unu agaghị agbaghara unu mmejọ unu.",
+      "Ka ilu ilu niile, iwe, ọnụma, mkpọtụ, okwu ọjọọ, ka ewepụ ya n’ime unu, na ajọ obi niile.",
+      "Ma bụrụrịanụ ndị ọma n’ebe ibe unu nọ, obi ebere, na-agbaghara ibe unu, dịka Chineke gbara unu mgbaghara n’ihi Kraịst."
+    ]
+  },
+  {
+    id: 'IRR66',
+    title: "Mba",
+    scripture: "Psalm 78:1; Prov. 14:34; Deut. 8:18-20; Amos 5:24, 15; Psalm 33:12",
+    verses: [
+      "Gee ntị, ndị m, n’iwu m: tụgharịa ntị unu n’okwu ọnụ m.",
+      "Ezi omume na-ebuli mba elu; ma mmehie bụ ihere nye mmadụ ọ bụla.",
+      "Cheta Jehova Chineke gị; n’ihi na Ọ bụ Ya na-enye gị ike inweta akụ, ka O guzosie ike ọgbụgba ndụ Ọ ṅụrụ nna nna gị iyi, dịka ọ dị taa.",
+      "Ọ ga-abụ, ma ọ bụrụ na i chefuo Jehova Chineke gị kpamkpam, soro chi ọzọ, jeere ha ozi, feekwa ha ofufe, ana m agba ama megide unu taa na unu ga-ala n’iyi n’eziokwu.",
+      "Dịka mba ndị Jehova bibiri n’ihu unu, otu ahụ ka unu ga-ala n’iyi, n’ihi na unu agaghị ege ntị n’olu Jehova Chineke unu.",
+      "Ma ka ikpe gbaa dịka mmiri, ezi omume dịka osimiri siri ike.",
+      "Kpọọ asị ihe ọjọọ, hụ ihe ọma n’anya, guzosiekwa ikpe n’ọnụ ụzọ ámá.",
+      "A gọziri mba nke Chineke ya bụ Jehova; ndị mmadụ Ọ họpụtara ka ha bụrụ ihe nketa Ya."
+    ]
+  },
+  {
+    id: 'IRR67',
+    title: "Obe Onye Kraịst",
+    scripture: "Matt. 16:24; 10:38; 16:25; 1 Peter 2:21; Phil. 1:29; 1 Peter 4:12-13, 16",
+    verses: [
+      "Mgbe ahụ Jizọs sịrị ndị na-eso ụzọ Ya: Ọ bụrụ na mmadụ chọrọ iso m, ka o jụ onwe ya, bulie obe ya, soro m.",
+      "Onye na-adịghị ebuli obe ya, soro m, erughị eru maka m.",
+      "N’ihi na onye chọrọ ịzọpụta ndụ ya ga-efunahụ ya; onye ga-efunahụ ndụ ya n’ihi m ga-achọta ya.",
+      "Kraịst tara ahụhụ n’ihi anyị, hapụkwara anyị ihe atụ, ka unu soro nzọụkwụ Ya.",
+      "N’ihi na e nyere unu nke a n’aha Kraịst: ọ bụghị naanị ikwere n’ime Ya, kamakwa ịta ahụhụ n’ihi Ya.",
+      "Ndị m hụrụ n’anya, unu echela na nnwale ọkụ nke na-anwa unu bụ ihe ijuanya, dịka ihe ọhụụ mere unu.",
+      "Kama ṅụrịa ọṅụ, dịka unu si so n’ahụhụ Kraịst; ka mgbe ebube Ya ga-ekpughe, unu wee nwee ọṅụ n’ụba.",
+      "Ma ọ bụrụ na mmadụ ata ahụhụ dịka Onye Kraịst, ka o ghara ime ihere; kama ka o too Chineke n’ihi nke a."
+    ]
+  },
+  {
+    id: 'IRR68',
+    title: "Ofufe n’Ụlọ Chineke",
+    scripture: "Psalm 84",
+    verses: [
+      "Olee otú ụlọikwuu Gị si maa mma, Jehova nke ndị agha!",
+      "Mkpụrụ obi m na-achọsi ike, ee, ọbụna na-ada mba n’ihi ogige Jehova.",
+      "Obi m na anụ ahụ m na-eti mkpu n’ihi Chineke dị ndụ.",
+      "Ee, nnụnụ sparrow achọtala ụlọ, swallow kwa akwu maka onwe ya, ebe ọ ga-edobe ụmụ ya.",
+      "N’akụkụ ebe ịchụ àjà Gị, Jehova nke ndị agha, Eze m na Chineke m.",
+      "A gọziri ndị bi n’ụlọ Gị; ha ga-anọgide na-eto Gị.",
+      "A gọziri nwoke ike ya dị n’ime Gị; ndị ụzọ Gị dị n’obi ya.",
+      "Ha na-aga site n’ike ruo n’ike; onye ọ bụla n’ime ha na-apụta n’ihu Chineke na Zayọn.",
+      "Jehova Chineke nke ndị agha, nụrụ ekpere m; gee ntị, Chineke Jekọb.",
+      "Lee, Chineke, ọta anyị, lekwasị ihu onye e teela mmanụ Gị anya.",
+      "N’ihi na otu ụbọchị n’ogige Gị ka mma karịa puku.",
+      "M ga-ahọrọ ịbụ onye na-eche ọnụ ụzọ n’ụlọ Chineke m, karịa ibi n’ụlọikwuu ndị ajọ omume.",
+      "N’ihi na Jehova Chineke bụ anyanwụ na ọta.",
+      "Jehova nke ndị agha, a gọziri nwoke nke tụkwasịrị Gị obi."
+    ]
+  },
+  {
+    id: 'IRR69',
+    title: "Nkwupụta Mmehie",
+    scripture: "Dan. 9:4-6; 1 John 1:5 to 2:2; Psalm 32:5",
+    verses: [
+      "Jehova, Chineke dị ukwuu na nke a na-atụ egwu, Onye na-edebe ọgbụgba ndụ na ebere nye ndị hụrụ Ya n’anya, na ndị na-edobe iwu Ya.",
+      "Anyị emehiela, mee ajọ omume, mee ihe ọjọọ, mee nnupụisi, ọbụna site n’ịhapụ ụkpụrụ Gị na ikpe Gị.",
+      "Anyị egekwala ntị n’ohu Gị ndị amụma, ndị kwuru n’aha Gị.",
+      "Nke a bụ ozi anyị nụrụ n’aka Ya, anyị na-ekwupụta unu: Chineke bụ ìhè, ọchịchịrị adịghị n’ime Ya ọbụla.",
+      "Ọ bụrụ na anyị asị na anyị nwere mmekọrịta na Ya, ma na-eje ije n’ọchịchịrị, anyị na-ekwu ụgha, anyị anaghị eme eziokwu.",
+      "Ma ọ bụrụ na anyị na-eje ije n’ìhè dịka Ọ nọ n’ìhè, anyị nwere mmekọrịta n’etiti onwe anyị, ọbara Jizọs Kraịst Ọkpara Ya na-asachapụ anyị pụọ n’mmehie niile.",
+      "Ọ bụrụ na anyị asị na anyị enweghị mmehie, anyị na-aghọgbu onwe anyị, eziokwu adịghị n’ime anyị.",
+      "Ọ bụrụ na anyị kwupụta mmehie anyị, Ọ bụ onye ntụkwasị obi na onye ezi omume, ka Ọ gbaghara anyị mmehie anyị, sachapụkwa anyị pụọ n’ajọ omume niile.",
+      "Ọ bụrụ na anyị asị na anyị emehịghị, anyị na-eme Ya onye ụgha, okwu Ya adịghị n’ime anyị. Ihe ndị a ka m dere unu, ka unu ghara imehie.",
+      "Ma ọ bụrụ na mmadụ emehie, anyị nwere Onye Na-arịọ arịrịọ n’ihu Nna, Jizọs Kraịst Onye ezi omume.",
+      "Ọ bụ Ya bụ àjà mgbaghara maka mmehie anyị; ọ bụghị naanị maka nke anyị, kamakwa maka mmehie nke ụwa dum.",
+      "A kwupụtara m mmehie m nye Gị, ezoghị m ajọ omume m. Asịrị m: Aga m ekwupụta mmejọ m nye Jehova; Ị gbagharịrị ajọ omume mmehie m."
+    ]
+  },
+  {
+    id: 'IRR70',
+    title: "Mmụọ Nsọ, Onye Enyemaka Anyị",
+    scripture: "Gal. 5:16, 22-25; Rom. 8:14-16, 26-27",
+    verses: [
+      "Nke a ka m na-ekwu: Jeenụ ije n’ime Mmụọ, unu agaghị emezu agụụ anụ ahụ.",
+      "Mkpụrụ nke Mmụọ bụ ịhụnanya, ọṅụ, udo, ndidi ogologo, ịdị nwayọọ, ịdị mma, okwukwe, ịdị umeala n’obi, ijide onwe.",
+      "Megide ihe ndị a, iwu adịghị.",
+      "Ndị bụ nke Kraịst akpọgidela anụ ahụ n’obe, na agụụ na ọchịchọ ya.",
+      "Ọ bụrụ na anyị na-adị ndụ n’ime Mmụọ, ka anyị na-eje ije n’ime Mmụọ kwa.",
+      "N’ihi na ndị niile Mmụọ Chineke na-eduga, ha bụ ụmụ Chineke.",
+      "Unu anabataghị mmụọ ohu ọzọ ka unu tụọ egwu; kama unu anabatala Mmụọ nke ụmụnna, nke anyị ji eti mkpu: Abba, Nna.",
+      "Mmụọ n’onwe Ya na-agba akaebe na mmụọ anyị, na anyị bụ ụmụ Chineke.",
+      "Otu a kwa, Mmụọ Nsọ na-enyere adịghị ike anyị aka; n’ihi na anyị amaghị ihe anyị kwesịrị ịrịọ dịka kwesịrị; ma Mmụọ n’onwe Ya na-arịọ arịrịọ n’ihi anyị site n’ịkwa ákwá na-enweghị okwu.",
+      "Onye na-enyocha obi maara uche Mmụọ, n’ihi na Ọ na-arịọ arịrịọ n’ihi ndị nsọ dịka uche Chineke si dị."
+    ]
+  },
+  {
+    id: 'IRR71',
+    title: "Mgbapụta Site n’Mmehie",
+    scripture: "Eph. 1:3-7; Rom. 8:1-2; 1 Peter 1:17-19",
+    verses: [
+      "A gọziri Chineke na Nna nke Onyenweanyị anyị Jizọs Kraịst, Onye gọziri anyị n’ngọzi ime mmụọ niile n’ebe eluigwe dị n’ime Kraịst.",
+      "Dịka O si họrọ anyị n’ime Ya tupu e kee ụwa, ka anyị bụrụ ndị nsọ, na-enweghị mmejọ n’ihu Ya n’ịhụnanya.",
+      "O họpụtara anyị tupu, ka anyị bụrụ ụmụ site n’aka Jizọs Kraịst nye onwe Ya, dịka obi ụtọ nke uche Ya si dị.",
+      "Maka otuto ebube amara Ya, nke O mere ka anyị bụrụ ndị a nabatara n’ime Onye a hụrụ n’anya.",
+      "N’ime Ya ka anyị nwere mgbapụta site n’ọbara Ya, mgbaghara mmehie, dịka akụnụba amara Ya si dị.",
+      "Ya mere, ugbu a, ikpe ọmụma adịghị n’ebe ndị nọ n’ime Kraịst Jizọs nọ, ndị na-ejeghị ije dịka anụ ahụ, kama dịka Mmụọ.",
+      "N’ihi na iwu nke Mmụọ nke ndụ n’ime Kraịst Jizọs emeela m onye nweere onwe m pụọ n’iwu mmehie na ọnwụ.",
+      "E dere: Bụrụnụ ndị nsọ; n’ihi na Abụ m onye nsọ. Ọ bụrụ na unu na-akpọ Nna, Onye na-ekpe mmadụ ikpe n’enweghị ọdịiche dịka ọrụ mmadụ si dị, bịa n’egwu n’oge unu bi n’ụwa dịka ndị ọbịa.",
+      "N’ịma na a gaghị agbapụ unu site n’ihe na-emebi emebi dịka ọlaọcha na ọlaedo, pụọ n’omume efu unu natara site n’omume nna nna unu,",
+      "Kama site n’ọbara dị oké ọnụ ahịa nke Kraịst, dịka nke atụrụ na-enweghị ntụpọ na-enweghị mmerụ."
+    ]
+  },
+  {
+    id: 'IRR72',
+    title: "Mee Ka Unu na Chineke Dị n’udo",
+    scripture: "2 Cor. 5:17-20; Eph. 2:13-16, 19-20, 22",
+    verses: [
+      "Ya mere, ọ bụrụ na onye ọ bụla nọ n’ime Kraịst, ọ bụ ihe e kere ọhụrụ: ihe ochie agafela; lee, ihe niile aghọwo ọhụrụ.",
+      "Ihe niile sitere n’aka Chineke, onye kpara anyị udo na Ya site n’aka Jizọs Kraịst, nyekwa anyị ozi nke ime ka mmadụ na Chineke bụrụ enyi ọzọ.",
+      "Ya bụ, na Chineke nọ n’ime Kraịst, na-eme ka ụwa na Ya bụrụ enyi, na-agụghị mmejọ ha; nyefekwaara anyị okwu nke ime ka mmadụ na Chineke bụrụ enyi.",
+      "Ya mere, anyị bụ ndị nnọchi anya Kraịst: dịka Chineke si arịọ unu site n’aka anyị, anyị na-arịọ unu n’aha Kraịst: Mee ka unu na Chineke dị n’udo.",
+      "Ma ugbu a n’ime Kraịst Jizọs, unu ndị dị anya n’oge gara aga, e meela unu ndị nso site n’ọbara Kraịst.",
+      "N’ihi na Ọ bụ udo anyị, Onye mere ka abụọ bụrụ otu, kwajikwa mgbidi nkewa dị n’etiti.",
+      "O wepụrụ n’anụ ahụ Ya ịkpọasị, ọbụna iwu nke iwu dị n’ime iwu e dere; ka Ọ kee mmadụ ọhụrụ otu n’ime abụọ, mee udo.",
+      "Ka Ọ kpara ha abụọ udo na Chineke n’otu ahụ site n’obe, ebe O gburu ịkpọasị ahụ.",
+      "Ya mere, unu abụghịzi ndị ọbịa na ndị mba ọzọ, kama unu bụ ụmụ amaala na ndị nsọ, bụkwa ndị ụlọ Chineke.",
+      "A wuworo unu n’elu ntọala ndịozi na ndị amụma, Jizọs Kraịst n’onwe Ya bụ nkume isi nkuku.",
+      "N’ime Ya ka a na-ewu unu ọnụ ka unu bụrụ ebe obibi Chineke site n’ime Mmụọ."
+    ]
+  },
+  {
+    id: 'IRR73',
+    title: "Oku Maka Nraranye",
+    scripture: "Col. 3:1-4; 1 Peter 1:13-16; 2 Cor. 5:14-15; Gal. 2:20; 6:14",
+    verses: [
+      "Ọ bụrụ na e biliri unu na Kraịst, chọọnụ ihe ndị dị n’elu, ebe Kraịst nọ n’aka nri Chineke.",
+      "Tinye uche unu n’ihe ndị dị n’elu, ọ bụghị n’ihe ndị dị n’ụwa.",
+      "N’ihi na unu anwụọla, ndụ unu zoro ezo n’ime Kraịst n’ime Chineke.",
+      "Mgbe Kraịst, Onye bụ ndụ anyị, ga-apụta, mgbe ahụ unu ga-apụta na Ya n’ebube.",
+      "Ya mere, kpọkọnụ akpụkpọ ụkwụ uche unu, bụrụnụ ndị jidere onwe ha, tụkwasị olileanya unu n’amara a ga-ewetara unu mgbe e ga-ekpughe Jizọs Kraịst.",
+      "Dịka ụmụ na-erube isi, unu emekwala onwe unu dịka agụụ mbụ unu n’oge amaghị ama unu.",
+      "Kama dịka Onye kpọrọ unu bụ onye nsọ, bụrụnụ ndị nsọ n’omume unu niile.",
+      "N’ihi na e dere: Bụrụnụ ndị nsọ; n’ihi na Abụ m onye nsọ.",
+      "N’ihi na ịhụnanya Kraịst na-achị anyị; n’ihi na anyị kpebiri na ma otu nwụrụ n’ihi mmadụ niile, mgbe ahụ mmadụ niile nwụrụ.",
+      "O nwụrụ n’ihi mmadụ niile, ka ndị dị ndụ ghara ibi ndụ ọzọ maka onwe ha, kama maka Onye nwụrụ n’ihi ha, bilikwara ọzọ.",
+      "E soro m Kraịst kpọgidere n’obe; ma m ka dị ndụ; ọ bụghị m, kama Kraịst bi n’ime m; ndụ m na-ebi ugbu a n’anụ ahụ, ana m ebi ya site n’okwukwe nke Ọkpara Chineke, onye hụrụ m n’anya, nye onwe Ya n’ihi m.",
+      "Ka Chineke ghara ikwe ka m jiri ihe ọ bụla nwee mpako, ma e wezụga obe nke Onyenweanyị anyị Jizọs Kraịst, site n’aka Ya ka ụwa a kpọgidere n’obe nye m, m kwa nye ụwa."
+    ]
+  },
+  {
+    id: 'IRR74',
+    title: "Iwu Ukwu Anyị",
+    scripture: "Matt. 28:16-20; Luke 24:46-48; Acts 1:8; 2 Cor. 5:20",
+    verses: [
+      "Mgbe ahụ ndị na-eso ụzọ iri na otu ahụ gara Galili, n’ugwu ahụ Jizọs kpọrọ ha.",
+      "Mgbe ha hụrụ Ya, ha kpọrọ Ya isiala; ma ụfọdụ nwere obi abụọ.",
+      "Jizọs bịara, gwa ha, sị: E nyela m ike niile n’eluigwe na n’ụwa.",
+      "Ya mere, gaanụ, kụziere mba niile, na-e baptiziri ha n’aha Nna, na nke Ọkpara, na nke Mmụọ Nsọ.",
+      "Na-akụzi ha ka ha debe ihe niile m nyere unu iwu; lee, anọ m unu mgbe niile, ruo n’ọgwụgwụ ụwa.",
+      "Jizọs sịrị ha: E dere ya otu a, na o kwesịrị ka Kraịst taa ahụhụ, bilie n’ọnwụ n’ụbọchị nke atọ.",
+      "Ka e kwusaa nchegharị na mgbaghara mmehie n’aha Ya n’etiti mba niile.",
+      "Unu bụ ndị akaebe nke ihe ndị a.",
+      "Unu ga-anata ike, mgbe Mmụọ Nsọ bịara n’elu unu; unu ga-abụkwa ndị akaebe m n’ime Jerusalem, n’ime Judia niile, na Sameria, ruo n’ókè ụwa.",
+      "Ya mere, anyị bụ ndị nnọchi anya Kraịst: dịka Chineke si arịọ unu site n’aka anyị, anyị na-arịọ unu n’aha Kraịst: Mee ka unu na Chineke dị n’udo."
+    ]
+  },
+  {
+    id: 'IRR75',
+    title: "Obe Kraịst",
+    scripture: "Isa. 53:4-6; Rom. 5:6, 8; 2 Cor. 5:21; 1 Peter 1:18-19; 1 Cor. 1:18, 23-24",
+    verses: [
+      "N’eziokwu, O buru mwute anyị, kụọkwa ọrịa anyị; ma anyị chere na Chineke tiri Ya ihe, kụkwa Ya, mee ka O taa ahụhụ.",
+      "Ma e merụrụ Ya n’ihi mmejọ anyị, e kụkwara Ya n’ihi ajọ omume anyị; ntaramahụhụ nke udo anyị dị n’elu Ya; site n’ọnya Ya ka e gwọrọ anyị.",
+      "Anyị niile dị ka atụrụ furu efu; onye ọ bụla tụgharịrị n’ụzọ nke ya; Jehova tinyere ajọ omume anyị niile n’elu Ya.",
+      "N’ihi na mgbe anyị ka na-enweghị ike, n’oge kwesịrị ekwesị Kraịst nwụrụ n’ihi ndị na-adịghị asọpụrụ Chineke.",
+      "Chineke gosipụtara ịhụnanya Ya n’ebe anyị nọ, n’ihi na mgbe anyị ka bụ ndị mmehie, Kraịst nwụrụ n’ihi anyị.",
+      "Onye na-amaghị mmehie ka O mere mmehie n’ihi anyị, ka anyị wee bụrụ ezi omume Chineke n’ime Ya.",
+      "N’ịma na a gaghị agbapụ unu site n’ihe na-emebi emebi dịka ọlaọcha na ọlaedo, kama site n’ọbara dị oké ọnụ ahịa nke Kraịst, dịka nke atụrụ na-enweghị ntụpọ na-enweghị mmerụ.",
+      "Ozi nke obe bụ nzuzu nye ndị na-ala n’iyi; ma nye anyị ndị a zọpụtara, ọ bụ ike Chineke.",
+      "Anyị na-ekwusa Kraịst a kpọgidere n’obe; nye ndị Juu, ọ bụ ihe mgbagwoju anya; nye ndị Gris, ọ bụ nzuzu.",
+      "Ma nye ndị a kpọrọ, ma Juu ma Gris, Kraịst bụ ike Chineke, bụkwa amamihe Chineke."
+    ]
+  },
+  {
+    id: 'IRR76',
+    title: "Eluigwe",
+    scripture: "John 14:1-3; Rev. 21:1-4, 27; 22:5",
+    verses: [
+      "Ka obi unu ghara ịtụ ụjọ: unu kwere na Chineke, kwekwanụ na m.",
+      "N’ụlọ Nna m e nwere ọtụtụ ebe obibi: ọ bụrụ na ọ bụghị otu a, aga m agwa unu. Ana m aga ịkwadebe unu ebe.",
+      "Ma ọ bụrụ na m gara kwadebe unu ebe, aga m alọghachi, nata unu n’ebe m nọ, ka ebe m nọ, unu nwekwara ike ịnọ.",
+      "M, Jọn, hụrụ eluigwe ọhụrụ na ụwa ọhụrụ; n’ihi na eluigwe mbụ na ụwa mbụ agafela; oke osimiri adịghịkwa ọzọ.",
+      "Ahụrụ m obodo nsọ, Jerusalem ọhụrụ, na-abịa ala site n’aka Chineke n’eluigwe, a kwadebere ya dịka nwanyị a na-alụ ọhụrụ e jiri mma kpọọ mma n’ihi di ya.",
+      "Anụrụ m olu ukwu si n’eluigwe, sị: Lee, ụlọikwuu Chineke dị n’etiti mmadụ, Ọ ga-ebikwa n’etiti ha; ha ga-abụ ndị Ya.",
+      "Chineke n’onwe Ya ga-anọnyere ha, bụrụ Chineke ha.",
+      "Chineke ga-ehichapụ anya mmiri niile n’anya ha; ọnwụ agaghị adị ọzọ; mwute, ịkwa ákwá, na ihe mgbu agaghị adị ọzọ; n’ihi na ihe mbụ agafela.",
+      "Ihe ọ bụla na-emerụ ahụ, ma ọ bụ na-eme ihe arụ, ma ọ bụ na-ekwu ụgha agaghị abanye n’ime ya; kama naanị ndị e dere n’akwụkwọ ndụ nke Nwa Atụrụ.",
+      "Abalị agaghị adị ebe ahụ; ha agaghị achọ kandụl ma ọ bụ ìhè anyanwụ; n’ihi na Onyenweanyị Chineke na-enye ha ìhè; ha ga-achị eze ruo mgbe ebighị ebi."
+    ]
+  },
+  {
+    id: 'IRR77',
+    title: "Ụbọchị Onyenweanyị",
+    scripture: "Ex. 20:8-11; Mark 2:27-28; 16:1-2, 5-6; John 20:19; Rev. 1:5-6",
+    verses: [
+      "Cheta ụbọchị izuike, ka i doo ya nsọ.",
+      "Ụbọchị isii ka ị ga-arụ ọrụ, mee ihe niile ị ga-eme.",
+      "Ma ụbọchị nke asaa bụ izuike nke Jehova Chineke gị: n’ime ya, ị gaghị arụ ọrụ ọ bụla.",
+      "N’ihi na n’ụbọchị isii Jehova kere eluigwe na ụwa, oke osimiri, na ihe niile dị n’ime ha, zuruike n’ụbọchị nke asaa; ya mere Jehova gọziri ụbọchị izuike, doo ya nsọ.",
+      "Jizọs sịrị ha: E kere izuike maka mmadụ, ọ bụghị mmadụ maka izuike.",
+      "Ya mere, Ọkpara nke mmadụ bụ Onyenweanyị nke izuike.",
+      "Mgbe izuike gafere, n’ụtụtụ ukwuu n’ụbọchị mbụ nke izu, ụmụnwaanyị ahụ bịara n’ili n’oge anyanwụ na-abilite.",
+      "Ha batara n’ili, hụ nwoke ọdọ nọdụ n’aka nri, yi uwe ọcha ogologo; ha tụrụ egwu.",
+      "Ọ sịrị ha: Unu atụla egwu: unu na-achọ Jizọs nke Nazaret, onye a kpọgidere n’obe: Ọ biliela; Ọ nọghị ebe a; lee ebe ha debere Ya.",
+      "N’ụbọchị ahụ n’abalị, bụ ụbọchị mbụ nke izu, mgbe e mechiri ọnụ ụzọ n’ebe ndị na-eso ụzọ gbakọtara n’egwu ndị Juu, Jizọs bịara guzo n’etiti ha, sị ha: Udo dịrị unu.",
+      "Nye Ya bụ onye hụrụ anyị n’anya, sachapụkwara anyị pụọ n’mmehie anyị n’ọbara Ya,",
+      "O meela anyị ndị eze na ndị nchụàjà nye Chineke na Nna Ya; otuto na ọchịchị dịrị Ya ruo mgbe ebighị ebi. Amen."
+    ]
+  },
+  {
+    id: 'IRR78',
+    title: "Olileanya Onye Kraịst",
+    scripture: "Lam. 3:24, 26; Rom. 8:24-25; Heb. 6:19; 1 John 3:3; 1 Peter 1:3-5; Rom. 15:13",
+    verses: [
+      "Jehova bụ òkè m, ka mkpụrụ obi m kwuru; ya mere aga m atụ anya Ya.",
+      "Ọ dị mma ka mmadụ nwee olileanya ma chere nzọpụta Jehova n’udo.",
+      "N’ihi na a zọpụtara anyị site n’olileanya; ma olileanya a na-ahụ anya abụghị olileanya; n’ihi na ihe mmadụ na-ahụ, gịnị mere o ji ga-atụ anya ya ọzọ?",
+      "Ma ọ bụrụ na anyị na-atụ anya ihe anyị na-adịghị ahụ, mgbe ahụ anyị na-echere ya na ndidi.",
+      "Olileanya a anyị nwere dịka arịlịka nke mkpụrụ obi, nke siri ike na nke kwụ ọtọ, nke na-abanye n’ime ebe dị n’azụ ákwà mgbochi.",
+      "Onye ọ bụla nwere olileanya a n’ime ya na-eme ka onwe ya dị ọcha, dịka Ọ dị ọcha.",
+      "A gọziri Chineke na Nna nke Onyenweanyị anyị Jizọs Kraịst, Onye dịka ebere Ya dị ukwuu si mụọ anyị ọzọ n’olileanya dị ndụ site n’mbilite n’ọnwụ Jizọs Kraịst.",
+      "Ruo nketa na-adịghị emebi emebi, na-adịghị emerụ ahụ, na-adịghị ada ada, nke a debeere unu n’eluigwe.",
+      "Unu ka e ji ike Chineke chekwaa site n’okwukwe ruo nzọpụta a kwadebere ka e kpughee n’oge ikpeazụ.",
+      "Ugbu a, Chineke nke olileanya juputara unu n’ọṅụ niile na udo n’ịkwere, ka unu bawanye n’olileanya site n’ike Mmụọ Nsọ."
+    ]
+  },
+  {
+    id: 'IRR79',
+    title: "Mmetụta Onye Kraịst",
+    scripture: "Matt. 5:13-16; Rom. 14:7-8, 16-18; 1 Tim. 4:12; Phil. 2:15",
+    verses: [
+      "Unu bụ nnu nke ụwa: ma ọ bụrụ na nnu tufuo uto ya, gịnị ka a ga-eji mee ka o bụrụ nnu ọzọ?",
+      "O nweghịzi uru, ma e wezụga ka a tụfuo ya, ka mmadụ zọkwasị ya n’ụkwụ.",
+      "Unu bụ ìhè nke ụwa. Obodo e debere n’elu ugwu apụghị izochi.",
+      "Mmadụ anaghị akpọ kandụl tinye ya n’okpuru akpa, kama n’elu ebe kandụl; ọ na-enyekwa ìhè nye ndị niile nọ n’ụlọ.",
+      "Ka ìhè unu si dị, ka o na-enwu n’ihu mmadụ, ka ha hụ ọrụ ọma unu, too Nna unu nke nọ n’eluigwe.",
+      "N’ihi na ọ dịghị onye n’ime anyị na-ebi ndụ n’ihi onwe ya; ọ dịghị onye na-anwụ n’ihi onwe ya.",
+      "Ma ọ bụrụ na anyị dị ndụ, anyị dị ndụ n’ihi Onyenweanyị; ma ọ bụrụ na anyị anwụ, anyị anwụ n’ihi Onyenweanyị: ya mere, ma anyị dị ndụ ma anyị anwụ, anyị bụ nke Onyenweanyị.",
+      "Ya mere, ekwela ka a kparị ihe ọma unu n’ụzọ ọjọọ.",
+      "N’ihi na alaeze Chineke abụghị nri na ihe ọṅụṅụ, kama bụ ezi omume, udo, na ọṅụ n’ime Mmụọ Nsọ.",
+      "Onye na-ejere Kraịst ozi n’ihe ndị a na-atọ Chineke ụtọ, mmadụ kwa na-anabata ya.",
+      "Ka mmadụ ọ bụla ghara ileda nwata gị anya; kama bụrụ ihe atụ nye ndị kwere ekwe, n’okwu, n’omume, n’ịhụnanya, n’mmụọ, n’okwukwe, n’ịdị ọcha.",
+      "Ka unu bụrụ ndị na-enweghị mmejọ na ndị enweghị aghụghọ, ụmụ Chineke na-enweghị ịba mba, n’etiti ọgbọ gbagọrọ agbagọ na nke rụrụ arụ, n’etiti ha ka unu na-enwu dịka ìhè n’ụwa."
+    ]
+  },
+  {
+    id: 'IRR80',
+    title: "Ọkpụkpọ Òkù Chineke",
+    scripture: "Isa. 55:1-3, 6-7; 1:18; John 7:37; Matt. 11:28-30",
+    verses: [
+      "Nụọ, onye ọ bụla na-akpịrị na-akụ, bịa n’ime mmiri; onye na-enweghị ego, bịa, zụta, rie.",
+      "Gịnị mere unu ji na-emefu ego n’ihe na-abụghị achịcha?",
+      "Tụgharịa ntị unu, bịa n’ebe m nọ; nụrụ, mkpụrụ obi unu ga-adị ndụ; aga m eme ọgbụgba ndụ ebighị ebi na unu.",
+      "Chọọnụ Jehova mgbe a pụrụ ịchọta Ya, kpọọ Ya mgbe Ọ nọ nso.",
+      "Ka onye ajọ omume hapụ ụzọ ya, ka onye na-adịghị ezi omume hapụ echiche ya; ka o laghachikwute Jehova, Ọ ga-emere ya ebere; laghachikwute Chineke anyị, n’ihi na Ọ ga-agbaghara n’ụba.",
+      "Bịa ugbu a, ka anyị kparịta okwu, ka Jehova kwuru: ọ bụ ezie na mmehie unu dị ka agba ọbara, ha ga-adị ọcha dịka snow; ọ bụ ezie na ha dị uhie dịka crimson, ha ga-adị ọcha dịka ajị anụ.",
+      "N’ụbọchị ikpeazụ, ụbọchị ukwu nke emume ahụ, Jizọs guzoro tie mkpu, sị: Ọ bụrụ na mmadụ na-akpịrị na-akụ, ka o bịa n’ebe m nọ, ṅụọ.",
+      "Bịakwutenụ m, unu niile na-arụ ọrụ ike, ndị ibu arọ dị n’elu, aga m enye unu izuike.",
+      "Were yok m n’elu unu, mụtakwa n’aka m; n’ihi na abụ m onye dị nwayọọ na onye umeala n’obi; unu ga-ahụ izuike nye mkpụrụ obi unu.",
+      "N’ihi na yok m dị mfe, ibu m dịkwa ọkụ."
+    ]
+  },
+  {
+    id: 'IRR81',
+    title: "Mishọn Ụwa",
+    scripture: "Isa. 60:3; Rom. 10:12-13; Eph. 3:8-11; 2 Cor. 5:18-19",
+    verses: [
+      "Ndị mba ọzọ ga-abịa n’ìhè Gị, ndị eze kwa n’ìhè nke ịrị elu Gị.",
+      "N’ihi na ọdịiche adịghị n’etiti Juu na Gris; otu Onyenweanyị ahụ bụ Onye-nwe mmadụ niile, Ọ na-enye n’ụba ndị niile na-akpọ Ya.",
+      "N’ihi na onye ọ bụla ga-akpọ aha Onyenweanyị ga-azọpụta.",
+      "Olee otú ha ga-esi kpọọ Onye ha na-ekweghị n’ime Ya? olee otú ha ga-esi kwere n’Onye ha na-anụbeghị?",
+      "Olee otú ha ga-esi nụ n’enweghị onye na-ekwusa? olee otú ha ga-esi kwusa ma e zigaghị ha?",
+      "Dịka e dere: Olee otú ụkwụ ndị na-ekwusa oziọma udo, na-ewetara ozi ọma si maa mma!",
+      "Nye m, onye dị ala karịa nke kacha nta n’ime ndị nsọ niile, e nyere amara a ka m kwusaa n’etiti ndị mba ọzọ akụnụba Kraịst nke enweghị onye pụrụ ịchọta ókè ya,",
+      "Ime ka mmadụ niile hụ ihe bụ mmekọrịta nke ihe omimi ahụ, nke e zoro ezo site n’mmalite ụwa n’ime Chineke, Onye kere ihe niile site n’aka Jizọs Kraịst,",
+      "Ka site n’ụka, amamihe Chineke nke dị ọtụtụ ụzọ wee pụta ugbu a nye ndị ọchịchị na ndị ike n’ebe eluigwe dị,",
+      "Dịka ebumnuche ebighị ebi ahụ nke O rụzuru n’ime Kraịst Jizọs Onyenweanyị anyị.",
+      "Ihe niile sitere n’aka Chineke, Onye kpara anyị udo na Ya site n’aka Jizọs Kraịst, nyekwa anyị ozi nke ime ka mmadụ na Chineke bụrụ enyi ọzọ.",
+      "Ya bụ, na Chineke nọ n’ime Kraịst, na-eme ka ụwa na Ya bụrụ enyi, na-agụghị mmejọ ha; nyefekwaara anyị okwu nke ime ka mmadụ na Chineke bụrụ enyi."
+    ]
+  },
+  {
+    id: 'IRR82',
+    title: "Ọmụmụ Ọhụrụ",
+    scripture: "John 1:1-7; 2 Cor. 5:17; Titus 3:5; Eph. 2:10",
+    verses: [
+      "N’mmalite, Okwu ahụ dị; Okwu ahụ nọnyere Chineke; Okwu ahụ bụ Chineke.",
+      "Okwu ahụ nọ n’mmalite n’ebe Chineke nọ.",
+      "Ihe niile sitere n’aka Ya ka e kere; n’enweghị Ya, a kpụtaghị ihe ọ bụla e kere eke.",
+      "N’ime Ya ka ndụ dị; ndụ ahụ bụ ìhè nke mmadụ.",
+      "Ìhè ahụ na-enwu n’ọchịchịrị; ọchịchịrị ahụ enweghị ike imeri ya.",
+      "E nwere nwoke e zitere site n’aka Chineke, aha ya bụ Jọn.",
+      "Ọ bịara ka ọ bụrụ onye akaebe, ikwupụta banyere Ìhè ahụ, ka mmadụ niile wee kwere site n’aka ya.",
+      "Ya mere, ọ bụrụ na onye ọ bụla nọ n’ime Kraịst, ọ bụ ihe e kere ọhụrụ; ihe ochie agafela; lee, ihe niile aghọwo ọhụrụ.",
+      "Ọ bụghị site n’ọrụ ezi omume anyị mere, kama dịka ebere Ya si dị, Ọ zọpụtara anyị, site n’ịsachasị nke ọmụmụ ọhụrụ na mmegharị ọhụrụ nke Mmụọ Nsọ.",
+      "N’ihi na anyị bụ ọrụ aka Ya, e kere anyị n’ime Kraịst Jizọs ka anyị rụọ ọrụ ọma, nke Chineke kwadebere tupu, ka anyị jee ije n’ime ha."
+    ]
+  },
+  {
+    id: 'IRR83',
+    title: "Ndụ Ebighị Ebi",
+    scripture: "John 3:16; 5:24; 10:27-29; 11:25-26; 1 John 5:11-13",
+    verses: [
+      "N’ihi na Chineke hụrụ ụwa n’anya otú a, na O nyere Ọkpara Ya nke ọ mụrụ naanị ya, ka onye ọ bụla kwere n’ime Ya ghara ịla n’iyi, kama nwee ndụ ebighị ebi.",
+      "N’eziokwu, n’eziokwu, agwa m unu, onye na-anụ okwu m, kwere n’Onye zitere m, nwere ndụ ebighị ebi; ọ gaghị abata n’ime ikpe ọmụma, kama ọ si n’ọnwụ gafee n’ime ndụ.",
+      "Atụrụ m na-anụ olu m; ama m ha, ha na-esokwa m.",
+      "Ana m enye ha ndụ ebighị ebi; ha agaghị alakwa n’iyi mgbe ọ bụla; ọ dịghịkwa onye ga-apụnara ha n’aka m.",
+      "Nna m, Onye nyere m ha, dị ukwuu karịa mmadụ niile; ọ dịghịkwa onye nwere ike ịnapụ ha n’aka Nna m.",
+      "Jizọs sịrị ya: Abụ m mbilite n’ọnwụ na ndụ; onye kwere n’ime m, ọbụna ma ọ nwụọ, ọ ga-adị ndụ.",
+      "Onye ọ bụla dị ndụ, kwere n’ime m, agaghị anwụ ruo mgbe ebighị ebi.",
+      "Nke a bụ akaebe: na Chineke enyela anyị ndụ ebighị ebi, ndụ a dịkwa n’ime Ọkpara Ya.",
+      "Onye nwere Ọkpara nwere ndụ; onye na-enweghị Ọkpara Chineke enweghị ndụ.",
+      "Ihe ndị a ka m dere unu ndị kwere n’aha Ọkpara Chineke, ka unu mara na unu nwere ndụ ebighị ebi, ka unu kwa kwere n’aha Ọkpara Chineke."
+    ]
+  },
+  {
+    id: 'IRR84',
+    title: "Oriri Nsọ nke Onyenweanyị",
+    scripture: "1 Cor. 11:23-29; 1 Tim. 1:17",
+    verses: [
+      "N’ihi na nwetara m n’aka Onyenweanyị ihe m nyeferekwa unu: na Onyenweanyị Jizọs n’abalị e rere Ya nye ndị iro, weere achịcha,",
+      "Mgbe O kelere, Ọ gbajiri ya, sị:",
+      "Naranụ, rịanụ: nke a bụ ahụ m nke a gbajiri n’ihi unu; meenụ nke a n’icheta m.",
+      "N’otu aka ahụ kwa, O weere iko mgbe ha risịrị nri, sị:",
+      "Iko a bụ ọgbụgba ndụ ọhụrụ n’ọbara m: meenụ nke a, ugboro ọ bụla unu ṅụrụ ya, n’icheta m.",
+      "N’ihi na ugboro ọ bụla unu riri achịcha a, ṅụọkwa iko a, unu na-ekwupụta ọnwụ Onyenweanyị, ruo mgbe Ọ ga-abịa.",
+      "Ya mere, onye ọ bụla riri achịcha a, ṅụọkwa iko Onyenweanyị n’ụzọ na-adịghị ekwesị, ga-abụ onye mmehie megide ahụ na ọbara Onyenweanyị.",
+      "Ma ka mmadụ nyochaa onwe ya, otú ahụ ka o rie achịcha ahụ, ṅụọkwa iko ahụ.",
+      "N’ihi na onye na-eri ma na-aṅụ n’ụzọ na-adịghị ekwesị, na-eri ma na-aṅụ ikpe ọmụma nye onwe ya, n’ihi na ọ naghị amata ahụ Onyenweanyị.",
+      "Ugbu a, nye Eze ebighị ebi, Onye na-adịghị anwụ anwụ, Onye a na-ahụghị anya, Chineke naanị onye amamihe, nsọpụrụ na otuto dịrị Ya ruo mgbe ebighị ebi. Amen."
+    ]
+  },
+  {
+    id: 'IRR85',
+    title: "Onye Ọzụzụ Atụrụ Ọma",
+    scripture: "John 10:7-14, 16, 27-29; Heb. 13:20-21",
+    verses: [
+      "Mgbe ahụ Jizọs sịrị ha ọzọ: N’eziokwu, n’eziokwu, agwa m unu, Abụ m ọnụ ụzọ atụrụ.",
+      "Ndị niile bịara tupu m bụ ndị ohi na ndị ohi ike; ma atụrụ ahụ anụghị ha.",
+      "Abụ m ọnụ ụzọ: ma onye ọ bụla banye site n’aka m, a ga-azọpụta ya; ọ ga-apụ, ọ ga-abata, ọ ga-achọta ebe ịzụ atụrụ.",
+      "Onye ohi anaghị abịa ma e wezụga ịzu ohi, igbu, na ibibi; abịara m ka ha nwee ndụ, nwee ya n’ụba.",
+      "Abụ m Onye Ọzụzụ Atụrụ Ọma: Onye Ọzụzụ Atụrụ Ọma na-enye ndụ Ya n’ihi atụrụ.",
+      "Ma onye ọrụ ụgwọ, onye na-abụghị onye ọzụzụ atụrụ, onye atụrụ ahụ abụghị nke ya, mgbe ọ hụrụ agụ ọhịa na-abịa, ọ na-ahapụ atụrụ, gbapụ; agụ ọhịa na-ejide ha, gbasaa ha.",
+      "Onye ọrụ ụgwọ na-agbapụ n’ihi na ọ bụ onye ọrụ ụgwọ, ọ naghị eche banyere atụrụ.",
+      "Abụ m Onye Ọzụzụ Atụrụ Ọma; ama m atụrụ m, atụrụ m kwa maara m.",
+      "Enwere m atụrụ ndị ọzọ, ndị na-abụghị nke òtù a; ha kwa ka m ga-eweta; ha ga-anụ olu m; otu ìgwè atụrụ na otu onye ọzụzụ atụrụ ga-adị.",
+      "Atụrụ m na-anụ olu m; ama m ha, ha na-esokwa m.",
+      "Ana m enye ha ndụ ebighị ebi; ha agaghị alakwa n’iyi mgbe ọ bụla; ọ dịghịkwa onye ga-apụnara ha n’aka m.",
+      "Nna m, Onye nyere m ha, dị ukwuu karịa mmadụ niile; ọ dịghịkwa onye nwere ike ịnapụ ha n’aka Nna m.",
+      "Ugbu a, Chineke nke udo, Onye kpụtakwara Onyenweanyị anyị Jizọs n’ọnwụ, Onye Ọzụzụ Atụrụ ukwu ahụ, site n’ọbara ọgbụgba ndụ ebighị ebi,",
+      "Mee ka unu zuo oke n’ọrụ ọma niile ka unu mee uche Ya, na-arụ n’ime unu ihe na-atọ Ya ụtọ, site n’aka Jizọs Kraịst; Onye otuto dịrị ruo mgbe ebighị ebi. Amen."
+    ]
+  },
+  {
+    id: 'IRR86',
+    title: "Nkasi Obi Chineke",
+    scripture: "Isa. 40:1, 31; John 14:1, 18, 16; 16:33; 2 Cor. 1:3-4",
+    verses: [
+      "Kasịnụ ndị m obi, kasịnụ ha obi, ka Chineke unu kwuru.",
+      "Ndị na-echere Jehova ga-enwe ike ọhụrụ; ha ga-ebuli nku dị ka ugo; ha ga-agba ọsọ, agaghị ike gwụ ha; ha ga-eje ije, agaghị ada mba.",
+      "Ka obi unu ghara ịtụ ụjọ: unu kwere na Chineke, kwekwanụ na m.",
+      "Agaghị m ahapụ unu ka unu bụrụ ndị na-enweghị nkasi obi; aga m abịakwute unu.",
+      "Aga m arịọ Nna, Ọ ga-enye unu Onye Nkasi Obi ọzọ, ka Ọ nọnyere unu ruo mgbe ebighị ebi.",
+      "Ihe ndị a ka m gwara unu ka unu nwee udo n’ime m. N’ụwa unu ga-enwe mkpagbu; ma nwee obi ike, emeriwo m ụwa.",
+      "A gọziri Chineke, Nna nke Onyenweanyị anyị Jizọs Kraịst, Nna ebere, Chineke nke nkasi obi niile.",
+      "Onye na-akasi anyị obi n’ime mkpagbu anyị niile, ka anyị nwee ike ikasi ndị nọ n’nsogbu ọ bụla obi, site n’otú Chineke si kasị anyị obi."
+    ]
+  },
+  {
+    id: 'IRR87',
+    title: "Udo n’Ụwa",
+    scripture: "Isa. 9:2, 6-7; 11:4, 9; Micah 4:3; Eph. 2:14-15; Luke 2:14",
+    verses: [
+      "Ndị mmadụ ahụ gara ije n’ọchịchịrị ahụla ìhè dị ukwuu; n’elu ndị bi n’ala nke onyinyo ọnwụ, ìhè ahụ enwuola.",
+      "N’ihi na e mụrụ anyị nwa; e nyere anyị Ọkpara; ọchịchị ga-adị n’ubu Ya.",
+      "Aha Ya ga-abụ Onye Ijuanya, Onye Ndụmọdụ, Chineke Dike, Nna Ebighị Ebi, Onye Isi Udo.",
+      "N’ịbawanye nke ọchịchị Ya na udo, ọ gaghị enwe ngwụcha; n’ocheeze Devid na n’alaeze Ya, iji dozie ya, guzobe ya site n’ime ikpe na ezi omume site ugbu a ruo mgbe ebighị ebi.",
+      "Ma n’ezi omume ka Ọ ga-ekpe ndị ogbenye ikpe, baakwa ndị dị umeala n’obi mba n’ịdị ziri ezi.",
+      "Ha agaghị emerụ ma ọ bụ bibie n’ugwu nsọ m niile; n’ihi na ụwa ga-juputa n’ịma Jehova dịka mmiri si kpuchie oke osimiri.",
+      "Ọ ga-ekpe ikpe n’etiti ọtụtụ mmadụ, baakwa mba siri ike nke dị anya mba.",
+      "Ha ga-akụ mma agha ha ghọọ ngwa ọrụ ubi, ube ha ghọọ mma ịkpụ osisi; mba agaghị ebuli mma agha megide mba ọzọ, ha agaghị amụta agha ọzọ.",
+      "N’ihi na Kraịst bụ udo anyị, Onye mere ka abụọ bụrụ otu, kwajikwa mgbidi nkewa dị n’etiti, wepụkwa ịkpọasị n’anụ ahụ Ya, mee udo.",
+      "Otuto dịrị Chineke n’eluigwe kachasị elu, n’ụwa udo, ịdị mma nye mmadụ."
+    ]
+  },
+  {
+    id: 'IRR88',
+    title: "Nkwenye Nke Mmeri",
+    scripture: "Rom. 8:18; 28, 31-39",
+    verses: [
+      "A na m atụgharị uche na ahụhụ nke oge a adịghị eru ka e jiri ya tụnyere ebube a ga-ekpughe n’ime anyị.",
+      "Anyị maara na ihe niile na-arụkọ ọrụ ọnụ maka ihe ọma nye ndị hụrụ Chineke n’anya, ndị a kpọrọ dịka ebumnuche Ya si dị.",
+      "Ọ bụrụ na Chineke dị n’akụkụ anyị, ònye ga-emegide anyị?",
+      "Onye na-enweghị ileghara Ọkpara Ya anya, kama nyefere Ya n’ihi anyị niile, òlee otú Ọ gaghịkwa enye anyị ihe niile n’efu na Ya?",
+      "Ònye ga-ebubo ndị Chineke họpụtara ebubo? Ọ bụ Chineke na-agụ mmadụ n’ezi omume.",
+      "Ònye bụ onye na-ama ikpe?",
+      "Ọ bụ Kraịst nwụrụ, ee, karịa nke ahụ, Ọ bilikwara ọzọ, Onye nọ n’aka nri Chineke, Onye na-arịọ arịrịọ n’ihi anyị.",
+      "Ònye ga-ekewa anyị pụọ n’ịhụnanya Kraịst? ọ bụ mkpagbu, ma ọ bụ nsogbu, ma ọ bụ ịkpagbu, ma ọ bụ agụụ, ma ọ bụ ịdị gba ọtọ, ma ọ bụ ihe ize ndụ, ma ọ bụ mma agha?",
+      "Dịka e dere: N’ihi Gị ka a na-egbu anyị ụbọchị niile; a gụrụ anyị dịka atụrụ e nyere ka e gbuo.",
+      "Mba; n’ihe ndị a niile, anyị karịrị ndị mmeri site n’Onye hụrụ anyị n’anya.",
+      "N’ihi na ekwenyela m na ọnwụ ma ọ bụ ndụ, ndị mmụọ ozi ma ọ bụ ndị ọchịchị, ike ma ọ bụ ihe dị ugbu a ma ọ bụ ihe ga-abịa,",
+      "Ma ịdị elu ma ọ bụ ịdị omimi, ma ọ bụ ihe e kere eke ọzọ ọ bụla, agaghị enwe ike ikewa anyị pụọ n’ịhụnanya Chineke dị n’ime Kraịst Jizọs Onyenweanyị anyị."
+    ]
+  },
+  {
+    id: 'IRR89',
+    title: "Mbilite n’Ọnwụ Kraịst",
+    scripture: "Matt. 28:1-10; 1 Cor. 15:20",
+    verses: [
+      "N’ọgwụgwụ izuike, mgbe ọ na-amalite ịkụ ụtụtụ n’ụbọchị mbụ nke izu, Meri Magdalin na Meri ọzọ bịara ịhụ ili ahụ.",
+      "Lee, ala ọma jijiji ukwu mere: n’ihi na mmụọ ozi Onyenweanyị si n’eluigwe bịa, gbagoro, tụgharịa nkume ahụ n’ọnụ ili, nọdụ n’elu ya.",
+      "Ihu ya dị ka ọkụ ọbara; uwe ya dị ọcha dịka snow.",
+      "N’ihi egwu ya ka ndị na-eche nche ji jijiji, ghọọ ndị nwụrụ anwụ.",
+      "Mmụọ ozi ahụ zara ụmụnwaanyị ahụ, sị: Unu atụla egwu; ama m na unu na-achọ Jizọs a kpọgidere n’obe.",
+      "Ọ nọghị ebe a; n’ihi na Ọ biliela dịka O kwuru. Bịa, hụ ebe Onyenweanyị dinaara.",
+      "Gaanụ ngwa ngwa, gwa ndị na-eso ụzọ Ya na Ọ biliela n’ọnwụ; lee, Ọ na-aga n’ihu unu gaa Galili; n’ebe ahụ ka unu ga-ahụ Ya; lee, agwala m unu.",
+      "Ha si n’ili ahụ pụọ ngwa ngwa n’egwu na n’ọṅụ dị ukwuu, gba ọsọ ịgwa ndị na-eso ụzọ Ya.",
+      "Ka ha na-aga ịgwa ndị na-eso ụzọ Ya, lee, Jizọs zutere ha, sị: Ndewo unu.",
+      "Ha bịara, jide ụkwụ Ya, kpọrọ Ya isiala.",
+      "Mgbe ahụ Jizọs sịrị ha: Unu atụla egwu; gaanụ gwa ụmụnna m ka ha gaa Galili, n’ebe ahụ ka ha ga-ahụ m.",
+      "Ugbu a, Kraịst ebiliela n’ọnwụ, bụrụ mkpụrụ mbụ nke ndị lara n’ụra."
+    ]
+  },
+  {
+    id: 'IRR90',
+    title: "Ụlọ Onye Kraịst",
+    scripture: "Deut. 6:4-7; Eph. 6:1-2, 4; Col. 3:12-15, 17",
+    verses: [
+      "Nụrụ, Izrel: Jehova Chineke anyị bụ otu Jehova.",
+      "Ị ga-ahụ Jehova Chineke gị n’anya n’obi gị niile, n’ime mkpụrụ obi gị niile, n’ike gị niile.",
+      "Okwu ndị a m na-enye gị iwu taa ga-adị n’obi gị.",
+      "Ị ga-akuziri ụmụ gị ha nke ọma, kwurịta ha mgbe ị nọdụ n’ụlọ gị, na mgbe ị na-aga n’ụzọ.",
+      "Unu ụmụ, nụrụnụ ndị mụrụ unu n’ime Onyenweanyị; n’ihi na nke a ziri ezi.",
+      "Sọpụrụ nna gị na nne gị; nke ahụ bụ iwu mbụ nwere nkwa.",
+      "Unu ndị nna, unu akpasula ụmụ unu iwe; kama zụlite ha n’ọzụzụ na ndụmọdụ Onyenweanyị.",
+      "Ya mere, dịka ndị Chineke họpụtara, ndị nsọ, ndị a hụrụ n’anya, yikwasịnụ obi ebere, obiọma, ịdị umeala n’obi, ịdị nwayọọ, ndidi ogologo.",
+      "Na-anọgide na-ebu ibe unu, na-agbaghara ibe unu.",
+      "N’elu ihe ndị a niile, yikwasịnụ ịhụnanya, nke bụ njikọ nke izu oke.",
+      "Ka udo Chineke chị n’obi unu; bụrụnụ ndị na-ekele.",
+      "Ihe ọ bụla unu na-eme n’okwu ma ọ bụ n’omume, meenu ya n’aha Onyenweanyị Jizọs, na-ekele Chineke Nna site n’aka Ya."
+    ]
+  },
+  {
+    id: 'IRR91',
+    title: "Nchegharị Maka Mmehie",
+    scripture: "Isa. 55:6-7; Acts 3:19; Luke 19:18-24; Isa. 1:18",
+    verses: [
+      "Chọọnụ Jehova mgbe a pụrụ ịchọta Ya, kpọọ Ya mgbe Ọ nọ nso.",
+      "Ka onye ajọ omume hapụ ụzọ ya, ka onye na-adịghị ezi omume hapụ echiche ya.",
+      "Ka o laghachikwute Jehova, Ọ ga-emere ya ebere; laghachikwute Chineke anyị, n’ihi na Ọ ga-agbaghara n’ụba.",
+      "Ya mere, chegharianụ, laghachinụ, ka e hichapụ mmehie unu.",
+      "Aga m ebili, laa n’ebe nna m nọ, sị ya: Nna, emehiela m megide eluigwe na megide gị.",
+      "Adịghịkwa m eru ka a kpọọ m nwa gị; mee m dịka otu n’ime ndị ọrụ gị.",
+      "O biliri, bịakwute nna ya. Ma mgbe ọ ka dị anya, nna ya hụrụ ya, obi ebere tụrụ ya; ọ gba ọsọ, dakwasị ya n’olu, sụọ ya ọnụ.",
+      "Nwa ahụ sịrị ya: Nna, emehiela m megide eluigwe na n’ihu gị, adịghịkwa m eru ka a kpọọ m nwa gị.",
+      "Ma nna ahụ sịrị ndị ohu ya: Weta uwe kacha mma, yikwasị ya; tinye mgbanaka n’aka ya, tinye akpụkpọ ụkwụ n’ụkwụ ya.",
+      "Weta nwa ehi a kụrụ abụba, gbuo ya; ka anyị rie, nwee obi ụtọ.",
+      "N’ihi na nwa m a nwụrụ anwụ, ọ dị ndụ ọzọ; o furu efu, a chọtara ya.",
+      "Bịa ugbu a, ka Jehova kwuru: ọ bụ ezie na mmehie unu dị ka agba ọbara, ha ga-adị ọcha dịka snow; ọ bụ ezie na ha dị uhie dịka crimson, ha ga-adị ọcha dịka ajị anụ."
+    ]
+  },
+  {
+    id: 'IRR92',
+    title: "Guzosienụ Ike",
+    scripture: "Phil. 1:27-28; Eph. 6:10-13, 18; 2 Tim. 2:3; 1 Cor. 15:58",
+    verses: [
+      "Ka omume unu bụrụ nke kwesịrị oziọma Kraịst, ka ma m bịakwute unu ma ọ bụ na m nọghị, m nụ banyere unu na unu na-eguzosi ike n’otu mmụọ, na otu uche, na-alụ ọgụ ọnụ maka okwukwe nke oziọma.",
+      "Unu atụla egwu n’ihe ọ bụla site n’aka ndị na-emegide unu: nke ahụ bụ ihe àmà nke mbibi nye ha, ma nke nzọpụta nye unu, nke sitere n’aka Chineke.",
+      "N’ikpeazụ, ụmụnna m, sie ike n’ime Onyenweanyị, na n’ike nke ike Ya.",
+      "Yikwasịnụ ngwá agha Chineke dum, ka unu nwee ike iguzogide aghụghọ ekwensu.",
+      "N’ihi na ọgụ anyị abụghị megide anụ ahụ na ọbara, kama megide ndị ọchịchị, megide ndị ike, megide ndị na-achị ọchịchịrị nke ụwa a, megide ajọ mmụọ n’ebe eluigwe dị.",
+      "Ya mere, naranụ ngwá agha Chineke dum, ka unu nwee ike iguzogide n’ụbọchị ọjọọ, mgbe unu mechaara ihe niile, iguzo.",
+      "Na-ekpe ekpere mgbe niile site n’ekpere niile na arịrịọ n’ime Mmụọ, na-elekọta nke a site n’ịnọgide na arịrịọ n’ihi ndị nsọ niile.",
+      "Tara ahụhụ dịka ezigbo sojá Jizọs Kraịst.",
+      "Ya mere, ụmụnna m hụrụ n’anya, guzosienụ ike, ghara ịkwaga, na-abawanye mgbe niile n’ọrụ Onyenweanyị, ebe unu maara na ọrụ unu abụghị n’efu n’ime Onyenweanyị."
+    ]
+  },
+  {
+    id: 'IRR93',
+    title: "Mmụọ Nsọ",
+    scripture: "John 14:16-18, 26; 16:7-14",
+    verses: [
+      "Aga m arịọ Nna, Ọ ga-enye unu Onye Nkasi Obi ọzọ, ka Ọ nọnyere unu ruo mgbe ebighị ebi.",
+      "Ya bụ, Mmụọ nke eziokwu; ụwa enweghị ike inweta Ya, n’ihi na ụwa anaghị ahụ Ya, ma ọ bụ mara Ya; ma unu maara Ya, n’ihi na Ọ bi n’etiti unu, Ọ ga-abụkwa n’ime unu.",
+      "Agaghị m ahapụ unu ka unu bụrụ ndị na-enweghị nkasi obi; aga m abịakwute unu.",
+      "Ma Onye Nkasi Obi, bụ Mmụọ Nsọ, Onye Nna ga-eziga n’aha m, Ọ ga-akuziri unu ihe niile, chetakwa unu ihe niile m gwara unu.",
+      "Ọ bara uru ka m laa; n’ihi na ma ọ bụrụ na m alaghị, Onye Nkasi Obi agaghị abịakwute unu; ma ọ bụrụ na m laa, aga m eziga Ya n’ebe unu nọ.",
+      "Mgbe Ọ bịara, Ọ ga-eme ka ụwa mata mmehie, ezi omume, na ikpe.",
+      "Banyere mmehie, n’ihi na ha ekweghị n’ime m;",
+      "Banyere ezi omume, n’ihi na ana m aga n’ebe Nna m nọ, unu agaghịkwa ahụ m ọzọ;",
+      "Banyere ikpe, n’ihi na a maraala onye isi nke ụwa a ikpe.",
+      "E nwere ọtụtụ ihe ọzọ m nwere ikwu unu, ma unu enweghị ike iburu ha ugbu a.",
+      "Ma mgbe Ọ, Mmụọ nke eziokwu, bịara, Ọ ga-edu unu n’eziokwu niile; n’ihi na Ọ gaghị ekwu site n’onwe Ya, kama ihe ọ bụla Ọ nụrụ, nke ahụ ka Ọ ga-ekwu; Ọ ga-egosikwa unu ihe ga-abịa.",
+      "Ọ ga-eto m; n’ihi na Ọ ga-anata nke m, gosi ya unu."
+    ]
+  },
+  {
+    id: 'IRR94',
+    title: "Kraịst, Onye Nzọpụta",
+    scripture: "Matt. 1:21; John 3:14-18; Rom. 3:8; Heb. 7:25; Acts 4:12; Rev. 1:5-6",
+    verses: [
+      "Ọ ga-amụ Ọkpara nwoke; i ga-akpọ aha Ya Jizọs; n’ihi na Ọ ga-azọpụta ndị Ya n’mmehie ha.",
+      "Dịka Mose siri bulie agwọ n’ọzara, otu a ka a ga-ebuli Ọkpara nke mmadụ elu.",
+      "Ka onye ọ bụla kwere n’ime Ya ghara ịla n’iyi, kama nwee ndụ ebighị ebi.",
+      "N’ihi na Chineke hụrụ ụwa n’anya otú a, na O nyere Ọkpara Ya nke ọ mụrụ naanị ya, ka onye ọ bụla kwere n’ime Ya ghara ịla n’iyi, kama nwee ndụ ebighị ebi.",
+      "N’ihi na Chineke ezighị Ọkpara Ya n’ụwa ka Ọ maa ụwa ikpe, kama ka ụwa wee zọpụta site n’aka Ya.",
+      "Onye kwere n’ime Ya, a naghị ama ya ikpe; ma onye na-ekweghị, a maala ya ikpe, n’ihi na o kwereghị n’aha Ọkpara Chineke nke ọ mụrụ naanị ya.",
+      "Chineke gosipụtara ịhụnanya Ya n’ebe anyị nọ, n’ihi na mgbe anyị ka bụ ndị mmehie, Kraịst nwụrụ n’ihi anyị.",
+      "Ya mere, Ọ nwere ike izọpụta kpamkpam ndị na-abịakwute Chineke site n’aka Ya, ebe Ọ na-adị ndụ mgbe niile ịrịọ arịrịọ n’ihi ha.",
+      "Nzọpụta adịghị n’ime onye ọzọ ọ bụla; n’ihi na aha ọzọ adịghị n’okpuru eluigwe e nyere mmadụ, nke anyị ga-esi zọpụta.",
+      "Nye Ya bụ onye hụrụ anyị n’anya, sachapụkwara anyị pụọ n’mmehie anyị n’ọbara Ya, meekwa anyị ndị eze na ndị nchụàjà nye Chineke na Nna Ya; otuto na ọchịchị dịrị Ya ruo mgbe ebighị ebi. Amen."
+    ]
+  },
+  {
+    id: 'IRR95',
+    title: "Mbilite n’Ọnwụ Ndị Kwesịrị Ikwere",
+    scripture: "1 Peter 1:3-5; John 11:25-26; 1 Cor. 15:51-58",
+    verses: [
+      "A gọziri Chineke na Nna nke Onyenweanyị anyị Jizọs Kraịst, Onye dịka ebere Ya dị ukwuu si mụọ anyị ọzọ n’olileanya dị ndụ site n’mbilite n’ọnwụ Jizọs Kraịst.",
+      "Ruo nketa na-adịghị emebi emebi, na-adịghị emerụ ahụ, na-adịghị ada ada, nke a debeere unu n’eluigwe; unu ka e ji ike Chineke chekwaa site n’okwukwe ruo nzọpụta a kwadebere ka e kpughee n’oge ikpeazụ.",
+      "Jizọs sịrị: Abụ m mbilite n’ọnwụ na ndụ; onye kwere n’ime m, ọbụna ma ọ nwụọ, ọ ga-adị ndụ.",
+      "Onye ọ bụla dị ndụ, kwere n’ime m, agaghị anwụ ruo mgbe ebighị ebi.",
+      "Lee, ana m egosi unu ihe omimi: anyị agaghị ala n’ụra niile, kama a ga-agbanwe anyị niile.",
+      "N’otu ntabi anya, n’ịkụ anya, mgbe opi ikpeazụ dara: n’ihi na opi ga-ada, a ga-ebulite ndị nwụrụ anwụ n’ahụ na-adịghị emebi emebi, a ga-agbanwe anyị.",
+      "N’ihi na nke na-emebi emebi ga-eyi ihe na-adịghị emebi emebi, nke na-anwụ anwụ ga-eyi ihe na-adịghị anwụ anwụ.",
+      "Mgbe ahụ, a ga-emezu okwu e dere: Ọnwụ e lọrọ n’iyi n’ime mmeri.",
+      "Onwụ, òlee ebe nsí gị? Ili, òlee ebe mmeri gị?",
+      "Nsí nke ọnwụ bụ mmehie; ike nke mmehie bụ iwu.",
+      "Ma ekele dịrị Chineke, Onye na-enye anyị mmeri site n’Onyenweanyị anyị Jizọs Kraịst.",
+      "Ya mere, ụmụnna m hụrụ n’anya, guzosienụ ike, ghara ịkwaga, na-abawanye mgbe niile n’ọrụ Onyenweanyị, ebe unu maara na ọrụ unu abụghị n’efu n’ime Onyenweanyị."
+    ]
+  },
+  {
+    id: 'IRR96',
+    title: "Nnụrù Isi",
+    scripture: "1 Sam. 15:22; Deut. 11:13-15; Matt. 7:18, 20-21; James 1:22",
+    verses: [
+      "Jehova ọ na-enwe nnukwu ụtọ n’aja ọkụ na n’aja, dịka n’ịnụ olu Jehova isi?",
+      "Lee, ịnụ isi ka mma karịa àjà; ige ntị ka mma karịa abụba atụrụ.",
+      "Ọ ga-abịa, ma ọ bụrụ na unu ege iwu m m na-enye unu taa ntị nke ọma,",
+      "Ịhụ Jehova Chineke unu n’anya, na ijere Ya ozi n’obi unu niile na n’ime mkpụrụ obi unu niile,",
+      "Aga m enye mmiri ozuzo ala unu n’oge ya, mmiri mbụ na mmiri ikpeazụ, ka unu kụọ ọka unu, mmanya unu, na mmanụ unu.",
+      "Aga m ezikwa ahịhịa n’ubi unu maka anụ ụlọ unu, ka unu rie, jupụta.",
+      "Osisi ọma apụghị imịpụta mkpụrụ ọjọọ; osisi rụrụ arụ apụghị imịpụta mkpụrụ ọma.",
+      "Ya mere, site n’mkpụrụ ha ka unu ga-ama ha.",
+      "Ọ bụghị onye ọ bụla na-asị m, Onyenweanyị, Onyenweanyị, ga-abanye n’alaeze eluigwe; kama onye na-eme uche Nna m nke nọ n’eluigwe.",
+      "Bụrụnụ ndị na-eme okwu ahụ, ọ bụghị naanị ndị na-anụ, na-aghọgbu onwe unu."
+    ]
+  },
+  {
+    id: 'IRR97',
+    title: "Mmeri n’Ọnwụnwa",
+    scripture: "James 1:12-15; 1 Cor. 10:13; Heb. 2:18; 4:14-15; Eph. 6:10, 13",
+    verses: [
+      "A gọziri nwoke na-anọgide n’ọnwụnwa; n’ihi na mgbe a nwara ya, ọ ga-anata okpueze ndụ, nke Onyenweanyị kwere ndị na-ahụ Ya n’anya.",
+      "Ka mmadụ ghara ikwu mgbe a na-anwa ya: Chineke na-anwa m.",
+      "N’ihi na a pụghị ịnwale Chineke n’ihe ọjọọ; Ọ naghịkwa anwa onye ọ bụla.",
+      "Kama mmadụ ọ bụla a na-anwa mgbe agụụ nke ya dọọrọ ya, dọkpụọ ya.",
+      "Mgbe agụụ mụtara ime, ọ na-amụpụta mmehie; mmehie, mgbe o zuru oke, na-amụpụta ọnwụ.",
+      "Ọnwụnwa adịghị abịa unu ma e wezụga nke bụ ihe mmadụ na-ahụkarị.",
+      "Ma Chineke bụ onye ntụkwasị obi: Ọ gaghị ekwe ka a nwale unu karịa ihe unu pụrụ iburu; kama n’ime ọnwụnwa ahụ, Ọ ga-emekwa ụzọ mgbapụ, ka unu nwee ike iguzogide ya.",
+      "N’ihi na n’ihe ahụ Ọ tara ahụhụ n’ịnwale, Ọ nwere ike inyere ndị a na-anwa aka.",
+      "Ya mere, ebe anyị nwere nnukwu Onye Nchụàjà, Jizọs Ọkpara Chineke, ka anyị jide nkwupụta anyị ike.",
+      "N’ihi na anyị enweghị nnukwu Onye Nchụàjà nke na-enweghị ike imetụta n’ịhụ mmetụta adịghị ike anyị; kama a nwara Ya n’ihe niile dịka anyị, ma Ọ nweghị mmehie.",
+      "N’ikpeazụ, sie ike n’ime Onyenweanyị, na n’ike nke ike Ya.",
+      "Ya mere, naranụ ngwá agha Chineke dum, ka unu nwee ike iguzogide n’ụbọchị ọjọọ, mgbe unu mechaara ihe niile, iguzo."
+    ]
+  },
+  {
+    id: 'IRR98',
+    title: "Ọbịbịa Nke Abụọ Kraịst",
+    scripture: "Acts 1:11; Matt. 24:42, 44; 1 Thess. 4:16-17; Titus 2:11-13; 1 John 3:2",
+    verses: [
+      "Jizọs a a kpọọrọ n’ebe unu nọ gaa eluigwe, Ọ ga-alọghachi otu a dịka unu hụrụ Ya ka Ọ na-aga eluigwe.",
+      "Ya mere, nọọrịanụ nche; n’ihi na unu amaghị oge Onyenweanyị unu ga-abịa.",
+      "Ya mere, dịrịanụ njikere kwa; n’ihi na n’oge unu na-adịghị atụ anya ya ka Ọkpara nke mmadụ ga-abịa.",
+      "N’ihi na Onyenweanyị n’onwe Ya ga-esi n’eluigwe rịdata n’oké iti mkpu, na olu mmụọ ozi ukwu, na opi Chineke.",
+      "Ndị nwụrụ anwụ n’ime Kraịst ga-ebili mbụ.",
+      "Mgbe ahụ anyị ndị dị ndụ fọdụrụ, a ga-eburu anyị n’ígwé ojii, iso ha, izute Onyenweanyị n’ime ikuku; otu a ka anyị ga-anọnyere Onyenweanyị mgbe niile.",
+      "N’ihi na amara Chineke nke na-eweta nzọpụta apụtala nye mmadụ niile,",
+      "Na-akụzi anyị ka anyị jụ ajọ omume na agụụ nke ụwa, ka anyị bie ndụ nke jidere onwe ya, nke ezi omume, nke ịdị nsọ, n’ụwa a.",
+      "Na-atụ anya olileanya ahụ a gọziri agọzi, na mbipụta ebube nke Chineke ukwu na Onye Nzọpụta anyị Jizọs Kraịst.",
+      "Ndị m hụrụ n’anya, ugbu a anyị bụ ụmụ Chineke, a pụtaghịkwa ugbu a ihe anyị ga-abụ; ma anyị maara na mgbe Ọ ga-apụta, anyị ga-adị ka Ya; n’ihi na anyị ga-ahụ Ya dịka Ọ dị."
+    ]
+  },
+  {
+    id: 'IRR99',
+    title: "Nlekọta Ihe Onwunwe",
+    scripture: "Mal. 3:10; Gal. 6:6-8; Luke 16:10; Matt. 25:29; 1 Cor. 4:2; 2 Cor. 8:7-9",
+    verses: [
+      "Wetanụ otu ụzọ n’ụzọ iri niile n’ụlọ nchekwa, ka nri dị n’ụlọ m; nwalee m ugbu a n’ihe a, ka Jehova nke ndị agha kwuru, ma Ọ gaghị emeghe unu windo eluigwe, wụsa unu ngọzi nke ukwuu ka ebe ghara iru.",
+      "Ka onye a na-akụzi okwu kesaa onye na-akụzi ya ihe ọma niile.",
+      "Unu echegbula onwe unu: a pụghị ịghọgbu Chineke; n’ihi na ihe mmadụ kụrụ, nke ahụ ka ọ ga-akọ.",
+      "N’ihi na onye na-akụ n’anụ ahụ ya, site n’anụ ahụ ga-akọ mmebi; ma onye na-akụ n’ime Mmụọ, site n’ime Mmụọ ga-akọ ndụ ebighị ebi.",
+      "Onye ntụkwasị obi n’ihe nta, ntụkwasị obi kwa n’ihe ukwuu; onye na-adịghị ezi omume n’ihe nta, na-adịghị ezi omume kwa n’ihe ukwuu.",
+      "Nye onye ọ bụla nwere, a ga-enye ya ọzọ, ọ ga-enwe n’ụba; ma onye na-enweghị, ọbụna ihe o nwere a ga-anapụ ya.",
+      "Ọzọkwa, ihe a chọrọ n’aka ndị nlekọta bụ ka a chọta mmadụ onye ntụkwasị obi.",
+      "Ya mere, dịka unu na-abawanye n’ihe niile—n’okwukwe, n’okwu, n’ọmụma, n’ọrụ ike niile, na n’ịhụnanya unu n’ebe anyị nọ—hụnụ na unu na-abawanye n’amara a kwa.",
+      "Anaghị m ekwu ya dịka iwu, kama iji gosipụta eziokwu nke ịhụnanya unu site n’ịhụ ịnọgidesi ike nke ndị ọzọ.",
+      "N’ihi na unu maara amara nke Onyenweanyị anyị Jizọs Kraịst, na Ọ bụ ezie na Ọ bara ụba, n’ihi unu Ọ ghọrọ ogbenye, ka unu site n’ogbenye Ya wee baa ụba."
+    ]
+  },
+  {
+    id: 'IRR100',
+    title: "Ọkpara Chineke",
+    scripture: "John 1:1-3, 14; Col. 1:15-17; 2:8-9; John 6:68-69",
+    verses: [
+      "N’mmalite, Okwu ahụ dị; Okwu ahụ nọnyere Chineke; Okwu ahụ bụ Chineke. Okwu ahụ nọ n’mmalite n’ebe Chineke nọ.",
+      "Ihe niile sitere n’aka Ya ka e kere; n’enweghị Ya, a kpụtaghị ihe ọ bụla e kere eke.",
+      "Okwu ahụ ghọrọ anụ ahụ, biri n’etiti anyị; anyị hụrụ ebube Ya, ebube dịka nke Ọkpara naanị Ya nke Nna, jupụtara n’amara na eziokwu.",
+      "Ọ bụ onyinyo nke Chineke a na-ahụghị anya, Ọkpara mbụ nke ihe e kere eke niile.",
+      "N’ihi na site n’aka Ya ka e kere ihe niile—ihe dị n’eluigwe na ihe dị n’ụwa, ihe a na-ahụ anya na ihe a na-adịghị ahụ anya—ma ocheeze, ma ọchịchị, ma ndị ọchịchị, ma ndị ike.",
+      "Ihe niile e kere site n’aka Ya, e kerekwa ha maka Ya; Ọ dị tupu ihe niile, n’ime Ya ka ihe niile ji adị.",
+      "Kpachara anya ka mmadụ ghara ịdọrọ unu pụọ site n’amamihe ụgha na aghụghọ efu, dịka omenala mmadụ si dị, dịka ihe mmalite nke ụwa si dị, ọ bụghị dịka Kraịst si dị.",
+      "N’ihi na n’ime Ya ka ịdị juputara nke chi niile bi n’ahụ.",
+      "Saimọn Pita zara Ya: Onyenweanyị, ònye ka anyị ga-agakwuru? Ị nwere okwu ndụ ebighị ebi.",
+      "Anyị ekwere ma mara n’eziokwu na Ị bụ Kraịst, Ọkpara Chineke dị ndụ."
+    ]
+  },
+  {
+    id: 'IRR101',
+    title: "Unu Echegbula",
+    scripture: "Matt. 6:19-21, 24-30, 32-33",
+    verses: [
+      "Unu akpakọbaala onwe unu akụ n’ụwa, ebe ikpuru na nchara na-emebi, ebe ndị ohi na-egwupụta ma na-ezu ohi.",
+      "Kama kpakọbaara onwe unu akụ n’eluigwe, ebe ikpuru ma ọ bụ nchara anaghị emebi, ebe ndị ohi anaghị egwupụta ma ọ bụ ezu ohi.",
+      "N’ihi na ebe akụ unu dị, n’ebe ahụ ka obi unu ga-adịkwa.",
+      "Ọ dịghị onye nwere ike ife nna ukwu abụọ: n’ihi na ọ ga-asị otu asị, hụ ọzọ n’anya; ma ọ bụ jide otu, leghara ọzọ anya. Unu apụghị ife Chineke na mamọn.",
+      "Ya mere, ana m asị unu, unu echegbula maka ndụ unu—ihe unu ga-eri ma ọ bụ ihe unu ga-aṅụ—ma ọ bụ maka ahụ unu—ihe unu ga-eyikwasị.",
+      "Ndụ ọ bụghị ihe karịa nri? ahụ ọ bụghị ihe karịa uwe?",
+      "Lee nnụnụ nke ikuku: ha anaghị akụ, ha anaghị akọ, ha anaghị akpọkọta n’ọba; ma Nna unu nke nọ n’eluigwe na-azụ ha. Unu ọ bụghị ihe karịrị ha?",
+      "Ònye n’ime unu site n’ichegbu onwe ya nwere ike itinye otu cubit n’ogo ya?",
+      "Gịnị mere unu ji echegbu onwe unu maka uwe? Tụlee okooko lily nke ọhịa, otú ha si eto; ha anaghị arụ ọrụ, ha anaghị agbaa ntụ.",
+      "Ma ana m asị unu, ọbụna Solomọn n’ebube ya niile, eyighị uwe dịka otu n’ime ha.",
+      "Ya mere, ma Chineke na-eyikwasị ahịhịa nke ubi, nke dị taa, echi a tụfuo ya n’ọkụ, Ọ gaghị eyikwasị unu karịa, unu ndị okwukwe nta?",
+      "Nna unu nke nọ n’eluigwe maara na unu chọrọ ihe ndị a niile.",
+      "Ma chọọnụ mbụ alaeze Chineke na ezi omume Ya; a ga-agbakwunyere unu ihe ndị a niile."
+    ]
+  },
+  {
+    id: 'IRR102',
+    title: "Ọṅụ n’Ofufe",
+    scripture: "Psalms 122; 95:1-3, 6",
+    verses: [
+      "Anụrị m ọṅụ mgbe ha sịrị m: Ka anyị gaa n’ụlọ Jehova.",
+      "Ụkwụ anyị ga-eguzo n’ime ọnụ ụzọ ámá gị, Jerusalem.",
+      "A wuworo Jerusalem dịka obodo nke ejikọrọ nke ọma; ebe ebo Jehova na-arịgo, ka ha nye ekele n’aha Jehova.",
+      "N’ihi na e debere ocheeze ikpe n’ebe ahụ, ocheeze nke ụlọ Devid.",
+      "Kpeenụ ekpere maka udo Jerusalem; ndị hụrụ gị n’anya ga-enwe ọganihu.",
+      "Udo dịrị n’ime mgbidi gị, ọganihu n’ime ụlọ eze gị.",
+      "N’ihi ụmụnna m na ndị enyi m, ana m asị ugbu a: Udo dịrị n’ime gị.",
+      "N’ihi ụlọ Jehova Chineke anyị ka m ga-achọ ihe ọma gị.",
+      "Bịa, ka anyị bụrụ Jehova abụ; ka anyị tie mkpu ọṅụ nye Nkume nke nzọpụta anyị.",
+      "Ka anyị bịa n’ihu Ya na ekele, tie mkpu ọṅụ nye Ya n’abụ.",
+      "N’ihi na Jehova bụ Chineke ukwu, Eze ukwu karịa chi niile.",
+      "Bịa, ka anyị kpọọ isiala, fee ofufe; ka anyị kpuo ikpere n’ihu Jehova Onye kere anyị."
     ]
   }
 ];

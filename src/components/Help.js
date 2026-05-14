@@ -35,7 +35,10 @@ function Help() {
         <h2>Contact Us</h2>
         <p>If you need further assistance, please reach out to us:</p>
         <p><i className="fas fa-envelope"></i> Email: mstraybiz@gmail.com</p>
-        <p><i className="fas fa-phone"></i> Phone: +234 (0) 8100425687</p>
+        <p className="contact-link" onClick={() => window.open('https://wa.me/2348100425687', '_blank')}>
+          <i className="fab fa-whatsapp"></i> WhatsApp: +234 810 042 5687
+        </p>
+        <p><i className="fas fa-phone"></i> Phone: +234 810 042 5687</p>
       </div>
     </div>
   );
